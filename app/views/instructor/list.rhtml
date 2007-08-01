@@ -1,0 +1,120 @@
+<div id="tabNavigation">
+	<ul>
+		<li id="nav-announcements"><a href="javascript: void(0)" onclick="switchTab('announcements')">Announcements</a></li>
+		<li id="nav-documents"><a href="javascript: void(0)" onclick="switchTab('documents')">Documents</a></li>
+		<li id="nav-openQuizzes"><a href="javascript: void(0)" onclick="switchTab('openQuizzes')">Open Quizzes</a></li>
+		<li id="nav-closedQuizzes"><a href="javascript: void(0)" onclick="switchTab('closedQuizzes')">Closed Quizzes</a></li>
+	</ul>
+</div>
+
+<%= error_messages_for :answer, :grade %>
+
+<div id="tabs">
+	
+	<div id="announcements-tab">
+	
+		<ul>
+		
+		<% if @announcements.empty? %>
+		
+			<li> No announcements. <%= @announcements.size %> </li>
+		
+		<% else %>
+		
+			<% for announcement in @announcements do %>
+		
+				<li>
+					<h3><%= announcement.title %></h3>
+					<em>
+						Posted by <%= announcement.user.first_name %> <%= announcement.user.last_name %>
+						on <%= datetime_format(announcement.created_at) %>
+					</em>
+					<p> <%= announcement.content %> </p>
+				</li>
+		
+			<% end %>
+		
+		<% end %>
+			
+		</ul>
+
+		<p><%= link_to "Add an Announcement", :controller => :announcement, :action => :create %></p>
+		<p><%= link_to "View Gradebook", :controller => :gradebook, :action => :list %></p>
+	
+	</div>
+	
+	<div id="documents-tab">
+	
+		<ul>
+		
+		  <% for document in @documents do %>
+		
+		    <li>
+		      <h3><%= link_to document.label, :controller => :document, :action => :show, :id => document.id %></h3>
+		      <em>added <%= datetime_format(document.created_at) %></em>
+		    </li>
+		
+		  <% end %>
+		
+		</ul>
+
+		<p><%= link_to "Add a Document", :controller => :document, :action => :create %></p>
+	
+	</div>
+		
+	<% if @quizzes.empty? %>
+		
+		<div id="openQuizzes-tab">
+			<ul><li> No open quizzes. </li></ul>
+			<p><%= link_to "Create a Quiz", :action => :create %></p>
+		</div>
+
+		<div id="closedQuizzes-tab">
+			<ul><li> No closed quizzes. </li></ul>
+			<p><%= link_to "Create a Quiz", :action => :create %></p>
+		</div>
+		
+	<% else %>
+	
+		<div id="openQuizzes-tab">
+
+			<ul>
+			
+				<% for quiz in @quizzes do %>
+			
+					<% if quiz.due >= Time.now() %>
+					<li>
+						<%= link_to quiz.name, :action => "show", :id => quiz.id %>
+					</li>
+					<% end %>
+			
+				<% end %>
+				
+			</ul>
+	
+			<p><%= link_to "Create a Quiz", :action => :create %></p>
+
+		</div>
+			
+		<div id="closedQuizzes-tab">
+	
+			<ul>
+			
+				<% for quiz in @quizzes do %>
+			
+					<% if quiz.due < Time.now() %>
+					<li>
+						<%= link_to quiz.name, :action => "show", :id => quiz.id %>
+					</li>
+					<% end %>
+			
+				<% end %>
+			</ul>
+	
+			<p><%= link_to "Create a Quiz", :action => :create %></p>
+
+		</div>
+		
+	<% end %>
+
+</div>

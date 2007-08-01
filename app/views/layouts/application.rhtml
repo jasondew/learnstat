@@ -1,0 +1,87 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN" "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
+	<title>learnSTAT</title>
+	<%= stylesheet_link_tag 'common' %>
+	<%= stylesheet_auto_link_tags %>
+
+	<%= javascript_include_tag 'prototype' %>
+	<%= javascript_include_tag 'custom' %>
+	<%= javascript_auto_include_tags %>
+
+
+  <!-- Ajax Search Api and Stylesheet
+  // Note: If you are already using the AJAX Search API, then do not include it
+  //       or its stylesheet again
+  //
+  // The Key Embedded in the following script tag is designed to work with
+  // the following site:
+  // http://learnstat.net
+  -->
+
+  <script src="http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-nbw&key=ABQIAAAAWI_amHt6Dg5V2H6C7Af-7xSW_oC5C_rLQFhetsLbeT4938VZMRQlatEpDMqTiqgCEe9SokV8Z2NrGQ" type="text/javascript"></script>
+  <style type="text/css"> @import url("http://www.google.com/uds/css/gsearch.css"); </style>
+
+  <!-- News Bar Code and Stylesheet -->
+  <script type="text/javascript"> window._uds_nbw_donotrepair = true; </script>
+  <script src="http://www.google.com/uds/solutions/newsbar/gsnewsbar.js?mode=new" type="text/javascript"></script>
+  <style type="text/css"> @import url("http://www.google.com/uds/solutions/newsbar/gsnewsbar.css"); </style>
+
+  <script type="text/javascript">
+    function LoadNewsBar() {
+      var newsBar;
+      var options = {
+        largeResultSet : true,
+        title : "In the news",
+        horizontal : true,
+	currentResult : document.getElementById("news"),
+        autoExecuteList : {
+          executeList : ["statistics OR statistical data OR research OR methods OR poll"]
+        }
+      }
+
+      newsBar = new GSnewsBar(document.getElementById("newsBar-bar"), options);
+    }
+    // arrange for this function to be called during body.onload
+    // event processing
+    GSearch.setOnLoadCallback(LoadNewsBar);
+  </script>
+
+</head>
+
+<body id="announcements">
+	<%= link_to "<h1><span>learnSTAT</span></h1>", :action => "list" %>
+
+	<div id="navbar">
+		<% if session[:user] %>
+			<p class="left">Welcome, <%= session[:user].first_name || "Anonymous" %>.</p>
+			<p class="right">[<%= link_to "Log Out", :controller => "account", :action => "logout" unless !session[:user] %>]</p>
+		<% end %>
+
+		<br />
+	</div>
+
+	<div id="content">
+		<p class="notices"><%= flash[:notice] %></p>
+		<%= yield %> 
+		<br />
+	</div>
+
+	<div id="footer">
+		<div>
+			<p>&copy; 2007 Jason Dew</p>
+		</div>
+
+		<div> <!-- badges -->
+			<a href="http://www.mozilla.com/en-US/firefox/"><img src="/images/firefox.png" alt="Use Firefox 2.0"/></a>
+			<a href="http://jigsaw.w3.org/css-validator/"><img src="/images/vcss.png" alt="Valid CSS!"/></a>
+			<a href="http://validator.w3.org/check?uri=referer"><img src="/images/valid-xhtml11.png" alt="Valid XHTML 1.1"/></a>
+		</div>
+
+		<br />
+	</div>
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<h2>Register an Account</h2>
+
+<%= form_tag :action=> "signup" %>
+
+ 	<%= error_messages_for 'user' %><br/>
+
+	<fieldset>
+  
+	  <label for="user_login">Desired login:</label><br/>
+	  <%= text_field "user", "login", :size => 30 %><br/>
+
+	  <label for="user_login">Blackboard username:</label><br/>
+	  <%= text_field "user", "blackboard_username", :size => 30 %><br/>
+
+	  <label for="user_login">First name:</label><br/>
+	  <%= text_field "user", "first_name", :size => 30 %><br/>
+
+	  <label for="user_login">Last name:</label><br/>
+	  <%= text_field "user", "last_name", :size => 30 %><br/>
+
+	  <label for="user_password">Choose password:</label><br/>
+	  <%= password_field "user", "password", :size => 30 %><br/>
+
+	  <label for="user_password_confirmation">Confirm password:</label><br/>
+	  <%= password_field "user", "password_confirmation", :size => 30 %><br/>
+
+		<input type="submit" class="submit" value="Register" />
+
+	</fieldset>
+
+</form>
+
+<br />

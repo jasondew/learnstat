@@ -1,0 +1,27 @@
+** Daemonized, any open files are closed.  Look at tmp/pids/mongrel.8101.pid and log/mongrel.8101.log for info.
+** Starting Mongrel listening at 127.0.0.1:8101
+** Starting Rails with production environment...
+/usr/lib64/ruby/1.8/fileutils.rb:243:in `mkdir': File exists - /var/www/learnstat.net/trunk/public/bundles (Errno::EEXIST)
+	from /usr/lib64/ruby/1.8/fileutils.rb:243:in `fu_mkdir'
+	from /usr/lib64/ruby/1.8/fileutils.rb:172:in `mkdir'
+	from /usr/lib64/ruby/1.8/fileutils.rb:171:in `each'
+	from /usr/lib64/ruby/1.8/fileutils.rb:171:in `mkdir'
+	from /var/www/learnstat.net/trunk/config/../vendor/plugins/bundled_resource-0.9/lib/bundled_resource.rb:38:in `create_public_bundle_directory'
+	from /var/www/learnstat.net/trunk/config/../vendor/plugins/bundled_resource-0.9/init.rb:57:in `load_plugin'
+	from /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/initializer.rb:401:in `load_plugin'
+	from /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/core_ext/kernel/reporting.rb:11:in `silence_warnings'
+	 ... 19 levels...
+	from /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+	from /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+	from /usr/bin/mongrel_rails:16:in `load'
+	from /usr/bin/mongrel_rails:16
+** Daemonized, any open files are closed.  Look at tmp/pids/mongrel.8101.pid and log/mongrel.8101.log for info.
+** Starting Mongrel listening at 127.0.0.1:8101
+** Starting Rails with production environment...
+** Rails loaded.
+** Loading any Rails specific GemPlugins
+** Signals ready.  TERM => stop.  USR2 => restart.  INT => stop (no restart).
+** Rails signals registered.  HUP => reload (without restart).  It might not work well.
+** Mongrel available at 127.0.0.1:8101
+** Writing PID file to tmp/pids/mongrel.8101.pid
+** TERM signal received.

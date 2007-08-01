@@ -1,0 +1,18 @@
+<% require_bundle :dynarch_calendar %>
+<h2> Create a Quiz </h2>
+
+<%= error_messages_for :quiz %><br/>
+
+<%= form_tag :action=> "create" %>
+
+<fieldset class="quiz_create">
+  <label for="quiz_name">Quiz name:</label><br/>
+  <%= text_field "quiz", "name", :size => 30 %><br/>
+
+  <label for="quiz_due">Due:</label><br/>
+  <%= dynarch_datetime_select "quiz", "due" %><br/>
+
+	<input type="submit" value="Create" />
+</fieldset>
+
+</form>

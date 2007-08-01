@@ -1,0 +1,59 @@
+<h2><%= @quiz.name %></h2>
+
+<p class="instructions">
+
+	<% if (@quiz.due < Time.now) %>
+		<strong>Completed Assignment:</strong> This assignment was due on <%= datetime_format(@quiz.due) %>.
+		Your answer, if you provided one, is shown in green.  The correct answer to the question is shown
+		underlined.
+	<% else %>
+		<strong>Instructions:</strong> Answer the following questions by clicking on the
+		answer of your choice.  You have until <%= datetime_format(@quiz.due) %> to complete
+		this assignment.  Note that your answers are saved automatically.
+	<% end %>
+</p>
+
+<% form_tag :action => 'submit', :id => @quiz.id do -%>
+
+<ol> <% for quiz_question in (@quiz.quiz_questions) %>
+
+	<% question = quiz_question.question %>
+
+	<li id="question<%= question.id %>"> <%= question.body %>
+		
+		<% if ((@quiz.due < Time.now) and (quiz_question.forgiven)) %>
+			<p><strong> This question has been forgiven.  If you chose an answer for this question, you
+			received full credit. </strong></p>
+		<% end %>
+
+		<ol class="answers"> <% for choice in (question.choices) %>
+
+				<%
+					li_class = ""
+					onclick = "answer(this, #{@quiz.id}, #{question.id}, #{choice.id})"
+
+					if !((@quiz_answers.find { |x| x.choice_id == choice.id }).nil?)
+						li_class += " chosen"
+					end
+
+					if ((@quiz.due < Time.now()) and (choice.id == question.answer))
+						li_class += " answer"
+					end
+				%>
+
+				<li class="<%= li_class %>" onclick="<%= onclick %>">
+					<input class="accessible" type="radio" name="answer[<%= question.id %>]" value="<%= choice.id %>" />
+					<%= choice.body %>
+				</li>
+
+		<% end %> </ol>
+
+	</li>
+
+<% end %> </ol>
+
+	<input class="accessible" type="submit" value="Submit" />
+
+<% end -%>
+
+<p> <%= link_to("Back to the Quiz List", url_for(:action => "list" ), { :id => 'done' }) %> </p>

@@ -1,0 +1,8 @@
+
+
+Processing AccountController#login (for 75.89.239.198 at 2007-07-31 21:28:47) [GET]
+  Session ID: 04fb1eec475a1c5ec9b9e56c86506d87
+  Parameters: {"action"=>"login", "controller"=>"account"}
+Rendering  within layouts/application
+Rendering account/login
+Completed in 0.05919 (16 reqs/sec) | Rendering: 0.05824 (98%) | 200 OK [http://learnstat.net/]

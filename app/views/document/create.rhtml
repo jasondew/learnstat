@@ -1,0 +1,21 @@
+<h2>Add a Document</h2>
+
+<%= form_tag url_for(:action => :save), :multipart => true %>
+
+  <%= error_messages_for 'document' %><br/>
+
+  <fieldset>
+
+    <label for="document_label">Label:</label><br/>
+    <%= text_field "document", "label", :size => 30 %><br/>
+
+    <label for="user_content">Content:</label><br/>
+		<%= file_field "document", "tmp_file" %><br />
+
+    <input type="submit" class="submit" value="Submit" />
+
+  </fieldset>
+
+</form>
+
+<br />

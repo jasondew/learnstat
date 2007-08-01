@@ -1,0 +1,17 @@
+defaults: &defaults
+  adapter: mysql
+  username: webuser
+  password: |n2maS!pw
+  host: mysql.learnstat.net
+
+development:
+  database: learnstat_development
+  <<: *defaults
+
+test:
+  database: learnstat_test
+  <<: *defaults
+
+production:
+  database: learnstat_production
+  <<: *defaults

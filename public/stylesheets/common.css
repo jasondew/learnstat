@@ -1,0 +1,371 @@
+* {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-family:  verdana, arial, sans-serif;
+	font-size: 11pt;
+	background: #c0c0c0;
+}
+
+br {
+	clear: both;
+	height: 0;
+}
+
+em {
+	font-style: oblique;
+	font-weight: normal;
+}
+
+img {
+	border: none;
+}
+
+h1 {
+	display: block;
+	margin: 0 auto;
+	width: 798px;
+	height: 100px;
+	border: 1px solid #111;
+	border-width: 0 1px;
+	background: #FFF url("../images/learnstat-logo.png") no-repeat;
+}
+
+h1 span {
+	display: none;
+}
+
+h2 {
+	font-size: 150%;
+	padding: 5px 0 5px 10px;
+	font-family: tahoma, arial, sans-serif;
+}
+
+pre {
+  background-color: #eee;
+  padding: 10px;
+  font-size: 11px;
+}
+
+a, a.visited, a.active {
+	text-decoration: none;
+	color: #990000;
+}
+
+p {
+	padding: 5px 10px;
+}
+
+p.instructions {
+	width: 75%;
+	margin: 10px;
+	padding: 4px;
+	border: 1px solid #999;
+	color: #333;
+}
+
+fieldset {
+	margin: 5px 10px;
+	padding: 5px;
+	width: 30%;
+}
+
+input.submit {
+	width: 5em;
+	margin: 5px auto;
+}
+
+input {
+	margin-bottom: 5px;
+}
+
+ul, ol {
+	margin: 10px 35px;
+}
+
+ol ol {
+	list-style-type: lower-latin;
+}
+
+#navbar a:hover, a:hover {
+	color: #990000;
+}
+
+#navbar {
+	margin: 0 auto;
+	background: #343434;
+	width: 798px;
+	border: 1px solid #111;
+	border-width: 0 1px;
+	font-weight: bold;
+	font-size: 85%;
+	font-variant: small-caps;
+	text-align: center;
+	padding: 4px 0;
+}
+
+#navbar p {
+	padding: 0 4px;
+	color: #909090;
+}
+
+#navbar p.left { float: left; }
+#navbar p.right { float: right; }
+
+#navbar a {
+	color: #909090;
+}
+
+div#content {
+	margin: 0 auto;
+	background: white;
+	width: 798px;
+	border: 1px solid #111;
+	border-width: 0 1px;
+	min-height: 200px;
+}
+
+#footer {
+	margin: 0 auto;
+	background: #343434;
+	width: 798px;
+	border: 1px solid #111;
+	color: #d0d0d0;
+	font-weight: bold;
+	font-size: 85%;
+	font-variant: small-caps;
+}
+
+#footer div {
+	float: right;
+	margin: 4px 10px;
+}
+
+#footer div:first-child { float: left; }
+
+.fieldWithErrors {
+  padding: 2px;
+  background-color: red;
+  display: table;
+}
+
+#errorExplanation {
+  width: 400px;
+  border: 2px solid red;
+  padding: 7px;
+  padding-bottom: 12px;
+  margin-bottom: 20px;
+  background-color: #f0f0f0;
+}
+
+#errorExplanation h2 {
+  text-align: left;
+  font-weight: bold;
+  padding: 5px 5px 5px 15px;
+  font-size: 12px;
+  margin: -7px;
+  background-color: #c00;
+  color: #fff;
+}
+
+#errorExplanation p {
+  color: #333;
+  margin-bottom: 0;
+  padding: 5px;
+}
+
+#errorExplanation ul li {
+  font-size: 12px;
+  list-style: square;
+}
+
+div.uploadStatus {
+  margin: 5px;
+}
+
+div.progressBar {
+  margin: 5px;
+}
+
+div.progressBar div.border {
+  background-color: #fff;
+  border: 1px solid grey;
+  width: 100%;
+}
+
+div.progressBar div.background {
+  background-color: #333;
+  height: 18px;
+  width: 0%;
+}
+
+li.question {
+	margin-bottom: 40px;
+}
+
+.question a {
+	display: block;
+	text-align: right;
+}
+
+li.added {
+	border: 2px solid green;
+}
+
+li.added a {
+	display: none;
+}
+
+li.answer {
+}
+
+ol.answers li:hover {
+	cursor: pointer;
+	background: #ccf;
+}
+
+ol.answers li.chosen {
+	color: green;
+}
+
+ol.answers li.answer {
+	text-decoration: underline;
+}
+
+p.notices {
+	color: green;
+	font-weight: bold;
+	padding: 0 10px;
+}
+
+.answer-block {
+	border: 1px solid #666;
+	margin-top: 10px;
+}
+
+.choices {
+	width: 310px;
+	float: left;
+	margin-right: 5px;
+}
+
+.analysis {
+	width: 350px;
+	float: right;
+	margin: 10px 5px;
+	display: none;
+}
+
+#summary {
+	font-size: 75%;
+	margin: 10px;
+}
+
+#gradebook {
+	border-collapse: collapse;
+}
+
+#gradebook th {
+	border-bottom: 1px solid #333;
+}
+
+#gradebook th, td {
+	padding: 4px;
+}
+
+#gradebook .data {
+	text-align: right;
+}
+
+.quiz_create select {
+	width: 3.5em;
+}
+
+#tabs {
+	clear: both;
+	padding-top: 10px;
+}
+
+#tabs ul {
+	list-style-type: none;
+}
+
+#tabNavigation {
+	float: left;
+	width: 100%;
+	background: #DAE0D2 url("../images/bg.gif") repeat-x bottom;
+	font-size: 93%;
+	line-height: normal;
+	display: none;
+}
+
+#tabNavigation ul {
+	margin: 0;
+	padding: 10px 10px 0;
+	list-style: none;
+}
+
+#tabNavigation li {
+	float: left;
+	background: url("../images/left_both.gif") no-repeat left top;
+	margin: 0;
+	padding: 0 0 0 9px;
+	border-bottom: 1px solid #765;
+}
+
+#tabNavigation a {
+	float: left;
+	display: block;
+	width: .1em;
+	background: url("../images/right_both.gif") no-repeat right top;
+	padding: 5px 15px 4px 6px;
+	text-decoration: none;
+	font-weight: bold;
+	color: #765;
+}
+
+#tabNavigation > ul a {width: auto;}
+
+	/* Commented Backslash Hack hides rule from IE5-Mac \*/
+#tabNavigation a {float: none;}
+
+	/* End IE5-Mac hack */
+#tabNavigation a:hover {
+	color: #333;
+}
+
+#announcements #nav-announcements, #documents #nav-documents,
+#openQuizzes #nav-openQuizzes, #closedQuizzes #nav-closedQuizzes {
+	background-position: 0 -150px;
+	border-width: 0;
+}
+
+#announcements #nav-announcements a, #documents #nav-documents a,
+#openQuizzes #nav-openQuizzes a, #closedQuizzes #nav-closedQuizzes a {
+	background-position: 100% -150px;
+	padding-bottom: 5px;
+	color: #333;
+}
+
+#tabNavigation li:hover, #tabNavigation li:hover a {
+	background-position: 0% -150px;
+	color: #333;
+}
+
+#tabNavigation li:hover a {
+	background-position: 100% -150px;
+}
+
+#news {
+	margin: 10px;
+	padding: 5px;
+	border: 1px solid #999;
+}
+
+#newsContainer {
+	margin: 10px 10px 10px 20px;
+}
+
+.unaccessible { display: none; }
