@@ -11,44 +11,6 @@
 	<%= javascript_include_tag 'custom' %>
 	<%= javascript_auto_include_tags %>
 
-
-  <!-- Ajax Search Api and Stylesheet
-  // Note: If you are already using the AJAX Search API, then do not include it
-  //       or its stylesheet again
-  //
-  // The Key Embedded in the following script tag is designed to work with
-  // the following site:
-  // http://learnstat.net
-  -->
-
-  <script src="http://www.google.com/uds/api?file=uds.js&v=1.0&source=uds-nbw&key=ABQIAAAAWI_amHt6Dg5V2H6C7Af-7xSW_oC5C_rLQFhetsLbeT4938VZMRQlatEpDMqTiqgCEe9SokV8Z2NrGQ" type="text/javascript"></script>
-  <style type="text/css"> @import url("http://www.google.com/uds/css/gsearch.css"); </style>
-
-  <!-- News Bar Code and Stylesheet -->
-  <script type="text/javascript"> window._uds_nbw_donotrepair = true; </script>
-  <script src="http://www.google.com/uds/solutions/newsbar/gsnewsbar.js?mode=new" type="text/javascript"></script>
-  <style type="text/css"> @import url("http://www.google.com/uds/solutions/newsbar/gsnewsbar.css"); </style>
-
-  <script type="text/javascript">
-    function LoadNewsBar() {
-      var newsBar;
-      var options = {
-        largeResultSet : true,
-        title : "In the news",
-        horizontal : true,
-	currentResult : document.getElementById("news"),
-        autoExecuteList : {
-          executeList : ["statistics OR statistical data OR research OR methods OR poll"]
-        }
-      }
-
-      newsBar = new GSnewsBar(document.getElementById("newsBar-bar"), options);
-    }
-    // arrange for this function to be called during body.onload
-    // event processing
-    GSearch.setOnLoadCallback(LoadNewsBar);
-  </script>
-
 </head>
 
 <body id="announcements">
