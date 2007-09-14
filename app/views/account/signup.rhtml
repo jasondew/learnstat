@@ -1,33 +1,23 @@
 <h2>Register an Account</h2>
 
-<%= form_tag :action=> "signup" %>
+<%= error_messages_for :user %>
 
- 	<%= error_messages_for 'user' %><br/>
+<% form_tag :action=> "signup" do %>
+ 
+  <fieldset>
+    <label for="user_login">Email:</label> <%= text_field :user, :email, :size => 30 %><br/>
+    <label for="user_login">Blackboard username:</label> <%= text_field "user", "blackboard_username", :size => 30 %><br/>
+    <label for="user_login">First name:</label> <%= text_field "user", "first_name", :size => 30 %><br/>
+    <label for="user_login">Last name:</label> <%= text_field "user", "last_name", :size => 30 %><br/>
+  </fieldset>
 
-	<fieldset>
-  
-	  <label for="user_login">Desired login:</label><br/>
-	  <%= text_field "user", "login", :size => 30 %><br/>
+  <fieldset>
+    <label for="user_login">Desired username:</label> <%= text_field :user, :login, :size => 30 %><br/>
+    <label for="user_password">Choose password:</label> <%= password_field :user, :password, :size => 30 %><br/>
+    <label for="user_password_confirmation">Confirm password:</label> <%= password_field :user, :password_confirmation, :size => 30 %><br/>
+    <label for="user_registration_code">Registration code:</label> <%= text_field :user, :registration_code, :size => 30 %><br/>
+  </fieldset>
 
-	  <label for="user_login">Blackboard username:</label><br/>
-	  <%= text_field "user", "blackboard_username", :size => 30 %><br/>
+  <%= submit_tag 'Signup' %>
 
-	  <label for="user_login">First name:</label><br/>
-	  <%= text_field "user", "first_name", :size => 30 %><br/>
-
-	  <label for="user_login">Last name:</label><br/>
-	  <%= text_field "user", "last_name", :size => 30 %><br/>
-
-	  <label for="user_password">Choose password:</label><br/>
-	  <%= password_field "user", "password", :size => 30 %><br/>
-
-	  <label for="user_password_confirmation">Confirm password:</label><br/>
-	  <%= password_field "user", "password_confirmation", :size => 30 %><br/>
-
-		<input type="submit" class="submit" value="Register" />
-
-	</fieldset>
-
-</form>
-
-<br />
+<% end %>

@@ -1,10 +1,9 @@
 require 'digest/sha1'
-
-class User < ActiveRecord::Base
+class <%= class_name %> < ActiveRecord::Base
   # Virtual attribute for the unencrypted password
-  attr_accessor :password, :registration_code
+  attr_accessor :password
 
-  validates_presence_of     :login, :email, :blackboard_username
+  validates_presence_of     :login, :email
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
   validates_length_of       :password, :within => 4..40, :if => :password_required?
@@ -12,13 +11,7 @@ class User < ActiveRecord::Base
   validates_length_of       :login,    :within => 3..40
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :email, :case_sensitive => false
-  validates_format_of       :registration_code, :with => /^STAT110F07$/i
-
   before_save :encrypt_password
-
-  def name
-    first_name || 'Anonymous'
-  end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
@@ -38,6 +31,23 @@ class User < ActiveRecord::Base
 
   def authenticated?(password)
     crypted_password == encrypt(password)
+  end
+
+  def remember_token?
+    remember_token_expires_at && Time.now.utc < remember_token_expires_at 
+  end
+
+  # These create and unset the fields required for remembering users between browser closes
+  def remember_me
+    self.remember_token_expires_at = 2.weeks.from_now.utc
+    self.remember_token            = encrypt("#{email}--#{remember_token_expires_at}")
+    save(false)
+  end
+
+  def forget_me
+    self.remember_token_expires_at = nil
+    self.remember_token            = nil
+    save(false)
   end
 
   protected

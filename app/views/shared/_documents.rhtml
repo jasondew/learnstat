@@ -1,0 +1,16 @@
+<h2 class="accessible">Documents</h2>
+	
+<ul>
+		
+  <% @documents.each do |document| %>
+
+    <li>
+      <h3><%= link_to document.label, :controller => :document, :action => :show, :id => document.id %></h3>
+      <em>added <%= datetime_format(document.created_at) %></em>
+    </li>
+		
+  <% end %>
+
+  <%= 'There are no documents at this time.' if @documents.empty? %>
+		
+</ul>

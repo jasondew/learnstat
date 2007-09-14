@@ -1,0 +1,13 @@
+<h2 class="accessible">Closed Quizzes</h2>
+	
+<ul>
+			
+<% @closed_quizzes.each do |quiz| %>
+			
+  <li> <%= link_to quiz.name, :action => "show", :id => quiz.id %>, <%= quiz.info %> </li>
+
+<% end %>
+
+<%= 'There are no closed quizzes at this time.' if @closed_quizzes.empty? %>
+
+</ul>

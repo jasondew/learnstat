@@ -47,4 +47,5 @@ window.onload = function() {
 	if (document.getElementById('documents-tab')) { $('documents-tab').style.display = "none"; }
 	if (document.getElementById('openQuizzes-tab')) { $('openQuizzes-tab').style.display = "none"; }
 	if (document.getElementById('closedQuizzes-tab')) { $('closedQuizzes-tab').style.display = "none"; }
+	if (document.getElementById('gradebook-tab')) { $('gradebook-tab').style.display = "none"; }
 }

@@ -4,22 +4,23 @@
 <head>
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>learnSTAT</title>
-	<%= stylesheet_link_tag 'common' %>
+
+  <%= stylesheet_link_tag 'application' %>
 	<%= stylesheet_auto_link_tags %>
 
 	<%= javascript_include_tag 'prototype' %>
-	<%= javascript_include_tag 'custom' %>
+  <%= javascript_include_tag :defaults %>
 	<%= javascript_auto_include_tags %>
 
 </head>
 
 <body id="announcements">
-	<%= link_to "<h1><span>learnSTAT</span></h1>", :action => "list" %>
+	<h1><span><%= link_to 'learnSTAT', :action => :list %></span></h1>
 
 	<div id="navbar">
-		<% if session[:user] %>
-			<p class="left">Welcome, <%= session[:user].first_name || "Anonymous" %>.</p>
-			<p class="right">[<%= link_to "Log Out", :controller => "account", :action => "logout" unless !session[:user] %>]</p>
+		<% if logged_in? %>
+			<p class="left">Welcome, <%= current_user.name %>.</p>
+			<p class="right">[<%= link_to 'Log Out', :controller => :account, :action => :logout %>]</p>
 		<% end %>
 
 		<br />

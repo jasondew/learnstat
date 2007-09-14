@@ -2,15 +2,9 @@ class StudentController < ApplicationController
 	before_filter :login_required
 
 	def index
-		redirect_to :action => "list"
-	end
-
-	def list
-		@user = User.find(session[:user].id)
-		@quizzes = Quiz.find(:all, :order => "due desc")
-		@user_answers = @user.answers
 		@announcements = Announcement.find(:all, :order => "created_at desc", :limit => 3)
 		@documents = Document.find(:all, :order => "id")
+		@open_quizzes, @closed_quizzes = Quiz.find(:all, :order => 'due desc').partition {|quiz| quiz.open? }
 	end
 
 	def show

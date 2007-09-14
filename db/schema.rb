@@ -35,7 +35,7 @@ ActiveRecord::Schema.define(:version => 20) do
   create_table "grades", :force => true do |t|
     t.column "user_id",    :integer
     t.column "quiz_id",    :integer
-    t.column "grade",      :decimal,  :default => 0.0
+    t.column "value",      :decimal,  :precision => 6, :scale => 2, :default => 0.0
     t.column "updated_at", :datetime
   end
 
@@ -58,12 +58,16 @@ ActiveRecord::Schema.define(:version => 20) do
   end
 
   create_table "users", :force => true do |t|
-    t.column "blackboard_username", :string
+    t.column "login",               :string
+    t.column "email",               :string
     t.column "first_name",          :string
     t.column "last_name",           :string
-    t.column "password",            :string
-    t.column "instructor",          :boolean,               :default => false
-    t.column "login",               :string,  :limit => 80
+    t.column "crypted_password",    :string,   :limit => 40
+    t.column "salt",                :string,   :limit => 40
+    t.column "created_at",          :datetime
+    t.column "updated_at",          :datetime
+    t.column "blackboard_username", :string
+    t.column "instructor",          :boolean,                :default => false
   end
 
 end

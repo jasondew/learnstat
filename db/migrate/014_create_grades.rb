@@ -3,7 +3,7 @@ class CreateGrades < ActiveRecord::Migration
     create_table :grades do |t|
 			t.column :user_id, :int
 			t.column :quiz_id, :int
-			t.column :grade, :decimal
+			t.column :value, :decimal, { :precision => 6, :default => 0, :scale => 2 }
 			t.column :updated_at, :datetime
     end
   end

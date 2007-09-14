@@ -3,13 +3,19 @@ class InstructorController < ApplicationController
 	before_filter :verify_instructor
 
 	def index
-		redirect_to :action => "list"
-	end
-
-	def list
-		@quizzes = Quiz.find(:all, :order => "due desc")
+    @students = User.find :all, :conditions => { :instructor => false }
 		@announcements = Announcement.find(:all, :order => "created_at desc")
 		@documents = Document.find(:all, :order => "id")
+
+    @quizzes = Quiz.find :all, :order => 'due desc'
+    @open_quizzes, @closed_quizzes = @quizzes.partition {|quiz| quiz.open? }
+
+    @grades = Grade.find :all
+    @gradebook = Hash.new { |h,k| h[k]= Hash.new }
+
+    @grades.each do |grade|
+      @gradebook[grade.user_id][grade.quiz_id] = grade_format(grade.value)
+    end
 	end
 
 	def create

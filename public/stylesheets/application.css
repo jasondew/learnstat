@@ -263,19 +263,19 @@ p.notices {
 	margin: 10px;
 }
 
-#gradebook {
+#gradebook-table {
 	border-collapse: collapse;
 }
 
-#gradebook th {
+#gradebook-table th {
 	border-bottom: 1px solid #333;
 }
 
-#gradebook th, td {
+#gradebook-table th, td {
 	padding: 4px;
 }
 
-#gradebook .data {
+#gradebook-table .data {
 	text-align: right;
 }
 
@@ -337,13 +337,15 @@ p.notices {
 }
 
 #announcements #nav-announcements, #documents #nav-documents,
-#openQuizzes #nav-openQuizzes, #closedQuizzes #nav-closedQuizzes {
+#openQuizzes #nav-openQuizzes, #closedQuizzes #nav-closedQuizzes,
+#gradebook #nav-gradebook {
 	background-position: 0 -150px;
 	border-width: 0;
 }
 
 #announcements #nav-announcements a, #documents #nav-documents a,
-#openQuizzes #nav-openQuizzes a, #closedQuizzes #nav-closedQuizzes a {
+#openQuizzes #nav-openQuizzes a, #closedQuizzes #nav-closedQuizzes a,
+#gradebook #nav-gradebook a {
 	background-position: 100% -150px;
 	padding-bottom: 5px;
 	color: #333;

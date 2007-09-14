@@ -1,0 +1,31 @@
+<%= render :partial => 'shared/tabs' %>
+
+<%= error_messages_for :answer, :grade %>
+
+<div id="tabs">
+	
+	<div id="announcements-tab">
+    <%= render :partial => 'shared/announcements' %>
+		<p><%= link_to "Add an Announcement", :controller => :announcement, :action => :create %></p>
+	</div>
+	
+	<div id="documents-tab">
+    <%= render :partial => 'shared/documents' %>
+		<p><%= link_to "Add a Document", :controller => :document, :action => :create %></p>
+	</div>
+		
+	<div id="openQuizzes-tab">
+    <%= render :partial => 'shared/documents' %>
+		<p><%= link_to "Add a Quiz", :action => :create %></p>
+	</div>
+			
+	<div id="closedQuizzes-tab">
+    <%= render :partial => 'shared/documents' %>
+		<p><%= link_to "Add a Quiz", :action => :create %></p>
+	</div>
+
+  <div id="gradebook-tab">
+    <%= render :partial => 'shared/gradebook' %>
+  </div>
+
+</div>

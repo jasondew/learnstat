@@ -1,0 +1,23 @@
+<h2 class="accessible">Announcements</h2>
+	
+<ul>
+		
+<% if announcements.empty? %>
+		
+  <li> There are no announcements at this time. </li>
+		
+<% else %>
+		
+  <% announcements.each do |announcement| %>
+		
+    <li>
+      <h3><%= announcement.title %></h3>
+      <em> Posted by <%= announcement.user.first_name %> <%= announcement.user.last_name %> on <%= datetime_format(announcement.created_at) %> </em>
+      <p> <%= announcement.content %> </p>
+    </li>
+		
+  <% end %>
+		
+<% end %>
+			
+</ul>

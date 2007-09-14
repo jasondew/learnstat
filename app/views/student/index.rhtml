@@ -1,0 +1,12 @@
+<%= render :partial => 'shared/tabs' %>
+
+<%= error_messages_for :answer, :grade %>
+
+<div id="tabs">
+	
+	<div id="announcements-tab"> <%= render :partial => 'shared/announcements' %> </div>
+	<div id="documents-tab"> <%= render :partial => 'shared/documents' %> </div>
+  <div id="openQuizzes-tab"> <%= render :partial => 'shared/open_quizzes' %> </div>
+	<div id="closedQuizzes-tab"> <%= render :partial => 'shared/closed_quizzes' %> </div>
+
+</div>

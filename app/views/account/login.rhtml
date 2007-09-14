@@ -2,16 +2,13 @@
 
 <p> <strong>Please log in or register an account.</strong> </p>
 
-<%= form_tag :action=> "login" %>
+<%= form_tag :action => :login %>
 
 	<fieldset>
-    <label for="user_login">Username:</label><br/>
-    <input type="text" name="user_login" id="user_login" size="30" value=""/> <br/>
+    <label for="login">Username:</label><br/> <%= text_field_tag 'login' %> <br />
+    <label for="password">Password:</label><br/> <%= password_field_tag 'password' %> <br />
 
-    <label for="user_password">Password:</label><br/>
-    <input type="password" name="user_password" id="user_password" size="30"/> <br />
-
-    <input type="submit" class="submit" name="login" value="Login" />
+    <%= submit_tag 'Login' %>
 	</fieldset>
 
 </form>

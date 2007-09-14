@@ -1,46 +1,41 @@
 class AccountController < ApplicationController
 
   def login
-    session[:user] = nil
+    return unless request.post?
 
-    case request.method
-      when :post
-        if session[:user] = User.authenticate(params[:user_login], params[:user_password])
-          flash[:notice]  = "Login successful."
-					@user = User.find( :first, :conditions => ["login = ?", params[:user_login]] );
+    self.current_user = User.authenticate(params[:login], params[:password])
+    flash[:notice] = logged_in? ? 'Logged in successfully.' : 'Unable to log you in, please check your username and password.'
 
-					if @user.instructor
-          	redirect_to :controller => :instructor, :action => "index"
-					else
-	          redirect_to :controller => :student, :action => "index"
-					end
-        else
-          @login = params[:user_login]
-          flash[:notice]  = "Login unsuccessful."
-					redirect_to :action => "login"
-      end
-    end
+    redirect
+  end
+
+  def signup
+    @user = User.new(params[:user])
+    return unless request.post?
+
+    @user.save!
+    self.current_user = @user
+
+    redirect
+    flash[:notice] = "Thanks for signing up!"
+
+    rescue ActiveRecord::RecordInvalid
+      render :action => :signup
   end
   
-  def signup
-    case request.method
-      when :post
-        @user = User.new(params[:user])
-        
-        if @user.save      
-          flash[:notice]  = "Signup successful."
-          redirect_to :action => "login"
-        end
-
-      when :get
-        @user = User.new
-    end      
-  end  
-    
   def logout
-    session[:user] = nil
-		flash[:notice] = "Logout successful."
-		redirect_to :action => "login"
+    reset_session
+    redirect
+    flash[:notice] = "You have been logged out."
   end
-    
+
+  private
+
+  def redirect
+    if logged_in?
+      redirect_to :controller => (current_user.instructor? ? :instructor : :student)
+    else
+      redirect_to :action => :login
+    end
+  end
 end
