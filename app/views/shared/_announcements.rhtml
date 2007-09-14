@@ -12,7 +12,7 @@
 		
     <li>
       <h3><%= announcement.title %></h3>
-      <em> Posted by <%= announcement.user.first_name %> <%= announcement.user.last_name %> on <%= datetime_format(announcement.created_at) %> </em>
+      <span class="information">Posted by <%= announcement.user.first_name %> <%= announcement.user.last_name %> on <%= datetime_format(announcement.created_at) %> </span>
       <p> <%= announcement.content %> </p>
     </li>
 		

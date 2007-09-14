@@ -6,15 +6,12 @@ class Quiz < ActiveRecord::Base
 	validates_presence_of :due
 
   def open?
-    due <= Time.now
+    due >= Time.now
   end
 
-  def info
-    attempted? ? "Attempted, grade: #{ grade_format( grade ) }" : 'Not attemped.'
-  end
-
-  def grade
-    current_user.grades.detect {|grade| grade.quiz_id == id }.value
+  def participation
+    students = User.find :all, :conditions => { :instructor => false }
+    grades.size / students.size.to_f
   end
 
 end

@@ -43,6 +43,11 @@ h2 {
 	font-family: tahoma, arial, sans-serif;
 }
 
+h3 {
+  font-family: georgia, serif;
+  font-size: 150%;
+}
+
 pre {
   background-color: #eee;
   padding: 10px;
@@ -371,3 +376,8 @@ p.notices {
 }
 
 .unaccessible { display: none; }
+
+.information {
+  font-style: italic;
+  font-size: 75%;
+}

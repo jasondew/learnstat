@@ -8,7 +8,7 @@ class CreateDocuments < ActiveRecord::Migration
       t.column :content_type, :string
     end
 
-		execute "ALTER TABLE `documents` MODIFY `content` mediumblob"
+#		execute "ALTER TABLE `documents` MODIFY `content` mediumblob"
   end
 
   def self.down

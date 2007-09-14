@@ -20,6 +20,15 @@ class User < ActiveRecord::Base
     first_name || 'Anonymous'
   end
 
+  def grade(quiz_id)
+    grade = Grade.find_by_user_id_and_quiz_id id, quiz_id
+    grade ? grade.value : nil
+  end
+
+  def attempted?(quiz_id)
+    ! grade(quiz_id).nil?
+  end
+
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
   def self.authenticate(login, password)
     u = find_by_login(login) # need to get the salt

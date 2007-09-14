@@ -6,22 +6,22 @@
 	
 	<div id="announcements-tab">
     <%= render :partial => 'shared/announcements' %>
-		<p><%= link_to "Add an Announcement", :controller => :announcement, :action => :create %></p>
+		<p><%= link_to "Add an Announcement", :controller => :announcement, :action => :new %></p>
 	</div>
 	
 	<div id="documents-tab">
     <%= render :partial => 'shared/documents' %>
-		<p><%= link_to "Add a Document", :controller => :document, :action => :create %></p>
+		<p><%= link_to "Add a Document", :controller => :document, :action => :new %></p>
 	</div>
 		
 	<div id="openQuizzes-tab">
-    <%= render :partial => 'shared/documents' %>
-		<p><%= link_to "Add a Quiz", :action => :create %></p>
+    <%= render :partial => 'shared/open_quizzes' %>
+		<p><%= link_to "Add a Quiz", :controller => :quiz, :action => :new %></p>
 	</div>
 			
 	<div id="closedQuizzes-tab">
-    <%= render :partial => 'shared/documents' %>
-		<p><%= link_to "Add a Quiz", :action => :create %></p>
+    <%= render :partial => 'shared/closed_quizzes' %>
+		<p><%= link_to "Add a Quiz", :controller => :quiz, :action => :new %></p>
 	</div>
 
   <div id="gradebook-tab">

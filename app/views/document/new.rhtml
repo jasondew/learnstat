@@ -1,8 +1,8 @@
 <h2>Add a Document</h2>
 
-<%= form_tag url_for(:action => :save), :multipart => true %>
+<% form_tag( { :action => :new }, :multipart => true ) do %>
 
-  <%= error_messages_for 'document' %><br/>
+  <%= error_messages_for 'document' %>
 
   <fieldset>
 
@@ -16,6 +16,4 @@
 
   </fieldset>
 
-</form>
-
-<br />
+<% end %>

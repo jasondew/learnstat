@@ -6,7 +6,7 @@
 
     <li>
       <h3><%= link_to document.label, :controller => :document, :action => :show, :id => document.id %></h3>
-      <em>added <%= datetime_format(document.created_at) %></em>
+      <span class="information">added <%= datetime_format(document.created_at) %></span>
     </li>
 		
   <% end %>

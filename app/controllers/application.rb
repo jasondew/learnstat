@@ -14,9 +14,15 @@ class ApplicationController < ActionController::Base
   end
 
   def grade_format(grade)
+    return '**' unless grade
     (((grade * 10000).round) / 100.0).to_s + "%"
   end
 
-  helper_method :datetime_format, :grade_format
+  def percent_format(number)
+    return '**' unless number
+    ((number * 10000).round / 100.0).to_s + '%'
+  end
+
+  helper_method :datetime_format, :grade_format, :percent_format
 
 end
