@@ -1,0 +1,6 @@
+student_quiz_1:
+ id: 1
+ user_id: 2
+ quiz_id: 1
+ value: 0.725
+ updated_at: <%= 2.days.ago %>

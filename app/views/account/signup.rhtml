@@ -5,7 +5,7 @@
 <% form_tag :action=> "signup" do %>
  
   <fieldset>
-    <label for="user_login">Email:</label> <%= text_field :user, :email, :size => 30 %><br/>
+    <label for="user_login">Email:</label> <br /> <%= text_field :user, :email, :size => 30 %><br/>
     <label for="user_login">Blackboard username:</label> <%= text_field "user", "blackboard_username", :size => 30 %><br/>
     <label for="user_login">First name:</label> <%= text_field "user", "first_name", :size => 30 %><br/>
     <label for="user_login">Last name:</label> <%= text_field "user", "last_name", :size => 30 %><br/>

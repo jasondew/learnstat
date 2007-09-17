@@ -1,0 +1,18 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+one:
+ id: 1
+ quiz_id: 1
+ question_id: 1
+ forgiven: 0
+
+two:
+ id: 2
+ quiz_id: 1
+ question_id: 2
+ forgiven: 0
+
+forgiven:
+ id: 3
+ quiz_id:
+ question_id: 3
+ forgiven: 1

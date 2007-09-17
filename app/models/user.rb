@@ -2,7 +2,7 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
   # Virtual attribute for the unencrypted password
-  attr_accessor :password, :registration_code
+  attr_accessor :password
 
   validates_presence_of     :login, :email, :blackboard_username
   validates_presence_of     :password,                   :if => :password_required?
@@ -20,13 +20,17 @@ class User < ActiveRecord::Base
     first_name || 'Anonymous'
   end
 
-  def grade(quiz_id)
+  def grade_on_quiz(quiz_id)
     grade = Grade.find_by_user_id_and_quiz_id id, quiz_id
     grade ? grade.value : nil
   end
 
-  def attempted?(quiz_id)
-    ! grade(quiz_id).nil?
+  def attempted_quiz?(quiz_id)
+    ! grade_on_quiz(quiz_id).nil?
+  end
+
+  def registration_code=(code)
+    super( code.upcase )
   end
 
   # Authenticates a user by their login name and unencrypted password.  Returns the user or nil.
