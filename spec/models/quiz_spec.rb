@@ -22,7 +22,9 @@ describe Quiz do
   end
 
   it 'should be able to report participation' do
+    @quiz.due = Date.today
     @quiz.save
+
     @quiz.participation.should be_close(0.0, 0.0001)
     @my_quiz.participation.should be_close(1.0, 0.0001)
   end

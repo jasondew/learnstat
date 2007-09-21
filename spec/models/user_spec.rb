@@ -27,6 +27,11 @@ describe User do
     User.new( @valid_attributes.update( { :registration_code => 'stupid' } ) ).save.should == false
   end
 
+  it 'should remember the registration code it was given' do
+    user = User.create @valid_attributes
+    user.registration_code.should == 'STAT110F07'
+  end
+
   it 'should respond with a valid name' do
     @user.name.should == 'Anonymous'
     @my.name.should == 'Jason'
