@@ -1,0 +1,612 @@
+
+
+Processing ApplicationController#index (for 192.168.0.192 at 2007-09-27 20:46:33) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/" with {:method=>:get}):
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing SessionsController#show (for 192.168.0.192 at 2007-09-27 20:46:44) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {"action"=>"show", "controller"=>"sessions"}
+
+
+ActionController::UnknownAction (No action responded to show):
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:46:49) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.00319 (313 reqs/sec) | Rendering: 0.00240 (75%) | 200 OK [http://phoenix/session/new]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 20:47:33) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering users/new
+Completed in 0.00381 (262 reqs/sec) | Rendering: 0.00277 (72%) | 200 OK [http://phoenix/signup]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:47:36) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.00227 (441 reqs/sec) | Rendering: 0.00139 (61%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#destroy (for 192.168.0.192 at 2007-09-27 20:47:40) [GET]
+  Session ID: fee793dfd57caecb9131bc42d7960be5
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://phoenix:3000/
+Completed in 0.00490 (204 reqs/sec) | 302 Found [http://phoenix/logout]
+
+
+Processing ApplicationController#index (for 192.168.0.192 at 2007-09-27 20:47:40) [GET]
+  Session ID: d5926b6cdc1e4a46491fce8466966147
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/" with {:method=>:get}):
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing SessionsController#destroy (for 192.168.0.192 at 2007-09-27 20:48:09) [GET]
+  Session ID: d5926b6cdc1e4a46491fce8466966147
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://phoenix:3000/
+Completed in 0.00503 (198 reqs/sec) | 302 Found [http://phoenix/logout]
+
+
+Processing ApplicationController#index (for 192.168.0.192 at 2007-09-27 20:48:09) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {}
+
+
+ActionController::RoutingError (no route found to match "/" with {:method=>:get}):
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1292:in `recognize_path'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1282:in `recognize'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:40:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (404 Page Not Found)
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:49:02) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.00271 (368 reqs/sec) | Rendering: 0.00164 (60%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:49:27) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering sessions/new
+Completed in 0.00246 (406 reqs/sec) | Rendering: 0.00149 (60%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:49:40) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+
+
+ActionView::TemplateError (undefined local variable or method `stylesheet_auto_link_tags' for #<#<Class:0x2b66ce6436f0>:0x2b66ce6436a0>) on line #9 of app/views/layouts/application.rhtml:
+6: 	<title>learnSTAT</title>
+7: 
+8:   <%= stylesheet_link_tag 'application' %>
+9: 	<%= stylesheet_auto_link_tags %>
+10: 
+11: 	<%= javascript_include_tag 'prototype' %>
+12:   <%= javascript_include_tag :defaults %>
+
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:9:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:50:09) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+
+
+ActionView::TemplateError (No route matches {:action=>"list"}) on line #14 of app/views/layouts/application.rhtml:
+11: </head>
+12: 
+13: <body id="announcements">
+14: 	<h1><span><%= link_to 'learnSTAT', :action => :list %></span></h1>
+15: 
+16: 	<div id="navbar">
+17: 		<% if logged_in? %>
+
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1266:in `generate'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/url_rewriter.rb:104:in `rewrite_path'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/url_rewriter.rb:69:in `rewrite'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:522:in `url_for'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:27:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:27:in `url_for'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:75:in `link_to_without_record_identification'
+    vendor/plugins/simply_helpful/lib/simply_helpful/record_tag_helper.rb:65:in `link_to'
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:14:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:50:56) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+
+
+ActionView::TemplateError (No route matches {:action=>"list"}) on line #14 of app/views/layouts/application.rhtml:
+11: </head>
+12: 
+13: <body id="announcements">
+14: 	<h1><span><%= link_to 'learnSTAT', :action => :list %></span></h1>
+15: 
+16: 	<div id="navbar">
+17: 		<% if logged_in? %>
+
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/routing.rb:1266:in `generate'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/url_rewriter.rb:104:in `rewrite_path'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/url_rewriter.rb:69:in `rewrite'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:522:in `url_for'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:27:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:27:in `url_for'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/helpers/url_helper.rb:75:in `link_to_without_record_identification'
+    vendor/plugins/simply_helpful/lib/simply_helpful/record_tag_helper.rb:65:in `link_to'
+    #{RAILS_ROOT}/app/views/layouts/application.rhtml:14:in `_run_rhtml_47app47views47layouts47application46rhtml'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:326:in `compile_and_render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:301:in `render_template'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_view/base.rb:260:in `render_file'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/layout.rb:254:in `render_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:50:in `render'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:1096:in `perform_action_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:632:in `call_filter'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:619:in `perform_action_without_benchmark'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/benchmarking.rb:66:in `perform_action_without_rescue'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/rescue.rb:83:in `perform_action'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `send'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:430:in `process_without_filters'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/filters.rb:624:in `process_without_session_management_support'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/session_management.rb:114:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/base.rb:330:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/dispatcher.rb:41:in `dispatch'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:78:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:618:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:617:in `process_client'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:736:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `initialize'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `new'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel.rb:720:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:271:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `each'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/configurator.rb:270:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:127:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/lib/mongrel/command.rb:211:in `run'
+    /usr/lib64/ruby/gems/1.8/gems/mongrel-1.0/bin/mongrel_rails:243
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:488:in `load'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/servers/mongrel.rb:60
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib64/ruby/gems/1.8/gems/activesupport-1.4.2/lib/active_support/dependencies.rb:495:in `require'
+    /usr/lib64/ruby/gems/1.8/gems/rails-1.2.3/lib/commands/server.rb:39
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/lib64/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+
+Rendering /usr/lib64/ruby/gems/1.8/gems/actionpack-1.13.3/lib/action_controller/templates/rescues/layout.rhtml (500 Internal Error)
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:52:23) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.02278 (43 reqs/sec) | Rendering: 0.02184 (95%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:52:56) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00559 (178 reqs/sec) | Rendering: 0.00476 (85%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:52:58) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00350 (285 reqs/sec) | Rendering: 0.00262 (74%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:53:46) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00545 (183 reqs/sec) | Rendering: 0.00466 (85%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:53:49) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00340 (294 reqs/sec) | Rendering: 0.00254 (74%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:54:02) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00645 (155 reqs/sec) | Rendering: 0.00535 (82%) | 200 OK [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 20:54:04) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00342 (292 reqs/sec) | Rendering: 0.00258 (75%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 21:03:45) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00508 (196 reqs/sec) | Rendering: 0.00390 (76%) | 200 OK [http://phoenix/login]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 21:03:48) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/new
+Completed in 0.00373 (268 reqs/sec) | Rendering: 0.00290 (77%) | 200 OK [http://phoenix/signup]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 21:05:16) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/new
+Completed in 0.00408 (245 reqs/sec) | Rendering: 0.00296 (72%) | 200 OK [http://phoenix/signup]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 21:05:22) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00479 (208 reqs/sec) | Rendering: 0.00393 (81%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2007-09-27 21:05:48) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering  within layouts/application
+Rendering sessions/new
+Completed in 0.00525 (190 reqs/sec) | Rendering: 0.00424 (80%) | 200 OK [http://phoenix/login]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 21:06:17) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/new
+Completed in 0.00363 (275 reqs/sec) | Rendering: 0.00280 (77%) | 200 OK [http://phoenix/signup]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 21:09:00) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/new
+Completed in 0.00608 (164 reqs/sec) | Rendering: 0.00507 (83%) | 200 OK [http://phoenix/signup]
+
+
+Processing UsersController#new (for 192.168.0.192 at 2007-09-27 21:09:35) [GET]
+  Session ID: b66e052ea8de4c20cc7ce37d768c0725
+  Parameters: {"action"=>"new", "controller"=>"users"}
+Rendering  within layouts/application
+Rendering users/new
+Completed in 0.00590 (169 reqs/sec) | Rendering: 0.00509 (86%) | 200 OK [http://phoenix/signup]

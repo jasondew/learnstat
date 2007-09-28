@@ -6,16 +6,22 @@ class CreateUsers < ActiveRecord::Migration
       t.column :first_name,                :string
       t.column :last_name,                 :string
       t.column :blackboard_username,       :string
-      t.column :registration_code,         :string
+
       t.column :crypted_password,          :string, :limit => 40
       t.column :salt,                      :string, :limit => 40
       t.column :created_at,                :datetime
       t.column :updated_at,                :datetime
+      t.column :remember_token,            :string
+      t.column :remember_token_expires_at, :datetime
+      
+      t.column :activation_code, :string, :limit => 40
+      t.column :activated_at, :datetime
     end
 
     User.create :login => 'jasondew', :email => 'jason.dew@gmail.com', :first_name => 'Jason', :last_name => 'Dew',
-                :blackboard_username => 'dew', :password => 'j4s0nd80', :password_confirmation => 'j4s0nd80',
-                :registration_code => 'stat110f07'
+                :blackboard_username => 'dew', :password => 'password', :password_confirmation => 'password',
+                :activation_code => 'stat110f07'
+
   end
 
   def self.down
