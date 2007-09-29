@@ -245,6 +245,10 @@ p.notices {
 	padding: 0 10px;
 }
 
+.chosen-question {
+  border: 2px solid red;
+}
+
 .answer-block {
 	border: 1px solid #666;
 	margin-top: 10px;

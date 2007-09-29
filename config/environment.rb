@@ -40,7 +40,7 @@ Rails::Initializer.run do |config|
   config.active_record.observers = :user_observer # or whatever you named your model
 
   # Make Active Record use UTC-base instead of local time
-  config.active_record.default_timezone = :utc
+  #config.active_record.default_timezone = :utc
   
   # See Rails::Configuration for more options
 end
