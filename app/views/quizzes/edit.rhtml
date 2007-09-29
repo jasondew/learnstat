@@ -8,11 +8,11 @@
 	<br />
 	
 	Available Questions: <br />
-	
+
 	<ul>
 	  <% @questions.each do |question| %>
 
-      <% quiz_question = @quiz.questions.find_by_question_id question %>
+      <% quiz_question = @quiz.questions.detect {|x| x.question_id == question.id } %>
 	
 	    <li id="<%= dom_id(question) %>" <%= quiz_question ? 'class="chosen-question"' : '' %>>
 

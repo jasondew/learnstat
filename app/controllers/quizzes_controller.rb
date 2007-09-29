@@ -63,7 +63,10 @@ class QuizzesController < ApplicationController
         format.html { redirect_to course_url(@course) }
         format.xml  { head :ok }
       else
-        format.html { render :action => "edit" }
+        format.html {
+          @questions = Question.find :all, :include => :choices
+          render :action => "edit"
+        }
         format.xml  { render :xml => @quiz.errors.to_xml }
       end
     end

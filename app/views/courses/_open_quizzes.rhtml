@@ -4,7 +4,7 @@
 			
 <% @course.open_quizzes.each do |quiz| %>
 
-  <% next unless current_user.instructor? or @course.viewable_at <= Time.now %>
+  <% next unless current_user.instructor? or quiz.viewable_at <= Time.now %>
 
   <li>
     <%= link_to quiz.name, quiz_path(@course, quiz) %>

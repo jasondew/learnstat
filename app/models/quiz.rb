@@ -16,8 +16,7 @@ class Quiz < ActiveRecord::Base
 
   def validate
     self.errors.add( :due_at, 'date must be in the future' ) if self.due_at < Time.now
-    self.errors.add( :viewable_at, 'date must be in the future' ) if self.viewable_at < Time.now
-    self.errors.add( :viewable_at, 'date must be before the due date' ) if self.viewable_at >= self.due
+    self.errors.add( :viewable_at, 'date must be before the due date' ) if self.viewable_at >= self.due_at
   end
 
   def participation
