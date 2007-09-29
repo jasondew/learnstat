@@ -1,0 +1,5 @@
+Title: <%= @announcement.title %> <br />
+Body: <%= @announcement.body %> <br />
+
+<%= link_to 'Edit', edit_announcement_path(@course, @announcement) %> |
+<%= link_to 'Back', course_path(@course) %>

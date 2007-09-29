@@ -1,0 +1,10 @@
+<h2>New quiz</h2>
+
+<%= error_messages_for :quiz %>
+
+<% form_for(:quiz, :url => quizzes_path) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p> <%= submit_tag "Create" %> </p>
+<% end %>
+
+<%= link_to 'Back', course_path(@course) %>

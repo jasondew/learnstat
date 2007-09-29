@@ -1,9 +1,15 @@
 require 'digest/sha1'
+
 class User < ActiveRecord::Base
+
+  has_many :announcements
+  has_many :documents
+  has_many :grades
+
   # Virtual attribute for the unencrypted password
   attr_accessor :password
 
-  validates_presence_of     :login, :email
+  validates_presence_of     :login, :email, :first_name, :last_name
   validates_presence_of     :password,                   :if => :password_required?
   validates_presence_of     :password_confirmation,      :if => :password_required?
   validates_length_of       :password, :within => 4..40, :if => :password_required?
@@ -11,11 +17,33 @@ class User < ActiveRecord::Base
   validates_length_of       :login,    :within => 3..40
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :email, :case_sensitive => false
+
   before_save :encrypt_password
   before_create :make_activation_code 
+
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
-  attr_accessible :login, :email, :password, :password_confirmation
+  attr_accessible :login, :email, :password, :password_confirmation, :first_name, :last_name,
+                  :blackboard_username, :registration_code, :instructor, :remember_me
+
+  def name
+    self.first_name
+  end
+
+  def full_name
+    "#{self.first_name} #{self.last_name}"
+  end
+
+  def validate_on_create
+    course = Course.find_by_registration_code self.registration_code
+
+    if course
+      self.course_id = course.id
+      self.errors.add(:registration_code, 'invalid because the course is closed') if course.registration_closed_at < Time.now
+    else
+      self.errors.add :registration_code
+    end
+  end
   
   # Activates the user in the database.
   def activate

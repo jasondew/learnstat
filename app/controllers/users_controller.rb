@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_filter :login_required
+
   # render new.rhtml
   def new
   end
@@ -8,19 +10,10 @@ class UsersController < ApplicationController
     @user = User.new(params[:user])
     @user.save!
     self.current_user = @user
-    redirect_back_or_default('/')
-    flash[:notice] = "Thanks for signing up!"
+    redirect_to login_url
+    flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail shortly."
   rescue ActiveRecord::RecordInvalid
     render :action => 'new'
-  end
-
-  def activate
-    self.current_user = User.find_by_activation_code(params[:activation_code])
-    if logged_in? && !current_user.activated?
-      current_user.activate
-      flash[:notice] = "Signup complete!"
-    end
-    redirect_back_or_default('/')
   end
 
 end

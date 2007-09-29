@@ -1,12 +1,15 @@
 # This controller handles the login/logout function of the site.  
 class SessionsController < ApplicationController
 
+  skip_before_filter :login_required
+
   # render new.rhtml
   def new
   end
 
   def create
     self.current_user = User.authenticate(params[:login], params[:password])
+
     if logged_in?
       if params[:remember_me] == "1"
         self.current_user.remember_me
@@ -16,6 +19,7 @@ class SessionsController < ApplicationController
       flash[:notice] = "Logged in successfully"
     else
       render :action => 'new'
+      flash[:notice] = "Unable to log in.  Please check your username and password."
     end
   end
 

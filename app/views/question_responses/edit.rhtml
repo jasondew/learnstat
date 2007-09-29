@@ -1,0 +1,12 @@
+<h1>Editing question_response</h1>
+
+<%= error_messages_for :question_response %>
+
+<% form_for(:question_response, :url => question_response_path(@question_response), :html => { :method => :put }) do |f| %>
+  <p>
+    <%= submit_tag "Update" %>
+  </p>
+<% end %>
+
+<%= link_to 'Show', question_response_path(@question_response) %> |
+<%= link_to 'Back', question_responses_path %>

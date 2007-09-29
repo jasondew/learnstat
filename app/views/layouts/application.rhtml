@@ -16,7 +16,7 @@
 	<div id="navbar">
 		<% if logged_in? %>
 			<p class="left">Welcome, <%= current_user.name %>.</p>
-			<p class="right">[<%= link_to 'Log Out', :controller => :account, :action => :logout %>]</p>
+			<p class="right">[<%= link_to 'Log Out', logout_url %>]</p>
 		<% end %>
 
 		<br />

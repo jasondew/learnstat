@@ -1,0 +1,8 @@
+<p>
+Name: <%= @quiz.name %> <br />
+Due: <%= datetime_format( @quiz.due_at ) %> <br />
+Participation: <%= percent_format( @quiz.participation ) %> <br />
+Questions: <%= @quiz.questions.count %>
+</p>
+
+<p> <%= link_to 'Edit', edit_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %> </p>
