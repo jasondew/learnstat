@@ -2,45 +2,63 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 20) do
+ActiveRecord::Schema.define(:version => 10) do
 
   create_table "announcements", :force => true do |t|
+    t.column "course_id",  :integer
     t.column "user_id",    :integer
     t.column "title",      :string
-    t.column "content",    :text
+    t.column "body",       :text
     t.column "created_at", :datetime
   end
 
-  create_table "answers", :force => true do |t|
-    t.column "user_id",     :integer
-    t.column "quiz_id",     :integer
-    t.column "question_id", :integer
-    t.column "choice_id",   :integer
-    t.column "correct",     :boolean
-  end
-
-  create_table "choices", :force => true do |t|
-    t.column "question_id", :integer
-    t.column "body",        :text
+  create_table "courses", :force => true do |t|
+    t.column "title",                  :string
+    t.column "department",             :string
+    t.column "number",                 :string
+    t.column "semester",               :integer
+    t.column "year",                   :integer
+    t.column "section",                :integer
+    t.column "registration_code",      :string
+    t.column "registration_closed_at", :datetime
+    t.column "created_at",             :datetime
+    t.column "updated_at",             :datetime
   end
 
   create_table "documents", :force => true do |t|
+    t.column "course_id",    :integer
+    t.column "user_id",      :integer
     t.column "label",        :string
-    t.column "created_at",   :datetime
-    t.column "content",      :binary
-    t.column "filename",     :string
+    t.column "viewable_at",  :datetime
     t.column "content_type", :string
+    t.column "filename",     :string
+    t.column "size",         :integer
+    t.column "created_at",   :datetime
   end
 
   create_table "grades", :force => true do |t|
-    t.column "user_id",    :integer
-    t.column "quiz_id",    :integer
-    t.column "value",      :decimal,  :precision => 7, :scale => 6, :default => 0.0
-    t.column "updated_at", :datetime
+    t.column "user_id", :integer
+    t.column "quiz_id", :integer
+    t.column "value",   :float
+  end
+
+  create_table "question_choices", :force => true do |t|
+    t.column "question_id", :integer
+    t.column "content",     :text
+  end
+
+  add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
+
+  create_table "question_responses", :force => true do |t|
+    t.column "user_id",            :integer
+    t.column "quiz_id",            :integer
+    t.column "quiz_question_id",   :integer
+    t.column "question_choice_id", :integer
+    t.column "correct",            :boolean
   end
 
   create_table "questions", :force => true do |t|
-    t.column "body",    :text
+    t.column "content", :text
     t.column "answer",  :integer
     t.column "chapter", :integer
   end
@@ -52,23 +70,30 @@ ActiveRecord::Schema.define(:version => 20) do
   end
 
   create_table "quizzes", :force => true do |t|
-    t.column "name",       :string
-    t.column "created_at", :datetime
-    t.column "due",        :datetime
+    t.column "course_id",   :integer
+    t.column "name",        :string
+    t.column "due_at",      :datetime
+    t.column "viewable_at", :datetime
+    t.column "created_at",  :datetime
   end
 
   create_table "users", :force => true do |t|
-    t.column "login",               :string
-    t.column "email",               :string
-    t.column "first_name",          :string
-    t.column "last_name",           :string
-    t.column "blackboard_username", :string
-    t.column "registration_code",   :string
-    t.column "crypted_password",    :string,   :limit => 40
-    t.column "salt",                :string,   :limit => 40
-    t.column "created_at",          :datetime
-    t.column "updated_at",          :datetime
-    t.column "instructor",          :boolean,                :default => false
+    t.column "course_id",                 :integer
+    t.column "login",                     :string
+    t.column "email",                     :string
+    t.column "first_name",                :string
+    t.column "last_name",                 :string
+    t.column "blackboard_username",       :string
+    t.column "registration_code",         :string
+    t.column "instructor",                :boolean,                :default => false
+    t.column "crypted_password",          :string,   :limit => 40
+    t.column "salt",                      :string,   :limit => 40
+    t.column "created_at",                :datetime
+    t.column "updated_at",                :datetime
+    t.column "remember_token",            :string
+    t.column "remember_token_expires_at", :datetime
+    t.column "activation_code",           :string,   :limit => 40
+    t.column "activated_at",              :datetime
   end
 
 end
