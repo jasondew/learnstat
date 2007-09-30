@@ -5,4 +5,8 @@ class QuizQuestion < ActiveRecord::Base
 
   validates_uniqueness_of :question_id, :scope => :quiz_id
 
+  def method_missing(method, *args)
+    self.question.send(method, *args)
+  end
+
 end

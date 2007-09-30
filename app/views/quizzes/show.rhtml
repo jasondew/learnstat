@@ -1,8 +1,35 @@
-<p>
-Name: <%= @quiz.name %> <br />
-Due: <%= datetime_format( @quiz.due_at ) %> <br />
-Participation: <%= percent_format( @quiz.participation ) %> <br />
-Questions: <%= @quiz.questions.count %>
-</p>
+<h3><%= @quiz.name %></h3>
 
-<p> <%= link_to 'Edit', edit_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %> </p>
+<span class="information">
+Due: <%= datetime_format( @quiz.due_at ) %> <br />
+
+<% if current_user.instructor? %>
+  Participation: <%= percent_format( @quiz.participation ) %> <br />
+  Questions: <%= @quiz.questions.count %>
+<% end %>
+</span>
+
+<br />
+
+<ol>
+
+  <% @quiz.questions.each do |question| %>
+
+    <li>
+      <%= question.content %>
+
+      <ol class="answers">
+        <% question.choices.each do |choice| %>
+          <% css_class = '' %>
+          <li <%= css_class %>><%= choice.content %></li>
+        <% end %>
+      </ol>
+    </li>
+
+  <% end %>
+
+</ol>
+
+<br />
+
+<%= link_to 'Edit', edit_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>
