@@ -5,6 +5,7 @@ class User < ActiveRecord::Base
   has_many :announcements
   has_many :documents
   has_many :grades
+  has_many :question_responses
 
   # Virtual attribute for the unencrypted password
   attr_accessor :password

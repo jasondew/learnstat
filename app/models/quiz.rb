@@ -28,6 +28,10 @@ class Quiz < ActiveRecord::Base
     self.due_at <= Time.now
   end
 
+  def closed?
+    self.due_at > Time.now
+  end
+
   def viewable_now?
     self.viewable_at <= Time.now
   end

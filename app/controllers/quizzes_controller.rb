@@ -17,6 +17,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes/1.xml
   def show
     @quiz = @course.quizzes.find(params[:id])
+    @question_responses = current_user.question_responses.find_by_quiz_id @quiz.id
 
     respond_to do |format|
       format.html # show.rhtml
