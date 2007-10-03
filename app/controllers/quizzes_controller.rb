@@ -1,6 +1,7 @@
 class QuizzesController < ApplicationController
 
   before_filter :get_course
+  before_filter :instructor_required, :except => :show
 
   # GET /quizzes
   # GET /quizzes.xml
@@ -17,7 +18,7 @@ class QuizzesController < ApplicationController
   # GET /quizzes/1.xml
   def show
     @quiz = @course.quizzes.find(params[:id])
-    @question_responses = current_user.question_responses.find_by_quiz_id @quiz.id
+    @question_responses = current_user.question_responses.find_all_by_quiz_id @quiz
 
     respond_to do |format|
       format.html # show.rhtml

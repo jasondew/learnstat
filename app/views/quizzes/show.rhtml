@@ -1,4 +1,7 @@
-<h2><%= @quiz.name %></h2>
+<h2>
+  <%= @quiz.name %>
+  <%= link_to image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_quiz_path(@course, @quiz) if current_user.instructor? %>
+</h2>
 
 <p class="instructions">
 
@@ -7,31 +10,34 @@
     Your answer, if you provided one, is shown in green.  The correct answer to the question is shown
     underlined.
   <% else %>
-    <strong>Instructions:</strong> Answer the following questions by clicking on the
+    <strong>Instructions:</strong> Complete the following questions by clicking on the
     answer of your choice.  You have until <%= datetime_format(@quiz.due_at) %> to complete
-    this assignment.  Note that your answers are saved automatically.
+    this assignment.  No assignment, written or otherwise, will be accepted after that time.
+    Note that your answers are saved automatically.
   <% end %>
 </p>
 
 <% if current_user.instructor? %>
-  <span class="information">
-    Participation: <%= percent_format( @quiz.participation ) %> <br />
-    Questions: <%= @quiz.questions.count %>
-  </span>
+  <p>
+    <span class="information">
+      Participation: <%= percent_format( @quiz.participation ) %> <br />
+      Questions: <%= @quiz.questions.count %>
+    </span>
+  </p>
 <% end %>
 
 <br />
 
 <ol>
 
-  <% @quiz.questions.each do |question| %>
+  <% @quiz.questions.each do |quiz_question| %>
 
-    <li>
-      <%= question.content %>
+    <li id="<%= dom_id(quiz_question) %>" <%= question_attributes(quiz_question) %>>
+      <%= quiz_question.content %>
 
       <ol class="answers">
-        <% question.choices.each do |choice| %>
-          <li <%= choice_class(question, choice, @responses) %> <%= choice_onclick(question, choice) %>>
+        <% quiz_question.choices.each do |choice| %>
+          <li id="<%= dom_id(choice) %>" <%= choice_class(quiz_question, choice, @question_responses) %> <%= choice_onclick(quiz_question, choice) %>>
             <%= choice.content %>
           </li>
         <% end %>
@@ -42,6 +48,4 @@
 
 </ol>
 
-<br />
-
-<%= link_to 'Edit', edit_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>
+<p> <%= link_to 'Done', course_path(@course) %> </p>

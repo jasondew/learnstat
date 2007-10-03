@@ -17,7 +17,7 @@
       <% if current_user.instructor? %>
         <%= "#{percent_format(quiz.participation)} participation" %>
       <% else %>
-        <%= "grade: #{quiz.grade_for(current_user)}" %>
+        <%= "grade: #{percent_format(quiz.grade_for current_user)}" %>
       <% end %>
     </span>
   </li>

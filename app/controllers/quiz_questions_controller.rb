@@ -6,7 +6,7 @@ class QuizQuestionsController < ApplicationController
   # POST /quiz_questions
   # POST /quiz_questions.xml
   def create
-    @quiz_question = @quiz.questions.build params[:quiz_question]
+    @quiz_question = @quiz.questions.build :question_id => params[:question_id]
     @question = @quiz_question.question
 
     respond_to do |format|

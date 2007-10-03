@@ -1,19 +1,30 @@
-function answer(obj, quiz_id, question_id, choice_id) {
-	var url = "/student/choose/" + quiz_id;
-	var params = "question_id=" + question_id + "&choice_id=" + choice_id;
+function quiz_error() {
+  alert('There has been a system error, please print this homework and continue on paper.');
+}
 
-	$('done').setAttribute("saved_href", $('done').href);
+function choose_answer(quiz_question_id, choice_id, url, params) {
+  quiz_question = $(quiz_question_id);
+  choice = $(choice_id);
 
-	new Ajax.Request(
-		url,
-		{
-			method: 'get',
-			parameters: params,
-			onSuccess: function(xhr) { $A(obj.parentNode.childNodes).each( function(o) { o.className = ""; } ); obj.className = "chosen"; },
-			onFailure: function(xhr) { alert(xhr.responseText); },
-			onComplete: function(xhr) { $('done').href = $('done').getAttribute("saved_href"); }
-		}
-	);
+  // throttle multiple requests
+  if (quiz_question.getAttribute('disabled') == 'disabled') { return false; }
+  else { quiz_question.setAttribute('disabled', 'disabled'); }
+  
+  new Ajax.Request( url,
+                    { asynchronous : true,
+                      evalScripts  : true,
+                      parameters   : params,
+                      onSuccess    : function(request) { select_choice(quiz_question, choice); quiz_question.setAttribute('disabled', ''); },
+                      onFailure    : function(request) { alert('Your answer was unable to be saved.  Has the due date passed?'); }
+                    }
+                  );
+
+  return true;
+}
+
+function select_choice(quiz_question, choice) {
+  $A(quiz_question.getElementsByTagName('li')).each( function(element) { element.className = ''; } );
+  choice.className = 'selected';
 }
 
 function answerShowHide(obj) {

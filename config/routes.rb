@@ -2,16 +2,19 @@ ActionController::Routing::Routes.draw do |map|
 
   # The priority is based upon order of creation: first created -> highest priority.
   
-  map.resources :users, :name_prefix => 'global_'
+  map.resources :users do |user|
+    user.resources :courses do |course|
+      course.resources :quizzes do |quiz|
+        quiz.resources :grades, :question_responses
+      end
+    end
+  end
+
   map.resources :activations
   map.resource :session, :controller => 'sessions'
 
   map.resources :courses do |course|
     course.resources :announcements, :documents
-
-    map.resources :users do |user|
-      user.resources :grades, :question_responses
-    end
 
     course.resources :quizzes do |quiz|
       quiz.resources :quiz_questions

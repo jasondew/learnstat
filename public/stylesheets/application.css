@@ -231,7 +231,7 @@ ol.answers li:hover {
 	background: #ccf;
 }
 
-ol.answers li.chosen {
+ol.answers li.selected {
 	color: green;
 }
 
