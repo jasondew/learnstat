@@ -15,6 +15,7 @@
 
     <span class="information">
       Mean Score: <%= percent_format quiz.mean_score %> <br />
+      Standard Deviation: <%= number_with_precision quiz.score_standard_deviation, 2 %> <br />
 
       <% if current_user.instructor? %>
         Participation: <%= percent_format quiz.participation %>

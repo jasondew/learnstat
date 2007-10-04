@@ -9629,3 +9629,616 @@ Rendered courses/_closed_quizzes (0.01663)
   [4;35;1mUser Load (0.000394)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
 Rendered courses/_gradebook (0.00252)
 Completed in 0.18935 (5 reqs/sec) | Rendering: 0.12635 (66%) | DB: 0.03718 (19%) | 200 OK [http://phoenix/courses/1]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2007-10-03 21:34:19) [GET]
+  Session ID: 32441a7e81820da69e26875db31afab9
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+
+
+CGI::Session::CookieStore::TamperedWithCookie (CGI::Session::CookieStore::TamperedWithCookie):
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/session/cookie_store.rb:122:in `unmarshal'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/session/cookie_store.rb:81:in `restore'
+    /usr/local/lib/ruby/1.8/cgi/session.rb:304:in `[]'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/cgi_process.rb:128:in `session'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/cgi_process.rb:156:in `stale_session_check!'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/cgi_process.rb:111:in `session'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/base.rb:1081:in `assign_shortcuts_without_flash'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/flash.rb:168:in `assign_shortcuts'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/base.rb:506:in `process_without_filters'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/filters.rb:683:in `process_without_session_management_support'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/session_management.rb:122:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/base.rb:372:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/dispatcher.rb:165:in `handle_request'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/dispatcher.rb:114:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/dispatcher.rb:125:in `dispatch_cgi'
+    /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:78:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `synchronize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/rails.rb:76:in `process'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:618:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:617:in `process_client'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:736:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `initialize'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `new'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel.rb:720:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:271:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `each'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/configurator.rb:270:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:127:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/lib/mongrel/command.rb:211:in `run'
+    /usr/local/lib/ruby/gems/1.8/gems/mongrel-1.0.1/bin/mongrel_rails:243
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:489:in `load'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3.7707/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/local/lib/ruby/gems/1.8/gems/activesupport-1.4.2.7707/lib/active_support/dependencies.rb:496:in `require'
+    /usr/local/lib/ruby/gems/1.8/gems/rails-1.2.3.7707/lib/commands/server.rb:39
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/ruby/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/local/lib/ruby/gems/1.8/gems/actionpack-1.13.3.7707/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2007-10-03 21:34:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001384)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://localhost:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x34f0120 @filter=:login_required>] returned_false.
+Completed in 0.00285 (351 reqs/sec) | DB: 0.00138 (48%) | 302 Found [http://localhost/]
+
+
+Processing SessionsController#new (for 127.0.0.1 at 2007-10-03 21:34:23) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--261b2d46f51a45ed75b56ac38aaabab38e51c1f3
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01012 (98 reqs/sec) | Rendering: 0.00813 (80%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#create (for 127.0.0.1 at 2007-10-03 21:37:44) [POST]
+  Session ID: BAh7CDoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgxjc3JmX2lkIiVlMmRm%0AMzlkMWJkMWQ1NjA3ZWFiNjFmZjZjMDZhMWRlNQ%3D%3D--6be88624a261d072557d41e012e65d82fd5562c3
+  Parameters: {"commit"=>"Login", "authenticity_token"=>"10915be41bcc2fc5023c753a1e726d52915694e4", "action"=>"create", "controller"=>"sessions", "login"=>"jasondew", "password"=>"password"}
+  [4;35;1mUser Load (0.003691)[0m   [0mSELECT * FROM users WHERE (login = 'jasondew' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.003743)[0m   [0;1mSHOW FIELDS FROM users[0m
+Redirected to http://localhost:3000/courses
+Completed in 0.02370 (42 reqs/sec) | DB: 0.00743 (31%) | 302 Found [http://localhost/session]
+
+
+Processing CoursesController#index (for 127.0.0.1 at 2007-10-03 21:37:44) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvOgl1c2VyaQYiCmZsYXNoSUM6J0FjdGlvbkNv%0AbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7BjoLbm90aWNlIhtMb2dnZWQg%0AaW4gc3VjY2Vzc2Z1bGx5BjoKQHVzZWR7BjsIVDoMY3NyZl9pZCIlZTJkZjM5%0AZDFiZDFkNTYwN2VhYjYxZmY2YzA2YTFkZTU%3D--4806baf57bc6b75e666c19d67d0fac8640617096
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.004450)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.003778)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002535)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000997)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.001248)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses', '{\"action\": \"index\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 21:37:44')[0m
+  [4;36;1mSQL (0.001785)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001610)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.003246)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002997)[0m   [0mSELECT * FROM courses [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mSQL (0.001179)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Completed in 0.06886 (14 reqs/sec) | Rendering: 0.00792 (11%) | DB: 0.02382 (34%) | 200 OK [http://localhost/courses]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 21:37:57) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgl1c2VyaQY6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--6ce65a5924ce1563211d8e191932ee159e18b298
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.003915)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.003604)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002749)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000785)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000984)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 21:37:57')[0m
+  [4;36;1mSQL (0.013890)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001699)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.003357)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002369)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00394)
+  [4;36;1mAnnouncement Columns (0.004236)[0m   [0;1mSHOW FIELDS FROM announcements[0m
+  [4;35;1mSQL (0.001100)[0m   [0mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.001599)[0m   [0;1mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.002846)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.02230)
+  [4;36;1mDocument Load (0.002235)[0m   [0;1mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.03460)
+  [4;35;1mQuiz Load (0.001638)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 21:37:57')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.01186)
+  [4;36;1mQuiz Load (0.001881)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 21:37:57')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.002516)[0m   [0mSHOW FIELDS FROM quizzes[0m
+  [4;36;1mQuestionResponse Columns (0.002519)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.003084)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.001044)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;35;1mQuestionResponse Load (0.003176)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mSQL (0.001034)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.002241)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.001476)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;36;1mQuestionResponse Load (0.001947)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.002353)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.001044)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;35;1mQuestionResponse Load (0.001991)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.002002)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.001020)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;36;1mQuestionResponse Load (0.001761)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.05891)
+  [4;35;1mQuiz Load (0.001815)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;36;1mUser Load (0.002847)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00887)
+Completed in 0.27859 (3 reqs/sec) | Rendering: 0.09747 (34%) | DB: 0.08276 (29%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:07:18) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvOgl1c2VyaQYiCmZsYXNoSUM6J0FjdGlvbkNv%0AbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--f5d1a621cef02d2d2d44d1b66ae7a14f9ed58331
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.003734)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.003230)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002518)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000743)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000862)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:07:18')[0m
+  [4;36;1mSQL (0.001461)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001464)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.002927)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002654)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00289)
+  [4;36;1mAnnouncement Columns (0.002635)[0m   [0;1mSHOW FIELDS FROM announcements[0m
+  [4;35;1mSQL (0.001018)[0m   [0mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.001604)[0m   [0;1mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.002551)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.01756)
+  [4;36;1mDocument Load (0.002048)[0m   [0;1mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00853)
+  [4;35;1mQuiz Load (0.001500)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:07:18')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.00932)
+  [4;36;1mQuiz Load (0.001698)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:07:18')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.004126)[0m   [0mSHOW FIELDS FROM quizzes[0m
+  [4;36;1mQuestionResponse Columns (0.002263)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.001714)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000823)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mUser Load (0.003534)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Columns (0.001885)[0m   [0mSHOW FIELDS FROM grades[0m
+  [4;36;1mGrade Load (0.001071)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001862)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;36;1mSQL (0.000807)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001369)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000721)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001424)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001847)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001661)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000772)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001014)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001505)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001581)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000758)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.000987)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001313)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.09021)
+  [4;36;1mQuiz Load (0.001807)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00381)
+Completed in 0.26026 (3 reqs/sec) | Rendering: 0.08928 (34%) | DB: 0.06749 (25%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:13:39) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgl1c2VyaQY6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--6ce65a5924ce1563211d8e191932ee159e18b298
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Columns (0.003973)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.002785)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.002779)[0m   [0;1mSHOW FIELDS FROM audits[0m
+  [4;35;1mSQL (0.000740)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000914)[0m   [0;1mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:13:39')[0m
+  [4;35;1mSQL (0.001546)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.001797)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCourse Columns (0.003574)[0m   [0mSHOW FIELDS FROM courses[0m
+  [4;36;1mCourse Load (0.002373)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00296)
+  [4;35;1mAnnouncement Columns (0.002838)[0m   [0mSHOW FIELDS FROM announcements[0m
+  [4;36;1mSQL (0.000962)[0m   [0;1mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mAnnouncement Load (0.001423)[0m   [0mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mUser Load (0.003164)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.01803)
+  [4;35;1mDocument Load (0.001619)[0m   [0mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00795)
+  [4;36;1mQuiz Load (0.001327)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:13:39')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.00908)
+  [4;35;1mQuiz Load (0.002086)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:13:39')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.002429)[0m   [0;1mSHOW FIELDS FROM quizzes[0m
+  [4;35;1mQuestionResponse Columns (0.002427)[0m   [0mSHOW FIELDS FROM question_responses[0m
+  [4;36;1mQuestionResponse Load (0.001860)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.001104)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mUser Load (0.002614)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Columns (0.002212)[0m   [0;1mSHOW FIELDS FROM grades[0m
+  [4;35;1mGrade Load (0.001656)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.004709)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;35;1mSQL (0.002235)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001936)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000857)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001236)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001772)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.002048)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000845)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001257)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001841)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001451)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.001886)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001211)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.002465)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.08056)
+  [4;35;1mQuiz Load (0.002030)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00433)
+Completed in 0.25279 (3 reqs/sec) | Rendering: 0.07243 (28%) | DB: 0.07598 (30%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:14:14) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvOgl1c2VyaQYiCmZsYXNoSUM6J0FjdGlvbkNv%0AbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--f5d1a621cef02d2d2d44d1b66ae7a14f9ed58331
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.003692)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.003322)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002458)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000671)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.001239)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:14:14')[0m
+  [4;36;1mSQL (0.001238)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001580)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.002920)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002186)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00297)
+  [4;36;1mAnnouncement Columns (0.002432)[0m   [0;1mSHOW FIELDS FROM announcements[0m
+  [4;35;1mSQL (0.000966)[0m   [0mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.001448)[0m   [0;1mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.002689)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.01731)
+  [4;36;1mDocument Load (0.001923)[0m   [0;1mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00825)
+  [4;35;1mQuiz Load (0.003012)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:14:14')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.01082)
+  [4;36;1mQuiz Load (0.001751)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:14:14')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.002218)[0m   [0mSHOW FIELDS FROM quizzes[0m
+  [4;36;1mQuestionResponse Columns (0.002485)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.002052)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.001352)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mUser Load (0.002845)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Columns (0.002139)[0m   [0mSHOW FIELDS FROM grades[0m
+  [4;36;1mGrade Load (0.001280)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.002143)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;36;1mSQL (0.001649)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001614)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000989)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001237)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001805)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001707)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.001412)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001235)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001872)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001863)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000866)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001224)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001513)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.07476)
+  [4;36;1mQuiz Load (0.001765)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00411)
+Completed in 0.24508 (4 reqs/sec) | Rendering: 0.07180 (29%) | DB: 0.07079 (28%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:15:22) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgl1c2VyaQY6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--6ce65a5924ce1563211d8e191932ee159e18b298
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Columns (0.004059)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.003198)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.003059)[0m   [0;1mSHOW FIELDS FROM audits[0m
+  [4;35;1mSQL (0.000763)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.001002)[0m   [0;1mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:15:22')[0m
+  [4;35;1mSQL (0.001287)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.001480)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCourse Columns (0.002957)[0m   [0mSHOW FIELDS FROM courses[0m
+  [4;36;1mCourse Load (0.002350)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00299)
+  [4;35;1mAnnouncement Columns (0.002427)[0m   [0mSHOW FIELDS FROM announcements[0m
+  [4;36;1mSQL (0.000976)[0m   [0;1mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mAnnouncement Load (0.001405)[0m   [0mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mUser Load (0.003190)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.08782)
+  [4;35;1mDocument Load (0.001862)[0m   [0mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00839)
+  [4;36;1mQuiz Load (0.001555)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:15:22')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.00946)
+  [4;35;1mQuiz Load (0.001844)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:15:22')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.002387)[0m   [0;1mSHOW FIELDS FROM quizzes[0m
+  [4;35;1mQuestionResponse Columns (0.002473)[0m   [0mSHOW FIELDS FROM question_responses[0m
+  [4;36;1mQuestionResponse Load (0.001944)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000869)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mUser Load (0.003309)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Columns (0.002206)[0m   [0;1mSHOW FIELDS FROM grades[0m
+  [4;35;1mGrade Load (0.001499)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.002491)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;35;1mSQL (0.001776)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001643)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000934)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001238)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001737)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001705)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000830)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001594)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.002607)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001490)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000970)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001254)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001736)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.07891)
+  [4;35;1mQuiz Load (0.001776)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00409)
+Completed in 0.25216 (3 reqs/sec) | Rendering: 0.14519 (57%) | DB: 0.07188 (28%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:15:52) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvOgl1c2VyaQYiCmZsYXNoSUM6J0FjdGlvbkNv%0AbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--f5d1a621cef02d2d2d44d1b66ae7a14f9ed58331
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.003706)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.002890)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002611)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000722)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.003469)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:15:52')[0m
+  [4;36;1mSQL (0.001248)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001665)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.002909)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002960)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00290)
+  [4;36;1mAnnouncement Columns (0.002360)[0m   [0;1mSHOW FIELDS FROM announcements[0m
+  [4;35;1mSQL (0.001018)[0m   [0mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.001508)[0m   [0;1mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.002702)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.08609)
+  [4;36;1mDocument Load (0.001822)[0m   [0;1mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00839)
+  [4;35;1mQuiz Load (0.001545)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:15:52')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.00949)
+  [4;36;1mQuiz Load (0.001813)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:15:52')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.002358)[0m   [0mSHOW FIELDS FROM quizzes[0m
+  [4;36;1mQuestionResponse Columns (0.002907)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.002900)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000933)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mUser Load (0.002884)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Columns (0.002241)[0m   [0mSHOW FIELDS FROM grades[0m
+  [4;36;1mGrade Load (0.001417)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.002139)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;36;1mSQL (0.002002)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001672)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.001461)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001233)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.002099)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001730)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000871)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.002674)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001984)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001617)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.001166)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001228)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001583)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.08141)
+  [4;36;1mQuiz Load (0.001782)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00412)
+Completed in 0.25570 (3 reqs/sec) | Rendering: 0.14372 (56%) | DB: 0.07583 (29%) | 200 OK [http://localhost/courses/1]
+WARNING: You're using the Ruby-based MySQL library that ships with Rails. This library is not suited for production. Please install the C-based MySQL library instead (gem install mysql).
+  [4;36;1mSQL (0.001065)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mQuiz Load (0.001722)[0m   [0mSELECT * FROM quizzes [0m
+  [4;36;1mQuiz Columns (0.002268)[0m   [0;1mSHOW FIELDS FROM quizzes[0m
+  [4;35;1mSQL (0.001340)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.002776)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.002083)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mUser Load (0.002730)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Columns (0.002132)[0m   [0mSHOW FIELDS FROM grades[0m
+  [4;36;1mUser Columns (0.003422)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mGrade Load (0.001186)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Columns (0.003548)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.002543)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000853)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:17:46) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsAOgl1c2VyaQY6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--6ce65a5924ce1563211d8e191932ee159e18b298
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Columns (0.003673)[0m   [0;1mSHOW FIELDS FROM users[0m
+  [4;35;1mUser Load (0.003020)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.002564)[0m   [0;1mSHOW FIELDS FROM audits[0m
+  [4;35;1mSQL (0.000723)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.001163)[0m   [0;1mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:17:47')[0m
+  [4;35;1mSQL (0.001596)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.001382)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCourse Columns (0.002920)[0m   [0mSHOW FIELDS FROM courses[0m
+  [4;36;1mCourse Load (0.002156)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00290)
+  [4;35;1mAnnouncement Columns (0.002292)[0m   [0mSHOW FIELDS FROM announcements[0m
+  [4;36;1mSQL (0.000927)[0m   [0;1mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mAnnouncement Load (0.001508)[0m   [0mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mUser Load (0.002787)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.01697)
+  [4;35;1mDocument Load (0.005103)[0m   [0mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.08246)
+  [4;36;1mQuiz Load (0.001613)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:17:47')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.00987)
+  [4;35;1mQuiz Load (0.001814)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:17:47')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.002352)[0m   [0;1mSHOW FIELDS FROM quizzes[0m
+  [4;35;1mQuestionResponse Columns (0.004151)[0m   [0mSHOW FIELDS FROM question_responses[0m
+  [4;36;1mQuestionResponse Load (0.002320)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000874)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mUser Load (0.002636)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Columns (0.002207)[0m   [0;1mSHOW FIELDS FROM grades[0m
+  [4;35;1mGrade Load (0.001267)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001971)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;35;1mSQL (0.000794)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001566)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000870)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001424)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.002061)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.020218)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000890)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001675)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001900)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.002982)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000865)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001953)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001455)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.09980)
+  [4;35;1mQuiz Load (0.001913)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00427)
+Completed in 0.27749 (3 reqs/sec) | Rendering: 0.14695 (52%) | DB: 0.09358 (33%) | 200 OK [http://localhost/courses/1]
+
+
+Processing CoursesController#show (for 127.0.0.1 at 2007-10-03 22:18:27) [GET]
+  Session ID: BAh7CToOcmV0dXJuX3RvIgYvOgl1c2VyaQYiCmZsYXNoSUM6J0FjdGlvbkNv%0AbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhhc2h7AAY6CkB1c2VkewA6DGNzcmZf%0AaWQiJWUyZGYzOWQxYmQxZDU2MDdlYWI2MWZmNmMwNmExZGU1--f5d1a621cef02d2d2d44d1b66ae7a14f9ed58331
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.003643)[0m   [0mSHOW FIELDS FROM users[0m
+  [4;36;1mUser Load (0.003405)[0m   [0;1mSELECT * FROM users WHERE (users.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002381)[0m   [0mSHOW FIELDS FROM audits[0m
+  [4;36;1mSQL (0.000747)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000891)[0m   [0mINSERT INTO audits (`url`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', '{\"action\": \"show\", \"id\": \"1\", \"controller\": \"courses\"}', '127.0.0.1', 1, '2007-10-03 22:18:27')[0m
+  [4;36;1mSQL (0.001083)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.001533)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.003738)[0m   [0;1mSHOW FIELDS FROM courses[0m
+  [4;35;1mCourse Load (0.004184)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00287)
+  [4;36;1mAnnouncement Columns (0.003074)[0m   [0;1mSHOW FIELDS FROM announcements[0m
+  [4;35;1mSQL (0.001820)[0m   [0mSELECT count(*) AS count_all FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.001436)[0m   [0;1mSELECT * FROM announcements WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.002500)[0m   [0mSELECT * FROM users WHERE (users.`id` = 1) [0m
+Rendered courses/_announcements (0.01808)
+  [4;36;1mDocument Load (0.002538)[0m   [0;1mSELECT * FROM documents WHERE (documents.course_id = 1) [0m
+Rendered courses/_documents (0.00876)
+  [4;35;1mQuiz Load (0.001491)[0m   [0mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at >= '2007-10-03 22:18:27')) ORDER BY due_at desc[0m
+Rendered courses/_open_quizzes (0.07642)
+  [4;36;1mQuiz Load (0.001599)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1 AND (due_at < '2007-10-03 22:18:27')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.002313)[0m   [0mSHOW FIELDS FROM quizzes[0m
+  [4;36;1mQuestionResponse Columns (0.002383)[0m   [0;1mSHOW FIELDS FROM question_responses[0m
+  [4;35;1mQuestionResponse Load (0.001943)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000899)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mUser Load (0.002759)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Columns (0.002260)[0m   [0mSHOW FIELDS FROM grades[0m
+  [4;36;1mGrade Load (0.001284)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 6) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.002292)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 6) ORDER BY quiz_question_id[0m
+  [4;36;1mSQL (0.001173)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.002600)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.002185)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001604)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 5) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001774)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 5) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;36;1mQuestionResponse Load (0.001737)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) AND (question_responses.`correct` = 1) [0m
+  [4;35;1mSQL (0.000871)[0m   [0mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mGrade Load (0.001249)[0m   [0;1mSELECT * FROM grades WHERE (grades.quiz_id = 3) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;35;1mQuestionResponse Load (0.001882)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 3) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+  [4;35;1mQuestionResponse Load (0.001625)[0m   [0mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) AND (question_responses.`correct` = 1) [0m
+  [4;36;1mSQL (0.000869)[0m   [0;1mSELECT count(*) AS count_all FROM question_responses WHERE (question_responses.quiz_id = 2) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM courses WHERE (courses.`id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mGrade Load (0.001255)[0m   [0mSELECT * FROM grades WHERE (grades.quiz_id = 2) AND (grades.`user_id` = 2) LIMIT 1[0m
+  [4;36;1mQuestionResponse Load (0.001675)[0m   [0;1mSELECT * FROM question_responses WHERE (question_responses.quiz_id = 2) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) [0m
+Rendered courses/_closed_quizzes (0.07779)
+  [4;36;1mQuiz Load (0.001588)[0m   [0;1mSELECT * FROM quizzes WHERE (quizzes.course_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
+Rendered courses/_gradebook (0.00390)
+Completed in 0.24997 (4 reqs/sec) | Rendering: 0.14008 (56%) | DB: 0.07428 (29%) | 200 OK [http://localhost/courses/1]

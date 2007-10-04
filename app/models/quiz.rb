@@ -21,8 +21,16 @@ class Quiz < ActiveRecord::Base
   end
 
   def mean_score
-    correct_responses = question_responses.find_all_by_correct true
-    correct_responses.size / question_responses.size.to_f
+    @mean_score ||= question_responses.find_all_by_correct( true ).size / question_responses.size.to_f
+  end
+
+  def score_standard_deviation
+    return 0 unless scores.size > 1
+    (scores.collect {|score| (score - mean_score) ** 2 }.sum / (scores.size - 1)) ** 0.5
+  end
+
+  def scores
+    @scores ||= course.students.collect {|student| grade_for(student) }
   end
 
   def grade_for(user)

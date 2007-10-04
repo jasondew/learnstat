@@ -7,12 +7,12 @@ module ApplicationHelper
 
   def grade_format(grade)
     return '**' unless grade
-    (((grade * 10000).round) / 100.0).to_s + "%"
+    number_to_percentage(number * 100, {:precision => 2})
   end
 
   def percent_format(number)
     return '**' unless number
-    ((number * 10000).round / 100.0).to_s + '%'
+    number_to_percentage(number * 100, {:precision => 2})
   end
 
 end
