@@ -2,10 +2,10 @@
 
 <%= error_messages_for :announcement %>
 
-<% form_for(:announcement, :url => announcement_path(@course, @announcement), :html => { :method => :put }) do |f| %>
+<% form_for(:announcement, :url => course_announcement_path(@course, @announcement), :html => { :method => :put }) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p> <%= submit_tag "Update" %> </p>
 <% end %>
 
-<%= link_to 'Show', announcement_path(@announcement) %> |
+<%= link_to 'Show', course_announcement_path(@course, @announcement) %> |
 <%= link_to 'Back', course_path(@course) %>

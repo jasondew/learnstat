@@ -6,7 +6,7 @@
 	<tr>
 		<th>Student</th>
 		<% @course.quizzes.each do |quiz| %>
-			<th> <%= link_to quiz.name, quiz_path(@course, quiz) %> </th>
+			<th> <%= link_to quiz.name, course_quiz_path(@course, quiz) %> </th>
 		<% end %>
 	</tr>
 	</thead>

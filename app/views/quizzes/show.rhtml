@@ -1,6 +1,6 @@
 <h2>
   <%= @quiz.name %>
-  <%= link_to image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_quiz_path(@course, @quiz) if current_user.instructor? %>
+  <%= link_to image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_course_quiz_path(@course, @quiz) if current_user.instructor? %>
 </h2>
 
 <p class="instructions">
@@ -13,7 +13,6 @@
     <strong>Instructions:</strong> Complete the following questions by clicking on the
     answer of your choice.  You have until <%= datetime_format(@quiz.due_at) %> to complete
     this assignment.  No assignment, written or otherwise, will be accepted after that time.
-    Note that your answers are saved automatically.
   <% end %>
 </p>
 

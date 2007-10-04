@@ -2,18 +2,38 @@ class Quiz < ActiveRecord::Base
 
   belongs_to :course
   has_many :questions, :class_name => 'QuizQuestion'
-  has_many :question_responses
+  has_many :question_responses, :order => 'quiz_question_id'
   has_many :grades
 
+  def self.decode_completion_code(code)
+    begin
+      Marshal.load code.unpack('m')[0]
+    rescue Exception => e
+      return nil
+    end
+  end
+
   validates_presence_of :name, :due_at
+
+  def validate
+    errors.add( :due_at, 'date must be in the future' ) if due_at and due_at <= Time.now
+    errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
+  end
 
   def grade_for(user)
     (grades.find_by_user_id(user) || compute_grade(user)).value
   end
 
-  def validate
-    errors.add( :due_at, 'date must be in the future' ) if due_at and due_at <= Time.now
-    errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
+  def attempted_by?(user)
+    question_responses.collect {|response| response.user_id }.include? user.id
+  end
+
+  def completion_code_for(user)
+    [ Marshal.dump( [user.to_param, self.to_param, responses_from(user) * 3 ] ) ].pack( 'm' )
+  end
+
+  def answers_from(user)
+    question_responses.find_all_by_user_id(user)
   end
 
   def participation
@@ -37,6 +57,10 @@ class Quiz < ActiveRecord::Base
   end
 
   private
+
+  def responses_from(user)
+    answers_from(user).collect {|response| response.question_choice_id }
+  end
 
   def compute_grade(user)
     correct_responses = user.question_responses.find_all_by_quiz_id_and_correct self.id, true

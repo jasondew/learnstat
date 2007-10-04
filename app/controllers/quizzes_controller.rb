@@ -3,17 +3,6 @@ class QuizzesController < ApplicationController
   before_filter :get_course
   before_filter :instructor_required, :except => :show
 
-  # GET /quizzes
-  # GET /quizzes.xml
-  def index
-    @quizzes = @course.quizzes
-
-    respond_to do |format|
-      format.html # index.rhtml
-      format.xml  { render :xml => @quizzes.to_xml }
-    end
-  end
-
   # GET /quizzes/1
   # GET /quizzes/1.xml
   def show
@@ -45,8 +34,8 @@ class QuizzesController < ApplicationController
     respond_to do |format|
       if @quiz.save
         flash[:notice] = 'Quiz was successfully created.'
-        format.html { redirect_to course_url(@course) }
-        format.xml  { head :created, :location => course_url(@course) }
+        format.html { redirect_to course_path(@course) }
+        format.xml  { head :created, :location => course_path(@course) }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @quiz.errors.to_xml }
@@ -62,7 +51,7 @@ class QuizzesController < ApplicationController
     respond_to do |format|
       if @quiz.update_attributes(params[:quiz])
         flash[:notice] = 'Quiz was successfully updated.'
-        format.html { redirect_to course_url(@course) }
+        format.html { redirect_to course_path(@course) }
         format.xml  { head :ok }
       else
         format.html {
@@ -81,7 +70,7 @@ class QuizzesController < ApplicationController
     @quiz.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_url(@course) }
+      format.html { redirect_to course_path(@course) }
       format.xml  { head :ok }
     end
   end

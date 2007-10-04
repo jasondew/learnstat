@@ -2,7 +2,7 @@
 
 <%= error_messages_for :quiz %>
 
-<% form_for(:quiz, :url => quiz_path(@course, @quiz), :html => { :method => :put }) do |f| %>
+<% form_for(:quiz, :url => course_quiz_path(@course, @quiz), :html => { :method => :put }) do |f| %>
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p> <%= submit_tag "Update" %> </p>
 <% end %>
@@ -23,7 +23,7 @@ Available Questions: <br />
                             :url => quiz_question_path(@course, @quiz, quiz_question), :method => :delete ) %>
       <% else %>
         <%= link_to_remote( image_tag( 'table_add.png', :alt => 'Add Question' ),
-                            :url => quiz_questions_path(@course, @quiz), :with => %Q|"question_id=#{question.id}"|,
+                            :url => course_quiz_quiz_questions_path(@course, @quiz), :with => %Q|"question_id=#{question.id}"|,
                             :method => :post ) %>
       <% end %>
 	
@@ -48,4 +48,4 @@ Available Questions: <br />
   <% end %>
 </ul>
 
-<%= link_to 'Show', quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>
+<%= link_to 'Show', course_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>

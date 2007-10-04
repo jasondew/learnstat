@@ -2,17 +2,6 @@ class DocumentsController < ApplicationController
 
   before_filter :get_course
 
-  # GET /documents
-  # GET /documents.xml
-  def index
-    @documents = @course.documents
-
-    respond_to do |format|
-      format.html # index.rhtml
-      format.xml  { render :xml => @documents.to_xml }
-    end
-  end
-
   def show
     @document = @course.documents.find(params[:id])
     send_file @document.full_filename, :type => @document.content_type
@@ -36,8 +25,8 @@ class DocumentsController < ApplicationController
     respond_to do |format|
       if @document.save
         flash[:notice] = 'Document was successfully created.'
-        format.html { redirect_to course_url(@course) }
-        format.xml  { head :created, :location => course_url(@course) }
+        format.html { redirect_to course_path(@course) }
+        format.xml  { head :created, :location => course_path(@course) }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @document.errors.to_xml }
@@ -53,7 +42,7 @@ class DocumentsController < ApplicationController
     respond_to do |format|
       if @document.update_attributes(params[:document])
         flash[:notice] = 'Document was successfully updated.'
-        format.html { redirect_to course_url(@course) }
+        format.html { redirect_to course_path(@course) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -69,7 +58,7 @@ class DocumentsController < ApplicationController
     @document.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_url(@course) }
+      format.html { redirect_to course_path(@course) }
       format.xml  { head :ok }
     end
   end

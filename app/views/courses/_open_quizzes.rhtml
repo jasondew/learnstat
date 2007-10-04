@@ -7,19 +7,22 @@
   <% next unless current_user.instructor? or quiz.viewable_at <= Time.now %>
 
   <li>
-    <%= link_to quiz.name, quiz_path(@course, quiz) %>
+    <%= link_to quiz.name, course_quiz_path(@course, quiz) %>
 
-    <%= link_to image_tag( 'application_form_edit.png', :alt => 'Edit Quiz' ), edit_quiz_path( @course, quiz ) if current_user.instructor? %>
-    <%= link_to image_tag( 'application_form_delete.png', :alt => 'Delete Quiz' ), quiz_path( @course, quiz ), :confirm => 'Are you sure?',
+    <%= link_to image_tag( 'application_form_edit.png', :alt => 'Edit Quiz' ), edit_course_quiz_path( @course, quiz ) if current_user.instructor? %>
+    <%= link_to image_tag( 'application_form_delete.png', :alt => 'Delete Quiz' ), course_quiz_path( @course, quiz ), :confirm => 'Are you sure?',
                 :method => :delete if current_user.instructor? %>
     
     <br />
 
     <span class="information">
-      Due <%= datetime_format(quiz.due_at) %> <br />
+      Due on: <%= datetime_format(quiz.due_at) %> <br />
       <% if current_user.instructor? %>
-        Viewable <%= quiz.viewable_now? ? datetime_format(quiz.viewable_at) : 'now' %> <br />
-        <%= percent_format quiz.participation %> participation so far"
+        Viewable: <%= quiz.viewable_now? ? datetime_format(quiz.viewable_at) : 'now' %> <br />
+        Participation: <%= percent_format quiz.participation %>
+      <% elsif quiz.attempted_by? current_user %>
+        Status: <%= quiz.answers_from(current_user).size %> of <%= quiz.questions.size %> questions attempted <br />
+        Completion code: <%= quiz.completion_code_for(current_user) %>
       <% end %>
     </span>
 
@@ -33,5 +36,5 @@
 </ul>
 
 <% if current_user.instructor? %>
-  <p><%= link_to image_tag('application_form_add.png') + "&nbsp;Add a Quiz", new_quiz_path(@course) %></p>
+  <p><%= link_to image_tag('application_form_add.png') + "&nbsp;Add a Quiz", new_course_quiz_path(@course) %></p>
 <% end %>

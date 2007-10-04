@@ -3,28 +3,6 @@ class AnnouncementsController < ApplicationController
   before_filter :instructor_required
   before_filter :get_course
 
-  # GET /announcements
-  # GET /announcements.xml
-  def index
-    @announcements = @course.announcements
-
-    respond_to do |format|
-      format.html # index.rhtml
-      format.xml  { render :xml => @announcements.to_xml }
-    end
-  end
-
-  # GET /announcements/1
-  # GET /announcements/1.xml
-  def show
-    @announcement = @course.announcements.find(params[:id])
-
-    respond_to do |format|
-      format.html # show.rhtml
-      format.xml  { render :xml => @announcement.to_xml }
-    end
-  end
-
   # GET /announcements/new
   def new
     @announcement = Announcement.new
@@ -43,8 +21,8 @@ class AnnouncementsController < ApplicationController
     respond_to do |format|
       if @announcement.save
         flash[:notice] = 'Announcement was successfully created.'
-        format.html { redirect_to announcement_url(@course, @announcement) }
-        format.xml  { head :created, :location => announcement_url(@course, @announcement) }
+        format.html { redirect_to course_path(@course) }
+        format.xml  { head :created, :location => course_path(@course) }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @announcement.errors.to_xml }
@@ -60,7 +38,7 @@ class AnnouncementsController < ApplicationController
     respond_to do |format|
       if @announcement.update_attributes(params[:announcement])
         flash[:notice] = 'Announcement was successfully updated.'
-        format.html { redirect_to announcement_url(@course, @announcement) }
+        format.html { redirect_to course_path(@course) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -76,7 +54,7 @@ class AnnouncementsController < ApplicationController
     @announcement.destroy
 
     respond_to do |format|
-      format.html { redirect_to announcements_url(@course) }
+      format.html { redirect_to course_path(@course) }
       format.xml  { head :ok }
     end
   end

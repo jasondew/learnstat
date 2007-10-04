@@ -2,98 +2,107 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 10) do
+ActiveRecord::Schema.define(:version => 11) do
 
   create_table "announcements", :force => true do |t|
-    t.column "course_id",  :integer
-    t.column "user_id",    :integer
-    t.column "title",      :string
-    t.column "body",       :text
-    t.column "created_at", :datetime
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.string   "title"
+    t.text     "body"
+    t.datetime "created_at"
+  end
+
+  create_table "audits", :force => true do |t|
+    t.integer  "user_id"
+    t.text     "params"
+    t.string   "url"
+    t.string   "ip"
+    t.datetime "created_at"
   end
 
   create_table "courses", :force => true do |t|
-    t.column "title",                  :string
-    t.column "department",             :string
-    t.column "number",                 :string
-    t.column "semester",               :integer
-    t.column "year",                   :integer
-    t.column "section",                :integer
-    t.column "registration_code",      :string
-    t.column "registration_closed_at", :datetime
-    t.column "created_at",             :datetime
-    t.column "updated_at",             :datetime
+    t.string   "title"
+    t.string   "department"
+    t.string   "number"
+    t.integer  "semester"
+    t.integer  "year"
+    t.integer  "section"
+    t.string   "registration_code"
+    t.datetime "registration_closed_at"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "documents", :force => true do |t|
-    t.column "course_id",    :integer
-    t.column "user_id",      :integer
-    t.column "label",        :string
-    t.column "viewable_at",  :datetime
-    t.column "content_type", :string
-    t.column "filename",     :string
-    t.column "size",         :integer
-    t.column "created_at",   :datetime
+    t.integer  "course_id"
+    t.integer  "user_id"
+    t.string   "label"
+    t.datetime "viewable_at"
+    t.string   "content_type"
+    t.string   "filename"
+    t.integer  "size"
+    t.datetime "created_at"
   end
 
   create_table "grades", :force => true do |t|
-    t.column "user_id", :integer
-    t.column "quiz_id", :integer
-    t.column "value",   :float
+    t.integer "user_id"
+    t.integer "quiz_id"
+    t.float   "value"
   end
 
   create_table "question_choices", :force => true do |t|
-    t.column "question_id", :integer
-    t.column "content",     :text
+    t.integer "question_id"
+    t.text    "content"
   end
 
   add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
   create_table "question_responses", :force => true do |t|
-    t.column "user_id",            :integer
-    t.column "quiz_id",            :integer
-    t.column "quiz_question_id",   :integer
-    t.column "question_choice_id", :integer
-    t.column "correct",            :boolean
+    t.integer "user_id"
+    t.integer "course_id"
+    t.integer "quiz_id"
+    t.integer "quiz_question_id"
+    t.integer "question_choice_id"
+    t.boolean "correct"
   end
 
   create_table "questions", :force => true do |t|
-    t.column "content", :text
-    t.column "answer",  :integer
-    t.column "chapter", :integer
+    t.text    "content"
+    t.integer "answer"
+    t.integer "chapter"
   end
 
   create_table "quiz_questions", :force => true do |t|
-    t.column "quiz_id",     :integer
-    t.column "question_id", :integer
-    t.column "forgiven",    :boolean, :default => false
+    t.integer "quiz_id"
+    t.integer "question_id"
+    t.boolean "forgiven",    :default => false
   end
 
   create_table "quizzes", :force => true do |t|
-    t.column "course_id",   :integer
-    t.column "name",        :string
-    t.column "due_at",      :datetime
-    t.column "viewable_at", :datetime
-    t.column "created_at",  :datetime
+    t.integer  "course_id"
+    t.string   "name"
+    t.datetime "due_at"
+    t.datetime "viewable_at"
+    t.datetime "created_at"
   end
 
   create_table "users", :force => true do |t|
-    t.column "course_id",                 :integer
-    t.column "login",                     :string
-    t.column "email",                     :string
-    t.column "first_name",                :string
-    t.column "last_name",                 :string
-    t.column "blackboard_username",       :string
-    t.column "registration_code",         :string
-    t.column "instructor",                :boolean,                :default => false
-    t.column "crypted_password",          :string,   :limit => 40
-    t.column "salt",                      :string,   :limit => 40
-    t.column "created_at",                :datetime
-    t.column "updated_at",                :datetime
-    t.column "remember_token",            :string
-    t.column "remember_token_expires_at", :datetime
-    t.column "activation_code",           :string,   :limit => 40
-    t.column "activated_at",              :datetime
+    t.integer  "course_id"
+    t.string   "login"
+    t.string   "email"
+    t.string   "first_name"
+    t.string   "last_name"
+    t.string   "blackboard_username"
+    t.string   "registration_code"
+    t.boolean  "instructor",                              :default => false
+    t.string   "crypted_password",          :limit => 40
+    t.string   "salt",                      :limit => 40
+    t.datetime "created_at"
+    t.datetime "updated_at"
+    t.string   "remember_token"
+    t.datetime "remember_token_expires_at"
+    t.string   "activation_code",           :limit => 40
+    t.datetime "activated_at"
   end
 
 end

@@ -1,5 +1,0 @@
-quiz_1:
- id: 1
- name: Quiz 1
- due: <%= 1.day.ago %>
- created_at: <%= 7.days.ago %>
