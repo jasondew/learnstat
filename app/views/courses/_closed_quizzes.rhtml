@@ -14,10 +14,12 @@
     <br />
 
     <span class="information">
+      Mean Score: <%= percent_format quiz.mean_score %> <br />
+
       <% if current_user.instructor? %>
-        <%= "#{percent_format(quiz.participation)} participation" %>
+        Participation: <%= percent_format quiz.participation %>
       <% else %>
-        <%= "grade: #{percent_format(quiz.grade_for current_user)}" %>
+        Grade: <%= percent_format quiz.grade_for(current_user) %>
       <% end %>
     </span>
   </li>

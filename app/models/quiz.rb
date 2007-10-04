@@ -20,6 +20,11 @@ class Quiz < ActiveRecord::Base
     errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
   end
 
+  def mean_score
+    correct_responses = question_responses.find_all_by_correct true
+    correct_responses.size / question_responses.size.to_f
+  end
+
   def grade_for(user)
     (grades.find_by_user_id(user) || compute_grade(user)).value
   end
