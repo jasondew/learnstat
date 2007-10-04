@@ -1,0 +1,8 @@
+<h2>Editing question choice</h2>
+
+<%= error_messages_for :question_choice %>
+
+<% form_for(:question_choice, :url => question_choice_path(@question, @question_choice), :html => { :method => :put }) do |f| %>
+  <label for="content">Choice: </label><%= f.text_field :content %>
+  <p> <%= submit_tag "Update" %> </p>
+<% end %>

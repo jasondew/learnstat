@@ -1,0 +1,18 @@
+<h2>Welcome to learnStat!</h2>
+
+<p> <strong>Please log in or register an account.</strong> </p>
+
+<% form_tag session_path do -%>
+
+  <fieldset>
+    <label for="login">Username:</label><br/> <%= text_field_tag 'login' %> <br />
+    <label for="password">Password:</label><br/> <%= password_field_tag 'password' %> <br />
+
+    <label for="remember_me">Remember me:</label> <%= check_box_tag 'remember_me' %> <br />
+
+    <%= submit_tag 'Login' %>
+  </fieldset>
+
+<% end -%>
+
+<p> <%= link_to "Register an Account", signup_url %>

@@ -1,0 +1,10 @@
+<h2>New question choice</h2>
+
+<%= error_messages_for :question_choice %>
+
+<% form_for(:question_choice, :url => question_choices_path(@question)) do |f| %>
+  <label for="content">Content: </label> <%= f.text_field :content %> <br />
+  <p> <%= submit_tag "Create" %> </p>
+<% end %>
+
+<%= link_to 'Back', question_choices_path %>

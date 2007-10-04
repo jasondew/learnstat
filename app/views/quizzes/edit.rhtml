@@ -1,0 +1,51 @@
+<h2>Editing quiz</h2>
+
+<%= error_messages_for :quiz %>
+
+<% form_for(:quiz, :url => course_quiz_path(@course, @quiz), :html => { :method => :put }) do |f| %>
+  <%= render :partial => 'form', :locals => { :f => f } %>
+  <p> <%= submit_tag "Update" %> </p>
+<% end %>
+
+<br />
+	
+Available Questions: <br />
+
+<ul>
+  <% @questions.each do |question| %>
+
+    <% quiz_question = @quiz.questions.detect {|x| x.question_id == question.id } %>
+	
+    <li id="<%= dom_id(question) %>" <%= quiz_question ? 'class="chosen-question"' : '' %>>
+
+      <% if quiz_question %>
+        <%= link_to_remote( image_tag( 'table_delete.png', :alt => 'Delete Question' ),
+                            :url => quiz_question_path(@course, @quiz, quiz_question), :method => :delete ) %>
+      <% else %>
+        <%= link_to_remote( image_tag( 'table_add.png', :alt => 'Add Question' ),
+                            :url => course_quiz_quiz_questions_path(@course, @quiz), :with => %Q|"question_id=#{question.id}"|,
+                            :method => :post ) %>
+      <% end %>
+	
+      <%= link_to image_tag( 'table_edit.png', :alt => 'Edit Question' ), edit_question_path(question), :popup => true %>
+      <%= link_to image_tag( 'table_delete.png', :alt => 'Delete Question' ), question_path(question),
+                  :confirm => 'Are you sure?', :method => :delete %>
+	
+      <%= question.content %>
+
+      <ol>
+
+        <% question.choices.each do |choice| %>
+
+          <li> <%= choice.content %> </li>
+
+        <% end %>
+
+      </ol>
+	
+    </li>
+	  
+  <% end %>
+</ul>
+
+<%= link_to 'Show', course_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>

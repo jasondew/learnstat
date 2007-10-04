@@ -1,0 +1,32 @@
+<h2 class="accessible">Announcements</h2>
+	
+<ul>
+		
+<% if @course.announcements.empty? %>
+		
+  <li> There are no announcements at this time. </li>
+		
+<% else %>
+		
+  <% @course.announcements.each do |announcement| %>
+		
+    <li>
+      <h3><%= announcement.title %></h3>
+      <span class="information">Posted by <%= announcement.user.full_name %> on <%= datetime_format(announcement.created_at) %> </span>
+      <% if current_user.instructor? %>
+        <%= link_to image_tag( 'comment_edit.png', :alt => 'Edit Announcement' ), edit_course_announcement_path(@course, announcement) %>
+        <%= link_to image_tag( 'comment_delete.png', :alt => 'Delete Announcement' ), course_announcement_path(@course, announcement),
+                    :method => :delete, :confirm => 'Are you sure?' %>
+      <% end %>
+      <p> <%= announcement.body %> </p>
+    </li>
+		
+  <% end %>
+		
+<% end %>
+			
+</ul>
+
+<% if current_user.instructor? %>
+  <p><%= link_to image_tag('comment_add.png') + "&nbsp; Add an Announcement", new_course_announcement_path(@course) %></p>
+<% end %>

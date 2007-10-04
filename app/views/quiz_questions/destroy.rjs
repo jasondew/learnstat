@@ -1,0 +1,2 @@
+page << "$('#{dom_id(@question)}').className = '';"
+page.visual_effect :highlight, dom_id(@question), :duration => 3

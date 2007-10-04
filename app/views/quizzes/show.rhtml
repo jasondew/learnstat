@@ -1,0 +1,50 @@
+<h2>
+  <%= @quiz.name %>
+  <%= link_to image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_course_quiz_path(@course, @quiz) if current_user.instructor? %>
+</h2>
+
+<p class="instructions">
+
+  <% if @quiz.closed? %>
+    <strong>Completed Assignment:</strong> This assignment was due on <%= datetime_format(@quiz.due_at) %>.
+    Your answer, if you provided one, is shown in green.  The correct answer to the question is shown
+    underlined.
+  <% else %>
+    <strong>Instructions:</strong> Complete the following questions by clicking on the
+    answer of your choice.  You have until <%= datetime_format(@quiz.due_at) %> to complete
+    this assignment.  No assignment, written or otherwise, will be accepted after that time.
+  <% end %>
+</p>
+
+<% if current_user.instructor? %>
+  <p>
+    <span class="information">
+      Participation: <%= percent_format( @quiz.participation ) %> <br />
+      Questions: <%= @quiz.questions.count %>
+    </span>
+  </p>
+<% end %>
+
+<br />
+
+<ol>
+
+  <% @quiz.questions.each do |quiz_question| %>
+
+    <li id="<%= dom_id(quiz_question) %>" <%= question_attributes(quiz_question) %>>
+      <%= quiz_question.content %>
+
+      <ol class="answers">
+        <% quiz_question.choices.each do |choice| %>
+          <li id="<%= dom_id(choice) %>" <%= choice_class(quiz_question, choice, @question_responses) %> <%= choice_onclick(quiz_question, choice) %>>
+            <%= choice.content %>
+          </li>
+        <% end %>
+      </ol>
+    </li>
+
+  <% end %>
+
+</ol>
+
+<p> <%= link_to 'Done', course_path(@course) %> </p>
