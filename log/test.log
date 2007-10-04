@@ -1,0 +1,2 @@
+Spec::Rails::DSL::HelperEvalContextController: missing default helper path spec/rails/dsl/helper_eval_context_helper
+Spec::Rails::DSL::ViewExampleController: missing default helper path spec/rails/dsl/view_example_helper

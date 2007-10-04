@@ -94,6 +94,10 @@ ol ol {
 	list-style-type: lower-latin;
 }
 
+ul.quizzes li {
+  margin-bottom: 20px;
+}
+
 #navbar a:hover, a:hover {
 	color: #990000;
 }

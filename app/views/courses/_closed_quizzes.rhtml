@@ -1,27 +1,26 @@
 <h2 class="accessible">Closed Quizzes</h2>
 	
-<ul>
+<ul class="quizzes">
 			
 <% @course.closed_quizzes.each do |quiz| %>
 			
   <li>
-    <%= link_to quiz.name, course_quiz_path(@course, quiz) %>
+    <h3><%= link_to quiz.name, course_quiz_path(@course, quiz) %></h3>
 
     <%= link_to image_tag( 'application_form_edit.png', :alt => 'Edit Quiz' ), edit_course_quiz_path( @course, quiz ) if current_user.instructor? %>
     <%= link_to image_tag( 'application_form_delete.png', :alt => 'Delete Quiz' ), course_quiz_path( @course, quiz ), :confirm => 'Are you sure?',
                 :method => :delete if current_user.instructor? %>
     
-    <br />
-
     <span class="information">
-      Mean Score: <%= percent_format quiz.mean_score %> <br />
-      Standard Deviation: <%= number_with_precision quiz.score_standard_deviation, 2 %> <br />
-
       <% if current_user.instructor? %>
-        Participation: <%= percent_format quiz.participation %>
+        Participation: <%= percent_format quiz.participation %> <br />
       <% else %>
-        Grade: <%= percent_format quiz.grade_for(current_user) %>
+        Your Score: <%= percent_format quiz.grade_for(current_user) %> <br />
+        Percentile Rank: <%= percent_format quiz.percentile_for(current_user) %> <br />
       <% end %>
+
+      Mean Score: <%= percent_format quiz.mean_score %> <br />
+      Standard Deviation: <%= number_with_precision quiz.score_standard_deviation, 2 %>
     </span>
   </li>
 

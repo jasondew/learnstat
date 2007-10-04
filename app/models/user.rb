@@ -6,6 +6,7 @@ class User < ActiveRecord::Base
   has_many :documents
   has_many :grades
   has_many :question_responses
+  has_many :correct_responses, :class_name => 'QuestionResponse', :conditions => { :correct => true }
   has_many :audits
 
   # Virtual attribute for the unencrypted password
@@ -34,6 +35,10 @@ class User < ActiveRecord::Base
 
   def full_name
     "#{self.first_name} #{self.last_name}"
+  end
+
+  def mean_score
+    correct_responses.size / question_responses.size.to_f
   end
 
   def validate_on_create

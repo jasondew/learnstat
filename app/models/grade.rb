@@ -1,10 +1,8 @@
 class Grade < ActiveRecord::Base
 
   belongs_to :user
-  belongs_to :quiz
+  belongs_to :course
 
-  has_many :responses, :class_name => 'QuestionResponse'
-
-  validates_presence_of :user_id, :value
+  validates_presence_of :user_id, :course_id, :value
 
 end

@@ -34,7 +34,11 @@ class Quiz < ActiveRecord::Base
   end
 
   def grade_for(user)
-    (grades.find_by_user_id(user) || compute_grade(user)).value
+    (user.correct_responses.find_all_by_quiz_id(self).size / questions.size.to_f)
+  end
+
+  def percentile_for(user)
+    (scores.sort.index(grade_for(user)) + 1 ) / scores.size.to_f
   end
 
   def attempted_by?(user)
@@ -73,11 +77,6 @@ class Quiz < ActiveRecord::Base
 
   def responses_from(user)
     answers_from(user).collect {|response| response.question_choice_id }
-  end
-
-  def compute_grade(user)
-    correct_responses = user.question_responses.find_all_by_quiz_id_and_correct self.id, true
-    user.grades.create :quiz_id => self.id, :value => (correct_responses.size / questions.size.to_f)
   end
 
 end

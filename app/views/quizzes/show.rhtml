@@ -13,6 +13,8 @@
     <strong>Instructions:</strong> Complete the following questions by clicking on the
     answer of your choice.  You have until <%= datetime_format(@quiz.due_at) %> to complete
     this assignment.  No assignment, written or otherwise, will be accepted after that time.
+
+    <p class="information">Your average score is <%= percent_format current_user.mean_score %>, can you do better here? </p>
   <% end %>
 </p>
 
@@ -24,8 +26,6 @@
     </span>
   </p>
 <% end %>
-
-<br />
 
 <ol>
 
