@@ -46,7 +46,8 @@ ActiveRecord::Schema.define(:version => 11) do
 
   create_table "grades", :force => true do |t|
     t.integer "user_id"
-    t.integer "quiz_id"
+    t.integer "course_id"
+    t.string  "nane"
     t.float   "value"
   end
 

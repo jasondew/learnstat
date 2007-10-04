@@ -1,0 +1,13 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+stat110:
+  id: 1
+  title: Stat 110
+  department: stat
+  number: 110
+  semester: 8
+  year: 2007
+  section: 851
+  registration_code: stat110f07
+  registration_closed_at: <%= 10.days.from_now %>
+  created_at: <%= 2.days.ago %>
+  updated_at: <%= 2.days.ago %>

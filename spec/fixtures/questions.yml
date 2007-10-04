@@ -1,0 +1,6 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+sample:
+  id: 1
+  answer: 42
+  content: Some question text
+  chapter: 2

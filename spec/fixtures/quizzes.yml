@@ -1,0 +1,16 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+first:
+  id: 1
+  course_id: 1
+  name: Quiz 1
+  due_at: <%= 2.days.from_now %>
+  viewable_at: <%= 5.days.ago %>
+  created_at: <%= 5.days.ago %>
+
+second:
+  id: 2
+  course_id: 1
+  name: Quiz 2
+  due_at: <%= 2.days.ago %>
+  viewable_at: <%= 4.days.ago %>
+  created_at: <%= 5.days.ago %>
