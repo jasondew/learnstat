@@ -5,11 +5,6 @@ module ApplicationHelper
     datetime.strftime("%A, %B %d at %I:%M%p")
   end
 
-  def grade_format(grade)
-    return '**' unless grade
-    number_to_percentage(number * 100, {:precision => 2})
-  end
-
   def percent_format(number)
     return '**' unless number
     number_to_percentage(number * 100, {:precision => 2})

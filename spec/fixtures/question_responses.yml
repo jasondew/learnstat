@@ -1,0 +1,24 @@
+# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
+
+<% 1.upto(5) do |count| %>
+student_1_response_<%= count %>:
+  user_id: 2
+  course_id: 1
+  quiz_id: 1
+  quiz_question_id: <%= count %>
+  question_choice_id: <%= count %>
+  correct: <%= count > 2 %>
+  created_at: <%= Time.now %>
+<% end %>
+
+<% 1.upto(5) do |count| %>
+student_2_response_<%= count %>:
+  user_id: 3
+  course_id: 1
+  quiz_id: 1
+  quiz_question_id: <%= count %>
+  question_choice_id: <%= count %>
+  correct: <%= count < 3 %>
+  created_at: <%= Time.now %>
+<% end %>
+

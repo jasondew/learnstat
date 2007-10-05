@@ -3,14 +3,12 @@ first:
   id: 1
   course_id: 1
   name: Quiz 1
-  due_at: <%= 2.days.from_now %>
-  viewable_at: <%= 5.days.ago %>
-  created_at: <%= 5.days.ago %>
+  due_at: <%= 2.days.from_now.to_s(:db) %>
+  viewable_at: <%= 5.days.ago.to_s(:db) %>
 
 second:
   id: 2
   course_id: 1
   name: Quiz 2
-  due_at: <%= 2.days.ago %>
-  viewable_at: <%= 4.days.ago %>
-  created_at: <%= 5.days.ago %>
+  due_at: <%= 2.days.ago.to_s(:db) %>
+  viewable_at: <%= 4.days.ago.to_s(:db) %>

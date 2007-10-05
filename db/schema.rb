@@ -59,12 +59,13 @@ ActiveRecord::Schema.define(:version => 11) do
   add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
   create_table "question_responses", :force => true do |t|
-    t.integer "user_id"
-    t.integer "course_id"
-    t.integer "quiz_id"
-    t.integer "quiz_question_id"
-    t.integer "question_choice_id"
-    t.boolean "correct"
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "quiz_id"
+    t.integer  "quiz_question_id"
+    t.integer  "question_choice_id"
+    t.boolean  "correct"
+    t.datetime "created_at",         :null => false
   end
 
   create_table "questions", :force => true do |t|

@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
   # Activates the user in the database.
   def activate
     @activated = true
-    self.activated_at = Time.now.utc
+    self.activated_at = Time.now
     self.activation_code = nil
     save(false)
   end
@@ -91,7 +91,7 @@ class User < ActiveRecord::Base
   end
 
   def remember_token?
-    remember_token_expires_at && Time.now.utc < remember_token_expires_at 
+    remember_token_expires_at && Time.now < remember_token_expires_at 
   end
 
   # These create and unset the fields required for remembering users between browser closes
@@ -100,7 +100,7 @@ class User < ActiveRecord::Base
   end
 
   def remember_me_for(time)
-    remember_me_until time.from_now.utc
+    remember_me_until time.from_now
   end
 
   def remember_me_until(time)

@@ -7,6 +7,7 @@ class CreateQuestionResponses < ActiveRecord::Migration
       t.column :quiz_question_id,   :integer
       t.column :question_choice_id, :integer
       t.column :correct,            :boolean
+      t.column :created_at,         :datetime
     end
   end
 

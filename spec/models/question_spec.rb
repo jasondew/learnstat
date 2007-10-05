@@ -11,7 +11,7 @@ describe Question do
   end
 
   it 'should know about correct answers' do
-    question = questions(:sample)
+    question = questions(:question_1)
     question.correct_answer?( 12 ).should == false
     question.correct_answer?( 42 ).should == true
   end

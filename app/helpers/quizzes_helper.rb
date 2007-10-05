@@ -1,6 +1,6 @@
 module QuizzesHelper
 
-  def question_attributes(quiz_question)
+  def question_attributes
     @quiz.closed? ? 'disabled="disabled"' : ''
   end
 

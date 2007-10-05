@@ -3,7 +3,7 @@ class Quiz < ActiveRecord::Base
   belongs_to :course
   has_many :questions, :class_name => 'QuizQuestion'
   has_many :question_responses, :order => 'quiz_question_id'
-  has_many :grades
+  has_many :correct_responses, :class_name => 'QuestionResponse', :conditions => { :correct => true }, :order => 'quiz_question_id'
 
   def self.decode_completion_code(code)
     begin
@@ -14,30 +14,30 @@ class Quiz < ActiveRecord::Base
   end
 
   validates_presence_of :name, :due_at
-
-  def validate
-    errors.add( :due_at, 'date must be in the future' ) if due_at and due_at <= Time.now
-    errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
-  end
+  validate :future_due_date
+  validate :viewable_before_due
 
   def mean_score
-    @mean_score ||= question_responses.find_all_by_correct( true ).size / question_responses.size.to_f
+    return nil unless question_responses.size > 0
+    @mean_score ||= correct_responses.size / question_responses.size.to_f
   end
 
   def score_standard_deviation
-    return 0 unless scores.size > 1
+    return nil unless scores.size > 1
     (scores.collect {|score| (score - mean_score) ** 2 }.sum / (scores.size - 1)) ** 0.5
   end
 
   def scores
-    @scores ||= course.students.collect {|student| grade_for(student) }
+    @scores ||= course.students.collect {|student| grade_for(student) }.compact
   end
 
   def grade_for(user)
+    return nil unless user.question_responses.size > 0 and questions.size > 0
     (user.correct_responses.find_all_by_quiz_id(self).size / questions.size.to_f)
   end
 
   def percentile_for(user)
+    return nil unless scores.size > 0
     (scores.sort.index(grade_for(user)) + 1 ) / scores.size.to_f
   end
 
@@ -46,11 +46,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def completion_code_for(user)
-    [ Marshal.dump( [user.to_param, self.to_param, responses_from(user) * 3 ] ) ].pack( 'm' )
-  end
-
-  def answers_from(user)
-    question_responses.find_all_by_user_id(user)
+    [ Marshal.dump( [user.to_param, self.to_param, responses_from(user) ] ) ].pack( 'm' )
   end
 
   def participation
@@ -77,6 +73,18 @@ class Quiz < ActiveRecord::Base
 
   def responses_from(user)
     answers_from(user).collect {|response| response.question_choice_id }
+  end
+
+  def answers_from(user)
+    question_responses.find_all_by_user_id(user)
+  end
+
+  def future_due_date
+    errors.add( :due_at, 'date must be in the future' ) if due_at <= Time.now
+  end
+
+  def viewable_before_due
+    errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
   end
 
 end
