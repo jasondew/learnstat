@@ -2,7 +2,7 @@
 
 <%= error_messages_for :announcement %>
 
-<% form_for(:announcement, :url => course_announcements_path) do |f| %>
+<% form_for(:announcement, :url => course_announcements_path(@course)) do |f| %>
 
   <%= render :partial => 'form', :locals => { :f => f } %>
 

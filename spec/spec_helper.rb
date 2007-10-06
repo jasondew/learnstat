@@ -35,6 +35,12 @@ end
     }
   end
 
+  def stub_actions(object, actions_and_return_values)
+    actions_and_return_values.each do |(action,return_value)|
+      object.stub!(action).and_return(return_value)
+    end
+  end
+
   def login_as(user)
     request.session[:user] = user ? users(user).id : nil
   end

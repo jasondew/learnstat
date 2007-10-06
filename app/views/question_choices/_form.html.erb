@@ -5,8 +5,8 @@
   <% question.choices.each do |choice| %>
 
     <li>
-      <%= link_to image_tag( 'table_edit.png', :alt => 'Edit Choice' ), edit_question_choice_path(question, choice) %>
-      <%= link_to image_tag( 'table_delete.png', :alt => 'Delete Choice' ), question_choice_path(question, choice),
+      <%= link_to image_tag( 'table_edit.png', :alt => 'Edit Choice' ), edit_question_question_choice_path(question, choice) %>
+      <%= link_to image_tag( 'table_delete.png', :alt => 'Delete Choice' ), question_question_choice_path(question, choice),
                   :confirm => 'Are you sure?', :method => :delete %>
       <%= choice.content %>
     </li>

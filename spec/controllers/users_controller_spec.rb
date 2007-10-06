@@ -1,5 +1,25 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+describe UsersController, "#route_for" do
+
+  it "should map { :controller => 'users', :action => 'new' } to /users/new" do
+    route_for(:controller => "users", :action => "new").should == "/users/new"
+  end
+  
+end
+
+describe UsersController, "#params_from" do
+
+  it "should generate params { :controller => 'users', action => 'new' } from GET /users/new" do
+    params_from(:get, "/users/new").should == {:controller => "users", :action => "new"}
+  end
+  
+  it "should generate params { :controller => 'users', action => 'create' } from POST /users" do
+    params_from(:post, "/users").should == {:controller => "users", :action => "create"}
+  end
+  
+end
+
 describe UsersController do
 
   def create_user(options = {})
