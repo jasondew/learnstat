@@ -18899,3 +18899,4 @@ Rendered courses/_closed_quizzes (0.14026)
   [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM users WHERE (users.course_id = 1 AND (users.`instructor` = 0)) ORDER BY last_name, first_name[0m
 Rendered courses/_gradebook (0.00388)
 Completed in 0.29954 (3 reqs/sec) | Rendering: 0.17108 (57%) | DB: 0.03032 (10%) | 200 OK [http://phoenix/courses/1]
+  [4;36;1mSQL (0.000240)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
