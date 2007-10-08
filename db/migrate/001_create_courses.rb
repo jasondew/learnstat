@@ -8,6 +8,8 @@ class CreateCourses < ActiveRecord::Migration
       t.column :year,                   :integer
       t.column :section,                :integer
 
+      t.column :instructor_id,          :integer
+
       t.column :registration_code,      :string
       t.column :registration_closed_at, :datetime
 

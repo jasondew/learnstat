@@ -269,15 +269,20 @@ describe CoursesController, "handling POST /courses" do
     @course = mock_model(Course, :to_param => "1")
     Course.stub!(:new).and_return(@course)
 
+    @courses = mock(Array, :build => @course)
+    @current_user = mock_model(User, :courses => @courses)
+
     login_as :instructor
   end
   
   def post_with_successful_save
+    @course.should_receive(:[]=).with('user_id', 1).and_return(@course)
     @course.should_receive(:save).and_return(true)
     post :create, :course => {}
   end
   
   def post_with_failed_save
+    @course.should_receive(:[]=).with('user_id', 1).and_return(@course)
     @course.should_receive(:save).and_return(false)
     post :create, :course => {}
   end

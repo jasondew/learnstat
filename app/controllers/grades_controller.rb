@@ -1,4 +1,7 @@
 class GradesController < ApplicationController
+  
+  before_filter :get_course
+
   # GET /grades
   # GET /grades.xml
   def index
@@ -39,8 +42,8 @@ class GradesController < ApplicationController
     respond_to do |format|
       if @grade.save
         flash[:notice] = 'Grade was successfully created.'
-        format.html { redirect_to grade_url(@grade) }
-        format.xml  { head :created, :location => grade_url(@grade) }
+        format.html { redirect_to course_url(@course) }
+        format.xml  { head :created, :location => course_url(@course) }
       else
         format.html { render :action => "new" }
         format.xml  { render :xml => @grade.errors.to_xml }
@@ -56,7 +59,7 @@ class GradesController < ApplicationController
     respond_to do |format|
       if @grade.update_attributes(params[:grade])
         flash[:notice] = 'Grade was successfully updated.'
-        format.html { redirect_to grade_url(@grade) }
+        format.html { redirect_to course_url(@course) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -72,7 +75,7 @@ class GradesController < ApplicationController
     @grade.destroy
 
     respond_to do |format|
-      format.html { redirect_to grades_url }
+      format.html { redirect_to user_course_grades_url(current_user, @course) }
       format.xml  { head :ok }
     end
   end

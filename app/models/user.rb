@@ -2,6 +2,9 @@ require 'digest/sha1'
 
 class User < ActiveRecord::Base
 
+  belongs_to :course
+  has_many :courses
+
   has_many :announcements
   has_many :documents
   has_many :grades

@@ -3,8 +3,9 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :users do |user|
     user.resources :courses do |course|
       course.resources :quizzes do |quiz|
-        quiz.resources :grades, :question_responses
+        quiz.resources :question_responses
       end
+      course.resources :grades
     end
   end
 
