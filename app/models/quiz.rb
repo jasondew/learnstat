@@ -37,7 +37,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def percentile_for(user)
-    return nil unless scores.size > 0
+    return nil unless grade_for(user) and scores.size > 0
     (scores.sort.index(grade_for(user)) + 1 ) / scores.size.to_f
   end
 

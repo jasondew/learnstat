@@ -63,31 +63,16 @@ module AuthenticatedSystem
     def access_denied
       respond_to do |accepts|
         accepts.html do
-          store_location
           redirect_to :controller => '/sessions', :action => 'new'
         end
         accepts.xml do
           headers["Status"]           = "Unauthorized"
           headers["WWW-Authenticate"] = %(Basic realm="Web Password")
-          render :text => "Could't authenticate you", :status => '401 Unauthorized'
+          render :text => "Couldn't authenticate you", :status => '401 Unauthorized'
         end
       end
       false
     end  
-    
-    # Store the URI of the current request in the session.
-    #
-    # We can return to this location by calling #redirect_back_or_default.
-    def store_location
-      session[:return_to] = request.request_uri
-    end
-    
-    # Redirect to the URI stored by the most recent store_location call or
-    # to the passed default.
-    def redirect_back_or_default(default)
-      session[:return_to] ? redirect_to_url(session[:return_to]) : redirect_to(default)
-      session[:return_to] = nil
-    end
     
     # Inclusion hook to make #current_user and #logged_in?
     # available as ActionView helper methods.

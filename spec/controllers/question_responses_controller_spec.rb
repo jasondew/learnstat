@@ -10,7 +10,6 @@ describe QuestionResponsesController, "handling POST /question_responses" do
     QuizQuestion.stub!(:find).and_return(@quiz_question)
 
     @current_user = mock_model(User)
-
     @request.env["HTTP_ACCEPT"] = "text/javascript"
 
     login_as :student_1

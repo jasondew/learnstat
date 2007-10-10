@@ -1,5 +1,21 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+describe "Access control" do
+  controller_name :courses
+
+  it "should send you to the login screen if not authorized" do
+    get :show, :id => 1
+    response.should redirect_to( '/session/new' )
+  end
+
+  it "should send you to the login screen if not authorized (XML)" do
+    @request.env["HTTP_ACCEPT"] = "application/xml"
+    get :show, :id => 1
+    response.body.should == "Couldn't authenticate you"
+    response.headers["Status"].should == '401 Unauthorized'
+  end
+end
+
 describe CoursesController, "#route_for" do
 
   it "should map { :controller => 'courses', :action => 'index' } to /courses" do

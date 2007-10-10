@@ -3,6 +3,14 @@ class QuizzesController < ApplicationController
   before_filter :get_course
   before_filter :instructor_required, :except => :show
 
+  # GET /quizzes
+  # GET /quizzes.xml
+  def index
+    respond_to do |format|
+      format.xml  { render :xml => @course.quizzes.to_xml }
+    end
+  end
+
   # GET /quizzes/1
   # GET /quizzes/1.xml
   def show
