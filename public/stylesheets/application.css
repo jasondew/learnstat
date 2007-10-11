@@ -230,6 +230,10 @@ li.added a {
 li.answer {
 }
 
+ol.answers {
+  margin-bottom: 25px;
+}
+
 ol.answers li:hover {
 	cursor: pointer;
 	background: #ccf;
@@ -278,6 +282,7 @@ p.notices {
 
 #gradebook-table {
 	border-collapse: collapse;
+  margin: 10px 25px;
 }
 
 #gradebook-table th {
@@ -286,6 +291,10 @@ p.notices {
 
 #gradebook-table th, td {
 	padding: 4px;
+}
+
+#gradebook-table .name {
+  border-right: 1px solid #333;
 }
 
 #gradebook-table .data {

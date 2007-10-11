@@ -12,6 +12,11 @@ describe Quiz do
     @student_2 = users(:student_2)
   end
 
+  it 'should know all responses for a particular question' do
+    @quiz.responses_for(1).should == []
+    quizzes(:first).responses_for(5).size.should == 2
+  end
+
   it 'should be able to encode and decode completion codes' do
     Quiz.decode_completion_code("BAhbCGkHaQhbCGkJaQppCw==\n").should == [2, 3, [4, 5, 6]]
     Quiz.decode_completion_code("QhbCGkJaQppCw==\n").should == nil

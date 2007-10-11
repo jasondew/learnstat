@@ -25,14 +25,20 @@
       Questions: <%= @quiz.questions.count %>
     </span>
   </p>
+
 <% end %>
 
-<ol>
+<ol class="questions">
 
   <% @quiz.questions.each do |quiz_question| %>
 
     <li id="<%= dom_id(quiz_question) %>" <%= question_attributes %>>
+      <%= link_to image_tag('chart_pie.png', :alt => 'Graph'), course_quiz_report_path(@course, @quiz, quiz_question), :rel => 'lightbox' %>
       <%= quiz_question.content %>
+
+      <br />
+
+      <%= link_to_function 'Show Answer', "$('#{dom_id(quiz_question)}').getElementsByClassName('hidden-answer')[0].className = 'answer'" if @quiz.closed? %>
 
       <ol class="answers">
         <% quiz_question.choices.each do |choice| %>

@@ -66,7 +66,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades" do
     @grade = mock_model(Grade)
     Grade.stub!(:find).and_return([@grade])
 
-    login_as :student_1
+    login_as :instructor
   end
   
   def do_get
@@ -100,7 +100,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades.xml" do
     @grade = mock_model(Grade, :to_xml => "XML")
     Grade.stub!(:find).and_return(@grade)
 
-    login_as :student_1
+    login_as :instructor
   end
   
   def do_get
@@ -131,7 +131,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1" do
     @grade = mock_model(Grade)
     Grade.stub!(:find).and_return(@grade)
 
-    login_as :student_1
+    login_as :instructor
   end
   
   def do_get
@@ -165,7 +165,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1.xml" do
     @grade = mock_model(Grade, :to_xml => "XML")
     Grade.stub!(:find).and_return(@grade)
 
-    login_as :student_1
+    login_as :instructor
   end
   
   def do_get

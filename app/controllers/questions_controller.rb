@@ -1,5 +1,7 @@
 class QuestionsController < ApplicationController
 
+  before_filter :require_instructor
+
   # GET /questions
   # GET /questions.xml
   def index

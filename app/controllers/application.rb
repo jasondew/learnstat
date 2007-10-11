@@ -15,7 +15,7 @@ class ApplicationController < ActionController::Base
   # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '978aea9145ec181f5fb34aa5b844a4c8'
 
-  def instructor_required
+  def require_instructor
     current_user.instructor?
   end
 

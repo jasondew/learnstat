@@ -32,12 +32,12 @@ class User < ActiveRecord::Base
   attr_accessible :login, :email, :password, :password_confirmation, :first_name, :last_name,
                   :blackboard_username, :registration_code, :instructor, :remember_me
 
-  def name
-    self.first_name
+  def full_name
+    "#{first_name} #{last_name}"
   end
 
-  def full_name
-    "#{self.first_name} #{self.last_name}"
+  def name
+    "#{first_name.first.capitalize} #{last_name.capitalize}"
   end
 
   def mean_score

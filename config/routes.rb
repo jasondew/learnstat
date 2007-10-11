@@ -17,6 +17,7 @@ ActionController::Routing::Routes.draw do |map|
 
     course.resources :quizzes do |quiz|
       quiz.resources :quiz_questions
+      quiz.resources :reports
     end
   end
 

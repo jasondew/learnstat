@@ -1,5 +1,6 @@
 class DocumentsController < ApplicationController
 
+  before_filter :require_instructor, :except => :show
   before_filter :get_course
 
   def show

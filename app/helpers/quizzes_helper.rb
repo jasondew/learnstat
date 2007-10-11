@@ -8,7 +8,9 @@ module QuizzesHelper
     classes = Array.new
     responses ||= Array.new
 
-    if current_user.instructor? or @quiz.closed?
+    if current_user.instructor? and @quiz.closed?
+      classes << 'hidden-answer' if quiz_question.answer == choice.id
+    elsif current_user.instructor? or @quiz.closed?
       classes << 'answer' if quiz_question.answer == choice.id
     end
 

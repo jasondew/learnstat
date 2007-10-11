@@ -16,7 +16,7 @@ describe User do
   end
 
   it 'should know its name(s)' do
-    @instructor.name.should == 'Jason'
+    @instructor.name.should == 'J Dew'
     @instructor.full_name.should == 'Jason Dew'
   end
 

@@ -138,7 +138,7 @@ describe QuestionChoicesController, "handling POST /question_choices" do
     @choices.should_receive(:build).and_return(@question_choice)
     @question.should_receive(:choices).and_return(@choices)
 
-    login_as :student_1
+    login_as :instructor
   end
   
   def post_with_successful_save

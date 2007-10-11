@@ -31,6 +31,10 @@ class Quiz < ActiveRecord::Base
     @scores ||= course.students.collect {|student| grade_for(student) }.compact
   end
 
+  def responses_for(question_id)
+    question_responses.find_all_by_quiz_question_id question_id
+  end
+
   def grade_for(user)
     return nil unless user.question_responses.size > 0 and questions.size > 0
     (user.correct_responses.find_all_by_quiz_id(self).size / questions.size.to_f)

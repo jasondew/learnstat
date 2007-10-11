@@ -1,5 +1,7 @@
 class QuizQuestionsController < ApplicationController
 
+  before_filter :require_instructor
+
   before_filter :get_course
   before_filter :get_quiz
 

@@ -1,5 +1,6 @@
 class GradesController < ApplicationController
   
+  before_filter :require_instructor
   before_filter :get_course
 
   # GET /grades

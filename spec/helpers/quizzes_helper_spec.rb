@@ -33,6 +33,10 @@ describe QuizzesHelper do
 
     scenarios = Array.new
 
+    scenarios << { :instructor => true,  :quiz_closed => true, :choice => 2, :chosen => 4, :class => 'hidden-answer' }
+    scenarios << { :instructor => true,  :quiz_closed => true, :choice => 4, :chosen => 4, :class => 'selected' }
+    scenarios << { :instructor => true,  :quiz_closed => true, :choice => 2, :chosen => 2, :class => 'hidden-answer selected' }
+
     scenarios << { :instructor => true,  :quiz_closed => false, :choice => 2, :chosen => 4, :class => 'answer' }
     scenarios << { :instructor => true,  :quiz_closed => false, :choice => 4, :chosen => 4, :class => 'selected' }
     scenarios << { :instructor => true,  :quiz_closed => false, :choice => 2, :chosen => 2, :class => 'answer selected' }

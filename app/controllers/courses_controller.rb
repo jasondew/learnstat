@@ -17,6 +17,15 @@ class CoursesController < ApplicationController
   # GET /courses/1.xml
   def show
     @course = Course.find(params[:id])
+    @gradebook = Hash.new {|h, k| h[k] = Hash.new }
+
+    if current_user.instructor?
+      @course.students.each do |student|
+        @course.quizzes.each do |quiz|
+          @gradebook[student.id][quiz.id] = quiz.grade_for(student)
+        end
+      end
+    end
 
     respond_to do |format|
       format.html # show.rhtml

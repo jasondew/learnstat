@@ -1,6 +1,6 @@
 class AnnouncementsController < ApplicationController
 
-  before_filter :instructor_required
+  before_filter :require_instructor
   before_filter :get_course
 
   # GET /announcements/new

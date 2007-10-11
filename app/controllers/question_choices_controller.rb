@@ -1,5 +1,6 @@
 class QuestionChoicesController < ApplicationController
 
+  before_filter :require_instructor
   before_filter :get_question
 
   # GET /question_choices/new

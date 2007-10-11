@@ -4,7 +4,7 @@
 
 	<thead>
 	<tr>
-		<th>Student</th>
+		<th class="name">Student</th>
 		<% @course.quizzes.each do |quiz| %>
 			<th> <%= link_to quiz.name, course_quiz_path(@course, quiz) %> </th>
 		<% end %>
@@ -15,10 +15,10 @@
 	<% @course.students.each do |student| %>
 
 		<tr>
-			<td> <%= student.last_name %>, <%= student.first_name %> </td>
+			<td class="name"> <%= student.name %> </td>
 
 			<% @course.quizzes.each do |quiz| %>
-				<td class="data"> <%#= @gradebook[student.id][quiz.id] || "-" %> </td>
+				<td class="data"> <%= percent_format @gradebook[student.id][quiz.id] %> </td>
 			<% end %>
 		</tr>
 

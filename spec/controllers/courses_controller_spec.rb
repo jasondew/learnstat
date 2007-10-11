@@ -147,6 +147,18 @@ describe CoursesController, "handling GET /courses/1" do
     @course = mock_model(Course)
     Course.stub!(:find).and_return(@course)
 
+    @student = mock_model(User)
+    @quiz = mock_model(Quiz, :grade_for => 0.5)
+
+    @students = mock(Array)
+    @quizzes = mock(Array)
+
+    @students.stub!(:each).and_return(@student)
+    @quizzes.stub!(:each).and_return(@quiz)
+
+    @course.stub!(:students).and_return(@students)
+    @course.stub!(:quizzes).and_return(@quizzes)
+
     login_as :instructor
   end
   
@@ -180,6 +192,15 @@ describe CoursesController, "handling GET /courses/1.xml" do
   before do
     @course = mock_model(Course, :to_xml => "XML")
     Course.stub!(:find).and_return(@course)
+
+    @student = mock_model(User)
+    @quiz = mock_model(Quiz, :grade_for => 0.5)
+
+    @students = [@student]
+    @quizzes = [@quiz]
+
+    @course.stub!(:students).and_return(@students)
+    @course.stub!(:quizzes).and_return(@quizzes)
 
     login_as :instructor
   end
