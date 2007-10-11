@@ -14,7 +14,7 @@ class Course < ActiveRecord::Base
   include SemesterConstants
 
   def enrollment
-    @enrollment ||= self.students.count
+    @enrollment ||= students.count
   end
 
 end

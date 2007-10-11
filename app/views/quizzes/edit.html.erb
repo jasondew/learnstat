@@ -20,7 +20,7 @@ Available Questions: <br />
 
       <% if quiz_question %>
         <%= link_to_remote( image_tag( 'table_delete.png', :alt => 'Delete Question' ),
-                            :url => quiz_question_path(@course, @quiz, quiz_question), :method => :delete ) %>
+                            :url => course_quiz_quiz_question_path(@course, @quiz, quiz_question), :method => :delete ) %>
       <% else %>
         <%= link_to_remote( image_tag( 'table_add.png', :alt => 'Add Question' ),
                             :url => course_quiz_quiz_questions_path(@course, @quiz), :with => %Q|"question_id=#{question.id}"|,

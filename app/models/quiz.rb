@@ -54,7 +54,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def participation
-    number_attempted / course.enrollment
+    number_attempted / course.enrollment.to_f
   end
 
   def number_attempted
