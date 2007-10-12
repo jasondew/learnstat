@@ -12,7 +12,7 @@ describe "/grades/edit.html.erb" do
   it "should render edit form" do
     render "/grades/edit.html.erb"
     
-    response.should have_tag("form[action=#{user_course_grade_path(@current_user, @course, @grade)}][method=post]") do
+    response.should have_tag("form[action=#{course_grade_path(@course, @grade)}][method=post]") do
     end
   end
 end

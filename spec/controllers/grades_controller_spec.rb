@@ -2,65 +2,65 @@ require File.dirname(__FILE__) + '/../spec_helper'
 
 describe GradesController, "#route_for" do
 
-  it "should map { :controller => 'grades', :action => 'index' } to /users/2/courses/1/grades" do
-    route_for(:controller => "grades", :action => "index", :course_id => 1, :user_id => 2).should == "/users/2/courses/1/grades"
+  it "should map { :controller => 'grades', :action => 'index' } to /courses/1/grades" do
+    route_for(:controller => "grades", :action => "index", :course_id => 1).should == "/courses/1/grades"
   end
   
-  it "should map { :controller => 'grades', :action => 'new' } to /users/2/courses/1/grades/new" do
-    route_for(:controller => "grades", :action => "new", :course_id => 1, :user_id => 2).should == "/users/2/courses/1/grades/new"
+  it "should map { :controller => 'grades', :action => 'new' } to /courses/1/grades/new" do
+    route_for(:controller => "grades", :action => "new", :course_id => 1).should == "/courses/1/grades/new"
   end
   
-  it "should map { :controller => 'grades', :action => 'show', :id => 1 } to /users/2/courses/1/grades/1" do
-    route_for(:controller => "grades", :action => "show", :course_id => 1, :user_id => 2, :id => 1).should == "/users/2/courses/1/grades/1"
+  it "should map { :controller => 'grades', :action => 'show', :id => 1 } to /courses/1/grades/1" do
+    route_for(:controller => "grades", :action => "show", :course_id => 1, :id => 1).should == "/courses/1/grades/1"
   end
   
-  it "should map { :controller => 'grades', :action => 'edit', :id => 1 } to /users/2/courses/1/grades/1/edit" do
-    route_for(:controller => "grades", :action => "edit", :course_id => 1, :user_id => 2, :id => 1).should == "/users/2/courses/1/grades/1/edit"
+  it "should map { :controller => 'grades', :action => 'edit', :id => 1 } to /courses/1/grades/1/edit" do
+    route_for(:controller => "grades", :action => "edit", :course_id => 1, :id => 1).should == "/courses/1/grades/1/edit"
   end
   
-  it "should map { :controller => 'grades', :action => 'update', :id => 1} to /users/2/courses/1/grades/1" do
-    route_for(:controller => "grades", :action => "update", :course_id => 1, :user_id => 2, :id => 1).should == "/users/2/courses/1/grades/1"
+  it "should map { :controller => 'grades', :action => 'update', :id => 1} to /courses/1/grades/1" do
+    route_for(:controller => "grades", :action => "update", :course_id => 1, :id => 1).should == "/courses/1/grades/1"
   end
   
-  it "should map { :controller => 'grades', :action => 'destroy', :id => 1} to /users/2/courses/1/grades/1" do
-    route_for(:controller => "grades", :action => "destroy", :course_id => 1, :user_id => 2, :id => 1).should == "/users/2/courses/1/grades/1"
+  it "should map { :controller => 'grades', :action => 'destroy', :id => 1} to /courses/1/grades/1" do
+    route_for(:controller => "grades", :action => "destroy", :course_id => 1, :id => 1).should == "/courses/1/grades/1"
   end
   
 end
 
 describe GradesController, "#params_from" do
 
-  it "should generate params { :controller => 'grades', action => 'index' } from GET /users/2/courses/1/grades" do
-    params_from(:get, "/users/2/courses/1/grades").should == {:controller => "grades", :action => "index", :course_id => "1", :user_id => "2"}
+  it "should generate params { :controller => 'grades', action => 'index' } from GET /courses/1/grades" do
+    params_from(:get, "/courses/1/grades").should == {:controller => "grades", :action => "index", :course_id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'new' } from GET /users/2/courses/1/grades/new" do
-    params_from(:get, "/users/2/courses/1/grades/new").should == {:controller => "grades", :action => "new", :course_id => "1", :user_id => "2"}
+  it "should generate params { :controller => 'grades', action => 'new' } from GET /courses/1/grades/new" do
+    params_from(:get, "/courses/1/grades/new").should == {:controller => "grades", :action => "new", :course_id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'create' } from POST /users/2/courses/1/grades" do
-    params_from(:post, "/users/2/courses/1/grades").should == {:controller => "grades", :action => "create", :course_id => "1", :user_id => "2"}
+  it "should generate params { :controller => 'grades', action => 'create' } from POST /courses/1/grades" do
+    params_from(:post, "/courses/1/grades").should == {:controller => "grades", :action => "create", :course_id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'show', id => '1' } from GET /users/2/courses/1/grades/1" do
-    params_from(:get, "/users/2/courses/1/grades/1").should == {:controller => "grades", :action => "show", :course_id => "1", :user_id => "2", :id => "1"}
+  it "should generate params { :controller => 'grades', action => 'show', id => '1' } from GET /courses/1/grades/1" do
+    params_from(:get, "/courses/1/grades/1").should == {:controller => "grades", :action => "show", :course_id => "1", :id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'edit', id => '1' } from GET /users/2/courses/1/grades/1;edit" do
-    params_from(:get, "/users/2/courses/1/grades/1/edit").should == {:controller => "grades", :action => "edit", :course_id => "1", :user_id => "2", :id => "1"}
+  it "should generate params { :controller => 'grades', action => 'edit', id => '1' } from GET /courses/1/grades/1;edit" do
+    params_from(:get, "/courses/1/grades/1/edit").should == {:controller => "grades", :action => "edit", :course_id => "1", :id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'update', id => '1' } from PUT /users/2/courses/1/grades/1" do
-    params_from(:put, "/users/2/courses/1/grades/1").should == {:controller => "grades", :action => "update", :course_id => "1", :user_id => "2", :id => "1"}
+  it "should generate params { :controller => 'grades', action => 'update', id => '1' } from PUT /courses/1/grades/1" do
+    params_from(:put, "/courses/1/grades/1").should == {:controller => "grades", :action => "update", :course_id => "1", :id => "1"}
   end
   
-  it "should generate params { :controller => 'grades', action => 'destroy', id => '1' } from DELETE /users/2/courses/1/grades/1" do
-    params_from(:delete, "/users/2/courses/1/grades/1").should == {:controller => "grades", :action => "destroy", :course_id => "1", :user_id => "2", :id => "1"}
+  it "should generate params { :controller => 'grades', action => 'destroy', id => '1' } from DELETE /courses/1/grades/1" do
+    params_from(:delete, "/courses/1/grades/1").should == {:controller => "grades", :action => "destroy", :course_id => "1", :id => "1"}
   end
   
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades" do
+describe GradesController, "handling GET /courses/1/grades" do
 
   before do
     @grade = mock_model(Grade)
@@ -70,7 +70,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades" do
   end
   
   def do_get
-    get :index, :course_id => 1, :user_id => 2
+    get :index, :course_id => 1
   end
   
   it "should be successful" do
@@ -94,7 +94,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades" do
   end
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades.xml" do
+describe GradesController, "handling GET /courses/1/grades.xml" do
 
   before do
     @grade = mock_model(Grade, :to_xml => "XML")
@@ -105,7 +105,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades.xml" do
   
   def do_get
     @request.env["HTTP_ACCEPT"] = "application/xml"
-    get :index, :course_id => 1, :user_id => 2
+    get :index, :course_id => 1
   end
   
   it "should be successful" do
@@ -125,7 +125,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades.xml" do
   end
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades/1" do
+describe GradesController, "handling GET /courses/1/grades/1" do
 
   before do
     @grade = mock_model(Grade)
@@ -135,7 +135,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1" do
   end
   
   def do_get
-    get :show, :id => "1", :course_id => 1, :user_id => 2
+    get :show, :id => "1", :course_id => 1
   end
 
   it "should be successful" do
@@ -159,7 +159,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1" do
   end
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades/1.xml" do
+describe GradesController, "handling GET /courses/1/grades/1.xml" do
 
   before do
     @grade = mock_model(Grade, :to_xml => "XML")
@@ -170,7 +170,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1.xml" do
   
   def do_get
     @request.env["HTTP_ACCEPT"] = "application/xml"
-    get :show, :id => "1", :course_id => 1, :user_id => 2
+    get :show, :id => "1", :course_id => 1
   end
 
   it "should be successful" do
@@ -190,7 +190,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1.xml" do
   end
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades/new" do
+describe GradesController, "handling GET /courses/1/grades/new" do
 
   before do
     @grade = mock_model(Grade)
@@ -200,7 +200,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/new" do
   end
   
   def do_get
-    get :new, :course_id => 1, :user_id => 2
+    get :new, :course_id => 1
   end
 
   it "should be successful" do
@@ -229,7 +229,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/new" do
   end
 end
 
-describe GradesController, "handling GET /users/2/courses/1/grades/1/edit" do
+describe GradesController, "handling GET /courses/1/grades/1/edit" do
 
   before do
     @grade = mock_model(Grade)
@@ -239,7 +239,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1/edit" do
   end
   
   def do_get
-    get :edit, :id => "1", :course_id => 1, :user_id => 2
+    get :edit, :id => "1", :course_id => 1
   end
 
   it "should be successful" do
@@ -263,7 +263,7 @@ describe GradesController, "handling GET /users/2/courses/1/grades/1/edit" do
   end
 end
 
-describe GradesController, "handling POST /users/2/courses/1/grades" do
+describe GradesController, "handling POST /courses/1/grades" do
 
   before do
     @grade = mock_model(Grade, :to_param => "1")
@@ -274,12 +274,12 @@ describe GradesController, "handling POST /users/2/courses/1/grades" do
   
   def post_with_successful_save
     @grade.should_receive(:save).and_return(true)
-    post :create, :grade => {}, :course_id => 1, :user_id => 2
+    post :create, :grade => {}, :course_id => 1
   end
   
   def post_with_failed_save
     @grade.should_receive(:save).and_return(false)
-    post :create, :grade => {}, :course_id => 1, :user_id => 2
+    post :create, :grade => {}, :course_id => 1
   end
   
   it "should create a new grade" do
@@ -298,7 +298,7 @@ describe GradesController, "handling POST /users/2/courses/1/grades" do
   end
 end
 
-describe GradesController, "handling PUT /users/2/courses/1/grades/1" do
+describe GradesController, "handling PUT /courses/1/grades/1" do
 
   before do
     @grade = mock_model(Grade, :to_param => "1")
@@ -309,12 +309,12 @@ describe GradesController, "handling PUT /users/2/courses/1/grades/1" do
   
   def put_with_successful_update
     @grade.should_receive(:update_attributes).and_return(true)
-    put :update, :id => "1", :course_id => 1, :user_id => 2
+    put :update, :id => "1", :course_id => 1
   end
   
   def put_with_failed_update
     @grade.should_receive(:update_attributes).and_return(false)
-    put :update, :id => "1", :course_id => 1, :user_id => 2
+    put :update, :id => "1", :course_id => 1
   end
   
   it "should find the grade requested" do
@@ -343,7 +343,7 @@ describe GradesController, "handling PUT /users/2/courses/1/grades/1" do
   end
 end
 
-describe GradesController, "handling DELETE /users/2/courses/1/grades/1" do
+describe GradesController, "handling DELETE /courses/1/grades/1" do
 
   before do
     @grade = mock_model(Grade, :destroy => true)
@@ -353,7 +353,7 @@ describe GradesController, "handling DELETE /users/2/courses/1/grades/1" do
   end
   
   def do_delete
-    delete :destroy, :id => "1", :course_id => 1, :user_id => 2
+    delete :destroy, :id => "1", :course_id => 1
   end
 
   it "should find the grade requested" do
@@ -368,6 +368,6 @@ describe GradesController, "handling DELETE /users/2/courses/1/grades/1" do
   
   it "should redirect to the grades list" do
     do_delete
-    response.should redirect_to(user_course_grades_url(1,1))
+    response.should redirect_to(course_grades_url(1))
   end
 end

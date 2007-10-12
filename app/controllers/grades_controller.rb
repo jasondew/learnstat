@@ -76,7 +76,7 @@ class GradesController < ApplicationController
     @grade.destroy
 
     respond_to do |format|
-      format.html { redirect_to user_course_grades_url(current_user, @course) }
+      format.html { redirect_to course_grades_url(@course) }
       format.xml  { head :ok }
     end
   end

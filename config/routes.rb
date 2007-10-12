@@ -1,24 +1,11 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :users do |user|
-    user.resources :courses do |course|
-      course.resources :quizzes do |quiz|
-        quiz.resources :question_responses
-      end
-      course.resources :grades
-    end
-  end
-
-  map.resources :activations
+  map.resources :users, :activations
   map.resource :session, :controller => 'sessions'
 
   map.resources :courses do |course|
-    course.resources :announcements, :documents
-
-    course.resources :quizzes do |quiz|
-      quiz.resources :quiz_questions
-      quiz.resources :reports
-    end
+    course.resources :announcements, :documents, :grades
+    course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :reports]
   end
 
   map.resources :questions do |question|

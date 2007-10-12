@@ -59,14 +59,10 @@ describe QuizzesHelper do
   end
 
   it 'should provide an onclick for a choice' do
-    @user.stub!(:to_param).and_return(1)
-    @course.stub!(:to_param).and_return(2)
-    @quiz.stub!(:to_param).and_return(3)
-
     @quiz_question.stub!(:id).and_return(4)
     @choice.stub!(:id).and_return(5)
 
-    choice_onclick(@quiz_question, @choice).should == %Q|onclick = "choose_answer('quiz_question_4', 'question_choice_5', '/users/1/courses/2/quizzes/3/question_responses', 'quiz_question_id=4&question_choice_id=5&authenticity_token=42')"|
+    choice_onclick(@quiz_question, @choice).should == %Q|onclick = "choose_answer('quiz_question_4', 'question_choice_5', '/courses/#{@course.id}/quizzes/#{@quiz.id}/question_responses', 'quiz_question_id=4&question_choice_id=5&authenticity_token=42')"|
   end
 
 end
