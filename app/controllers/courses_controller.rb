@@ -10,6 +10,7 @@ class CoursesController < ApplicationController
   # GET /courses/1
   def show
     @course = Course.find(params[:id])
+    @quizzes = @course.quizzes
     @gradebook = Hash.new {|h,k| h[k] = Array.new }
 
     @students = current_user.instructor? ? @course.students : [current_user]

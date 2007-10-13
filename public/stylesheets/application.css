@@ -45,7 +45,35 @@ h2 {
 
 h3 {
   font-family: georgia, serif;
-  font-size: 150%;
+  font-size: 16px;
+  float: left;
+  margin: 4px 10px;
+}
+
+div.block_head {
+  color: white;
+  background: url("/images/rounded_top.png");
+  border-bottom: 1px solid #333;
+  height: 26px;
+}
+
+div.block_body {
+  background: url("/images/rounded_bottom.png") bottom;
+  margin-bottom: 20px;
+  padding: 10px;
+  clear: both;
+}
+
+div.block_information {
+  float: right;
+  font-style: italic;
+  font-size: 10px;
+  margin: 10px 10px 4px 10px;
+}
+
+.information {
+  font-style: italic;
+  font-size: 60%;
 }
 
 pre {
@@ -250,7 +278,8 @@ ol.answers li.answer {
 p.notices {
 	color: green;
 	font-weight: bold;
-	padding: 0 10px;
+	padding: 0;
+  text-align: center;
 }
 
 .chosen-question {
@@ -282,19 +311,29 @@ p.notices {
 
 #gradebook-table {
 	border-collapse: collapse;
-  margin: 10px 25px;
+  margin: 10px auto;
 }
 
 #gradebook-table th {
 	border-bottom: 1px solid #333;
 }
 
-#gradebook-table th, td {
-	padding: 4px;
+#gradebook-table th, #gradebook-table th a {
+  background: #9b2f47;
+  color: white;
 }
 
-#gradebook-table .name {
-  border-right: 1px solid #333;
+#gradebook-table th, td {
+	padding: 4px;
+  border: 1px solid #333;
+}
+
+#gradebook-table td.name {
+  background: #f2e3e6;
+}
+
+#gradebook-table td.name, #gradebook-table th.name {
+  border-right: 2px solid #333;
 }
 
 #gradebook-table .data {
@@ -359,15 +398,13 @@ p.notices {
 }
 
 #announcements #nav-announcements, #documents #nav-documents,
-#openQuizzes #nav-openQuizzes, #closedQuizzes #nav-closedQuizzes,
-#gradebook #nav-gradebook {
+#quizzes #nav-quizzes, #gradebook #nav-gradebook {
 	background-position: 0 -150px;
 	border-width: 0;
 }
 
 #announcements #nav-announcements a, #documents #nav-documents a,
-#openQuizzes #nav-openQuizzes a, #closedQuizzes #nav-closedQuizzes a,
-#gradebook #nav-gradebook a {
+#quizzes #nav-quizzes a, #gradebook #nav-gradebook a {
 	background-position: 100% -150px;
 	padding-bottom: 5px;
 	color: #333;
@@ -394,7 +431,3 @@ p.notices {
 
 .unaccessible { display: none; }
 
-.information {
-  font-style: italic;
-  font-size: 75%;
-}

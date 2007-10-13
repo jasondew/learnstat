@@ -6,4 +6,8 @@ class Document < ActiveRecord::Base
   acts_as_attachment :storage => :file_system
   validates_as_attachment
 
+  def viewable_now?
+    viewable_at <= Time.now
+  end
+
 end
