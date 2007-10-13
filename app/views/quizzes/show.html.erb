@@ -9,6 +9,9 @@
     <strong>Completed Assignment:</strong> This assignment was due on <%= datetime_format(@quiz.due_at) %>.
     Your answer, if you provided one, is shown in green.  The correct answer to the question is shown
     underlined.
+
+    <p class="information">Mean: <%= percent_format @quiz.mean %>, Standard Deviation: <%= number_with_precision @quiz.standard_deviation, 2 %></p>
+
   <% else %>
     <strong>Instructions:</strong> Complete the following questions by clicking on the
     answer of your choice.  You have until <%= datetime_format(@quiz.due_at) %> to complete

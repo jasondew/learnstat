@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 11) do
+ActiveRecord::Schema.define(:version => 12) do
 
   create_table "announcements", :force => true do |t|
     t.integer  "course_id"
@@ -44,10 +44,18 @@ ActiveRecord::Schema.define(:version => 11) do
     t.datetime "created_at"
   end
 
+  create_table "exams", :force => true do |t|
+    t.string   "name"
+    t.datetime "given_on"
+    t.boolean  "final"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
   create_table "grades", :force => true do |t|
     t.integer "user_id"
     t.integer "course_id"
-    t.string  "nane"
+    t.integer "exam_id"
     t.float   "value"
   end
 

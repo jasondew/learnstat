@@ -1,5 +1,34 @@
 require File.dirname(__FILE__) + '/../spec_helper'
 
+describe "CourseCommons", :shared => true do
+
+  before do
+    @course = mock_model(Course)
+    Course.stub!(:find).and_return(@course)
+    Course.stub!(:new).and_return(@course)
+
+    @student = mock_model(User)
+    @quiz = mock_model(Quiz, :grade_for => 0.5)
+    @exam = mock_model(Exam)
+
+    @students = mock(Array)
+    @quizzes = mock(Array)
+
+    @students.stub!(:each).and_return(@student)
+    @quizzes.stub!(:each).and_return(@quiz)
+
+    @gradeables = [@quiz,@exam]
+
+    @course.stub!(:students).and_return(@students)
+    @course.stub!(:quizzes).and_return(@quizzes)
+    @course.stub!(:gradeables).and_return(@gradeables)
+    @course.stub!(:destroy)
+
+    login_as :instructor
+  end
+
+end
+
 describe "Access control" do
   controller_name :courses
 
@@ -8,12 +37,6 @@ describe "Access control" do
     response.should redirect_to( '/session/new' )
   end
 
-  it "should send you to the login screen if not authorized (XML)" do
-    @request.env["HTTP_ACCEPT"] = "application/xml"
-    get :show, :id => 1
-    response.body.should == "Couldn't authenticate you"
-    response.headers["Status"].should == '401 Unauthorized'
-  end
 end
 
 describe CoursesController, "#route_for" do
@@ -78,13 +101,8 @@ end
 
 describe CoursesController, "handling GET /courses" do
 
-  before do
-    @course = mock_model(Course)
-    Course.stub!(:find).and_return([@course])
+  it_should_behave_like 'CourseCommons'
 
-    login_as :instructor
-  end
-  
   def do_get
     get :index
   end
@@ -106,61 +124,13 @@ describe CoursesController, "handling GET /courses" do
   
   it "should assign the found courses for the view" do
     do_get
-    assigns[:courses].should == [@course]
-  end
-end
-
-describe CoursesController, "handling GET /courses.xml" do
-
-  before do
-    @course = mock_model(Course, :to_xml => "XML")
-    Course.stub!(:find).and_return(@course)
-
-    login_as :instructor
-  end
-  
-  def do_get
-    @request.env["HTTP_ACCEPT"] = "application/xml"
-    get :index
-  end
-  
-  it "should be successful" do
-    do_get
-    response.should be_success
-  end
-
-  it "should find all courses" do
-    Course.should_receive(:find).with(:all).and_return([@course])
-    do_get
-  end
-  
-  it "should render the found courses as xml" do
-    @course.should_receive(:to_xml).and_return("XML")
-    do_get
-    response.body.should == "XML"
+    assigns[:courses].should == @course
   end
 end
 
 describe CoursesController, "handling GET /courses/1" do
 
-  before do
-    @course = mock_model(Course)
-    Course.stub!(:find).and_return(@course)
-
-    @student = mock_model(User)
-    @quiz = mock_model(Quiz, :grade_for => 0.5)
-
-    @students = mock(Array)
-    @quizzes = mock(Array)
-
-    @students.stub!(:each).and_return(@student)
-    @quizzes.stub!(:each).and_return(@quiz)
-
-    @course.stub!(:students).and_return(@students)
-    @course.stub!(:quizzes).and_return(@quizzes)
-
-    login_as :instructor
-  end
+  it_should_behave_like 'CourseCommons'
   
   def do_get
     get :show, :id => "1"
@@ -185,56 +155,36 @@ describe CoursesController, "handling GET /courses/1" do
     do_get
     assigns[:course].should equal(@course)
   end
+
 end
 
-describe CoursesController, "handling GET /courses/1.xml" do
+describe CoursesController, "calculating the gradebook" do
 
   before do
-    @course = mock_model(Course, :to_xml => "XML")
+    @course = mock_model(Course)
     Course.stub!(:find).and_return(@course)
+    Course.stub!(:new).and_return(@course)
 
     @student = mock_model(User)
-    @quiz = mock_model(Quiz, :grade_for => 0.5)
+    @quiz = mock_model(Quiz, :name => 'quiz', :grade_for => 0.5)
+    @exam = mock_model(Exam, :name => 'exam', :grade_for => 0.8)
 
     @students = [@student]
-    @quizzes = [@quiz]
-
-    @course.stub!(:students).and_return(@students)
-    @course.stub!(:quizzes).and_return(@quizzes)
+    @gradeables = [@quiz,@exam]
 
     login_as :instructor
   end
-  
-  def do_get
-    @request.env["HTTP_ACCEPT"] = "application/xml"
-    get :show, :id => "1"
-  end
 
-  it "should be successful" do
-    do_get
-    response.should be_success
-  end
-  
-  it "should find the course requested" do
-    Course.should_receive(:find).with("1").and_return(@course)
-    do_get
-  end
-  
-  it "should render the found course as xml" do
-    @course.should_receive(:to_xml).and_return("XML")
-    do_get
-    response.body.should == "XML"
+  it "should calculate correctly" do
+    @course.should_receive(:students).and_return(@students)
+    @course.should_receive(:gradeables).and_return(@gradeables)
+    get :show, :id => 1
   end
 end
 
 describe CoursesController, "handling GET /courses/new" do
 
-  before do
-    @course = mock_model(Course)
-    Course.stub!(:new).and_return(@course)
-
-    login_as :instructor
-  end
+  it_should_behave_like 'CourseCommons'
   
   def do_get
     get :new
@@ -268,12 +218,7 @@ end
 
 describe CoursesController, "handling GET /courses/1/edit" do
 
-  before do
-    @course = mock_model(Course)
-    Course.stub!(:find).and_return(@course)
-
-    login_as :instructor
-  end
+  it_should_behave_like 'CourseCommons'
   
   def do_get
     get :edit, :id => "1"
@@ -302,16 +247,8 @@ end
 
 describe CoursesController, "handling POST /courses" do
 
-  before do
-    @course = mock_model(Course, :to_param => "1")
-    Course.stub!(:new).and_return(@course)
+  it_should_behave_like 'CourseCommons'
 
-    @courses = mock(Array, :build => @course)
-    @current_user = mock_model(User, :courses => @courses)
-
-    login_as :instructor
-  end
-  
   def post_with_successful_save
     @course.should_receive(:[]=).with('user_id', 1).and_return(@course)
     @course.should_receive(:save).and_return(true)
@@ -331,7 +268,7 @@ describe CoursesController, "handling POST /courses" do
 
   it "should redirect to the new course on successful save" do
     post_with_successful_save
-    response.should redirect_to(course_url("1"))
+    response.should redirect_to(course_url(@course))
   end
 
   it "should re-render 'new' on failed save" do
@@ -341,14 +278,9 @@ describe CoursesController, "handling POST /courses" do
 end
 
 describe CoursesController, "handling PUT /courses/1" do
-
-  before do
-    @course = mock_model(Course, :to_param => "1")
-    Course.stub!(:find).and_return(@course)
-
-    login_as :instructor
-  end
   
+  it_should_behave_like 'CourseCommons'
+
   def put_with_successful_update
     @course.should_receive(:update_attributes).and_return(true)
     put :update, :id => "1"
@@ -376,7 +308,7 @@ describe CoursesController, "handling PUT /courses/1" do
 
   it "should redirect to the course on successful update" do
     put_with_successful_update
-    response.should redirect_to(course_url("1"))
+    response.should redirect_to(course_url(@course))
   end
 
   it "should re-render 'edit' on failed update" do
@@ -386,14 +318,9 @@ describe CoursesController, "handling PUT /courses/1" do
 end
 
 describe CoursesController, "handling DELETE /courses/1" do
-
-  before do
-    @course = mock_model(Course, :destroy => true)
-    Course.stub!(:find).and_return(@course)
-
-    login_as :instructor
-  end
   
+  it_should_behave_like 'CourseCommons'
+
   def do_delete
     delete :destroy, :id => "1"
   end

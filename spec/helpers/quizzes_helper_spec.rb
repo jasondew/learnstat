@@ -65,4 +65,14 @@ describe QuizzesHelper do
     choice_onclick(@quiz_question, @choice).should == %Q|onclick = "choose_answer('quiz_question_4', 'question_choice_5', '/courses/#{@course.id}/quizzes/#{@quiz.id}/question_responses', 'quiz_question_id=4&question_choice_id=5&authenticity_token=42')"|
   end
 
+  it "should be able to make a gradeable_path for a Quiz" do
+    @gradeable = mock_model(Quiz)
+    gradeable_path(@gradeable).should == course_quiz_path(@course, @gradeable)
+  end
+  
+  it "should be able to make a gradeable_path for an Exam" do
+    @gradeable = mock_model(Exam)
+    gradeable_path(@gradeable).should == course_exam_path(@course, @gradeable)
+  end
+
 end

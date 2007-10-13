@@ -17,14 +17,14 @@ class Quiz < ActiveRecord::Base
   validate :future_due_date
   validate :viewable_before_due
 
-  def mean_score
+  def mean
     return nil unless question_responses.size > 0
     @mean_score ||= correct_responses.size / question_responses.size.to_f
   end
 
-  def score_standard_deviation
+  def standard_deviation
     return nil unless scores.size > 1
-    (scores.collect {|score| (score - mean_score) ** 2 }.sum / (scores.size - 1)) ** 0.5
+    (scores.collect {|score| (score - mean) ** 2 }.sum / (scores.size - 1)) ** 0.5
   end
 
   def scores
@@ -73,8 +73,6 @@ class Quiz < ActiveRecord::Base
     viewable_at <= Time.now
   end
 
-  private
-
   def responses_from(user)
     answers_from(user).collect {|response| response.question_choice_id }
   end
@@ -82,6 +80,8 @@ class Quiz < ActiveRecord::Base
   def answers_from(user)
     question_responses.find_all_by_user_id(user)
   end
+
+  private
 
   def future_due_date
     errors.add( :due_at, 'date must be in the future' ) if due_at <= Time.now

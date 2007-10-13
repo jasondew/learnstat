@@ -1,0 +1,18 @@
+<h1>Listing exams</h1>
+
+<table>
+  <tr>
+  </tr>
+
+<% for exam in @exams %>
+  <tr>
+    <td><%= link_to 'Show', course_exam_path(@course,exam) %></td>
+    <td><%= link_to 'Edit', edit_course_exam_path(@course,exam) %></td>
+    <td><%= link_to 'Destroy', course_exam_path(@course,exam), :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+</table>
+
+<br />
+
+<%= link_to 'New exam', new_course_exam_path(@course) %>

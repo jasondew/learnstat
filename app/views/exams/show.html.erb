@@ -1,0 +1,7 @@
+<h2><%= @exam.name %></h2>
+
+<p><label for="mean">Mean Score: </label><%= percent_format @exam.mean %></p>
+<p><label for="sd">Standard Deviation: </label><%= number_with_precision @exam.standard_deviation, 2 %></p>
+
+<p><%= link_to image_tag('application_form_edit.png', :alt => 'Edit Exam') + '&nbsp; Edit Exam', edit_course_exam_path(@course, @exam) if current_user.instructor? %></p>
+<p><%= link_to 'Back', course_path(@course) %></p>

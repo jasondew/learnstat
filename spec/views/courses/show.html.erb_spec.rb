@@ -4,9 +4,9 @@ describe "/courses/show.html.erb" do
   include CoursesHelper
   
   before do
-    @course = mock_model(Course)
-
-    assigns[:course] = @course
+    assigns[:course] = @course = mock_model(Course)
+    @student = mock_model(User, :null_object => true)
+    assigns[:students] = @students = [@student]
     login_as :student_1
   end
 
@@ -17,6 +17,7 @@ describe "/courses/show.html.erb" do
     @course.stub!(:open_quizzes).and_return([])
     @course.stub!(:closed_quizzes).and_return([])
     @course.stub!(:students).and_return([])
+    @course.stub!(:gradeables).and_return([])
 
     render "/courses/show.html.erb"
   end

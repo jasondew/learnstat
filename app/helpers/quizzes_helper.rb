@@ -1,5 +1,12 @@
 module QuizzesHelper
 
+  def gradeable_path(gradeable)
+    case gradeable
+      when Quiz: course_quiz_path(@course, gradeable)
+      when Exam: course_exam_path(@course, gradeable)
+    end
+  end
+
   def question_attributes
     @quiz.closed? ? 'disabled="disabled"' : ''
   end

@@ -76,13 +76,13 @@ describe Quiz do
   end
 
   it 'should know its mean score' do
-    @quiz_1.mean_score.should == 0.5
-    @quiz_2.mean_score.should == nil
+    @quiz_1.mean.should == 0.5
+    @quiz_2.mean.should == nil
   end
 
   it 'should know its scores standard deviation' do
-    @quiz_1.score_standard_deviation.should be_close(0.14, 0.01)
-    @quiz_2.score_standard_deviation.should == nil
+    @quiz_1.standard_deviation.should be_close(0.14, 0.01)
+    @quiz_2.standard_deviation.should == nil
   end
 
   it 'should know who attempted itself' do

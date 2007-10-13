@@ -19,8 +19,8 @@
         Percentile Rank: <%= percent_format quiz.percentile_for(current_user) %> <br />
       <% end %>
 
-      Mean Score: <%= percent_format quiz.mean_score %> <br />
-      Standard Deviation: <%= number_with_precision quiz.score_standard_deviation, 2 %>
+      Mean Score: <%= percent_format quiz.mean %> <br />
+      Standard Deviation: <%= number_with_precision quiz.standard_deviation, 2 %>
     </span>
   </li>
 

@@ -1,10 +1,13 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :users, :activations
+  map.resources :users
+  map.resources :activations
+
   map.resource :session, :controller => 'sessions'
 
   map.resources :courses do |course|
-    course.resources :announcements, :documents, :grades
+    course.resources :announcements, :documents
+    course.resources :exams, :has_many => :grades
     course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :reports]
   end
 

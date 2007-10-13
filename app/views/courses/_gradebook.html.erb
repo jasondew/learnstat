@@ -5,20 +5,20 @@
 	<thead>
 	<tr>
 		<th class="name">Student</th>
-		<% @course.quizzes.each do |quiz| %>
-			<th> <%= link_to quiz.name, course_quiz_path(@course, quiz) %> </th>
+		<% @course.gradeables.each do |gradeable| %>
+			<th> <%= link_to gradeable.name, gradeable_path(gradeable) %> </th>
 		<% end %>
 	</tr>
 	</thead>
 
 	<tbody>
-	<% @course.students.each do |student| %>
+	<% @students.each do |student| %>
 
 		<tr>
 			<td class="name"> <%= student.name %> </td>
 
-			<% @course.quizzes.each do |quiz| %>
-				<td class="data"> <%= percent_format @gradebook[student.id][quiz.id] %> </td>
+			<% @course.gradeables.each do |gradeable| %>
+				<td class="data"> <%= percent_format @gradebook[gradeable.name.underscore][student.id] %> </td>
 			<% end %>
 		</tr>
 
@@ -28,3 +28,5 @@
 	</tbody>
 
 </table>
+
+<p> <%= link_to image_tag( 'application_form_add.png', :alt => 'Add an Exam') + '&nbsp; Add an Exam', new_course_exam_path(@course) if current_user.instructor? %> </p>
