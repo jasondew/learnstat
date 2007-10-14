@@ -1,6 +1,6 @@
 <h2 class="accessible">Gradebook</h2>
 
-<% if @course.gradeables.empty? %>
+<% if @course.gradeables.empty? and (! current_user.instructor?) %>
 
   <ul><li>There are no grades posted at this time.</li></ul>
 
