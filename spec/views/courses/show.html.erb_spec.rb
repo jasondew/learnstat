@@ -5,6 +5,7 @@ describe "/courses/show.html.erb" do
   
   before do
     assigns[:course] = @course = mock_model(Course)
+    assigns[:quizzes] = @quizzes = []
     @student = mock_model(User, :null_object => true)
     assigns[:students] = @students = [@student]
     login_as :student_1
@@ -13,9 +14,6 @@ describe "/courses/show.html.erb" do
   it "should render attributes in <p>" do
     @course.stub!(:announcements).and_return([])
     @course.stub!(:documents).and_return([])
-    @course.stub!(:quizzes).and_return([])
-    @course.stub!(:open_quizzes).and_return([])
-    @course.stub!(:closed_quizzes).and_return([])
     @course.stub!(:students).and_return([])
     @course.stub!(:gradeables).and_return([])
 

@@ -171,6 +171,7 @@ describe CoursesController, "calculating the gradebook" do
 
     @students = [@student]
     @gradeables = [@quiz,@exam]
+    @quizzes = [@quiz]
 
     login_as :instructor
   end
@@ -178,6 +179,7 @@ describe CoursesController, "calculating the gradebook" do
   it "should calculate correctly" do
     @course.should_receive(:students).and_return(@students)
     @course.should_receive(:gradeables).and_return(@gradeables)
+    @course.should_receive(:quizzes).and_return(@quizzes)
     get :show, :id => 1
   end
 end
