@@ -1,5 +1,7 @@
 <h2>Editing document</h2>
 
+<div class="block">
+
 <%= error_messages_for :document %>
 
 <% form_for(:document, :url => course_document_path(@course, @document), :html => { :method => :put }) do |f| %>
@@ -11,3 +13,7 @@
 <% end %>
 
 <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />

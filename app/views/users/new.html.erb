@@ -1,25 +1,35 @@
 <h2>Register an Account</h2>
 
-<%= error_messages_for :user %>
+<% form_for @user do |f| -%>
 
-<% form_for :user, :url => users_path do |f| -%>
+<div id="login_box">
 
-  <fieldset>
-    <legend>Demographic Information:</legend>
-    <label for="login">Email:</label> <br /> <%= f.text_field :email, :size => 30 %><br/>
-    <label for="login">Blackboard username:</label> <%= f.text_field :blackboard_username, :size => 30 %><br/>
-    <label for="login">First name:</label> <%= f.text_field :first_name, :size => 30 %><br/>
-    <label for="login">Last name:</label> <%= f.text_field :last_name, :size => 30 %><br/>
-  </fieldset>
+  <% unless @user.errors.empty? %>
+    <div class="block"> <%= error_messages_for :user %> </div>
+  <% end %>
 
-  <fieldset>
-    <legend>Account Information:</legend>
-    <label for="login">Desired username:</label> <%= f.text_field :login, :size => 30 %><br/>
-    <label for="password">Choose password:</label> <%= f.password_field :password, :size => 30 %><br/>
-    <label for="password_confirmation">Confirm password:</label> <%= f.password_field :password_confirmation, :size => 30 %><br/>
-    <label for="registration_code">Registration code:</label> <%= f.text_field :registration_code, :size => 30 %><br/>
-  </fieldset>
+  <div class="block options">
+    <p class="criteria">Demographic Information</p>
 
-  <%= submit_tag 'Sign up' %>
+    <div class="required form_field"> <label for="email">Email:</label> <%= f.text_field :email %> </div>
+    <div class="form_field"> <label for="blackboard_username">Blackboard username:</label> <%= f.text_field :blackboard_username %> </div>
+    <div class="required form_field"> <label for="first_name">First name:</label> <%= f.text_field :first_name %> </div>
+    <div class="required form_field"> <label for="last_name">Last name:</label> <%= f.text_field :last_name %> </div>
+  </div>
+
+  <div class="block options">
+    <p class="criteria">Account Information</p>
+
+    <div class="required form_field"> <label for="login">Desired username:</label> <%= f.text_field :login %> </div>
+    <div class="required form_field"> <label for="password">Choose password:</label> <%= f.password_field :password %> </div>
+    <div class="required form_field"> <label for="password_confirmation">Confirm password:</label> <%= f.password_field :password_confirmation %> </div>
+    <div class="required form_field"> <label for="registration_code">Registration code:</label> <%= f.text_field :registration_code %> </div>
+  </div>
+
+  <br />
+
+  <div class="block submit"> <%= image_submit_tag 'register.png', :alt => 'Register' %> </div>
+
+</div>
 
 <% end -%>

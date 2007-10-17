@@ -1,5 +1,7 @@
 <h2>Editing announcement</h2>
 
+<div class="block">
+
 <%= error_messages_for :announcement %>
 
 <% form_for(:announcement, :url => course_announcement_path(@course, @announcement), :html => { :method => :put }) do |f| %>
@@ -9,3 +11,7 @@
 
 <%= link_to 'Show', course_announcement_path(@course, @announcement) %> |
 <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />

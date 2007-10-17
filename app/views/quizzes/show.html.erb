@@ -3,6 +3,8 @@
   <%= link_to image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_course_quiz_path(@course, @quiz) if current_user.instructor? %>
 </h2>
 
+<div class="block">
+
 <p class="instructions">
 
   <% if @quiz.closed? %>
@@ -57,3 +59,7 @@
 </ol>
 
 <p> <%= link_to 'Done', course_path(@course) %> </p>
+
+</div>
+
+<br />

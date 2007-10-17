@@ -1,10 +1,18 @@
 <h2>Add an Exam</h2>
 
+<div class="block">
+
 <%= error_messages_for :exam %>
 
 <% form_for([@course, @exam]) do |f| %>
+
   <%= render :partial => 'form', :locals => { :f => f } %>
   <p> <%= f.submit "Create" %> </p>
+
 <% end %>
 
 <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />

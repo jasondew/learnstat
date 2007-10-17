@@ -38,9 +38,9 @@ h1 span {
 }
 
 h2 {
-	font-size: 150%;
-	padding: 5px 0 5px 10px;
 	font-family: georgia, serif;
+	font-size: 24px;
+	padding: 5px 0 5px 10px;
   color: white;
 }
 
@@ -53,7 +53,7 @@ h3 {
 
 #login_box {
   background: #696969;
-  width: 600px;
+  width: 650px;
   margin: 10px auto;
   border: 1px solid #333;
   padding: 0;
@@ -61,9 +61,7 @@ h3 {
   font-family: georgia, serif;
 }
 
-#login_box div.options {
-  float: left;
-  width: 244px;
+.block {
 	background: white;
   color: black;
   margin: 10px 15px;
@@ -73,36 +71,41 @@ h3 {
   font-size: 14px;
 }
 
+#login_box .options {
+  float: left;
+  width: 269px;
+}
+
 #login_box p.criteria {
   margin: 0 auto 10px auto;
   text-align: center;
   border-bottom: 1px solid #111;
-  font-family: georgia, serif;
+  font-family: arial, sans-serif;
   font-size: 16px;
   font-variant: small-caps;
+  font-weight: bold;
+}
+
+#login_box div.form_field {
+  margin-bottom: 10px;
 }
 
 #login_box div.form_field label {
   display: block;
   float: left;
+  clear: left;
   text-align: right;
-  margin-right: 10px;
+  margin-right: 5px;
   width: 100px;
-  font-size: 11px;
+  font-size: 10px;
   font-weight: bold;
 }  
 
-#login_box div.form_field input[type=text] { width: 120px; }
-#login_box div.form_field input[type=password] { width: 120px; }
+#login_box div.form_field input[type=text] { width: 160px; }
+#login_box div.form_field input[type=password] { width: 160px; }
 
-#login_box p.submit {
-  margin: 0 auto;
+#login_box .submit {
   text-align: center;
-}
-
-#login_box p.submit input {
-  margin-top: 10px;
-  padding: 5px;
 }
 
 div.block_head {
@@ -154,21 +157,6 @@ p.instructions {
 	color: #333;
 }
 
-fieldset {
-	margin: 5px 10px;
-	padding: 5px;
-	width: 30%;
-}
-
-input.submit {
-	width: 5em;
-	margin: 5px auto;
-}
-
-input {
-	margin-bottom: 5px;
-}
-
 ul, ol {
 	margin: 10px 35px;
 }
@@ -203,15 +191,32 @@ ul.quizzes li {
 	color: #909090;
 }
 
-#navbar p.left { float: left; }
-#navbar p.right { float: right; }
+#navbar p.left {
+  float: left;
+  width: 185px;
+  text-align: left;
+}
+
+#navbar p.right {
+  float: right;
+  width: 185px;
+  text-align: right;
+}
+
+#navbar p.notices {
+  width: 400px;
+  float: left;
+	color: white;
+  text-align: center;
+}
+
 
 #navbar a {
 	color: #909090;
 }
 
 div#content {
-  background: url("/images/stripes.png");
+  background: #d6abb5 url("/images/gradient.png") top repeat-x;
 	margin: 0 auto;
 	width: 798px;
 	border: 1px solid #111;
@@ -224,7 +229,7 @@ div#content {
 	background: #343434;
 	width: 798px;
 	border: 1px solid #111;
-	color: #d0d0d0;
+	color: #909090;
 	font-weight: bold;
 	font-size: 85%;
 	font-variant: small-caps;
@@ -244,11 +249,11 @@ div#content {
 }
 
 #errorExplanation {
+  margin: 0 auto;
   width: 400px;
   border: 2px solid red;
   padding: 7px;
   padding-bottom: 12px;
-  margin-bottom: 20px;
   background-color: #f0f0f0;
 }
 
@@ -330,13 +335,6 @@ ol.answers li.answer {
 	text-decoration: underline;
 }
 
-p.notices {
-	color: green;
-	font-weight: bold;
-	padding: 0;
-  text-align: center;
-}
-
 .chosen-question {
   border: 2px solid red;
 }
@@ -384,7 +382,7 @@ p.notices {
 }
 
 #gradebook-table td.name {
-  background: #f2e3e6;
+  background: #d6abb5;
 }
 
 #gradebook-table td.name, #gradebook-table th.name {
@@ -402,6 +400,7 @@ p.notices {
 #tabs {
 	clear: both;
 	padding-top: 10px;
+  background: white;
 }
 
 #tabs ul {

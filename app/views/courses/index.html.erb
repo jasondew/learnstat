@@ -1,5 +1,6 @@
 <h2>Listing courses</h2>
 
+<div class="block">
 <ul>
 
   <% @courses.each do |course| %>
@@ -16,3 +17,4 @@
 </ul>
 
 <%= link_to 'New course', new_course_path %>
+</div>

@@ -1,26 +1,28 @@
 <h2>Welcome to learnSTAT!</h2>
 
-<div id="login_box">
-
 <% form_tag session_path do -%>
 
-  <div class="options">
+<div id="login_box">
+
+  <div class="block options">
     <p class="criteria">I already have an account.</p>
 
     <div class="form_field"> <label for="login">Username:</label> <%= text_field_tag 'login', {}, :size => 20 %> </div>
     <div class="form_field"> <label for="password">Password:</label> <%= password_field_tag 'password', {}, :size => 20 %> </div>
     <div class="form_field"> <label for="remember_me">Remember me:</label> <%= check_box_tag 'remember_me' %> </div>
 
-    <p class="submit"><%= submit_tag 'Login' %></p>
+    <p class="submit"><%= image_submit_tag 'login.png', :alt => 'Login' %></p>
   </div>
 
-  <div class="options">
+  <div class="block options">
     <p class="criteria">I want to create an account.</p>
     <p class="submit"> <%= link_to "Create an Account", signup_url %> </p>
   </div>
 
   <br />
 
+</div>
+
 <% end -%>
 
-</div>
+<br />

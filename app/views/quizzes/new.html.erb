@@ -1,5 +1,7 @@
 <h2>New quiz</h2>
 
+<div class="block">
+
 <%= error_messages_for :quiz %>
 
 <% form_for(:quiz, :url => course_quizzes_path(@course)) do |f| %>
@@ -8,3 +10,7 @@
 <% end %>
 
 <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />

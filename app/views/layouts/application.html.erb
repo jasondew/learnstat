@@ -6,6 +6,8 @@
 	<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1" />
 	<title>learnSTAT</title>
 
+	<link rel="shortcut icon" href="/favicon.ico" />
+
   <%= stylesheet_link_tag 'application' %>
 	<%= stylesheet_link_tag 'lightbox' %>
 
@@ -17,28 +19,20 @@
 	<%= link_to '<h1><span>learnSTAT</span></h1>', login_url %>
 
 	<div id="navbar">
-		<% if logged_in? %>
-			<p class="left">Welcome, <%= current_user.name %>.</p>
-			<p class="right">[<%= link_to 'Log Out', logout_url %>]</p>
-		<% end %>
+		<p class="left"><%= "Welcome, #{current_user.name}." if logged_in? %> &nbsp; </p>
+		<p class="notices"><%= flash[:notice] %></p>
+		<p class="right">&nbsp; <%= "[#{link_to 'Logout', logout_url }]" if logged_in? %></p>
 
 		<br />
 	</div>
 
 	<div id="content">
-		<p class="notices"><%= flash[:notice] %></p>
 		<%= yield %> 
-		<br />
 	</div>
 
 	<div id="footer">
-		<div>
-			<p>&copy; 2007 Jason Dew</p>
-		</div>
-
-		<div> <!-- badges -->
-			<a href="http://www.mozilla.com/en-US/firefox/"><img src="/images/firefox.png" alt="Use Firefox 2.0"/></a>
-		</div>
+		<div> <p>&copy; 2007 Jason Dew</p> </div>
+		<div> <a href="http://www.mozilla.com/en-US/firefox/"><img src="/images/firefox.png" alt="Use Firefox 2.0"/></a> </div>
 
 		<br />
 	</div>

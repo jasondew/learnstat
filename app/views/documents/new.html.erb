@@ -1,5 +1,7 @@
 <h2>New document</h2>
 
+<div class="block">
+
 <%= error_messages_for :document %>
 
 <% form_for(:document, :url => course_documents_path(@course), :html => { :multipart => true } ) do |f| %>
@@ -12,3 +14,7 @@
 <% end %>
 
 <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />

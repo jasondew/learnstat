@@ -1,5 +1,7 @@
 <h2>Editing quiz</h2>
 
+<div class="block">
+
 <%= error_messages_for :quiz %>
 
 <% form_for(:quiz, :url => course_quiz_path(@course, @quiz), :html => { :method => :put }) do |f| %>
@@ -7,8 +9,12 @@
   <p> <%= submit_tag "Update" %> </p>
 <% end %>
 
+</div>
+
 <br />
 	
+<div class="block">
+
 Available Questions: <br />
 
 <ul>
@@ -49,3 +55,7 @@ Available Questions: <br />
 </ul>
 
 <%= link_to 'Show', course_quiz_path(@course, @quiz) %> | <%= link_to 'Back', course_path(@course) %>
+
+</div>
+
+<br />
