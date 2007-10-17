@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   before_filter :audit_request
   before_filter :login_required
 
-  session :session_key => '_trunk_session_id'
+  session :session_key => '_learnstat_session_id'
 
   helper :all # include all helpers, all the time
 
