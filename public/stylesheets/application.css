@@ -40,7 +40,8 @@ h1 span {
 h2 {
 	font-size: 150%;
 	padding: 5px 0 5px 10px;
-	font-family: tahoma, arial, sans-serif;
+	font-family: georgia, serif;
+  color: white;
 }
 
 h3 {
@@ -48,6 +49,60 @@ h3 {
   font-size: 16px;
   float: left;
   margin: 4px 10px;
+}
+
+#login_box {
+  background: #696969;
+  width: 600px;
+  margin: 10px auto;
+  border: 1px solid #333;
+  padding: 0;
+  color: white;
+  font-family: georgia, serif;
+}
+
+#login_box div.options {
+  float: left;
+  width: 244px;
+	background: white;
+  color: black;
+  margin: 10px 15px;
+  padding: 10px;
+  border: 2px solid #333;
+  font-family: verdana, arial, sans-serif;
+  font-size: 14px;
+}
+
+#login_box p.criteria {
+  margin: 0 auto 10px auto;
+  text-align: center;
+  border-bottom: 1px solid #111;
+  font-family: georgia, serif;
+  font-size: 16px;
+  font-variant: small-caps;
+}
+
+#login_box div.form_field label {
+  display: block;
+  float: left;
+  text-align: right;
+  margin-right: 10px;
+  width: 100px;
+  font-size: 11px;
+  font-weight: bold;
+}  
+
+#login_box div.form_field input[type=text] { width: 120px; }
+#login_box div.form_field input[type=password] { width: 120px; }
+
+#login_box p.submit {
+  margin: 0 auto;
+  text-align: center;
+}
+
+#login_box p.submit input {
+  margin-top: 10px;
+  padding: 5px;
 }
 
 div.block_head {
@@ -156,8 +211,8 @@ ul.quizzes li {
 }
 
 div#content {
+  background: url("/images/stripes.png");
 	margin: 0 auto;
-	background: white;
 	width: 798px;
 	border: 1px solid #111;
 	border-width: 0 1px;
