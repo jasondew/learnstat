@@ -17,7 +17,6 @@ test:
 production:
   adapter: mysql
   database: learnstat_production
-  host: chimera
-  username: root
-  password: j4s0nd80
+  username: webuser
+  password: |n2mas!pw
   socket: /var/run/mysqld/mysqld.sock
