@@ -1,5 +1,3 @@
-require 'mongrel_cluster/recipes'
-
 set :application, "learnSTAT"
 set :repository,  "svn://alpha/projects/learnstat/trunk"
 
