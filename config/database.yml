@@ -16,7 +16,7 @@ test:
 
 production:
   adapter: mysql
-  database: learnstat_production
+  database: learnstat
   username: webuser
   password: |n2mas!pw
   socket: /var/run/mysqld/mysqld.sock
