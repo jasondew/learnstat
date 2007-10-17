@@ -3,7 +3,8 @@ require 'mongrel_cluster/recipes'
 set :application, "learnSTAT"
 set :repository,  "svn://alpha/projects/learnstat/trunk"
 
-set :user, "root"
+set :user, "deploy"
+set :password, "C4pisTrano!"
 set :scm_username, "deploy"
 set :scm_password, "C4pisTrano!"
 set :use_sudo, false
