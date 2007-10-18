@@ -37,7 +37,8 @@ class ApplicationController < ActionController::Base
 
   def audit_request
     return unless logged_in?
-    current_user.audits.create :method => request.method.to_s, :url => request.path, :params => stored_params, :ip => request.remote_ip
+    x = current_user.audits.create :method => request.method.to_s, :url => request.path, :params => stored_params, :ip => request.remote_ip
+    logger.warn x.inspect
   end
 
   def stored_params
