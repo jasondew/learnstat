@@ -15,7 +15,7 @@ class UserMailer < ActionMailer::Base
   
   protected
     def setup_email(user)
-      @from        = "ADMINEMAIL"
+      @from        = "instructor@learnstat.net"
       @subject     = "[learnstat.net] "
       @sent_on     = Time.now
       @body[:user] = user
