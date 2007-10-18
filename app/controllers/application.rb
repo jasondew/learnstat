@@ -42,10 +42,8 @@ class ApplicationController < ActionController::Base
 
   def prepare_for_database(params)
     prepared_params = params.dup
-
-    if document_params = prepared_params.delete(:document)
-      document_params.delete(:uploaded_data)
-    end
+    prepared_params.delete(:document)
+    prepared_params
   end
 
 end
