@@ -1,5 +1,7 @@
 class ActivationsController < ApplicationController
 
+  before_filter :require_instructor
+
   def new
     self.current_user = User.find_by_activation_code(params[:activation_code])
 
