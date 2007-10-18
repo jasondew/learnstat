@@ -403,6 +403,10 @@ ol.answers li.answer {
   background: white;
 }
 
+#tabs > div {
+  min-height: 200px;
+}
+
 #tabs ul {
 	list-style-type: none;
 }
