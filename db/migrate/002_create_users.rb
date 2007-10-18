@@ -25,10 +25,6 @@ class CreateUsers < ActiveRecord::Migration
                  :blackboard_username => 'dew', :password => 'password', :password_confirmation => 'password',
                  :registration_code => 'stat110f07', :instructor => true ).activate
 
-    User.create( :login => 'student', :email => 'jason.dew@gmail.com', :first_name => 'Student', :last_name => 'X',
-                 :blackboard_username => 'student', :password => 'password', :password_confirmation => 'password',
-                 :registration_code => 'stat110f07' ).activate
-
   end
 
   def self.down
