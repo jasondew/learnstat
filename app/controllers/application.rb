@@ -37,13 +37,15 @@ class ApplicationController < ActionController::Base
 
   def audit_request
     return unless logged_in?
-    current_user.audits.create :url => request.path, :params => prepare_for_database(params), :ip => request.remote_ip
+    current_user.audits.create :method => request.method.to_s, :url => request.path, :params => stored_params, :ip => request.remote_ip
   end
 
-  def prepare_for_database(params)
-    prepared_params = params.dup
-    prepared_params.delete(:document)
-    prepared_params
+  def stored_params
+    fixed_params = params.dup
+    fixed_params.delete(:document)
+    fixed_params.delete(:action)
+    fixed_params.delete(:controller)
+    fixed_params.to_json
   end
 
 end

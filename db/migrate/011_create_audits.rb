@@ -3,7 +3,7 @@ class CreateAudits < ActiveRecord::Migration
     create_table :audits do |t|
       t.integer :user_id
       t.text :params
-      t.string :url, :ip
+      t.string :url, :ip, :method
       t.datetime :created_at
     end
   end
