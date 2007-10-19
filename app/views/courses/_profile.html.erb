@@ -1,0 +1,19 @@
+<h2 class="accessible">My Profile</h2>
+
+<% remote_form_for current_user do %>
+
+  <div id="login_box">
+
+    <div class="block">
+      <p> <label for="current_password">Current password: </label><%= password_field_tag :current_password %> </p>
+      <p> <label for="new_password">New password: </label><%= password_field_tag :new_password %> </p>
+      <p> <label for="new_password_confirmation">New password again: </label><%= password_field_tag :new_password_confirmation %> </p>
+    </div>
+
+    <div class="block submit"> <%= image_submit_tag 'update.png', :alt => 'Update' %> </div>
+
+  </div>
+
+<% end %>
+
+<br />

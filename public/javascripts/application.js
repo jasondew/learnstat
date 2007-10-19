@@ -58,4 +58,5 @@ window.onload = function() {
 	if (document.getElementById('documents-tab')) { $('documents-tab').style.display = "none"; }
 	if (document.getElementById('quizzes-tab')) { $('quizzes-tab').style.display = "none"; }
 	if (document.getElementById('gradebook-tab')) { $('gradebook-tab').style.display = "none"; }
+	if (document.getElementById('profile-tab')) { $('profile-tab').style.display = "none"; }
 }

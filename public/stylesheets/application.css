@@ -203,7 +203,7 @@ ul.quizzes li {
   text-align: right;
 }
 
-#navbar p.notices {
+#navbar #notices {
   width: 400px;
   float: left;
 	color: white;
@@ -456,16 +456,20 @@ ol.answers li.answer {
 }
 
 #announcements #nav-announcements, #documents #nav-documents,
-#quizzes #nav-quizzes, #gradebook #nav-gradebook {
+#quizzes #nav-quizzes, #gradebook #nav-gradebook, #profile #nav-profile {
 	background-position: 0 -150px;
 	border-width: 0;
 }
 
 #announcements #nav-announcements a, #documents #nav-documents a,
-#quizzes #nav-quizzes a, #gradebook #nav-gradebook a {
+#quizzes #nav-quizzes a, #gradebook #nav-gradebook a, #profile #nav-profile a {
 	background-position: 100% -150px;
 	padding-bottom: 5px;
 	color: #333;
+}
+
+body #nav-profile {
+  float: right;
 }
 
 #tabNavigation li:hover, #tabNavigation li:hover a {

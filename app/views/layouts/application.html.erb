@@ -20,7 +20,7 @@
 
 	<div id="navbar">
 		<p class="left"><%= "Welcome, #{current_user.name}." if logged_in? %> &nbsp; </p>
-		<p class="notices"><%= flash[:notice] %></p>
+		<p id="notices"><%= flash[:notice] %></p>
 		<p class="right">&nbsp; <%= "[#{link_to 'Logout', logout_url }]" if logged_in? %></p>
 
 		<br />
