@@ -12,7 +12,11 @@
 	<tr>
 		<th class="name">Student</th>
 		<% @course.gradeables.each do |gradeable| %>
-			<th> <%= link_to gradeable.name, gradeable_path(gradeable) %> </th>
+			<th>
+        <%= link_to gradeable.name, gradeable_path( gradeable ) %>
+        <%= link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ),
+                    gradeable_report_path( gradeable ), :rel => 'lightbox' %>
+      </th>
 		<% end %>
 	</tr>
 	</thead>

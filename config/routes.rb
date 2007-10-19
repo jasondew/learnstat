@@ -7,7 +7,7 @@ ActionController::Routing::Routes.draw do |map|
 
   map.resources :courses do |course|
     course.resources :announcements, :documents
-    course.resources :exams, :has_many => :grades
+    course.resources :exams, :has_many => :grades, :has_one => :exam_distribution
     course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :response_distributions],
                                :has_one => :grade_distribution
   end

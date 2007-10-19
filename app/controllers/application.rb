@@ -47,6 +47,10 @@ class ApplicationController < ActionController::Base
     @quiz = Quiz.find params[:quiz_id]
   end
 
+  def get_exam
+    @exam = Exam.find params[:exam_id]
+  end
+
   private
 
   def audit_request
