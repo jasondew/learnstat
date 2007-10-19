@@ -17,7 +17,7 @@ class SessionsController < ApplicationController
       end
 
       flash[:notice] = "Logged in successfully"
-      redirect_to courses_path
+      redirect_back_or_default courses_path
     else
       flash[:notice] = "Unable to log in.  Please check your username and password."
       render :action => 'new'

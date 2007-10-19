@@ -61,9 +61,19 @@ module AuthenticatedSystem
     # to access the requested action.  For example, a popup window might
     # simply close itself.
     def access_denied
+      store_location
       redirect_to :controller => '/sessions', :action => 'new'
       false
     end  
+
+    def store_location
+      session[:return_to] = request.request_uri
+    end
+
+    def redirect_back_or_default(default)
+      session[:return_to] ? redirect_to( session[:return_to] ) : redirect_to( default )
+      session[:return_to] = nil
+    end
     
     # Inclusion hook to make #current_user and #logged_in?
     # available as ActionView helper methods.
