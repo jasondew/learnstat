@@ -1,13 +1,14 @@
 class UsersController < ApplicationController
 
-  skip_before_filter :login_required
+  skip_before_filter :login_required, :except => :update
 
   def new
     @user = User.new
   end
 
   def create
-    @user = User.create! params[:user]
+    @user = User.new params[:user]
+    @user.save!
     redirect_to login_url
     flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail within 24 hours."
   rescue ActiveRecord::RecordInvalid
