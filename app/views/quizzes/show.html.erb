@@ -38,7 +38,7 @@
   <% @quiz.questions.each do |quiz_question| %>
 
     <li id="<%= dom_id(quiz_question) %>" <%= question_attributes %>>
-      <%= link_to image_tag('chart_pie.png', :alt => 'Graph'), course_quiz_report_path(@course, @quiz, quiz_question), :rel => 'lightbox' %>
+      <%= link_to image_tag('chart_pie.png', :alt => 'Graph'), course_quiz_response_distribution_path(@course, @quiz, quiz_question), :rel => 'lightbox' %>
       <%= quiz_question.content %>
 
       <br />

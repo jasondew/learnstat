@@ -4,6 +4,8 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
 
+  LETTER_GRADES = [:F, :D, :C, :B, :A]
+
   before_filter :audit_request
   before_filter :login_required
 
@@ -17,6 +19,18 @@ class ApplicationController < ActionController::Base
 
   def require_instructor
     current_user.instructor?
+  end
+
+  def letter_grade_for(score)
+    score = (score <= 1) ? score * 100 : score
+
+    case score
+      when 90..100: :A
+      when  80..90: :B
+      when  70..80: :C
+      when  60..70: :D
+      when   0..60: :F
+    end
   end
 
   protected
