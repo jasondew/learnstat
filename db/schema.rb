@@ -2,7 +2,7 @@
 # migrations feature of ActiveRecord to incrementally modify your database, and
 # then regenerate this schema definition.
 
-ActiveRecord::Schema.define(:version => 12) do
+ActiveRecord::Schema.define(:version => 13) do
 
   create_table "announcements", :force => true do |t|
     t.integer  "course_id"
@@ -15,6 +15,7 @@ ActiveRecord::Schema.define(:version => 12) do
   create_table "audits", :force => true do |t|
     t.integer  "user_id"
     t.text     "params"
+    t.string   "method"
     t.string   "url"
     t.string   "ip"
     t.datetime "created_at"
@@ -27,6 +28,7 @@ ActiveRecord::Schema.define(:version => 12) do
     t.integer  "semester"
     t.integer  "year"
     t.integer  "section"
+    t.integer  "instructor_id"
     t.string   "registration_code"
     t.datetime "registration_closed_at"
     t.datetime "created_at"
@@ -45,6 +47,7 @@ ActiveRecord::Schema.define(:version => 12) do
   end
 
   create_table "exams", :force => true do |t|
+    t.integer  "course_id"
     t.string   "name"
     t.datetime "given_on"
     t.boolean  "final"
@@ -53,10 +56,12 @@ ActiveRecord::Schema.define(:version => 12) do
   end
 
   create_table "grades", :force => true do |t|
-    t.integer "user_id"
-    t.integer "course_id"
-    t.integer "exam_id"
-    t.float   "value"
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "exam_id"
+    t.float    "value"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   create_table "question_choices", :force => true do |t|
@@ -73,8 +78,11 @@ ActiveRecord::Schema.define(:version => 12) do
     t.integer  "quiz_question_id"
     t.integer  "question_choice_id"
     t.boolean  "correct"
-    t.datetime "created_at",         :null => false
+    t.datetime "created_at"
   end
+
+  add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
+  add_index "question_responses", ["quiz_id", "user_id", "correct"], :name => "index_question_responses_on_quiz_id_and_user_id_and_correct"
 
   create_table "questions", :force => true do |t|
     t.text    "content"
@@ -87,6 +95,8 @@ ActiveRecord::Schema.define(:version => 12) do
     t.integer "question_id"
     t.boolean "forgiven",    :default => false
   end
+
+  add_index "quiz_questions", ["quiz_id"], :name => "index_quiz_questions_on_quiz_id"
 
   create_table "quizzes", :force => true do |t|
     t.integer  "course_id"

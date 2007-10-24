@@ -65,21 +65,6 @@ class BarGraphBuilder
 
     image = rvg.draw
     image.format = 'png'
-
-    image.border!(1, 1, "#666")
-
-    # Bend the image
-    image.background_color = "none"
-
-    # Make the shadow
-    shadow = image.flop
-    shadow = shadow.colorize(1, 1, 1, "gray75")    # shadow color can vary to taste
-    shadow.background_color = "white"              # was "none"
-    shadow.border!(10, 10, "white")
-    shadow = shadow.blur_image(0, 3)               # shadow blurriness can vary according to taste
-
-    # Composite image over shadow. The y-axis adjustment can vary according to taste.
-    image = shadow.composite(image, 0, 5, Magick::OverCompositeOp)
     image.to_blob
   end
 
