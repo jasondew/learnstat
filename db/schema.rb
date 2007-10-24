@@ -12,6 +12,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "created_at"
   end
 
+  add_index "announcements", ["course_id"], :name => "index_announcements_on_course_id"
+
   create_table "audits", :force => true do |t|
     t.integer  "user_id"
     t.text     "params"
@@ -46,6 +48,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "created_at"
   end
 
+  add_index "documents", ["course_id"], :name => "index_documents_on_course_id"
+
   create_table "exams", :force => true do |t|
     t.integer  "course_id"
     t.string   "name"
@@ -55,6 +59,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "updated_at"
   end
 
+  add_index "exams", ["course_id"], :name => "index_exams_on_course_id"
+
   create_table "grades", :force => true do |t|
     t.integer  "user_id"
     t.integer  "course_id"
@@ -63,6 +69,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "created_at"
     t.datetime "updated_at"
   end
+
+  add_index "grades", ["course_id"], :name => "index_grades_on_course_id"
 
   create_table "question_choices", :force => true do |t|
     t.integer "question_id"
@@ -82,6 +90,7 @@ ActiveRecord::Schema.define(:version => 13) do
   end
 
   add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
+  add_index "question_responses", ["quiz_id"], :name => "index_question_responses_on_quiz_id"
   add_index "question_responses", ["quiz_id", "user_id", "correct"], :name => "index_question_responses_on_quiz_id_and_user_id_and_correct"
 
   create_table "questions", :force => true do |t|
@@ -106,6 +115,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "created_at"
   end
 
+  add_index "quizzes", ["course_id"], :name => "index_quizzes_on_course_id"
+
   create_table "users", :force => true do |t|
     t.integer  "course_id"
     t.string   "login"
@@ -124,5 +135,8 @@ ActiveRecord::Schema.define(:version => 13) do
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
   end
+
+  add_index "users", ["course_id"], :name => "index_users_on_course_id"
+  add_index "users", ["course_id", "instructor"], :name => "index_users_on_course_id_and_instructor"
 
 end
