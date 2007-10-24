@@ -51,6 +51,10 @@ h3 {
   margin: 4px 10px;
 }
 
+h3 a {
+  color: white;
+}
+
 #login_box {
   background: #696969;
   width: 650px;
