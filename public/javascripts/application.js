@@ -29,8 +29,8 @@ function select_choice(quiz_question, choice) {
 
 function answerShowHide(obj) {
 	var questionId = obj.getAttribute("questionId");
-	var answer = obj.parentNode.getElementsByClassName("answer")[0];
-	var analysis = obj.parentNode.getElementsByClassName("analysis")[0];
+	var answer = obj.parentNode.select(".answer").first();
+	var analysis = obj.parentNode.select(".analysis").first();
 
 	if (answer.style.color == "red") {
 		answer.style.color = "black";
@@ -51,10 +51,10 @@ function switchTab(tab) {
 }
 
 window.onload = function() {
-	document.getElementsByClassName("accessible").each( function(obj) { obj.style.display = "none"; } );
-	document.getElementsByClassName("unaccessible").each( function(obj) { obj.style.display = "block"; } );
-	if (document.getElementById('tabNavigation')) { $('tabNavigation').style.display = "block"; }
+  $$('.accessible').collect( function(obj) { obj.hide(); } );
+  $$('.unaccessible').collect( function(obj) { obj.show(); } );
 
+	if (document.getElementById('tabNavigation')) { $('tabNavigation').style.display = "block"; }
 	if (document.getElementById('documents-tab')) { $('documents-tab').style.display = "none"; }
 	if (document.getElementById('quizzes-tab')) { $('quizzes-tab').style.display = "none"; }
 	if (document.getElementById('gradebook-tab')) { $('gradebook-tab').style.display = "none"; }

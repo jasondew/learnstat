@@ -18,6 +18,9 @@
                     gradeable_report_path( gradeable ), :rel => 'lightbox' %>
       </th>
 		<% end %>
+
+    <th>Quiz Average</th>
+    <th>Exam Average</th>
 	</tr>
 	</thead>
 
@@ -30,6 +33,9 @@
 			<% @course.gradeables.each do |gradeable| %>
 				<td class="data"> <%= percent_format @gradebook[gradeable.name.underscore][student.id] %> </td>
 			<% end %>
+
+			<td class="data"> <%= percent_format @gradebook['Quiz Average'][student.id] %> </td>
+			<td class="data"> <%= percent_format @gradebook['Exam Average'][student.id] %> </td>
 		</tr>
 
 	<% end %>

@@ -4,8 +4,6 @@ class CreateQuestionChoices < ActiveRecord::Migration
       t.column :question_id, :integer
       t.column :content, :text
     end
-
-    add_index :question_choices, :question_id
   end
 
   def self.down

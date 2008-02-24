@@ -1,22 +1,6 @@
 development:
   adapter: mysql
   database: learnstat_development
-  host: chimera
-  username: root
-  password: j4s0nd80
-  socket: /var/run/mysqld/mysqld.sock
-
-test:
-  adapter: mysql
-  database: learnstat_test
-  host: chimera
-  username: root
-  password: j4s0nd80
-  socket: /var/run/mysqld/mysqld.sock
-
-production:
-  adapter: mysql
-  database: learnstat
-  username: webuser
-  password: |n2mas!pw
-  socket: /var/run/mysqld/mysqld.sock
+  user: root
+  password: doc1291
+  socket: /tmp/mysql.sock

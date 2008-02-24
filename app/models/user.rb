@@ -44,6 +44,14 @@ class User < ActiveRecord::Base
     correct_responses.size / question_responses.size.to_f
   end
 
+  def adjusted_mean_score(adjustment)
+    (correct_responses.size + adjustment)/ question_responses.size.to_f
+  end
+
+  def exam_mean_score
+    grades.sum(:value) / grades.length.to_f
+  end
+
   def validate_on_create
     course = Course.find_by_registration_code self.registration_code
 

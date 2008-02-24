@@ -105,8 +105,10 @@ h3 a, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
   font-weight: bold;
 }  
 
-#login_box div.form_field input[type=text] { width: 160px; }
-#login_box div.form_field input[type=password] { width: 160px; }
+#login_box div.form_field input[type=text] { width: 150px; }
+#login_box div.form_field input[type=password] { width: 150px; }
+
+#remember_me { vertical-align: top; }
 
 #login_box .submit {
   text-align: center;
@@ -239,12 +241,10 @@ div#content {
 	font-variant: small-caps;
 }
 
-#footer div {
-	float: right;
-	margin: 4px 10px;
+#footer {
+	margin: 0 auto;
+  text-align: center;
 }
-
-#footer div:first-child { float: left; }
 
 .fieldWithErrors {
   padding: 2px;

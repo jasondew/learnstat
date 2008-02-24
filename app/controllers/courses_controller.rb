@@ -19,6 +19,9 @@ class CoursesController < ApplicationController
       @course.gradeables.each do |gradeable|
         @gradebook[gradeable.name.underscore][student.id] = gradeable.grade_for(student)
       end
+
+      @gradebook['Quiz Average'][student.id] = student.adjusted_mean_score(9)
+      @gradebook['Exam Average'][student.id] = student.exam_mean_score
     end
   end
 
