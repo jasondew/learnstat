@@ -1,0 +1,29 @@
+!!! 1.1
+
+%html{:xmlns => "http://www.w3.org/1999/xhtml", 'xml:lang' => "en-US", :lang => "en-US"}
+
+  %head
+    %meta{'http-equiv' => "Content-Type", :content => "text/html; charset=ISO-8859-1"}
+    %link{:rel => "shortcut icon", :href => "/favicon.ico"}
+    %title learnSTAT
+
+    = stylesheet_link_tag :all, :cache => true
+    = javascript_include_tag :all, :cache => true
+
+  %body#announcements
+    = link_to content_tag(:h1, content_tag(:span, 'learnSTAT')), login_url
+
+    #navbar
+      %p.left= "Welcome, #{current_user.name}." if logged_in?
+      %p#notices= flash[:notice]
+      %p.right= "[#{link_to 'Logout', logout_url }]" if logged_in?
+  
+      %br
+  
+    #content= yield
+
+    #footer
+      %div= content_tag(:p, '&copy; 2007 Jason Dew')
+      %div= link_to image_tag("firefox.png", :alt => "Use Firefox 2.0"), "http://www.mozilla.com/en-US/firefox/"
+  
+      %br

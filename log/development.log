@@ -7281,3 +7281,461 @@ Migrating to AddIndexes (13)
   [4;36;1mSQL (0.000368)[0m   [0;1mSHOW KEYS FROM quizzes[0m
   [4;35;1mSQL (0.001438)[0m   [0mSHOW FIELDS FROM users[0m
   [4;36;1mSQL (0.000470)[0m   [0;1mSHOW KEYS FROM users[0m
+
+
+Processing CoursesController#index (for 192.168.0.192 at 2008-02-24 10:34:04) [GET]
+  Session ID: a180f71a2c1ffacd862b3ae2743df3e9
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;36;1mSQL (0.000268)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://phoenix:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x2aaaafd618f0 @filter=:login_required>] rendered_or_redirected.
+Completed in 0.00505 (198 reqs/sec) | DB: 0.00027 (5%) | 302 Found [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-24 10:34:05) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--261b2d46f51a45ed75b56ac38aaabab38e51c1f3
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.04009 (24 reqs/sec) | Rendering: 0.03408 (85%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#create (for 192.168.0.192 at 2008-02-24 10:34:13) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--56eb5557edc247fd444c217cc748e5c867bcab18
+  Parameters: {"x"=>"104", "y"=>"20", "authenticity_token"=>"5c4c0c1c6bbbb47d7520a662127c54aefa1a98c0", "action"=>"create", "controller"=>"sessions", "password"=>"j4s0nd80", "login"=>"jasondew"}
+  [4;35;1mUser Load (0.000673)[0m   [0mSELECT * FROM `users` WHERE (login = 'jasondew' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.001514)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://phoenix:3000/
+Completed in 0.01642 (60 reqs/sec) | DB: 0.00219 (13%) | 302 Found [http://phoenix/session]
+
+
+Processing CoursesController#index (for 192.168.0.192 at 2008-02-24 10:34:14) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBz%0AdWNjZXNzZnVsbHkGOgpAdXNlZHsGOwlU--1dc0d71c81955cf2834c3f63a0277232806b9b33
+  Parameters: {"action"=>"index", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.001434)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000534)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001012)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000312)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/', 'get', '{}', '192.168.0.192', 1, '2008-02-24 10:34:14')[0m
+  [4;36;1mSQL (0.000407)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000369)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.001152)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.000409)[0m   [0mSELECT * FROM `courses` [0m
+Rendering template within layouts/application
+Rendering courses/index
+  [4;36;1mSQL (0.000460)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) [0m
+Completed in 0.06048 (16 reqs/sec) | Rendering: 0.01101 (18%) | DB: 0.00622 (10%) | 200 OK [http://phoenix/]
+
+
+Processing CoursesController#show (for 192.168.0.192 at 2008-02-24 10:34:16) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--b480a1bbc5d2bc8ab9a9c3984b77f568cc52c7ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.001544)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000538)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001009)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 10:34:16')[0m
+  [4;36;1mSQL (0.159469)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000420)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.001166)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.000485)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (0.000748)[0m   [0;1mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mQuiz Load (0.000389)[0m   [0mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1 AND (due_at < '2008-02-24 10:34:16')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.008650)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mExam Load (0.000428)[0m   [0mSELECT * FROM `exams` WHERE (exams.course_id = 1) ORDER BY given_on[0m
+  [4;36;1mQuestionResponse Columns (0.001029)[0m   [0;1mSHOW FIELDS FROM `question_responses`[0m
+  [4;35;1mSQL (0.000300)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;36;1mSQL (0.000202)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;35;1mQuizQuestion Columns (0.000798)[0m   [0mSHOW FIELDS FROM `quiz_questions`[0m
+  [4;36;1mSQL (0.000274)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000444)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000201)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000382)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000192)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000384)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000185)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;36;1mSQL (0.000177)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000373)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00177)
+  [4;36;1mAnnouncement Columns (0.000975)[0m   [0;1mSHOW FIELDS FROM `announcements`[0m
+  [4;35;1mSQL (0.000289)[0m   [0mSELECT count(*) AS count_all FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.000288)[0m   [0;1mSELECT * FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.000490)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered courses/_announcements (0.01768)
+  [4;36;1mDocument Load (0.000502)[0m   [0;1mSELECT * FROM `documents` WHERE (documents.course_id = 1) [0m
+  [4;35;1mDocument Columns (0.001071)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered courses/_documents (0.15274)
+  [4;36;1mQuiz Load (0.000464)[0m   [0;1mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1) ORDER BY due_at[0m
+  [4;35;1mQuestionResponse Load (0.000555)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.quiz_id = 1) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mSQL (0.000313)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) [0m
+  [4;36;1mSQL (0.000241)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.quiz_id = 1 AND (`question_responses`.`correct` = 1)) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendered courses/_quizzes (0.02931)
+Rendered courses/_gradebook (0.00601)
+Rendered courses/_profile (0.00646)
+Completed in 0.49356 (2 reqs/sec) | Rendering: 0.21945 (44%) | DB: 0.18539 (37%) | 200 OK [http://phoenix/courses/1]
+
+
+Processing CoursesController#show (for 192.168.0.192 at 2008-02-24 13:28:19) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Columns (0.001736)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000542)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001040)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000144)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000283)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 13:28:19')[0m
+  [4;35;1mSQL (0.000384)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000382)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCourse Columns (0.001175)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.000470)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mUser Load (0.000738)[0m   [0mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mQuiz Load (0.000372)[0m   [0;1mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1 AND (due_at < '2008-02-24 13:28:19')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.000980)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mExam Load (0.000395)[0m   [0;1mSELECT * FROM `exams` WHERE (exams.course_id = 1) ORDER BY given_on[0m
+  [4;35;1mQuestionResponse Columns (0.001053)[0m   [0mSHOW FIELDS FROM `question_responses`[0m
+  [4;36;1mSQL (0.000293)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;35;1mSQL (0.000199)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;36;1mQuizQuestion Columns (0.001011)[0m   [0;1mSHOW FIELDS FROM `quiz_questions`[0m
+  [4;35;1mSQL (0.000276)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000453)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000383)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000396)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000189)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;35;1mSQL (0.000191)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000377)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+
+
+ActionController::MissingTemplate (Missing layout layouts/application.html.erb in view path /home/jasondew/Documents/learnstat/app/views):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1269:in `assert_existence_of_template_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:257:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CoursesController#show (for 192.168.0.192 at 2008-02-24 13:28:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--b480a1bbc5d2bc8ab9a9c3984b77f568cc52c7ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mSQL (0.000284)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.001594)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000561)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001026)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000143)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000286)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 13:28:35')[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000774)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.001167)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.000431)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (0.000736)[0m   [0;1mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mQuiz Load (0.000370)[0m   [0mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1 AND (due_at < '2008-02-24 13:28:35')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.000960)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mExam Load (0.000390)[0m   [0mSELECT * FROM `exams` WHERE (exams.course_id = 1) ORDER BY given_on[0m
+  [4;36;1mQuestionResponse Columns (0.001040)[0m   [0;1mSHOW FIELDS FROM `question_responses`[0m
+  [4;35;1mSQL (0.000302)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;35;1mQuizQuestion Columns (0.000863)[0m   [0mSHOW FIELDS FROM `quiz_questions`[0m
+  [4;36;1mSQL (0.000300)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000477)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000235)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000470)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000216)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000406)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mSQL (0.000215)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;36;1mSQL (0.000197)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000415)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00202)
+  [4;36;1mAnnouncement Columns (0.000997)[0m   [0;1mSHOW FIELDS FROM `announcements`[0m
+  [4;35;1mSQL (0.000303)[0m   [0mSELECT count(*) AS count_all FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;36;1mAnnouncement Load (0.000311)[0m   [0;1mSELECT * FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;35;1mUser Load (0.000445)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered courses/_announcements (0.02509)
+  [4;36;1mDocument Load (0.000486)[0m   [0;1mSELECT * FROM `documents` WHERE (documents.course_id = 1) [0m
+  [4;35;1mDocument Columns (0.001079)[0m   [0mSHOW FIELDS FROM `documents`[0m
+Rendered courses/_documents (0.06217)
+  [4;36;1mQuiz Load (0.000468)[0m   [0;1mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1) ORDER BY due_at[0m
+  [4;35;1mQuestionResponse Load (0.000555)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.quiz_id = 1) ORDER BY quiz_question_id[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mSQL (0.000313)[0m   [0mSELECT count(*) AS count_all FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) [0m
+  [4;36;1mSQL (0.000246)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.quiz_id = 1 AND (`question_responses`.`correct` = 1)) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendered courses/_quizzes (0.03031)
+Rendered courses/_gradebook (0.00635)
+Rendered courses/_profile (0.00420)
+
+
+ActionView::TemplateError (Illegal Indentation: Only two space characters are allowed as tabulation.) in layouts/application.html.haml:
+
+    (haml):11
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/precompiler.rb:649:in `count_soft_tabs'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/precompiler.rb:127:in `precompile'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/helpers/text_helper.rb:29:in `each_with_index'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/precompiler.rb:125:in `each'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/precompiler.rb:125:in `each_with_index'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/precompiler.rb:125:in `precompile'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/engine.rb:71:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/template/plugin.rb:27:in `new'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/haml/template/plugin.rb:27:in `compile'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:513:in `delegate_compile'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:560:in `create_template_source'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:597:in `compile_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:630:in `compile_and_render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:365:in `render_template'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_view/base.rb:316:in `render_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:268:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing CoursesController#show (for 192.168.0.192 at 2008-02-24 13:28:48) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;36;1mUser Columns (0.001568)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000551)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001029)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000274)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 13:28:48')[0m
+  [4;35;1mSQL (0.000628)[0m   [0mCOMMIT[0m
+  [4;36;1mSQL (0.000376)[0m   [0;1mSHOW TABLES[0m
+  [4;35;1mCourse Columns (0.001163)[0m   [0mSHOW FIELDS FROM `courses`[0m
+  [4;36;1mCourse Load (0.000464)[0m   [0;1mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;35;1mUser Load (0.000728)[0m   [0mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;36;1mQuiz Load (0.000366)[0m   [0;1mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1 AND (due_at < '2008-02-24 13:28:48')) ORDER BY due_at desc[0m
+  [4;35;1mQuiz Columns (0.000963)[0m   [0mSHOW FIELDS FROM `quizzes`[0m
+  [4;36;1mExam Load (0.000392)[0m   [0;1mSELECT * FROM `exams` WHERE (exams.course_id = 1) ORDER BY given_on[0m
+  [4;35;1mQuestionResponse Columns (0.001041)[0m   [0mSHOW FIELDS FROM `question_responses`[0m
+  [4;36;1mSQL (0.000295)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;35;1mSQL (0.000201)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;36;1mQuizQuestion Columns (0.000868)[0m   [0;1mSHOW FIELDS FROM `quiz_questions`[0m
+  [4;35;1mSQL (0.000272)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000453)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000201)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000384)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000192)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mQuestionResponse Load (0.000385)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mSQL (0.000187)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;35;1mSQL (0.000206)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mQuestionResponse Load (0.000407)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendering template within layouts/application
+Rendering courses/show
+Rendered courses/_tabs (0.00033)
+  [4;35;1mAnnouncement Columns (0.000996)[0m   [0mSHOW FIELDS FROM `announcements`[0m
+  [4;36;1mSQL (0.000291)[0m   [0;1mSELECT count(*) AS count_all FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;35;1mAnnouncement Load (0.000300)[0m   [0mSELECT * FROM `announcements` WHERE (announcements.course_id = 1) [0m
+  [4;36;1mUser Load (0.000419)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) [0m
+Rendered courses/_announcements (0.01370)
+  [4;35;1mDocument Load (0.000475)[0m   [0mSELECT * FROM `documents` WHERE (documents.course_id = 1) [0m
+  [4;36;1mDocument Columns (0.001072)[0m   [0;1mSHOW FIELDS FROM `documents`[0m
+Rendered courses/_documents (0.02118)
+  [4;35;1mQuiz Load (0.000461)[0m   [0mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1) ORDER BY due_at[0m
+  [4;36;1mQuestionResponse Load (0.000607)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.quiz_id = 1) ORDER BY quiz_question_id[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mSQL (0.000490)[0m   [0;1mSELECT count(*) AS count_all FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) [0m
+  [4;35;1mSQL (0.000256)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.quiz_id = 1 AND (`question_responses`.`correct` = 1)) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 8) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 8 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 4) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 4 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 6) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 6 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 5) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 3) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+  [4;35;1mCACHE (0.000000)[0m   [0mSELECT * FROM `question_responses` WHERE (question_responses.user_id = 3 AND (`question_responses`.`correct` = 1)) AND (`question_responses`.`quiz_id` = 1) [0m
+  [4;36;1mCACHE (0.000000)[0m   [0;1mSELECT count(*) AS count_all FROM `quiz_questions` WHERE (quiz_questions.quiz_id = 1) [0m
+Rendered courses/_quizzes (0.10522)
+Rendered courses/_gradebook (0.00289)
+Rendered courses/_profile (0.00200)
+Completed in 0.25996 (3 reqs/sec) | Rendering: 0.15146 (58%) | DB: 0.02430 (9%) | 200 OK [http://phoenix/courses/1]
