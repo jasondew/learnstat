@@ -8831,3 +8831,1102 @@ Processing SessionsController#new (for 127.0.0.1 at 2008-02-24 17:50:17) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 0.00394 (253 reqs/sec) | Rendering: 0.00183 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:06:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--b480a1bbc5d2bc8ab9a9c3984b77f568cc52c7ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:06:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6DnJldHVybl90bzA6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--b480a1bbc5d2bc8ab9a9c3984b77f568cc52c7ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Mysql::Error (Can't connect to local MySQL server through socket '/tmp/mysql.sock' (2)):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `real_connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:19) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:30) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Mysql::Error (Access denied for user 'root'@'192.168.0.103' (using password: NO)):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `real_connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:43) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:43) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Mysql::Error (Access denied for user 'root'@'192.168.0.103' (using password: NO)):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `real_connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:10:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+
+
+Mysql::Error (Access denied for user 'root'@'192.168.0.103' (using password: YES)):
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `real_connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:471:in `connect'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:165:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `new'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/mysql_adapter.rb:88:in `mysql_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:291:in `connection='
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:259:in `retrieve_connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/connection_specification.rb:78:in `connection'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:11:06) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mSQL (0.000217)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+  [4;35;1mUser Columns (0.001579)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000573)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001041)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000287)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:11:06')[0m
+  [4;36;1mSQL (0.000394)[0m   [0;1mCOMMIT[0m
+
+
+ActionController::UnknownAction (No action responded to index):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (not_found)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:13:10) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001634)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000587)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001041)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000147)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:13:10')[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02587 (38 reqs/sec) | DB: 0.00853 (32%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:13:10) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001499)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000520)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001026)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000160)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000285)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:13:10')[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+
+
+ActionController::MissingTemplate (Missing template users/show.html.erb in view path /home/jasondew/Documents/learnstat/app/views):
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1269:in `assert_existence_of_template_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1098:in `render_for_file'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:836:in `render_with_no_layout'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/layout.rb:262:in `render_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:51:in `render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1153:in `default_render'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1159:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:16:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001578)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000554)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001013)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000263)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:16:07')[0m
+  [4;36;1mSQL (0.000617)[0m   [0;1mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02422 (41 reqs/sec) | DB: 0.00416 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:16:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001525)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000538)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001017)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000264)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:16:07')[0m
+  [4;36;1mSQL (0.000602)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04753 (21 reqs/sec) | Rendering: 0.02445 (51%) | DB: 0.00408 (8%) | 200 OK [http://phoenix/users/1]
+
+
+Processing CoursesController#show (for 192.168.0.192 at 2008-02-24 19:16:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"courses"}
+  [4;35;1mUser Columns (0.001593)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000540)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001031)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000126)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000273)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/courses/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:16:27')[0m
+  [4;36;1mSQL (0.012923)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000391)[0m   [0mSHOW TABLES[0m
+  [4;36;1mCourse Columns (0.001143)[0m   [0;1mSHOW FIELDS FROM `courses`[0m
+  [4;35;1mCourse Load (0.000460)[0m   [0mSELECT * FROM `courses` WHERE (`courses`.`id` = 1) [0m
+  [4;36;1mUser Load (0.000735)[0m   [0;1mSELECT * FROM `users` WHERE (users.course_id = 1 AND (`users`.`instructor` = 0)) ORDER BY last_name, first_name[0m
+  [4;35;1mQuiz Load (0.000373)[0m   [0mSELECT * FROM `quizzes` WHERE (quizzes.course_id = 1 AND (due_at < '2008-02-24 19:16:27')) ORDER BY due_at desc[0m
+  [4;36;1mQuiz Columns (0.000974)[0m   [0;1mSHOW FIELDS FROM `quizzes`[0m
+  [4;35;1mExam Load (0.000429)[0m   [0mSELECT * FROM `exams` WHERE (exams.course_id = 1) ORDER BY given_on[0m
+  [4;36;1mQuestionResponse Columns (0.001054)[0m   [0;1mSHOW FIELDS FROM `question_responses`[0m
+  [4;35;1mSQL (0.000304)[0m   [0mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7) [0m
+  [4;36;1mSQL (0.000219)[0m   [0;1mSELECT count(*) AS count_all FROM `question_responses` WHERE (question_responses.user_id = 7 AND (`question_responses`.`correct` = 1)) [0m
+  [4;35;1mGrade Columns (0.001005)[0m   [0mSHOW FIELDS FROM `grades`[0m
+  [4;36;1mSQL (0.000251)[0m   [0;1mSELECT sum(value) AS sum_value FROM `grades` WHERE (grades.user_id = 7) [0m
+  [4;35;1mGrade Load (0.000208)[0m   [0mSELECT * FROM `grades` WHERE (grades.user_id = 7) [0m
+
+
+NoMethodError (You have a nil object when you didn't expect it!
+The error occurred while evaluating nil./):
+    /app/models/user.rb:52:in `exam_mean_score'
+    /app/controllers/courses_controller.rb:24:in `show'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/associations/association_proxy.rb:125:in `each'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/associations/association_proxy.rb:125:in `send'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/associations/association_proxy.rb:125:in `method_missing'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/associations/association_collection.rb:162:in `method_missing'
+    /app/controllers/courses_controller.rb:18:in `show'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:1158:in `perform_action_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:697:in `call_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:689:in `perform_action_without_benchmark'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/1.8/benchmark.rb:293:in `measure'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/benchmarking.rb:68:in `perform_action_without_rescue'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/rescue.rb:199:in `perform_action_without_caching'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:678:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/connection_adapters/abstract/query_cache.rb:33:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/activerecord-2.0.2/lib/active_record/query_cache.rb:8:in `cache'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/caching.rb:677:in `perform_action'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `send'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:524:in `process_without_filters'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/filters.rb:685:in `process_without_session_management_support'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/session_management.rb:123:in `sass_old_process'
+    /usr/lib/ruby/gems/1.8/gems/haml-1.8.1/lib/sass/plugin/rails.rb:15:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/base.rb:388:in `process'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:171:in `handle_request'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:115:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:126:in `dispatch_cgi'
+    /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/dispatcher.rb:9:in `dispatch'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:76:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `synchronize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/../lib/mongrel/rails.rb:74:in `process'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:159:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:158:in `process_client'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:285:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `initialize'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `new'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel.rb:268:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:282:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `each'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/configurator.rb:281:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:128:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/lib/mongrel/command.rb:212:in `run'
+    /usr/lib/ruby/gems/1.8/gems/mongrel-1.1.3/bin/mongrel_rails:281
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:489:in `load'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/servers/mongrel.rb:64
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:342:in `new_constants_in'
+    /usr/lib/ruby/gems/1.8/gems/activesupport-2.0.2/lib/active_support/dependencies.rb:496:in `require'
+    /usr/lib/ruby/gems/1.8/gems/rails-2.0.2/lib/commands/server.rb:39
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `gem_original_require'
+    /usr/local/lib/site_ruby/1.8/rubygems/custom_require.rb:27:in `require'
+    ./script/server:3
+
+Rendering /usr/lib/ruby/gems/1.8/gems/actionpack-2.0.2/lib/action_controller/templates/rescues/layout.erb (internal_server_error)
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:16:35) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001596)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000533)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001034)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000278)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:16:35')[0m
+  [4;35;1mSQL (0.000640)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02484 (40 reqs/sec) | DB: 0.02826 (113%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:17:45) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001583)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000551)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001017)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000127)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000269)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:17:45')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02379 (42 reqs/sec) | DB: 0.00416 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:17:45) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001517)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000520)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001014)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000388)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:17:45')[0m
+  [4;35;1mSQL (0.000625)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03413 (29 reqs/sec) | Rendering: 0.00962 (28%) | DB: 0.00419 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:18:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001622)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000539)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001035)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000270)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:18:27')[0m
+  [4;35;1mSQL (0.000625)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02474 (40 reqs/sec) | DB: 0.00423 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:18:28) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001564)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000525)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001014)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000269)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:18:28')[0m
+  [4;35;1mSQL (0.000623)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03342 (29 reqs/sec) | Rendering: 0.01007 (30%) | DB: 0.00413 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:20:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001560)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000555)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001028)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000267)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:20:15')[0m
+  [4;35;1mSQL (0.000586)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02384 (41 reqs/sec) | DB: 0.00413 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:20:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001491)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000540)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001032)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000132)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000266)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:20:15')[0m
+  [4;35;1mSQL (0.000593)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03372 (29 reqs/sec) | Rendering: 0.00947 (28%) | DB: 0.00405 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:20:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001579)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000550)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001036)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000276)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:20:50')[0m
+  [4;35;1mSQL (0.006696)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02950 (33 reqs/sec) | DB: 0.01029 (34%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:20:50) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001471)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000518)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001039)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000141)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000271)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:20:50')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03285 (30 reqs/sec) | Rendering: 0.00933 (28%) | DB: 0.00405 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:21:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001591)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000539)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001038)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000144)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000340)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:21:20')[0m
+  [4;35;1mSQL (0.000624)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02548 (39 reqs/sec) | DB: 0.00428 (16%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:21:20) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001482)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000508)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001014)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000263)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:21:20')[0m
+  [4;35;1mSQL (0.004260)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03469 (28 reqs/sec) | Rendering: 0.00789 (22%) | DB: 0.00766 (22%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:23:52) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001577)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000558)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001043)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000139)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000270)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:23:52')[0m
+  [4;35;1mSQL (0.000614)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02356 (42 reqs/sec) | DB: 0.00420 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:23:52) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001581)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000652)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001015)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000272)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:23:52')[0m
+  [4;35;1mSQL (0.000616)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03386 (29 reqs/sec) | Rendering: 0.00836 (24%) | DB: 0.00427 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:24:26) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001582)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000549)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001028)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000133)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000270)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:24:26')[0m
+  [4;35;1mSQL (0.011233)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.03394 (29 reqs/sec) | DB: 0.01480 (43%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:24:26) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001487)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000541)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001034)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000284)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:24:26')[0m
+  [4;35;1mSQL (0.002229)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03318 (30 reqs/sec) | Rendering: 0.00805 (24%) | DB: 0.00571 (17%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:24:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001606)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000547)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001094)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000146)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000280)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:24:49')[0m
+  [4;35;1mSQL (0.000615)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02412 (41 reqs/sec) | DB: 0.00429 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:24:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001534)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000530)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001021)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000260)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:24:49')[0m
+  [4;35;1mSQL (0.000622)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03147 (31 reqs/sec) | Rendering: 0.00784 (24%) | DB: 0.00410 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:26:13) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001577)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000558)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001033)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000128)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000273)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:26:13')[0m
+  [4;35;1mSQL (0.000640)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02361 (42 reqs/sec) | DB: 0.00421 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:26:13) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001534)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000527)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001024)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000137)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000280)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:26:13')[0m
+  [4;35;1mSQL (0.003993)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03687 (27 reqs/sec) | Rendering: 0.00935 (25%) | DB: 0.00750 (20%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:26:23) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001599)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000538)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001028)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000142)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000270)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:26:23')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.10375 (9 reqs/sec) | DB: 0.00419 (4%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:26:23) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001612)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000538)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001024)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000134)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000270)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:26:24')[0m
+  [4;35;1mSQL (0.000619)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03436 (29 reqs/sec) | Rendering: 0.01086 (31%) | DB: 0.00420 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:26:51) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001566)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000549)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001057)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000276)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:26:51')[0m
+  [4;35;1mSQL (0.007414)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.03058 (32 reqs/sec) | DB: 0.01100 (35%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:26:51) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001470)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000564)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001027)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000272)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:26:51')[0m
+  [4;35;1mSQL (0.000599)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03312 (30 reqs/sec) | Rendering: 0.00820 (24%) | DB: 0.00407 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:26:57) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001566)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000529)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001033)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000122)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000266)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:26:57')[0m
+  [4;35;1mSQL (0.000612)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02387 (41 reqs/sec) | DB: 0.00413 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:26:57) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001469)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000515)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001020)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000136)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000268)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:26:57')[0m
+  [4;35;1mSQL (0.000627)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03213 (31 reqs/sec) | Rendering: 0.00814 (25%) | DB: 0.00403 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:27:41) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001570)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000548)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001034)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000140)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000273)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:27:41')[0m
+  [4;35;1mSQL (0.000638)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02489 (40 reqs/sec) | DB: 0.00420 (16%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:27:41) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001478)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000517)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001092)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000143)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000290)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:27:42')[0m
+  [4;35;1mSQL (0.000588)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03542 (28 reqs/sec) | Rendering: 0.00807 (22%) | DB: 0.00411 (11%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 19:27:59) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001552)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000545)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001037)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000137)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000275)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 19:27:59')[0m
+  [4;35;1mSQL (0.000602)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02395 (41 reqs/sec) | DB: 0.00415 (17%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 19:27:59) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001627)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000518)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001031)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000376)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 19:27:59')[0m
+  [4;35;1mSQL (0.000614)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03241 (30 reqs/sec) | Rendering: 0.00821 (25%) | DB: 0.00430 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 20:41:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001625)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000535)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001159)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000359)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000281)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 20:41:27')[0m
+  [4;35;1mSQL (0.000375)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.10517 (9 reqs/sec) | DB: 0.00433 (4%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 20:41:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001586)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000532)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001022)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000273)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 20:41:27')[0m
+  [4;35;1mSQL (0.000627)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03187 (31 reqs/sec) | Rendering: 0.00818 (25%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 20:45:47) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001573)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000552)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001033)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000276)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 20:45:47')[0m
+  [4;35;1mSQL (0.014327)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.03764 (26 reqs/sec) | DB: 0.01790 (47%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 20:45:47) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001502)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000525)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001028)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000272)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 20:45:47')[0m
+  [4;35;1mSQL (0.000592)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03216 (31 reqs/sec) | Rendering: 0.00802 (24%) | DB: 0.00406 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 20:45:48) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001633)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000548)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001036)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000135)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000301)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users', 'get', '{}', '192.168.0.192', 1, '2008-02-24 20:45:48')[0m
+  [4;35;1mSQL (0.000620)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02842 (35 reqs/sec) | DB: 0.00427 (15%) | 302 Found [http://phoenix/users]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 20:45:48) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001475)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000515)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001015)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000134)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000286)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 20:45:48')[0m
+  [4;35;1mSQL (0.000660)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03162 (31 reqs/sec) | Rendering: 0.00795 (25%) | DB: 0.00408 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-24 20:45:56) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001524)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000529)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001066)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000157)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000275)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/', 'get', '{}', '192.168.0.192', 1, '2008-02-24 20:45:56')[0m
+  [4;35;1mSQL (0.000599)[0m   [0mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.11190 (8 reqs/sec) | DB: 0.00415 (3%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 20:45:56) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001528)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000518)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001023)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000130)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000265)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 20:45:56')[0m
+  [4;35;1mSQL (0.000613)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03118 (32 reqs/sec) | Rendering: 0.00787 (25%) | DB: 0.00408 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-24 20:45:58) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--865a56056f611241a2b5cf8b90595850703074a2
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;36;1mUser Columns (0.001560)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000533)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001027)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000147)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000276)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-24 20:45:58')[0m
+  [4;35;1mSQL (0.006698)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03797 (26 reqs/sec) | Rendering: 0.00797 (20%) | DB: 0.01024 (26%) | 200 OK [http://phoenix/users/1]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-24 20:46:03) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlMWM5ZGIzNDdiMDg4MTNiMDQ2OTZjY2YwNzEyOTA0%0ANGQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--337284804316acf11ea9eae4c970d709c25529ae
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mUser Columns (0.001536)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+  [4;35;1mUser Load (0.000546)[0m   [0mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;36;1mAudit Columns (0.001021)[0m   [0;1mSHOW FIELDS FROM `audits`[0m
+  [4;35;1mSQL (0.000138)[0m   [0mBEGIN[0m
+  [4;36;1mAudit Create (0.000275)[0m   [0;1mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/login', 'get', '{}', '192.168.0.192', 1, '2008-02-24 20:46:03')[0m
+  [4;35;1mSQL (0.000617)[0m   [0mCOMMIT[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.04165 (24 reqs/sec) | Rendering: 0.01679 (40%) | DB: 0.00413 (9%) | 200 OK [http://phoenix/login]
+
+
+Processing UsersController#index (for 127.0.0.1 at 2008-02-24 20:46:12) [GET]
+  Session ID: 35c6891073d51ccd79052c863c7e492c
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://localhost:3000/users/false
+Completed in 0.00588 (170 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://localhost/]
+
+
+Processing UsersController#show (for 127.0.0.1 at 2008-02-24 20:46:12) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00928 (107 reqs/sec) | Rendering: 0.00341 (36%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/false]

@@ -116,13 +116,13 @@ h3 a, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
 
 div.block_head {
   color: white;
-  background: url("/images/rounded_top.png");
+  background: url("/images/rounded_top.png") top left no-repeat;
   border-bottom: 1px solid #333;
   height: 26px;
 }
 
 div.block_body {
-  background: url("/images/rounded_bottom.png") bottom;
+  background: url("/images/rounded_bottom.png") bottom left no-repeat;
   margin-bottom: 20px;
   padding: 10px;
   clear: both;
@@ -224,10 +224,12 @@ ul.quizzes li {
 div#content {
   background: #d6abb5 url("/images/gradient.png") top repeat-x;
 	margin: 0 auto;
+  padding: 6px 0;
 	width: 798px;
 	border: 1px solid #111;
 	border-width: 0 1px;
 	min-height: 200px;
+	clear: both;
 }
 
 #footer {

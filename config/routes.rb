@@ -21,6 +21,6 @@ ActionController::Routing::Routes.draw do |map|
   map.logout '/logout', :controller => 'sessions', :action => 'destroy'
   map.activate '/activate/:activation_code', :controller => 'activations', :action => 'new'
 
-  map.connect '', :controller => 'courses'
+  map.connect '', :controller => 'users'
 
 end

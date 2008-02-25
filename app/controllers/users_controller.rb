@@ -29,4 +29,17 @@ class UsersController < ApplicationController
     end
   end
 
+  def index
+    redirect_to current_user_path
+  end
+
+  def show
+  end
+
+  private
+
+  def current_user_path
+    user_path(current_user)
+  end
+
 end
