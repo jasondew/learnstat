@@ -192,7 +192,7 @@ ul.quizzes li {
 
 #navbar {
 	margin: 0 auto;
-	background: #437da9;
+	background: #a94343;
 	width: 798px;
 	border: 1px solid #111;
 	border-width: 0 1px;
@@ -233,7 +233,7 @@ ul.quizzes li {
 }
 
 div#content {
-  background: url(/images/gradient.png) repeat-x;
+  background: url(/images/blue_gradient.png) repeat-x;
 	margin: 0 auto;
   padding: 6px 0;
 	width: 798px;
@@ -245,7 +245,7 @@ div#content {
 
 #footer {
 	margin: 0 auto;
-	background: #437da9;
+	background: #a94343;
 	width: 798px;
 	border: 1px solid #111;
 	color: #eee;
