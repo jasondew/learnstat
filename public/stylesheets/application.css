@@ -1,3 +1,11 @@
+/*
+ * colors from http://www.wellstyled.com/tools/colorscheme2/index-en.html
+ * red: A94343
+ * green: #43A943
+ * blue: #437DA9
+ * brown: #A97643
+*/
+
 * {
 	margin: 0;
 	padding: 0;
@@ -117,12 +125,15 @@ h3 a, h3 a:link, h3 a:visited, h3 a:hover, h3 a:active {
 div.block_head {
   color: white;
   background: url("/images/rounded_top.png") top left no-repeat;
-  border-bottom: 1px solid #333;
   height: 26px;
+  width: 720px;
+  padding: 4px;
+  border-bottom: 1px solid #333;
 }
 
 div.block_body {
   background: url("/images/rounded_bottom.png") bottom left no-repeat;
+  width: 728px;
   margin-bottom: 20px;
   padding: 10px;
   clear: both;
@@ -181,7 +192,7 @@ ul.quizzes li {
 
 #navbar {
 	margin: 0 auto;
-	background: #343434;
+	background: #437da9;
 	width: 798px;
 	border: 1px solid #111;
 	border-width: 0 1px;
@@ -194,7 +205,7 @@ ul.quizzes li {
 
 #navbar p {
 	padding: 0 4px;
-	color: #909090;
+	color: #eee;
 }
 
 #navbar p.left {
@@ -218,11 +229,11 @@ ul.quizzes li {
 
 
 #navbar a {
-	color: #909090;
+	color: #eee;
 }
 
 div#content {
-  background: #d6abb5 url("/images/gradient.png") top repeat-x;
+  background: url(/images/gradient.png) repeat-x;
 	margin: 0 auto;
   padding: 6px 0;
 	width: 798px;
@@ -234,10 +245,10 @@ div#content {
 
 #footer {
 	margin: 0 auto;
-	background: #343434;
+	background: #437da9;
 	width: 798px;
 	border: 1px solid #111;
-	color: #909090;
+	color: #eee;
 	font-weight: bold;
 	font-size: 85%;
 	font-variant: small-caps;

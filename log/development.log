@@ -9930,3 +9930,1023 @@ Processing UsersController#show (for 127.0.0.1 at 2008-02-24 20:46:12) [GET]
 Rendering template within layouts/application
 Rendering users/show
 Completed in 0.00928 (107 reqs/sec) | Rendering: 0.00341 (36%) | DB: 0.00000 (0%) | 200 OK [http://localhost/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:08:18) [GET]
+  Session ID: db5752613e848a9c9fd3b672fecf19e6
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mSQL (0.000377)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00626 (159 reqs/sec) | DB: 0.00038 (6%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:08:18) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04504 (22 reqs/sec) | Rendering: 0.03939 (87%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:08:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00591 (169 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:08:21) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00906 (110 reqs/sec) | Rendering: 0.00338 (37%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:08:22) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00586 (170 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:08:23) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00949 (105 reqs/sec) | Rendering: 0.00338 (35%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:08:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00575 (173 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:08:25) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00914 (109 reqs/sec) | Rendering: 0.00334 (36%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:09:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00636 (157 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:09:44) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00888 (112 reqs/sec) | Rendering: 0.00330 (37%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:09:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/users/false
+Completed in 0.00589 (169 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:09:53) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"show", "id"=>"false", "controller"=>"users"}
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.00900 (111 reqs/sec) | Rendering: 0.00339 (37%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/users/false]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:10:52) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsABjoKQHVzZWR7AA%3D%3D--49f28cf8eef3eaa2708226985339ae658db8336e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+Redirected to http://phoenix:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x2aaaafefcb10 @filter=:login_required>] rendered_or_redirected.
+Completed in 0.00514 (194 reqs/sec) | DB: 0.00000 (0%) | 302 Found [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:10:52) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--261b2d46f51a45ed75b56ac38aaabab38e51c1f3
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.02750 (36 reqs/sec) | Rendering: 0.01735 (63%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:12:58) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01006 (99 reqs/sec) | Rendering: 0.00443 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:13:22) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01036 (96 reqs/sec) | Rendering: 0.00464 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:13:40) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01072 (93 reqs/sec) | Rendering: 0.00452 (42%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:13:50) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01021 (97 reqs/sec) | Rendering: 0.00450 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:14:05) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01048 (95 reqs/sec) | Rendering: 0.00461 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:14:40) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.08996 (11 reqs/sec) | Rendering: 0.00461 (5%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:15:16) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.00999 (100 reqs/sec) | Rendering: 0.00433 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:15:33) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01021 (97 reqs/sec) | Rendering: 0.00442 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:15:51) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.09297 (10 reqs/sec) | Rendering: 0.08731 (93%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:16:17) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01003 (99 reqs/sec) | Rendering: 0.00433 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:16:36) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--ded99f1c79a4aebf5f069b96f9314e8f7f3f4983
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01012 (98 reqs/sec) | Rendering: 0.00440 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#create (for 192.168.0.192 at 2008-02-25 20:17:29) [POST]
+  Session ID: BAh7CDoMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--ef67b67dba402799f3ad4afddee9dea7e85f775c
+  Parameters: {"x"=>"0", "y"=>"0", "authenticity_token"=>"1ab6a4fbc51a58b27dcd89d49260def9e96485e5", "action"=>"create", "controller"=>"sessions", "password"=>"j4s0nd80", "login"=>"jasondew"}
+  [4;35;1mUser Load (0.000643)[0m   [0mSELECT * FROM `users` WHERE (login = 'jasondew' and activated_at IS NOT NULL) LIMIT 1[0m
+  [4;36;1mUser Columns (0.001478)[0m   [0;1mSHOW FIELDS FROM `users`[0m
+Redirected to http://phoenix:3000/
+Completed in 0.09463 (10 reqs/sec) | DB: 0.00212 (2%) | 302 Found [http://phoenix/session]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:17:29) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsGOgtub3RpY2UiG0xvZ2dlZCBpbiBzdWNjZXNzZnVsbHkG%0AOgpAdXNlZHsGOwhUOg5yZXR1cm5fdG8w--cac8715cb12f8eed412420ae823c27c1c7c4503b
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001483)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000518)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001022)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000279)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/', 'get', '{}', '192.168.0.192', 1, '2008-02-25 20:17:29')[0m
+  [4;36;1mSQL (0.000387)[0m   [0;1mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.05769 (17 reqs/sec) | DB: 0.00383 (6%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:17:29) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001531)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000525)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001024)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000264)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:17:29')[0m
+  [4;36;1mSQL (0.000872)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03315 (30 reqs/sec) | Rendering: 0.00815 (24%) | DB: 0.00435 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:19:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001564)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000541)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001073)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000272)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:19:07')[0m
+  [4;36;1mSQL (0.000598)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03115 (32 reqs/sec) | Rendering: 0.00793 (25%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:19:27) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001581)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000552)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001043)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:19:27')[0m
+  [4;36;1mSQL (0.016874)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04759 (21 reqs/sec) | Rendering: 0.00788 (16%) | DB: 0.02046 (42%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:19:39) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001593)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000541)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001039)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:19:39')[0m
+  [4;36;1mSQL (0.000603)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03165 (31 reqs/sec) | Rendering: 0.00796 (25%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:20:14) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001606)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000540)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001045)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000280)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:20:14')[0m
+  [4;36;1mSQL (0.000603)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03380 (29 reqs/sec) | Rendering: 0.00811 (23%) | DB: 0.00420 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:21:56) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001580)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000548)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001036)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000130)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000278)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:21:56')[0m
+  [4;36;1mSQL (0.014825)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04514 (22 reqs/sec) | Rendering: 0.00785 (17%) | DB: 0.01840 (40%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:22:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001593)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000553)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001032)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000272)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:22:44')[0m
+  [4;36;1mSQL (0.000634)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03151 (31 reqs/sec) | Rendering: 0.00786 (24%) | DB: 0.00421 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:23:38) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001606)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000561)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001050)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000145)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000285)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:23:38')[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03195 (31 reqs/sec) | Rendering: 0.00790 (24%) | DB: 0.00426 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:23:43) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001577)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000538)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001020)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000281)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:23:43')[0m
+  [4;36;1mSQL (0.013829)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04565 (21 reqs/sec) | Rendering: 0.00801 (17%) | DB: 0.01738 (38%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:23:44) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001545)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000530)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001053)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:23:44')[0m
+  [4;36;1mSQL (0.024626)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.05553 (18 reqs/sec) | Rendering: 0.00792 (14%) | DB: 0.02815 (50%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:24:37) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001581)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000548)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001143)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000280)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:24:37')[0m
+  [4;36;1mSQL (0.000614)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03245 (30 reqs/sec) | Rendering: 0.00806 (24%) | DB: 0.00430 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:24:39) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001564)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000540)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001014)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000136)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:24:39')[0m
+  [4;36;1mSQL (0.000607)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03190 (31 reqs/sec) | Rendering: 0.00807 (25%) | DB: 0.00414 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:25:31) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001562)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001956)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001052)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000280)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:25:31')[0m
+  [4;36;1mSQL (0.014978)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.13211 (7 reqs/sec) | Rendering: 0.00831 (6%) | DB: 0.01997 (15%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:25:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001581)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000536)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001026)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000279)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:25:32')[0m
+  [4;36;1mSQL (0.010377)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04092 (24 reqs/sec) | Rendering: 0.00783 (19%) | DB: 0.01393 (34%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:25:40) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001572)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000534)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001027)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000269)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:25:40')[0m
+  [4;36;1mSQL (0.022379)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.05345 (18 reqs/sec) | Rendering: 0.00803 (15%) | DB: 0.02592 (48%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:27:04) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001581)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000553)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001042)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000139)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000307)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:27:04')[0m
+  [4;36;1mSQL (0.000669)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03723 (26 reqs/sec) | Rendering: 0.00855 (22%) | DB: 0.00429 (11%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:27:40) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001566)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000555)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001027)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:27:40')[0m
+  [4;36;1mSQL (0.016248)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.13776 (7 reqs/sec) | Rendering: 0.00925 (6%) | DB: 0.01980 (14%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:27:41) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001549)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000584)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001011)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000273)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:27:41')[0m
+  [4;36;1mSQL (0.000588)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03152 (31 reqs/sec) | Rendering: 0.00802 (25%) | DB: 0.00414 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:27:51) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001581)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000541)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001010)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:27:52')[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03229 (30 reqs/sec) | Rendering: 0.00803 (24%) | DB: 0.00415 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:28:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001589)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000532)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001075)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000279)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:28:07')[0m
+  [4;36;1mSQL (0.000595)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03262 (30 reqs/sec) | Rendering: 0.00802 (24%) | DB: 0.00420 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:28:19) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001560)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000539)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001026)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:28:19')[0m
+  [4;36;1mSQL (0.000602)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03077 (32 reqs/sec) | Rendering: 0.00777 (25%) | DB: 0.00413 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:29:06) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001584)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000544)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001023)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:29:06')[0m
+  [4;36;1mSQL (0.000619)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03126 (31 reqs/sec) | Rendering: 0.00791 (25%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:29:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001561)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000531)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001027)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:29:07')[0m
+  [4;36;1mSQL (0.001070)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03201 (31 reqs/sec) | Rendering: 0.00789 (24%) | DB: 0.00460 (14%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:29:42) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001604)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000533)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001037)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000142)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000282)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:29:42')[0m
+  [4;36;1mSQL (0.017553)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04967 (20 reqs/sec) | Rendering: 0.00808 (16%) | DB: 0.02115 (42%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:02) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001575)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000540)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001037)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000265)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:02')[0m
+  [4;36;1mSQL (0.000606)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03090 (32 reqs/sec) | Rendering: 0.00778 (25%) | DB: 0.00415 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:10) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001579)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000563)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001044)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000140)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000289)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:10')[0m
+  [4;36;1mSQL (0.000601)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03187 (31 reqs/sec) | Rendering: 0.00792 (24%) | DB: 0.00422 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001588)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000544)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001044)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000134)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000273)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:18')[0m
+  [4;36;1mSQL (0.000620)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03134 (31 reqs/sec) | Rendering: 0.00791 (25%) | DB: 0.00420 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:25) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001591)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000525)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001022)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000131)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000281)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:25')[0m
+  [4;36;1mSQL (0.000665)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03393 (29 reqs/sec) | Rendering: 0.00829 (24%) | DB: 0.00421 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001554)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000535)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001034)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:32')[0m
+  [4;36;1mSQL (0.000616)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03081 (32 reqs/sec) | Rendering: 0.00781 (25%) | DB: 0.00413 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:33) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001560)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000534)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001140)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000122)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:33')[0m
+  [4;36;1mSQL (0.139537)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.17275 (5 reqs/sec) | Rendering: 0.00909 (5%) | DB: 0.14317 (82%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:35) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001544)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000530)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001022)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000271)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:35')[0m
+  [4;36;1mSQL (0.000588)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03123 (32 reqs/sec) | Rendering: 0.00785 (25%) | DB: 0.00409 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:45) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001583)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000530)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001047)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000383)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:45')[0m
+  [4;36;1mSQL (0.000609)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03301 (30 reqs/sec) | Rendering: 0.00808 (24%) | DB: 0.00429 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:30:55) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001614)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000534)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.000998)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000128)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000271)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:30:55')[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03165 (31 reqs/sec) | Rendering: 0.00800 (25%) | DB: 0.00415 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:31:07) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001578)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.001282)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002987)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000374)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000297)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:31:07')[0m
+  [4;36;1mSQL (0.002113)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04375 (22 reqs/sec) | Rendering: 0.00836 (19%) | DB: 0.00863 (19%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:31:15) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001580)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000543)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001021)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:31:15')[0m
+  [4;36;1mSQL (0.021308)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.05323 (18 reqs/sec) | Rendering: 0.00845 (15%) | DB: 0.02486 (46%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:31:49) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001579)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000548)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001028)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000313)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:31:49')[0m
+  [4;36;1mSQL (0.014578)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04645 (21 reqs/sec) | Rendering: 0.00810 (17%) | DB: 0.01818 (39%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:31:55) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001550)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000522)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001035)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000123)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:31:55')[0m
+  [4;36;1mSQL (0.018209)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.13201 (7 reqs/sec) | Rendering: 0.00891 (6%) | DB: 0.02171 (16%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:32:03) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.009572)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000549)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001071)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000137)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000273)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:32:03')[0m
+  [4;36;1mSQL (0.000603)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03944 (25 reqs/sec) | Rendering: 0.00781 (19%) | DB: 0.01220 (30%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:32:13) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001543)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000538)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001036)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000133)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:32:13')[0m
+  [4;36;1mSQL (0.000638)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03163 (31 reqs/sec) | Rendering: 0.00784 (24%) | DB: 0.00416 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:32:23) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001574)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000548)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001033)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000129)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000270)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:32:23')[0m
+  [4;36;1mSQL (0.000630)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03219 (31 reqs/sec) | Rendering: 0.00792 (24%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:32:32) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001582)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000543)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.002365)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000150)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000294)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:32:32')[0m
+  [4;36;1mSQL (0.000608)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.11484 (8 reqs/sec) | Rendering: 0.00799 (6%) | DB: 0.00554 (4%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:40:58) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001580)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000550)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001045)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000132)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000277)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:40:58')[0m
+  [4;36;1mSQL (0.016430)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.04704 (21 reqs/sec) | Rendering: 0.00780 (16%) | DB: 0.02001 (42%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:41:09) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001591)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000537)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001030)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000125)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000267)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:41:09')[0m
+  [4;36;1mSQL (0.000631)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03157 (31 reqs/sec) | Rendering: 0.00803 (25%) | DB: 0.00418 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:41:28) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001588)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000543)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001008)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000275)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:41:28')[0m
+  [4;36;1mSQL (0.000605)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03191 (31 reqs/sec) | Rendering: 0.00800 (25%) | DB: 0.00416 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:42:39) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001642)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000548)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001060)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000155)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000302)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:42:39')[0m
+  [4;36;1mSQL (0.019173)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.13179 (7 reqs/sec) | Rendering: 0.00811 (6%) | DB: 0.02288 (17%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:43:09) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001625)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000560)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001052)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000447)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000273)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:43:09')[0m
+  [4;36;1mSQL (0.000622)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03228 (30 reqs/sec) | Rendering: 0.00781 (24%) | DB: 0.00458 (14%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:43:18) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001582)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000536)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.000988)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:43:19')[0m
+  [4;36;1mSQL (0.000628)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03230 (30 reqs/sec) | Rendering: 0.00824 (25%) | DB: 0.00414 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:47:04) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001573)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000576)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001041)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000138)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:47:04')[0m
+  [4;36;1mSQL (0.000613)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03191 (31 reqs/sec) | Rendering: 0.00805 (25%) | DB: 0.00422 (13%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:47:11) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001573)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000534)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001022)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000276)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:47:11')[0m
+  [4;36;1mSQL (0.000615)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03341 (29 reqs/sec) | Rendering: 0.00850 (25%) | DB: 0.00415 (12%) | 200 OK [http://phoenix/users/1]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-25 20:47:16) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001558)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000540)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001036)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000274)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/', 'get', '{}', '192.168.0.192', 1, '2008-02-25 20:47:16')[0m
+  [4;36;1mSQL (0.000606)[0m   [0;1mCOMMIT[0m
+Redirected to http://phoenix:3000/users/1
+Completed in 0.02352 (42 reqs/sec) | DB: 0.00415 (17%) | 302 Found [http://phoenix/]
+
+
+Processing UsersController#show (for 192.168.0.192 at 2008-02-25 20:47:17) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBjoOcmV0dXJuX3RvMCIKZmxhc2hJQzonQWN0aW9uQ29udHJv%0AbGxlcjo6Rmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--9280c124b91ebe86eb19a28aa7adbc664065e082
+  Parameters: {"action"=>"show", "id"=>"1", "controller"=>"users"}
+  [4;35;1mUser Columns (0.001466)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000524)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001002)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000135)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000271)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/users/1', 'get', '{\"id\": \"1\"}', '192.168.0.192', 1, '2008-02-25 20:47:17')[0m
+  [4;36;1mSQL (0.004511)[0m   [0;1mCOMMIT[0m
+Rendering template within layouts/application
+Rendering users/show
+Completed in 0.03551 (28 reqs/sec) | Rendering: 0.00788 (22%) | DB: 0.00791 (22%) | 200 OK [http://phoenix/users/1]
+
+
+Processing SessionsController#destroy (for 192.168.0.192 at 2008-02-25 20:47:19) [GET]
+  Session ID: BAh7CToMY3NyZl9pZCIlN2Q2MDZiMzcwODY0ZDdlYWFmODA3MDc4MDM2ZGI2%0AYjQ6CXVzZXJpBiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6%0AOkZsYXNoSGFzaHsABjoKQHVzZWR7ADoOcmV0dXJuX3RvMA%3D%3D--903c93b7c0ccb461007763e76d7d0b4f92c09116
+  Parameters: {"action"=>"destroy", "controller"=>"sessions"}
+  [4;35;1mUser Columns (0.001568)[0m   [0mSHOW FIELDS FROM `users`[0m
+  [4;36;1mUser Load (0.000516)[0m   [0;1mSELECT * FROM `users` WHERE (`users`.`id` = 1) LIMIT 1[0m
+  [4;35;1mAudit Columns (0.001039)[0m   [0mSHOW FIELDS FROM `audits`[0m
+  [4;36;1mSQL (0.000127)[0m   [0;1mBEGIN[0m
+  [4;35;1mAudit Create (0.000272)[0m   [0mINSERT INTO `audits` (`url`, `method`, `params`, `ip`, `user_id`, `created_at`) VALUES('/logout', 'get', '{}', '192.168.0.192', 1, '2008-02-25 20:47:19')[0m
+  [4;36;1mSQL (0.063290)[0m   [0;1mCOMMIT[0m
+  [4;35;1mSQL (0.000430)[0m   [0mBEGIN[0m
+  [4;36;1mUser Update (0.000429)[0m   [0;1mUPDATE `users` SET `created_at` = '2007-10-17 20:34:04', `login` = 'jasondew', `crypted_password` = '0b7ecf373cfa41aa85ad1fc088c5bde57aa1caf7', `activated_at` = '2007-10-17 20:34:08', `remember_token_expires_at` = NULL, `activation_code` = NULL, `salt` = 'f09e4b308c8f7bd933f5ea88fb6316072f9a70db', `last_name` = 'Dew', `course_id` = 1, `first_name` = 'Jason', `registration_code` = 'stat110f07', `remember_token` = NULL, `blackboard_username` = 'dew', `instructor` = 1, `email` = 'jason.dew@gmail.com', `updated_at` = '2008-02-25 20:47:19' WHERE `id` = 1[0m
+  [4;35;1mSQL (0.000549)[0m   [0mCOMMIT[0m
+Cookie set: auth_token=; path=/; expires=Thu, 01 Jan 1970 00:00:00 GMT
+Redirected to http://phoenix:3000/login
+Completed in 0.09976 (10 reqs/sec) | DB: 0.06822 (68%) | 302 Found [http://phoenix/logout]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:47:19) [GET]
+  Session ID: BAh7BiIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6Rmxhc2g6OkZsYXNo%0ASGFzaHsGOgtub3RpY2UiHllvdSBoYXZlIGJlZW4gbG9nZ2VkIG91dC4GOgpA%0AdXNlZHsGOwZU--cdd5cb30515246d7ff61df99ccabc64febd902ea
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01015 (98 reqs/sec) | Rendering: 0.00460 (45%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:47:46) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01008 (99 reqs/sec) | Rendering: 0.00437 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:47:48) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01071 (93 reqs/sec) | Rendering: 0.00448 (41%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:48:21) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01012 (98 reqs/sec) | Rendering: 0.00450 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:48:25) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01058 (94 reqs/sec) | Rendering: 0.00481 (45%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:49:00) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mSQL (0.000220)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.03552 (28 reqs/sec) | Rendering: 0.02949 (83%) | DB: 0.00022 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:49:14) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01018 (98 reqs/sec) | Rendering: 0.00445 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:49:38) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01024 (97 reqs/sec) | Rendering: 0.00451 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-25 20:49:57) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01118 (89 reqs/sec) | Rendering: 0.00479 (42%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/login]
