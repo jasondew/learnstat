@@ -11098,3 +11098,102 @@ Processing SessionsController#new (for 127.0.0.1 at 2008-02-25 21:20:11) [GET]
 Rendering template within layouts/application
 Rendering sessions/new
 Completed in 0.00452 (221 reqs/sec) | Rendering: 0.00208 (46%) | DB: 0.00000 (0%) | 200 OK [http://localhost/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 18:31:58) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+  [4;36;1mSQL (0.000229)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.04088 (24 reqs/sec) | Rendering: 0.03412 (83%) | DB: 0.00023 (0%) | 200 OK [http://phoenix/login]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-26 20:47:13) [GET]
+  Session ID: d4f7c2fbd4d8a7fe056531133ebda5c1
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mSQL (0.000208)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://phoenix:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x2aaaafb4a328 @filter=:login_required>] rendered_or_redirected.
+Completed in 0.00548 (182 reqs/sec) | DB: 0.00021 (3%) | 302 Found [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 20:47:14) [GET]
+  Session ID: BAh7BzoOcmV0dXJuX3RvIgYvIgpmbGFzaElDOidBY3Rpb25Db250cm9sbGVy%0AOjpGbGFzaDo6Rmxhc2hIYXNoewAGOgpAdXNlZHsA--261b2d46f51a45ed75b56ac38aaabab38e51c1f3
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.04689 (21 reqs/sec) | Rendering: 0.04116 (87%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing UsersController#index (for 192.168.0.192 at 2008-02-26 20:52:09) [GET]
+  Session ID: BAh7BzoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA%3D--9ecd42ed9a521f3f1d44979973f500be5c436a3e
+  Parameters: {"action"=>"index", "controller"=>"users"}
+  [4;36;1mSQL (0.000227)[0m   [0;1mSET SQL_AUTO_IS_NULL=0[0m
+Redirected to http://phoenix:3000/session/new
+Filter chain halted as [#<ActionController::Filters::ClassMethods::SymbolFilter:0x2aaaafb60600 @filter=:login_required>] rendered_or_redirected.
+Completed in 0.00505 (197 reqs/sec) | DB: 0.00023 (4%) | 302 Found [http://phoenix/]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 20:52:10) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGI6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--00f45cc975822e9665dd931d6b0c42df6e815b56
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01678 (59 reqs/sec) | Rendering: 0.01100 (65%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 20:57:53) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--9b8d23e9285492f44715f4bd08eee05f94d0ec90
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01024 (97 reqs/sec) | Rendering: 0.00444 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 20:58:31) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGI6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--00f45cc975822e9665dd931d6b0c42df6e815b56
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.09120 (10 reqs/sec) | Rendering: 0.08553 (93%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 21:00:25) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--9b8d23e9285492f44715f4bd08eee05f94d0ec90
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01065 (93 reqs/sec) | Rendering: 0.00466 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 21:00:42) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGI6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--00f45cc975822e9665dd931d6b0c42df6e815b56
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01029 (97 reqs/sec) | Rendering: 0.00449 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 21:00:58) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--9b8d23e9285492f44715f4bd08eee05f94d0ec90
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01013 (98 reqs/sec) | Rendering: 0.00449 (44%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 21:01:14) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGI6DnJldHVybl90byIGLyIKZmxhc2hJQzonQWN0aW9uQ29udHJvbGxlcjo6%0ARmxhc2g6OkZsYXNoSGFzaHsABjoKQHVzZWR7AA%3D%3D--00f45cc975822e9665dd931d6b0c42df6e815b56
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01045 (95 reqs/sec) | Rendering: 0.00457 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
+
+
+Processing SessionsController#new (for 192.168.0.192 at 2008-02-26 21:01:39) [GET]
+  Session ID: BAh7CDoMY3NyZl9pZCIlYTkyYmEzMzUzZDg3OTEzNDQ2OTA3MDQ4OGU3N2M3%0AOGIiCmZsYXNoSUM6J0FjdGlvbkNvbnRyb2xsZXI6OkZsYXNoOjpGbGFzaEhh%0Ac2h7AAY6CkB1c2VkewA6DnJldHVybl90byIGLw%3D%3D--9b8d23e9285492f44715f4bd08eee05f94d0ec90
+  Parameters: {"action"=>"new", "controller"=>"sessions"}
+Rendering template within layouts/application
+Rendering sessions/new
+Completed in 0.01033 (96 reqs/sec) | Rendering: 0.00452 (43%) | DB: 0.00000 (0%) | 200 OK [http://phoenix/session/new]
