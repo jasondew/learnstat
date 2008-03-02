@@ -233,7 +233,7 @@ ul.quizzes li {
 }
 
 div#content {
-  background: url(/images/blue_gradient.png) repeat-x;
+  background: url(/images/brown_gradient.png) top left repeat-x;
 	margin: 0 auto;
   padding: 6px 0;
 	width: 798px;

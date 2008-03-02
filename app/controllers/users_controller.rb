@@ -1,5 +1,7 @@
 class UsersController < ApplicationController
 
+  skip_before_filter :login_required, :except => :new
+
   def new
     @user = User.new
   end
