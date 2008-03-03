@@ -10,16 +10,13 @@
     = stylesheet_link_tag 'application', 'lightbox', :cache => true
     = javascript_include_tag 'prototype', 'effects', 'controls', 'lightbox', 'application', :cache => true
 
-  %body#announcements
+  %body
     = link_to content_tag(:h1, content_tag(:span, 'learnSTAT')), login_url
 
-    #navbar
-      %p.left= "Welcome, #{current_user.name}." if logged_in?
-      %p#notices= flash[:notice]
-      %p.right= "[#{link_to 'Logout', logout_url }]" if logged_in?
-  
+    #navbar= navbar
+    #menubar= menubar
+    #content
+      = yield
       %br
-  
-    #content= yield
 
     #footer= content_tag(:p, '&copy; 2007 &ndash; 2008 Palmetto Web Consulting')

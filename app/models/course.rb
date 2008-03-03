@@ -9,7 +9,11 @@ class Course < ActiveRecord::Base
   has_many :open_quizzes, :class_name => 'Quiz', :conditions => [ "due_at >= ?", Time.now ], :order => 'due_at desc'
   has_many :closed_quizzes, :class_name => 'Quiz', :conditions => [ "due_at < ?", Time.now ], :order => 'due_at desc'
 
-  has_many :announcements
+  has_many :announcements do
+    def latest
+      find(:all, :order => 'created_at desc', :limit => 5)
+    end
+  end
   has_many :documents
 
   include SemesterConstants

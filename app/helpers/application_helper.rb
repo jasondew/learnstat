@@ -1,6 +1,53 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
+  MENU_ITEMS = %w(home documents quizzes grades profile)
+
+  def navbar
+    returning(Array.new) do |html|
+      html << content_tag(:p, welcome_message, :class => 'left')
+      html << content_tag(:p, flash[:notice], :id => 'notices')
+      html << content_tag(:p, user_information, :class => 'right')
+      html << content_tag(:br)
+    end.join("\n")
+  end
+
+  def menubar(selected = 'home')
+    return unless logged_in?
+
+    returning(Array.new) do |html|
+      MENU_ITEMS.each do |item|
+        html << menu_link(item, selected == item)
+      end
+      html << content_tag(:br)
+    end.join("\n")
+  end
+
+  def menu_link(item, selected)
+    image_filename = "#{item}_#{selected ? 'blue' : 'black'}.png"
+    css_class = selected ? 'selected' : ''
+    href = selected ? '#' : ""
+
+    link_to(image_tag(image_filename, :alt => item.capitalize), href, :class => css_class)
+  end
+
+  def small_block(title, content)
+    content_tag(:div, :class => 'small_block') do |html|
+      returning(Array.new) do |html|
+        html << content_tag(:div, title, :class => 'small_block_head')
+        html << content_tag(:div, content, :class => 'small_block_body')
+      end.join("\n")
+    end
+  end
+
+  def welcome_message
+    logged_in? ? "Welcome, #{current_user.name}." : "&nbsp;"
+  end
+
+  def user_information
+    logged_in? ? "[#{link_to 'Logout', logout_url }]" : "&nbsp;"
+  end
+
   def datetime_format(datetime)
     datetime.strftime("%A, %B %d at %I:%M%p")
   end

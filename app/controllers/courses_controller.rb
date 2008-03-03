@@ -9,6 +9,11 @@ class CoursesController < ApplicationController
 
   # GET /courses/1
   def show
+    @course = Course.find params[:id]
+    @latest_announcements = @course.announcements.latest
+  end
+
+  def old_show
     @course = Course.find(params[:id])
     @quizzes = @course.quizzes
     @gradebook = Hash.new {|h,k| h[k] = Array.new }

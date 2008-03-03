@@ -49,6 +49,7 @@ class User < ActiveRecord::Base
   end
 
   def exam_mean_score
+    return 0 unless grades.length > 0
     grades.sum(:value) / grades.length.to_f
   end
 
