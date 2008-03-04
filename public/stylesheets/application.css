@@ -129,19 +129,45 @@ div.block_head {
   width: 720px;
   padding: 4px;
   border-bottom: 1px solid #333;
+  font-size: 20px;
+  font-weight: bold;
+  margin: 0 auto;
 }
 
 div.block_body {
   background: url("/images/rounded_bottom.png") bottom left no-repeat;
   width: 708px;
-  margin-bottom: 20px;
+  margin: 0 auto 20px auto;
   padding: 10px;
   clear: both;
 }
 
+div.block_information {
+  margin: 8px 0 0 0;
+  text-align: right;
+  font-style: italic;
+  font-size: 85%;
+}
+
+#announcements div.block_head {
+  background: url("/images/rounded_medium_top.png") top left no-repeat;
+  height: 20px;
+  width: 450px;
+  padding: 4px;
+  font-size: 18px;
+  font-weight: bold;
+}
+
+#announcements div.block_body {
+  background: url("/images/rounded_medium_bottom.png") bottom left no-repeat;
+  width: 442px;
+  padding: 8px;
+  margin-bottom: 20px;
+}
+
 div.small_block {
-  width: 355px;
-  margin: 10px 4px;
+  width: 300;
+  margin: 10px;
   float: right;
   clear: right;
 }
@@ -153,23 +179,16 @@ div.small_block_head {
   font-size: 18px;
   background: url("/images/rounded_small_top.png") top left no-repeat;
   height: 20px;
-  width: 347px;
+  width: 292px;
   padding: 4px;
   border-bottom: 1px solid #333;
 }
 
 div.small_block_body {
   background: url("/images/rounded_small_bottom.png") bottom left no-repeat;
-  width: 339px;
+  width: 284px;
   padding: 8px;
   margin-bottom: 20px;
-}
-
-div.block_information {
-  float: right;
-  font-style: italic;
-  font-size: 10px;
-  margin: 10px 10px 4px 10px;
 }
 
 .information {
@@ -477,8 +496,7 @@ ol.answers li.answer {
 }
 
 #announcements {
+  width: 448px;
 	margin: 10px;
-	padding: 5px;
-	border: 1px solid #999;
   float: left;
 }

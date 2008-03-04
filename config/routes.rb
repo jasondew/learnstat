@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :users
+  map.resources :users, :has_one => :profile
   map.resources :activations
 
   map.resource :session, :controller => 'sessions'
@@ -10,6 +10,7 @@ ActionController::Routing::Routes.draw do |map|
     course.resources :exams, :has_many => :grades, :has_one => :exam_distribution
     course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :response_distributions],
                                :has_one => :grade_distribution
+    course.resource :gradebook
   end
 
   map.resources :questions do |question|

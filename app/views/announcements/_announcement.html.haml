@@ -1,0 +1,7 @@
+.block_head
+  = announcement.title
+  = instructor_links(announcement) if current_user.instructor?
+
+.block_body
+  = announcement.body
+  .block_information= "Posted by #{announcement.user.full_name} on #{datetime_format(announcement.created_at)}"

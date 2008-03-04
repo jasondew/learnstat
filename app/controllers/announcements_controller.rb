@@ -1,7 +1,11 @@
 class AnnouncementsController < ApplicationController
 
-  before_filter :require_instructor
+  before_filter :require_instructor, :except => [:index, :show]
   before_filter :get_course
+
+  def index
+    @announcements = @course.announcements
+  end
 
   # GET /announcements/new
   def new
