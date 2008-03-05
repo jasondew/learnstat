@@ -11,6 +11,7 @@ ActionController::Routing::Routes.draw do |map|
     course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :response_distributions],
                                :has_one => :grade_distribution
     course.resource :gradebook
+    course.resources :users, :has_one => :profile
   end
 
   map.resources :questions do |question|

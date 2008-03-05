@@ -13,15 +13,14 @@ module ApplicationHelper
   end
 
   def menubar
-    #FIXME doesn't show on /user/x/profile
-    return unless logged_in? and (@course)
+    return unless logged_in? and (@course or controller.is_a? ::ProfilesController)
 
     menu_item_urls = {'home'          => course_path(@course),
                       'announcements' => course_announcements_path(@course),
                       'documents'     => course_documents_path(@course),
                       'quizzes'       => course_quizzes_path(@course),
                       'grades'        => course_gradebook_path(@course),
-                      'profile'       => user_profile_path(current_user) }
+                      'profile'       => course_user_profile_path(@course, current_user) }
 
     returning(Array.new) do |html|
       MENU_ITEMS.each do |item|
@@ -44,8 +43,8 @@ module ApplicationHelper
       when AnnouncementsController: 'announcements'
       when DocumentsController: 'documents'
       when QuizzesController: 'quizzes'
-      when UsersController: 'profile'
-      when GradebooksController: 'gradebook'
+      when ProfilesController: 'profile'
+      when GradebooksController: 'grades'
       when CoursesController: 'home'
       else 'home'
     end
