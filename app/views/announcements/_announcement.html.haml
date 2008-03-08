@@ -1,6 +1,4 @@
-.block_head
-  = announcement.title
-  = instructor_links(announcement) if current_user.instructor?
+.block_head= announcement_title(announcement)
 
 .block_body
   = announcement.body

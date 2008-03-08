@@ -11,6 +11,7 @@ class CoursesController < ApplicationController
   def show
     @course = Course.find params[:id]
     @latest_announcements = @course.announcements.latest
+    @latest_documents = @course.documents.latest
   end
 
   def old_show

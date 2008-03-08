@@ -1,0 +1,9 @@
+- if quiz.viewable_now? or instructor?
+  
+  .block_head
+    = link_to quiz.name, course_quiz_path( @course, quiz )
+    = instructor_quiz_links(quiz)
+
+  .block_body
+    = quiz_details(quiz)
+    .block_information= quiz_information(quiz)

@@ -1,1 +1,5 @@
-= render :partial => 'announcement', :collection => @announcements
+%h2 Announcements
+
+= render_collection @announcements, 'announcement'
+
+%p= instructor_link 'Add an announcement', 'newspaper_add.png', new_course_announcement_path(@course)

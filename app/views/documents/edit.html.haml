@@ -1,0 +1,9 @@
+%h2 Edit document
+
+= error_messages_for :document
+
+- form_for(:document, :url => course_document_path(@course, @document), :html => { :method => :put }) do |f|
+  = render :partial => 'form', :locals => { :f => f }
+  %p
+    = submit_tag "Update"
+    = link_to 'Cancel', course_path(@course)

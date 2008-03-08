@@ -3,6 +3,7 @@
 
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
+  include ActionView::Helpers::NumberHelper
 
   LETTER_GRADES = [:F, :D, :C, :B, :A]
 
@@ -21,6 +22,19 @@ class ApplicationController < ActionController::Base
     current_user.instructor?
   end
 
+  def datetime_format(datetime)
+    datetime.strftime("%A, %B %d at %I:%M%p")
+  end
+
+  def percent_format(number)
+    return '**' unless number
+    number_to_percentage(number * 100, {:precision => 2})
+  end
+
+  def instructor?
+    current_user && current_user.instructor?
+  end
+
   def letter_grade_for(score)
     score = (score <= 1) ? score * 100 : score
 
@@ -32,6 +46,8 @@ class ApplicationController < ActionController::Base
       when   0..60: :F
     end
   end
+
+  helper_method :datetime_format, :percent_format, :instructor?
 
   protected
 

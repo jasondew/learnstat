@@ -3,9 +3,16 @@ module ApplicationHelper
 
   MENU_ITEMS = %w(home announcements documents quizzes grades profile)
 
+  def render_collection(objects, name, wrapper = nil)
+    return content_tag(:p, "There are no #{name.pluralize} at this time.") if objects.empty?
+    content = render :partial => name, :collection => objects
+    wrapper ? content_tag(wrapper, content) : content
+  end
+
   def navbar
     returning(Array.new) do |html|
       html << content_tag(:p, welcome_message, :class => 'left')
+      html << content_tag(:p, navbar_title, :class => 'middle')
       html << content_tag(:p, user_information, :class => 'right')
       html << content_tag(:br)
     end.join("\n")
@@ -56,6 +63,10 @@ module ApplicationHelper
     end
   end
 
+  def instructor_link(text, image, *args)
+    link_to content_tag(:span, image_tag(image) + text, :class => "instructor_link"), *args
+  end
+
   def small_block(title, content)
     content_tag(:div, :class => 'small_block') do
       returning(Array.new) do |html|
@@ -65,21 +76,16 @@ module ApplicationHelper
     end
   end
 
+  def navbar_title
+    @course ? @course.title : ""
+  end
+
   def welcome_message
     logged_in? ? "Welcome, #{current_user.name}." : "&nbsp;"
   end
 
   def user_information
     logged_in? ? "[#{link_to 'Logout', logout_url }]" : "&nbsp;"
-  end
-
-  def datetime_format(datetime)
-    datetime.strftime("%A, %B %d at %I:%M%p")
-  end
-
-  def percent_format(number)
-    return '**' unless number
-    number_to_percentage(number * 100, {:precision => 2})
   end
 
 end

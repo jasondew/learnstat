@@ -3,16 +3,10 @@ class QuizzesController < ApplicationController
   before_filter :require_instructor, :except => :show
   before_filter :get_course
 
-  # GET /quizzes
-  # GET /quizzes.xml
   def index
-    respond_to do |format|
-      format.xml  { render :xml => @course.quizzes.to_xml }
-    end
+    @quizzes = @course.quizzes
   end
 
-  # GET /quizzes/1
-  # GET /quizzes/1.xml
   def show
     @quiz = @course.quizzes.find(params[:id])
     @question_responses = current_user.question_responses.find_all_by_quiz_id @quiz

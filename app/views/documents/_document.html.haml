@@ -1,0 +1,6 @@
+- if document.viewable_now? or instructor?
+
+  .block_head= document_title(document)
+  .block_body
+    = link_to document.filename, course_document_path(@course, document)
+    .block_information= "added #{datetime_format(document.created_at)}"

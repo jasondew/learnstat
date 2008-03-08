@@ -1,0 +1,5 @@
+%h2 Quizzes
+
+= render_collection(@quizzes, 'quiz')
+
+%p= instructor_link 'Add a quiz', 'application_form_add.png', new_course_quiz_path(@course)

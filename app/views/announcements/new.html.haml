@@ -1,0 +1,9 @@
+%h2 New announcement
+
+= error_messages_for :announcement
+
+- form_for(:announcement, :url => course_announcements_path(@course)) do |f|
+  = render :partial => 'form', :locals => { :f => f }
+  %p
+    = submit_tag "Create"
+    = link_to 'Cancel', course_path(@course)

@@ -1,0 +1,12 @@
+%p
+  %label{ :for => "label"} Label:
+  = f.text_field :label
+
+- if @document.new_record?
+  %p
+    %label{ :for => "uploaded_data"} File:
+    = f.file_field :uploaded_data
+
+%p
+  %label{ :for => "viewable_at"} Viewable at:
+  = f.datetime_select :viewable_at

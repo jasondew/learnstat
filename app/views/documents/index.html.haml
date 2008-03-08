@@ -1,0 +1,5 @@
+%h2 Documents
+
+= render_collection(@course.documents, 'document')
+
+%p= instructor_link 'Add a document', 'page_add.png', new_course_document_path(@course)

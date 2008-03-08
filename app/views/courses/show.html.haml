@@ -1,10 +1,7 @@
-%h2= @course.title
+%h2 Latest Announcements
 
-#announcements
-  = html_announcements(@latest_announcements)
+#announcements= format_announcements(@latest_announcements)
 
-  = link_to 'All announcements', course_announcements_path(@course)
-
-= small_block('Latest Documents', 'Nothing yet')
+= small_block('Latest Documents', format_documents(@latest_documents))
 = small_block('Open Quizzes', 'Nothing yet')
 = small_block('Latest Grades', 'Nothing yet')
