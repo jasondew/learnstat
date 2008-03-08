@@ -6,10 +6,16 @@ module ApplicationHelper
   def navbar
     returning(Array.new) do |html|
       html << content_tag(:p, welcome_message, :class => 'left')
-      html << content_tag(:p, flash[:notice], :id => 'notices')
       html << content_tag(:p, user_information, :class => 'right')
       html << content_tag(:br)
     end.join("\n")
+  end
+
+  def messages
+    return if flash.empty?
+
+    flashes = flash.collect {|(key, value)| content_tag(:div, value, :class => key) }
+    content_tag(:div, flashes.join("\n"), :id => "messages")
   end
 
   def menubar
