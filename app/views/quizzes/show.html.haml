@@ -1,0 +1,9 @@
+%h2= quiz_title(@quiz)
+
+%p.instructions= quiz_instructions(@quiz)
+
+= quiz_instructor_information(@quiz)
+
+%ol.questions= render :partial => 'quiz_question', :collection => @quiz.questions
+
+%p= link_to 'Done', course_path(@course)

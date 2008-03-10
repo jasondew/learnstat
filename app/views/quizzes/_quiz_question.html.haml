@@ -1,0 +1,10 @@
+-#FIXME: the question_attributes need to be added to the li hash
+
+%li{ :id => dom_id(quiz_question), :etc => question_attributes}
+  %p
+    = link_to image_tag('chart_pie.png', :alt => 'Graph'), course_quiz_response_distribution_path(@course, @quiz, quiz_question), :rel => 'lightbox'
+    = quiz_question.content
+
+  %p= link_to_function 'Show Answer', "$('#{dom_id(quiz_question)}').getElementsByClassName('hidden-answer')[0].className = 'answer'" if @quiz.closed?
+
+  %ol.answers= render :partial => 'question_choice', :collection => quiz_question.choices, :locals => { :quiz_question => quiz_question }

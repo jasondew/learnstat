@@ -1,0 +1,13 @@
+%h2 Edit quiz
+
+= error_messages_for :quiz
+
+- form_for(:quiz, :url => course_quiz_path(@course, @quiz), :html => { :method => :put }) do |f|
+  = render :partial => 'form', :locals => { :f => f }
+  %p= submit_tag "Update"
+
+#quiz_questions= render :partial => 'questions'
+
+= link_to 'Show', course_quiz_path(@course, @quiz)
+|
+= link_to 'Back', course_path(@course)

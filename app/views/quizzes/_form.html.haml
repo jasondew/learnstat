@@ -1,0 +1,11 @@
+%p
+  %label{:for => "name"} Name:
+  = f.text_field :name
+
+%p
+  %label{:for => "due_at"} Due:
+  = f.datetime_select :due_at
+
+%p
+  %label{:for => "viewable_at"} Viewable at:
+  = f.datetime_select :viewable_at
