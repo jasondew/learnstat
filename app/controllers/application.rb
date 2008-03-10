@@ -27,7 +27,7 @@ class ApplicationController < ActionController::Base
   end
 
   def percent_format(number)
-    return '**' unless number
+    return 'Not available' unless number
     number_to_percentage(number * 100, {:precision => 2})
   end
 

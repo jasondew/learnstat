@@ -14,4 +14,8 @@ module DocumentsHelper
     end.join("\n")
   end
 
+  def document_information(document)
+    "viewable #{document.viewable_now? ? 'now' : datetime_format(document.viewable_at)}, added #{datetime_format document.created_at}"
+  end
+
 end

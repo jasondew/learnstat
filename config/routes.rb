@@ -8,13 +8,15 @@ ActionController::Routing::Routes.draw do |map|
   map.resources :courses do |course|
     course.resources :announcements, :documents
     course.resources :exams, :has_many => :grades, :has_one => :exam_distribution
-    course.resources :quizzes, :has_many => [:quiz_questions, :question_responses, :response_distributions],
-                               :has_one => :grade_distribution
+    course.resources :quizzes, :has_many => [:question_responses, :response_distributions], :has_one => :grade_distribution,
+                               :member => { :mark_viewable => :post } do |quiz|
+      quiz.resources :quiz_questions, :collection => { :search => :post }
+    end
     course.resource :gradebook
     course.resources :users, :has_one => :profile
   end
 
-  map.resources :questions do |question|
+  map.resources :questions, :collection => { :search => :post } do |question|
     question.resources :question_choices
   end
 

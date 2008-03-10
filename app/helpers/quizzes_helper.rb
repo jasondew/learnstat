@@ -1,5 +1,39 @@
 module QuizzesHelper
 
+  def quiz_title(quiz)
+    returning(Array.new) do |html|
+      html << @quiz.name
+      html << link_to(image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_course_quiz_path(@course, @quiz)) if current_user.instructor?
+    end.join("\n")
+  end
+
+  def quiz_instructions(quiz)
+    returning(Array.new) do |html|
+      if @quiz.closed?
+        html << "<strong>Completed Assignment:</strong> This assignment was due on #{datetime_format(@quiz.due_at)}."
+        html << "Your answer, if you provided one, is shown in green.  The correct answer to the question is shown underlined."
+        html << content_tag(:p, "Mean: #{percent_format @quiz.mean}, Standard Deviation: #{number_with_precision @quiz.standard_deviation, 2}",
+                            :class => "information")
+      else
+        html << "<strong>Instructions:</strong> Complete the following questions by clicking on the answer of your choice."
+        html << "You have until #{datetime_format(@quiz.due_at)} to complete this assignment.  No assignment, written or "
+        html << "otherwise, will be accepted after that time."
+        html << content_tag(:p, "Your average score is #{percent_format current_user.mean_score}, can you do better here?", :class => "information")
+      end
+    end.join("\n")
+  end
+
+  def quiz_instructor_information(quiz)
+    return unless instructor?
+
+    content_tag(:p) do
+      returning(Array.new) do |html|
+        html << content_tag(:div, "Participation: #{percent_format( @quiz.participation )}")
+        html << content_tag(:div, "Questions: #{@quiz.questions.count}")
+      end.join("\n")
+    end
+  end
+
   def instructor_quiz_links(quiz)
     return unless instructor?
 
@@ -8,6 +42,21 @@ module QuizzesHelper
       html << link_to( image_tag( 'application_form_delete.png', :alt => 'Delete Quiz' ), course_quiz_path( @course, quiz ),
                        :confirm => 'Are you sure?', :method => :delete )
       html << link_to( image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), course_quiz_grade_distribution_path( @course, quiz ), :rel => 'lightbox' )
+    end.join("\n")
+  end
+
+  def quiz_question_links(question, quiz_question)
+    returning(Array.new) do |html|
+      if quiz_question 
+        html << link_to_remote( image_tag( 'table_delete.png', :alt => 'Delete Question' ),
+                                :url => course_quiz_quiz_question_path(@course, @quiz, quiz_question), :method => :delete ) 
+      else
+        html << link_to_remote( image_tag( 'table_add.png', :alt => 'Add Question' ), :url => course_quiz_quiz_questions_path(@course, @quiz),
+                                :with => %Q|"question_id=#{question.id}"|, :method => :post ) 
+      end
+ 
+      html << link_to( image_tag( 'table_edit.png', :alt => 'Edit Question' ), edit_question_path(question), :popup => true )
+      html << link_to( image_tag( 'table_delete.png', :alt => 'Delete Question' ), question_path(question), :confirm => 'Are you sure?', :method => :delete )
     end.join("\n")
   end
 
@@ -23,31 +72,36 @@ module QuizzesHelper
 
   def open_quiz_details(quiz)
     returning(Array.new) do |html|
-      html << content_tag(:p, "Due on: #{datetime_format(quiz.due_at)}")
+      html << content_tag(:div, "Due on: #{datetime_format(quiz.due_at)}")
 
       if instructor?
-        html << content_tag(:p, "Participation so far: #{percent_format quiz.participation}")
-      elsif quiz.attempted_by? current_user
-        html << content_tag(:p, "Status: #{quiz.answers_from(current_user).size} of #{quiz.questions.size} questions attempted")
-        html << link_to_function('Show completion code', "Effect.Appear('completion_code')")
-        html << content_tag(:div, quiz.completion_code_for(current_user), :style => "display: none; width: 80%", :id => "completion_code")
+        if quiz.viewable_now?
+          html << content_tag(:div, "Participation so far: #{percent_format quiz.participation}")
+        else
+          html << content_tag(:div, link_to("Make viewable now", mark_viewable_course_quiz_path(@course, quiz), :method => :post))
+        end
+      else
+        if quiz.attempted_by? current_user
+          html << content_tag(:div, "Status: #{quiz.answers_from(current_user).size} of #{quiz.questions.size} questions attempted")
+          html << content_tag(:div, link_to_function('Show completion code', "Effect.Appear('completion_code')"))
+          html << content_tag(:div, quiz.completion_code_for(current_user), :style => "display: none; width: 80%", :id => "completion_code")
+          html << content_tag(:div, link_to('Take Quiz', course_quiz_path(@course, quiz)))
+        end
       end
-
-      html << link_to('Take Quiz', course_quiz_path(@course, quiz))
     end.join("\n")
   end
 
   def closed_quiz_details(quiz)
     returning(Array.new) do |html|
       if instructor?
-        html << content_tag(:p, "Participation: #{percent_format quiz.participation}")
+        html << content_tag(:div, "Participation: #{percent_format quiz.participation}")
       else
-        html << content_tag(:p, "Your Score: #{percent_format quiz.grade_for(current_user)}")
-        html << content_tag(:p, "Percentile Rank: #{percent_format quiz.percentile_for(current_user)}")
+        html << content_tag(:div, "Your Score: #{percent_format quiz.grade_for(current_user)}")
+        html << content_tag(:div, "Percentile Rank: #{percent_format quiz.percentile_for(current_user)}")
       end
 
-      html << content_tag(:p, "Mean Score: #{percent_format quiz.mean}")
-      html << content_tag(:p, "Standard Deviation: #{number_with_precision quiz.standard_deviation, 2}")
+      html << content_tag(:div, "Mean Score: #{percent_format quiz.mean}")
+      html << content_tag(:div, "Standard Deviation: #{number_with_precision quiz.standard_deviation, 2}")
     end.join("\n")
   end
 

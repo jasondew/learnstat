@@ -3,23 +3,22 @@ class DocumentsController < ApplicationController
   before_filter :require_instructor, :except => :show
   before_filter :get_course
 
+  def index
+  end
+
   def show
     @document = @course.documents.find(params[:id])
     send_file @document.full_filename, :type => @document.content_type
   end
 
-  # GET /documents/new
   def new
     @document = Document.new
   end
 
-  # GET /documents/1;edit
   def edit
     @document = @course.documents.find(params[:id])
   end
 
-  # POST /documents
-  # POST /documents.xml
   def create
     @document = @course.documents.build params[:document]
 
@@ -35,8 +34,6 @@ class DocumentsController < ApplicationController
     end
   end
 
-  # PUT /documents/1
-  # PUT /documents/1.xml
   def update
     @document = @course.documents.find(params[:id])
 
@@ -52,8 +49,6 @@ class DocumentsController < ApplicationController
     end
   end
 
-  # DELETE /documents/1
-  # DELETE /documents/1.xml
   def destroy
     @document = @course.documents.find(params[:id])
     @document.destroy

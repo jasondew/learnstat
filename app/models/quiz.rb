@@ -18,13 +18,13 @@ class Quiz < ActiveRecord::Base
   validate :viewable_before_due
 
   def mean
-    return nil unless question_responses.size > 0
+    return if question_responses.empty?
     @mean_score ||= correct_responses.size / question_responses.size.to_f
   end
 
   def standard_deviation
-    return nil unless scores.size > 1
-    (scores.collect {|score| (score - mean) ** 2 }.sum / (scores.size - 1)) ** 0.5
+    return 'Not available' unless scores.size > 1
+    (scores.collect {|score| (score - mean) ** 2 }.sum / (scores.size - 1.0)) ** 0.5
   end
 
   def scores
@@ -36,12 +36,12 @@ class Quiz < ActiveRecord::Base
   end
 
   def grade_for(user)
-    return nil unless user.question_responses.size > 0 and questions.size > 0
+    return unless user.question_responses.size > 0 and questions.size > 0
     (user.correct_responses.find_all_by_quiz_id(self).size / questions.size.to_f)
   end
 
   def percentile_for(user)
-    return nil unless grade_for(user) and scores.size > 0
+    return unless grade_for(user) and scores.size > 0
     (scores.sort.index(grade_for(user)) + 1 ) / scores.size.to_f
   end
 
@@ -54,6 +54,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def participation
+    return 0 unless course.enrollment > 0
     number_attempted / course.enrollment.to_f
   end
 
