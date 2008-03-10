@@ -1,6 +1,8 @@
 class UsersController < ApplicationController
 
   skip_before_filter :login_required, :only => [:new, :create]
+  before_filter :instructor_required, :only => :password_reset
+  before_filter :get_course
 
   def new
     @user = User.new
@@ -13,6 +15,14 @@ class UsersController < ApplicationController
     flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail soon."
   rescue ActiveRecord::RecordInvalid
     render :action => 'new'
+  end
+
+  def reset_password
+    @user = @course.students.find params[:id]
+    password = "new"
+    @user.update_attributes :password => password, :password_confirmation => password
+
+    render :text => "The new password for #{@user.name} (#{@user.login}) is `#{password}`."
   end
 
   def update

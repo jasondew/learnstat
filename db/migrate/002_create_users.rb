@@ -17,8 +17,10 @@ class CreateUsers < ActiveRecord::Migration
       t.column :remember_token,            :string
       t.column :remember_token_expires_at, :datetime
       
-      t.column :activation_code, :string, :limit => 40
-      t.column :activated_at, :datetime
+      t.column :activation_code,           :string, :limit => 40
+      t.column :activated_at,              :datetime
+
+      t.column :last_login,                :datetime
     end
 
     User.create( :login => 'jasondew', :email => 'jason.dew@gmail.com', :first_name => 'Jason', :last_name => 'Dew',

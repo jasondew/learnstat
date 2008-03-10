@@ -16,6 +16,8 @@ class SessionsController < ApplicationController
         cookies[:auth_token] = { :value => self.current_user.remember_token , :expires => self.current_user.remember_token_expires_at }
       end
 
+      current_user.update_attribute :last_login, Time.now
+
       flash[:notice] = "Logged in successfully"
       redirect_to courses_path
     else

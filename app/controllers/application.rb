@@ -23,6 +23,7 @@ class ApplicationController < ActionController::Base
   end
 
   def datetime_format(datetime)
+    return 'Not available' unless datetime
     datetime.strftime("%A, %B %d at %I:%M%p")
   end
 

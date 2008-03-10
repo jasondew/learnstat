@@ -41,15 +41,17 @@ class User < ActiveRecord::Base
   end
 
   def mean_score
+    return if question_responses.empty?
     correct_responses.size / question_responses.size.to_f
   end
 
   def adjusted_mean_score(adjustment)
+    return if question_responses.empty?
     (correct_responses.size + adjustment)/ question_responses.size.to_f
   end
 
   def exam_mean_score
-    return 0 unless grades.length > 0
+    return if grades.empty?
     grades.sum(:value) / grades.length.to_f
   end
 

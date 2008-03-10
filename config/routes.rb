@@ -1,6 +1,6 @@
 ActionController::Routing::Routes.draw do |map|
 
-  map.resources :users, :has_one => :profile
+  map.resources :users
   map.resources :activations
 
   map.resource :session, :controller => 'sessions'
@@ -12,8 +12,8 @@ ActionController::Routing::Routes.draw do |map|
                                :member => { :mark_viewable => :post } do |quiz|
       quiz.resources :quiz_questions, :collection => { :search => :post }
     end
-    course.resource :gradebook
-    course.resources :users, :has_one => :profile
+    course.resource :gradebook, :roster
+    course.resources :users, :member => { :reset_password => :post }
   end
 
   map.resources :questions, :collection => { :search => :post } do |question|

@@ -1,0 +1,21 @@
+%h2 Roster
+
+%table
+  %thead
+    %tr
+      %th Student
+      %th Login
+      %th Blackboard Username
+      %th Email Address
+      %th Last Logged On
+      %th Actions
+
+  %tbody
+    - @students.each do |student|
+      %tr
+        %td= student.name
+        %td= student.login
+        %td= student.blackboard_username
+        %td= student.email
+        %td= datetime_format student.last_login
+        %td= link_to_remote 'Reset Password', :url => reset_password_course_user_path(:course_id => @course, :id => student.id), :success => "alert(request.responseText)"

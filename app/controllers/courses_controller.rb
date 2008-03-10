@@ -2,46 +2,24 @@ class CoursesController < ApplicationController
 
   before_filter :redirect_students_to_show, :except => :show
 
-  # GET /courses
   def index
     @courses = Course.find(:all)
   end
 
-  # GET /courses/1
   def show
     @course = Course.find params[:id]
     @latest_announcements = @course.announcements.latest
     @latest_documents = @course.documents.latest
   end
 
-  def old_show
-    @course = Course.find(params[:id])
-    @quizzes = @course.quizzes
-    @gradebook = Hash.new {|h,k| h[k] = Array.new }
-
-    @students = current_user.instructor? ? @course.students : [current_user]
-
-    @students.each do |student|
-      @course.gradeables.each do |gradeable|
-        @gradebook[gradeable.name.underscore][student.id] = gradeable.grade_for(student)
-      end
-
-      @gradebook['Quiz Average'][student.id] = student.adjusted_mean_score(9)
-      @gradebook['Exam Average'][student.id] = student.exam_mean_score
-    end
-  end
-
-  # GET /courses/new
   def new
     @course = Course.new
   end
 
-  # GET /courses/1;edit
   def edit
     @course = Course.find(params[:id])
   end
 
-  # POST /courses
   def create
     @course = current_user.courses.build params[:course]
 
@@ -53,7 +31,6 @@ class CoursesController < ApplicationController
     end
   end
 
-  # PUT /courses/1
   def update
     @course = Course.find(params[:id])
 
@@ -65,7 +42,6 @@ class CoursesController < ApplicationController
     end
   end
 
-  # DELETE /courses/1
   def destroy
     @course = Course.find(params[:id])
     @course.destroy
@@ -76,7 +52,7 @@ class CoursesController < ApplicationController
   private
 
   def redirect_students_to_show
-    redirect_to course_path(current_user.course_id) unless current_user.instructor?
+    redirect_to course_path(current_user.course_id) unless instructor?
   end
 
 end

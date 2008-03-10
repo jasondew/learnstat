@@ -1,0 +1,18 @@
+%h2 Profile
+
+%hr
+
+%h3 Change my password
+
+-form_for current_user do |f|
+  %p
+    %label current password:
+    = text_field_tag 'current_password'
+  %p
+    %label new password:
+    = f.text_field :password
+  %p
+    %label confirm new password:
+    = f.text_field :password_confirmation
+
+  = image_submit_tag 'update.png'

@@ -1,7 +1,15 @@
 # Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
 
-  MENU_ITEMS = %w(home announcements documents quizzes grades profile)
+  MENU_ITEMS = [
+    ['home',          "course_path(@course)",                         true ],
+    ['announcements', "course_announcements_path(@course)",           true ],
+    ['documents',     "course_documents_path(@course)",               true ],
+    ['quizzes',       "course_quizzes_path(@course)",                 true ],
+    ['roster',        "course_roster_path(@course)",                  false],
+    ['grades',        "course_gradebook_path(@course)",               true ],
+    ['profile',       "edit_course_user_path(@course, current_user)", true ]
+  ]
 
   def render_collection(objects, name, wrapper = nil)
     return content_tag(:p, "There are no #{name.pluralize} at this time.") if objects.empty?
@@ -26,18 +34,12 @@ module ApplicationHelper
   end
 
   def menubar
-    return unless logged_in? and (@course or controller.is_a? ::ProfilesController)
-
-    menu_item_urls = {'home'          => course_path(@course),
-                      'announcements' => course_announcements_path(@course),
-                      'documents'     => course_documents_path(@course),
-                      'quizzes'       => course_quizzes_path(@course),
-                      'grades'        => course_gradebook_path(@course),
-                      'profile'       => course_user_profile_path(@course, current_user) }
+    return unless logged_in? and @course
 
     returning(Array.new) do |html|
-      MENU_ITEMS.each do |item|
-        html << menu_link(item, menu_item_urls[item], item_selected == item)
+      MENU_ITEMS.each do |(item, url_method, public_item)|
+        next unless instructor? or public_item
+        html << menu_link(item, eval(url_method), item_selected == item)
       end
 
       html << content_tag(:br)
@@ -56,14 +58,16 @@ module ApplicationHelper
       when AnnouncementsController: 'announcements'
       when DocumentsController: 'documents'
       when QuizzesController: 'quizzes'
-      when ProfilesController: 'profile'
+      when UsersController: 'profile'
       when GradebooksController: 'grades'
       when CoursesController: 'home'
+      when RostersController: 'roster'
       else 'home'
     end
   end
 
   def instructor_link(text, image, *args)
+    return unless instructor?
     link_to content_tag(:span, image_tag(image) + text, :class => "instructor_link"), *args
   end
 
