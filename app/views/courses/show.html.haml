@@ -3,5 +3,5 @@
 #announcements= format_announcements(@latest_announcements)
 
 = small_block('Latest Documents', format_documents(@latest_documents))
-= small_block('Open Quizzes', 'Nothing yet')
-= small_block('Latest Grades', 'Nothing yet')
+= small_block('Open Quizzes', format_quizzes(@open_quizzes))
+= small_block('Latest Grades', format_grades(@latest_grades)) unless instructor?

@@ -11,6 +11,4 @@ class Grade < ActiveRecord::Base
     user and user.name
   end
 
-
-
 end

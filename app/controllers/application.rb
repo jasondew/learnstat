@@ -27,8 +27,8 @@ class ApplicationController < ActionController::Base
     datetime.strftime("%A, %B %d at %I:%M%p")
   end
 
-  def percent_format(number)
-    return 'Not available' unless number
+  def percent_format(number, nil_text="Not available")
+    return nil_text unless number
     number_to_percentage(number * 100, {:precision => 2})
   end
 

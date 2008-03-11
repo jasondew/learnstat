@@ -15,7 +15,7 @@ class Course < ActiveRecord::Base
   include SemesterConstants
 
   def gradeables
-    [closed_quizzes, exams].flatten.sort_by {|gradeable| gradeable.respond_to?(:due_at) ? gradeable.due_at : gradeable.given_on }
+    @gradeables ||= [closed_quizzes, exams].flatten.sort_by {|gradeable| gradeable.respond_to?(:due_at) ? gradeable.due_at : gradeable.given_on }
   end
 
   def enrollment

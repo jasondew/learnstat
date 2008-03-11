@@ -5,7 +5,7 @@ task :fake_students => :environment do
   number = (ENV["NUMBER"] || 3).to_i
   password = "password"
 
-  number.times do |i|
+  (1..number).each do |i|
     User.create( :login => "student#{i}",
                  :email => Faker::Internet.email,
                  :first_name => Faker::Name.first_name,

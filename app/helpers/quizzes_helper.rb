@@ -18,9 +18,14 @@ module QuizzesHelper
         html << "<strong>Instructions:</strong> Complete the following questions by clicking on the answer of your choice."
         html << "You have until #{datetime_format(@quiz.due_at)} to complete this assignment.  No assignment, written or "
         html << "otherwise, will be accepted after that time."
-        html << content_tag(:p, "Your average score is #{percent_format current_user.mean_score}, can you do better here?", :class => "information")
+
+        html << challenge(current_user) if current_user.mean_score
       end
     end.join("\n")
+  end
+
+  def challenge(user)
+    content_tag(:p, "Your average score is #{percent_format current_user.mean_score}, can you do better here?", :class => "information")
   end
 
   def quiz_instructor_information(quiz)
@@ -105,8 +110,22 @@ module QuizzesHelper
     end.join("\n")
   end
 
-  def question_attributes
-    @quiz.closed? ? 'disabled="disabled"' : ''
+  def question_text(course, quiz, quiz_question)
+    returning(Array.new) do |html|
+      html << link_to(image_tag('chart_pie.png', :alt => 'Graph'), course_quiz_response_distribution_path(@course, @quiz, quiz_question),
+                      :rel => 'lightbox') if instructor?
+      html << quiz_question.content
+    end.join("\n")
+  end
+
+  def question_attributes(quiz_question)
+    attributes = { :id => dom_id(quiz_question) }
+    attributes.update( :disabled => "disabled" ) if @quiz.closed?
+    attributes
+  end
+
+  def choice_attributes(quiz_question, question_choice, responses)
+    { :id => dom_id(question_choice), :class => choice_class(quiz_question, question_choice, responses), :onclick => choice_onclick(quiz_question, question_choice) }
   end
 
   def choice_class(quiz_question, choice, responses)
@@ -121,14 +140,14 @@ module QuizzesHelper
 
     classes << 'selected' if responses.detect {|x| x.question_choice_id == choice.id }
 
-    %Q|class = "#{classes.join(' ')}"|
+    classes.join(' ')
   end
 
   def choice_onclick(quiz_question, choice)
     path = course_quiz_question_responses_path( @course, @quiz )
     parameters = "quiz_question_id=#{quiz_question.id}&question_choice_id=#{choice.id}&authenticity_token=#{form_authenticity_token}"
 
-    %Q|onclick = "choose_answer('#{dom_id(quiz_question)}', '#{dom_id(choice)}', '#{path}', '#{parameters}')"|
+    "choose_answer('#{dom_id(quiz_question)}', '#{dom_id(choice)}', '#{path}', '#{parameters}')"
   end
 
 end

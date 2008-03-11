@@ -10,6 +10,8 @@ class CoursesController < ApplicationController
     @course = Course.find params[:id]
     @latest_announcements = @course.announcements.latest
     @latest_documents = @course.documents.latest
+    @open_quizzes = @course.open_quizzes
+    @latest_grades = @course.gradeables.size > 3 ? @course.gradeables[0..2] : @course.gradeables
   end
 
   def new

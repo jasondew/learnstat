@@ -1,5 +1,28 @@
 module CoursesHelper
 
+  def format_grades(grades)
+    return content_tag(:p, "There are no grades posted at this time.") if grades.empty?
+
+    returning(Array.new) do |html|
+      grades.each do |gradeable|
+        html << content_tag(:div, "#{gradeable.name} &ndash; #{percent_format gradeable.grade_for(current_user), 'Not attempted'}")
+      end
+    end.join("\n")
+  end
+
+  def format_quizzes(quizzes)
+    return content_tag(:p, "There are no open quizzes at this time.") if quizzes.empty?
+
+    returning(Array.new) do |html|
+      quiz_links = quizzes.collect do |quiz|
+        content_tag(:dt, link_to(quiz.name, course_quiz_path(@course, quiz))) + content_tag(:dd, "due #{datetime_format(quiz.due_at)}")
+      end
+
+      html << content_tag(:dl, quiz_links.join("\n"))
+      html << content_tag(:div, link_to('View all quizzes', course_quizzes_path(@course)), :class => 'collection_link')
+    end.join("\n")
+  end
+
   def format_announcements(announcements)
     return content_tag(:p, "There are no announcements at this time.") if announcements.empty?
 
