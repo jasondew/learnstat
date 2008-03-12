@@ -1,7 +1,7 @@
 class QuizzesController < ApplicationController
 
   before_filter :require_instructor, :except => :show
-  before_filter :get_course
+  before_filter :get_course, :except => :parse_date
 
   def index
     @quizzes = @course.quizzes

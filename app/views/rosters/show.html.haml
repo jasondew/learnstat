@@ -16,7 +16,4 @@
         %td= student.login
         %td= student.blackboard_username
         %td= datetime_format student.last_login
-        %td
-          = link_to_remote 'Reset Password', :url => reset_password_course_user_path(:course_id => @course, :id => student.id), :success => "alert(request.responseText)"
-          -#FIXME actually implement this
-          = link_to 'Impersonate', "#", :popup => true
+        %td= link_to_remote 'Reset Password', :url => reset_password_course_user_path(:course_id => @course, :id => student.id), :success => "alert(request.responseText)"

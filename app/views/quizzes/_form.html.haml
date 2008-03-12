@@ -4,8 +4,8 @@
 
 %p
   %label{:for => "due_at"} Due:
-  = f.datetime_select :due_at
+  = f.text_field :due_at_textual
 
 %p
   %label{:for => "viewable_at"} Viewable at:
-  = f.datetime_select :viewable_at
+  = f.text_field :viewable_at_textual

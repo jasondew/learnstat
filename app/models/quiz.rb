@@ -17,6 +17,14 @@ class Quiz < ActiveRecord::Base
   validate :future_due_date
   validate :viewable_before_due
 
+  def method_missing(method_name, *args)
+    if method_name.to_s =~ /(.*)_textual=$/
+      send("#{$1}=", Chronic.parse(args.first))
+    else
+      super
+    end
+  end
+
   def mean
     return if question_responses.empty?
     @mean_score ||= correct_responses.size / question_responses.size.to_f
