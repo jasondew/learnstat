@@ -14,7 +14,7 @@ namespace :vlad do
   desc "Copy config files from shared/config to release dir"
   remote_task :after_update do
 #    run "ln -s #{deploy_to}/shared/config/database.yml #{deploy_to}/current/config/database.yml"
-    run "ln -s #{deploy_to}/shared/config/ferret_server.yml #{deploy_to}/current/config/ferret_server.yml"
+#    run "ln -s #{deploy_to}/shared/config/ferret_server.yml #{deploy_to}/current/config/ferret_server.yml"
     run "mkdir #{deploy_to}/current/index"
     run "chmod -R 0777 #{deploy_to}/current/index/"
   end
