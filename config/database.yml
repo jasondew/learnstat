@@ -9,3 +9,10 @@ development:
   password: doc1291
   socket: /tmp/mysql.sock
   <% end %>
+
+production:
+  adapter: mysql
+  database: learnstat_production
+  username: webuser
+  password: |n2mas!pw
+  socket: /var/run/mysqld/mysqld.sock
