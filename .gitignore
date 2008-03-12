@@ -5,6 +5,6 @@ tmp/**/*
 doc/app
 doc/api
 *.swp
-**/.DS_Store
+.DS_Store
 public/documents/*
 index/*
