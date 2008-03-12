@@ -11,7 +11,7 @@ require 'tasks/rails'
 
 begin
   require 'vlad'
-  Vlad.load
+  Vlad.load :scm => :git, :app => :thin
 rescue LoadError
   # do nothing
 end
