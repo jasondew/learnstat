@@ -141,6 +141,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "remember_token_expires_at"
     t.string   "activation_code",           :limit => 40
     t.datetime "activated_at"
+    t.datetime "last_login"
   end
 
   add_index "users", ["course_id"], :name => "index_users_on_course_id"
