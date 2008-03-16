@@ -2,7 +2,7 @@ class UsersController < ApplicationController
 
   skip_before_filter :login_required, :only => [:new, :create]
   before_filter :instructor_required, :only => :password_reset
-  before_filter :get_course
+  before_filter :get_course, :except => [:update]
 
   def new
     @user = User.new
