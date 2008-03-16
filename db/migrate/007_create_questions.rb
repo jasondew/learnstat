@@ -5,6 +5,7 @@ class CreateQuestions < ActiveRecord::Migration
       t.column :answer,    :integer
       t.column :chapter,   :integer
     end
+
   end
 
   def self.down
