@@ -25,17 +25,23 @@ class UsersController < ApplicationController
     render :text => "The new password for #{@user.name} (#{@user.login}) is `#{password}`."
   end
 
+  def edit
+  end
+
   def update
     @user = User.authenticate( current_user.login, params[:current_password] )
 
     if @user
       if @user.update_attributes :password => params[:new_password], :password_confirmation => params[:new_password_confirmation]
-        @notice = 'Password changed'
+        flash[:notice] = 'Your password has been changed.'
+        redirect_to course_path(@user.course)
       else
-        @notice = 'Unable to change password'
+        flash[:error] = 'New password was not confirmed.'
+        render :action => 'edit'
       end
     else
-      @notice = 'Unable to authenticate'
+      flash[:error] = 'Current password was incorrect.'
+      render :action => 'edit'
     end
   end
 
