@@ -1,0 +1,12 @@
+%h2= @exam.name
+
+%p
+  %label{ :for => 'mean' } Mean Score:
+  = percent_format @exam.mean
+
+%p
+  %label{ :for => 'sd' } Standard Deviation:
+  = number_with_precision @exam.standard_deviation, 2
+
+%p= instructor_link 'Edit Exam', 'application_form_edit.png', edit_course_exam_path(@course, @exam)
+%p= link_to 'Back', course_path(@course)

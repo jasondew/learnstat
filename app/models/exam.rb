@@ -1,5 +1,7 @@
 class Exam < ActiveRecord::Base
 
+  include TextualDateTimes
+
   belongs_to :course
   has_many :grades
 

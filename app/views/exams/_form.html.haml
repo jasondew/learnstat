@@ -1,0 +1,18 @@
+%p
+  %label{ :for => 'name'} Name: 
+  = f.text_field :name
+
+%p
+  %label{ :for => 'given_on_textual' } Given:
+  = f.text_field :given_on_textual
+
+%p
+  %label{ :for => 'final' } Final Exam?
+  = f.check_box :final
+
+%table
+  %tr
+    %th Name
+    %th Grade
+
+  = render :partial => 'grade', :collection => @exam.grades

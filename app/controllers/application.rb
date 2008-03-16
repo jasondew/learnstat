@@ -4,7 +4,7 @@
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include ActionView::Helpers::NumberHelper
-  include TextualDateTimes
+  include ExceptionNotifiable
 
   LETTER_GRADES = [:F, :D, :C, :B, :A]
 
