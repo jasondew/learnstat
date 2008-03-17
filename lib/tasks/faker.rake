@@ -13,7 +13,7 @@ task :fake_students => :environment do
                  :blackboard_username => Faker::Name.last_name.downcase,
                  :password => password,
                  :password_confirmation => password,
-                 :registration_code => 'stat110f07',
+                 :registration_code => 'stat110s08',
                  :instructor => false ).activate
   end
 end

@@ -11,10 +11,9 @@ class Grade < ActiveRecord::Base
     user and user.name
   end
 
-  #FIXME this doesn't seem to work
   def value=(value)
-    value = value.to_f > 1.0 ? value : value / 100.0
-    super(value)
+    normalized_value = value.to_f > 1.0 ? value.to_f / 100.0 : value.to_f
+    super(normalized_value)
   end
 
 end

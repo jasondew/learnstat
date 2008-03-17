@@ -163,9 +163,12 @@ pre
   :padding 10px
   :font-size 11px
 
-a, a:visited, a:active
+a, a:link, a:visited, a:active
   :text-decoration none
-  :color #990000
+  :color = !red
+
+a:hover
+  :text-decoration underline
 
 p
   :padding 5px 10px
@@ -393,10 +396,13 @@ table
   th
   :border-bottom 1px solid #333
 
-  th, th a
+  th
     :background #9b2f47
     :color white
-
+    
+    a, a:link, a:visited, a:active
+      :color white
+    
   th, td
     :padding 4px
     :border 1px solid #333
