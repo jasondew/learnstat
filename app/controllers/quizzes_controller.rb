@@ -25,7 +25,7 @@ class QuizzesController < ApplicationController
 
   def edit
     @quiz = @course.quizzes.find(params[:id])
-    @questions = Question.find_by_contents("*", {}, :include => :choices)
+    @questions = Question.find_by_contents("*", { :limit => :all }, :include => :choices)
   end
 
   def create
