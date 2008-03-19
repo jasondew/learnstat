@@ -9,7 +9,7 @@ class DocumentsController < ApplicationController
   def show
     @document = @course.documents.find(params[:id])
 #    response.headers['X-Accel-Redirect'] = @document.full_filename
-    send_file @document.full_filename, :type => @document.content_type, :disposition => :inline
+    send_file @document.full_filename, :type => @document.content_type
   end
 
   def new
