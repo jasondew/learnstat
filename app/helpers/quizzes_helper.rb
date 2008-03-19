@@ -18,15 +18,8 @@ module QuizzesHelper
         html << "<strong>Instructions:</strong> Complete the following questions by clicking on the answer of your choice."
         html << "You have until #{datetime_format(@quiz.due_at)} to complete this assignment.  No assignment, written or "
         html << "otherwise, will be accepted after that time."
-
-        html << challenge(current_user) if current_user.mean_score
       end
     end.join("\n")
-  end
-
-  def challenge(user)
-    #FIXME don't show this unless at least one quiz has been completed
-    content_tag(:p, "Your average score is #{percent_format current_user.mean_score}, can you do better here?", :class => "information")
   end
 
   def quiz_instructor_information(quiz)
