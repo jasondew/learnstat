@@ -5,7 +5,7 @@ class Document < ActiveRecord::Base
   belongs_to :course
   belongs_to :user
 
-  acts_as_attachment :storage => :file_system
+  has_attachment :storage => :file_system
 #  validates_as_attachment
 
   def viewable_now?

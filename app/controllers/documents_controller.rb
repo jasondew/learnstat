@@ -15,37 +15,15 @@ class DocumentsController < ApplicationController
     @document = Document.new
   end
 
-  def edit
-    @document = @course.documents.find(params[:id])
-  end
-
   def create
     @document = @course.documents.build params[:document]
 
-    respond_to do |format|
-      if @document.save
-        flash[:notice] = 'Document was successfully created.'
-        format.html { redirect_to course_path(@course) }
-        format.xml  { head :created, :location => course_path(@course) }
-      else
-        format.html { render :action => "new" }
-        format.xml  { render :xml => @document.errors.to_xml }
-      end
-    end
-  end
-
-  def update
-    @document = @course.documents.find(params[:id])
-
-    respond_to do |format|
-      if @document.update_attributes(params[:document])
-        flash[:notice] = 'Document was successfully updated.'
-        format.html { redirect_to course_path(@course) }
-        format.xml  { head :ok }
-      else
-        format.html { render :action => "edit" }
-        format.xml  { render :xml => @document.errors.to_xml }
-      end
+    if @document.save
+      flash[:notice] = 'Document was successfully created.'
+      redirect_to course_documents_path(@course)
+    else
+      flash[:error] = 'Document was not saved.'
+      render :action => "new"
     end
   end
 
@@ -53,10 +31,9 @@ class DocumentsController < ApplicationController
     @document = @course.documents.find(params[:id])
     @document.destroy
 
-    respond_to do |format|
-      format.html { redirect_to course_path(@course) }
-      format.xml  { head :ok }
-    end
+    flash[:notice] = 'Document destroyed.'
+
+    redirect_to course_path(@course)
   end
 
 end
