@@ -8,7 +8,7 @@ class DocumentsController < ApplicationController
 
   def show
     @document = @course.documents.find(params[:id])
-    send_file @document.full_filename, :type => @document.content_type
+    response.headers['X-Accel-Redirect'] = @document.full_filename
   end
 
   def new
