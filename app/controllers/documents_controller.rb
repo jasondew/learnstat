@@ -13,6 +13,8 @@ class DocumentsController < ApplicationController
     response.headers['Content-Type'] = @document.content_type
     response.headers['Content-length'] = @document.size
     response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
+
+    render :nothing => true
   end
 
   def new
