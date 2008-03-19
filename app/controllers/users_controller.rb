@@ -10,16 +10,19 @@ class UsersController < ApplicationController
 
   def create
     @user = User.new params[:user]
-    @user.save!
-    redirect_to login_url
-    flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail soon."
-  rescue ActiveRecord::RecordInvalid
-    render :action => 'new'
+
+    if @user.save
+      flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail as soon as the instructor approves your account."
+      redirect_to login_url
+    else
+      render :action => 'new'
+    end
   end
 
   def reset_password
+    password = "Password1"
+
     @user = @course.students.find params[:id]
-    password = "new"
     @user.update_attributes :password => password, :password_confirmation => password
 
     render :text => "The new password for #{@user.name} (#{@user.login}) is `#{password}`."
@@ -32,7 +35,7 @@ class UsersController < ApplicationController
     @user = User.authenticate( current_user.login, params[:current_password] )
 
     if @user
-      if @user.update_attributes :password => params[:new_password], :password_confirmation => params[:new_password_confirmation]
+      if @user.update_attributes :password => params[:user][:password], :password_confirmation => params[:user][:password_confirmation]
         flash[:notice] = 'Your password has been changed.'
         redirect_to course_path(@user.course)
       else

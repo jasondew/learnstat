@@ -3,7 +3,6 @@ require 'digest/sha1'
 class User < ActiveRecord::Base
 
   belongs_to :course
-  has_many :courses
 
   has_many :announcements
   has_many :documents
@@ -23,9 +22,11 @@ class User < ActiveRecord::Base
   validates_length_of       :login,    :within => 3..40
   validates_length_of       :email,    :within => 3..100
   validates_uniqueness_of   :login, :case_sensitive => false
+  validates_uniqueness_of   :blackboard_username, :case_sensitive => false
 
   before_save :encrypt_password
   before_create :make_activation_code 
+  before_save :set_course
 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
@@ -55,17 +56,6 @@ class User < ActiveRecord::Base
     grades.sum(:value) / grades.length.to_f
   end
 
-  def validate_on_create
-    course = Course.find_by_registration_code self.registration_code
-
-    if course
-      self.course_id = course.id
-      self.errors.add(:registration_code, 'invalid because the course is closed') if course.registration_closed_at < Time.now
-    else
-      self.errors.add :registration_code
-    end
-  end
-  
   # Activates the user in the database.
   def activate
     @activated = true
@@ -130,7 +120,11 @@ class User < ActiveRecord::Base
   end
 
   protected
-    # before filter 
+
+    def set_course
+      self.course = Course.find_by_registration_code(registration_code) unless self.course
+    end
+
     def encrypt_password
       return if password.blank?
       self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?

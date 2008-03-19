@@ -14,6 +14,10 @@ class Course < ActiveRecord::Base
 
   include SemesterConstants
 
+  def open?
+    registration_closed_at >= Time.now
+  end
+
   def gradeables
     @gradeables ||= [closed_quizzes, exams].flatten.sort_by {|gradeable| gradeable.respond_to?(:due_at) ? gradeable.due_at : gradeable.given_on }
   end

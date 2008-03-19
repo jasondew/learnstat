@@ -1,6 +1,10 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
+#FIXME need to change the notice people get on account registration
+#FIXME need to show students that need to be activated on the roster page
+#FIXME add some cache_fu!
+
 class ApplicationController < ActionController::Base
   include AuthenticatedSystem
   include ActionView::Helpers::NumberHelper

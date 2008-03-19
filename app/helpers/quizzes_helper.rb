@@ -25,6 +25,7 @@ module QuizzesHelper
   end
 
   def challenge(user)
+    #FIXME don't show this unless at least one quiz has been completed
     content_tag(:p, "Your average score is #{percent_format current_user.mean_score}, can you do better here?", :class => "information")
   end
 
