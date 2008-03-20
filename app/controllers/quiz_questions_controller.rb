@@ -6,7 +6,7 @@ class QuizQuestionsController < ApplicationController
   before_filter :get_quiz
 
   def search
-    @questions = Question.find_by_contents params[:q], { :lazy => :content, :per_page => 1000 }, :include => :choices
+    @questions = Question.find_by_contents(params[:q], { :limit => :all }, :include => :choices)
     render :partial => 'quizzes/questions'
   end
 
