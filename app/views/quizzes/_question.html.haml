@@ -10,4 +10,4 @@
 
   %ol
     - question.choices.each do |choice|
-      %li= choice.content
+      %li= choice.content rescue choice
