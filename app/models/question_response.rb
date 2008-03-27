@@ -3,6 +3,8 @@ class QuestionResponse < ActiveRecord::Base
   belongs_to :user
   belongs_to :course
   belongs_to :quiz
+  belongs_to :quiz_question
+  belongs_to :question_choice
 
   validates_presence_of :user_id, :course_id, :quiz_id, :quiz_question_id, :question_choice_id
   validate :timely_response

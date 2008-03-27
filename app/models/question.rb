@@ -1,8 +1,14 @@
 class Question < ActiveRecord::Base
 
+  #FIXME BUG: choices are NOT getting searched
+
   has_many :choices, :class_name => 'QuestionChoice', :dependent => :delete_all, :order => 'id'
 
-  acts_as_ferret :fields => {:content => {:store => :yes}, :choices => {:store => :yes}}, :remote => false
+  acts_as_ferret :fields => {:content => {:store => :yes}, :choice_texts => { }}, :remote => false
+
+  def choice_texts
+    choices.collect(&:content).join(" ")
+  end
 
   def correct_answer?(question_choice_id)
     answer == question_choice_id.to_i
