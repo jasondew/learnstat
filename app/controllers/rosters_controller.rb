@@ -8,4 +8,17 @@ class RostersController < ApplicationController
     @students = @course.students
   end
 
+  def impersonate
+    user = User.find params[:id]
+
+    if user
+      self.current_user = user
+      flash[:notice] = "Now impersonating #{current_user.login}"
+      redirect_to @course
+    else
+      flash[:notice] = "Unable to find that user."
+      redirect_to :action => 'show'
+    end
+  end
+
 end

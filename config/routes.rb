@@ -12,7 +12,8 @@ ActionController::Routing::Routes.draw do |map|
                                :member => { :mark_viewable => :post } do |quiz|
       quiz.resources :quiz_questions, :collection => { :search => :post }
     end
-    course.resource :gradebook, :roster
+    course.resource :gradebook
+    course.resource :roster, :member => { :impersonate => :post }
     course.resources :users, :member => { :reset_password => :post }
   end
 
