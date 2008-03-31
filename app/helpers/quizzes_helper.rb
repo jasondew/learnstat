@@ -101,6 +101,7 @@ module QuizzesHelper
 
       html << content_tag(:div, "Mean Score: #{percent_format quiz.mean}")
       html << content_tag(:div, "Standard Deviation: #{number_with_precision quiz.standard_deviation, 2}")
+      html << content_tag(:div, "Range: #{percent_format quiz.scores.min} to #{percent_format quiz.scores.max}")
     end.join("\n")
   end
 
