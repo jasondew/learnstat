@@ -13,7 +13,8 @@ class GradebooksController < ApplicationController
         @gradebook[gradeable.name.underscore][student.id] = gradeable.grade_for(student)
       end
 
-#      @gradebook['Quiz Average'][student.id] = student.adjusted_mean_score(0)
+#FIXME should only show quiz average for closed quizzes
+      @gradebook['Quiz Average'][student.id] = student.adjusted_mean_score(0)
       @gradebook['Exam Average'][student.id] = student.exam_mean_score
     end
   end
