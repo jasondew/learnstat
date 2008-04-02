@@ -43,11 +43,15 @@ class User < ActiveRecord::Base
 
   def mean_score
     return if question_responses.empty?
+    return if course.quizzes.detect(&:open?)
+
     correct_responses.size / question_responses.size.to_f
   end
 
   def adjusted_mean_score(adjustment)
     return if question_responses.empty?
+    return if course.quizzes.detect(&:open?)
+
     (correct_responses.size + adjustment)/ question_responses.size.to_f
   end
 
