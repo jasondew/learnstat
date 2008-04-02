@@ -8,3 +8,5 @@ doc/api
 .DS_Store
 public/documents/*
 index/*
+public/javascripts/all.js
+public/stylesheets/all.css
