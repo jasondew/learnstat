@@ -9,13 +9,13 @@ class DocumentsController < ApplicationController
   def show
     @document = @course.documents.find params[:id]
 
-    response.headers['X-Accel-Redirect'] = @document.full_filename
-    response.headers['Content-Type'] = @document.content_type
-    response.headers['Content-length'] = @document.size
-    response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
+#    response.headers['X-Accel-Redirect'] = @document.full_filename
+#    response.headers['Content-Type'] = @document.content_type
+#    response.headers['Content-length'] = @document.size
+#    response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
 
-    render :nothing => true
-#    send_file @document.full_filename, :type => @document.content_type
+#    render :nothing => true
+    send_file @document.full_filename, :type => @document.content_type, :buffer_size => 32768
   end
 
   def new
