@@ -18,6 +18,8 @@ namespace :vlad do
 #    run "ln -s #{deploy_to}/shared/config/ferret_server.yml #{deploy_to}/current/config/ferret_server.yml"
     
     run "mkdir #{deploy_to}/current/index"
+    run "rm -rf #{deploy_to}/current/index/*"
+    run "rm -rf #{deploy_to}/current/tmp/cache/*"
     run "chmod -R 0755 #{deploy_to}/current/index/"
   end
 
