@@ -7,15 +7,15 @@ class DocumentsController < ApplicationController
   end
 
   def show
-    @document = @course.documents.find(params[:id])
+    @document = @course.documents.find params[:id]
 
-#    response.headers['X-Accel-Redirect'] = @document.full_filename
-#    response.headers['Content-Type'] = @document.content_type
-#    response.headers['Content-length'] = @document.size
-#    response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
-#
-#    render :nothing => true
-    send_file @document.full_filename, :type => @document.content_type
+    response.headers['X-Accel-Redirect'] = @document.full_filename
+    response.headers['Content-Type'] = @document.content_type
+    response.headers['Content-length'] = @document.size
+    response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
+
+    render :nothing => true
+#    send_file @document.full_filename, :type => @document.content_type
   end
 
   def new
