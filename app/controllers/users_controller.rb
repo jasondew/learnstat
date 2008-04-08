@@ -2,7 +2,10 @@ class UsersController < ApplicationController
 
   skip_before_filter :login_required, :only => [:new, :create]
   before_filter :instructor_required, :only => :password_reset
-  before_filter :get_course, :only => :show
+  before_filter :get_course, :only => [:show, :edit]
+
+  def show
+  end
 
   def new
     @user = User.new
@@ -19,6 +22,9 @@ class UsersController < ApplicationController
     end
   end
 
+  def edit
+  end
+
   def reset_password
     password = "Password1"
 
@@ -26,9 +32,6 @@ class UsersController < ApplicationController
     @user.update_attributes :password => password, :password_confirmation => password
 
     render :text => "The new password for #{@user.name} (#{@user.login}) is `#{password}`."
-  end
-
-  def edit
   end
 
   def update
@@ -50,9 +53,6 @@ class UsersController < ApplicationController
 
   def index
     redirect_to current_user_path
-  end
-
-  def show
   end
 
   private

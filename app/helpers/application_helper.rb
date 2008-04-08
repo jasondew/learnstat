@@ -18,6 +18,8 @@ module ApplicationHelper
   end
 
   def navbar
+    return unless logged_in?
+
     returning(Array.new) do |html|
       html << content_tag(:p, welcome_message, :class => 'left')
       html << content_tag(:p, navbar_title, :class => 'middle')
