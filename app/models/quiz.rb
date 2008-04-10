@@ -68,7 +68,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def open?
-    due_at >= Time.now
+    due_at >= Time.now and viewable_at >= Time.now
   end
 
   def closed?
