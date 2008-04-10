@@ -114,9 +114,7 @@ module QuizzesHelper
   end
 
   def question_attributes(quiz_question)
-    attributes = { :id => dom_id(quiz_question) }
-    attributes.update( :disabled => "disabled" ) if @quiz.closed?
-    attributes
+    { :id => dom_id(quiz_question) }
   end
 
   def choice_attributes(quiz_question, question_choice, responses)

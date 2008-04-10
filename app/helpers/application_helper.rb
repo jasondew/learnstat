@@ -38,17 +38,18 @@ module ApplicationHelper
   def menubar
     return unless logged_in? and @course
 
-    returning(Array.new) do |html|
-      MENU_ITEMS.each do |(item, url_method, public_item)|
-        next unless instructor? or public_item
-        html << menu_link(item, eval(url_method), item_selected == item)
-      end
-
-      html << content_tag(:br)
-    end.join("\n")
+    content_tag(:div, :id => "menubar") do
+      returning(Array.new) do |html|
+        MENU_ITEMS.each do |(item, url_method, public_item)|
+          next unless instructor? or public_item
+          html << menu_link(item, eval(url_method), item_selected == item)
+        end
+      end.join("\n")
+    end
   end
 
   def menu_link(item, url, selected)
+#    return link_to(item, url)
     image_filename = "#{item}_#{selected ? 'blue' : 'black'}.png"
     css_class = selected ? 'selected' : ''
 
