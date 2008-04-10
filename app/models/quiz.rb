@@ -26,7 +26,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def standard_deviation
-    return 'Not available' if scores.empty?
+    return 'Not available' if scores.nil? or scores.empty?
     return 0.0 if scores.size == 1
 
     (scores.collect {|score| (score - mean) ** 2 }.sum / (scores.size - 1.0)) ** 0.5
