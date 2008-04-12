@@ -96,9 +96,9 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "created_at"
   end
 
-  add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
-  add_index "question_responses", ["quiz_id"], :name => "index_question_responses_on_quiz_id"
   add_index "question_responses", ["quiz_id", "user_id", "correct"], :name => "index_question_responses_on_quiz_id_and_user_id_and_correct"
+  add_index "question_responses", ["quiz_id"], :name => "index_question_responses_on_quiz_id"
+  add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
 
   create_table "questions", :force => true do |t|
     t.text    "content"
@@ -144,7 +144,7 @@ ActiveRecord::Schema.define(:version => 13) do
     t.datetime "last_login"
   end
 
-  add_index "users", ["course_id"], :name => "index_users_on_course_id"
   add_index "users", ["course_id", "instructor"], :name => "index_users_on_course_id_and_instructor"
+  add_index "users", ["course_id"], :name => "index_users_on_course_id"
 
 end
