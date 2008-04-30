@@ -52,7 +52,8 @@ class User < ActiveRecord::Base
     return if question_responses.empty?
     return if course.quizzes.detect(&:open?)
 
-    (correct_responses.size + adjustment)/ question_responses.size.to_f
+    ams = (correct_responses.size + adjustment)/ question_responses.size.to_f
+    ams > 100.0 ? 100.0 : ams
   end
 
   def exam_mean_score
