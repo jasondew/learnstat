@@ -58,7 +58,7 @@ class User < ActiveRecord::Base
 
   def exam_mean_score
     return if grades.empty?
-    grades.sum(:value) / grades.length.to_f
+    grades.inject(0.0) {|sum, grade| sum += grade.value unless grade.exam.final; sum } / grades.length.to_f
   end
 
   # Activates the user in the database.
