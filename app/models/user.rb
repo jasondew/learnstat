@@ -71,7 +71,7 @@ class User < ActiveRecord::Base
     @activated = true
     update_attribute :activated_at, Time.now
     UserMailer.deliver_signup_notification self
-    UserMailer.deliver_instructor_signup_notification self
+    UserMailer.deliver_instructor_signup_notification(self) unless instructor?
   end
 
   def activated?
