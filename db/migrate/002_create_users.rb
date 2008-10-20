@@ -25,7 +25,7 @@ class CreateUsers < ActiveRecord::Migration
 
     User.create( :login => 'jasondew', :email => 'jason.dew@gmail.com', :first_name => 'Jason', :last_name => 'Dew',
                  :blackboard_username => 'dew', :password => 'password', :password_confirmation => 'password',
-                 :registration_code => 'stat110s08', :instructor => true ).activate
+                 :registration_code => 'stat110f08', :instructor => true ).activate
 
   end
 
