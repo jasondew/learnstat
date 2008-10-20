@@ -2,6 +2,12 @@ class UserMailer < ActionMailer::Base
 
   def signup_notification user
     setup_email user
+    @recipients  = user.email
+    @subject    += "Signup notification"
+  end
+
+  def instructor_signup_notification user
+    setup_email user
     @recipients  = user.course.instructor.email
     @subject    += "Signup notification for #{user.name}"
   end
