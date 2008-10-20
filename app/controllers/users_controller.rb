@@ -15,7 +15,7 @@ class UsersController < ApplicationController
     @user = User.new params[:user]
 
     if @user.save
-      flash[:notice] = "Thanks for signing up!  You should receive an activation e-mail as soon as the instructor approves your account."
+      flash[:notice] = "Thanks for signing up!  You may now login to your account."
       redirect_to login_url
     else
       render :action => 'new'

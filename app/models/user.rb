@@ -69,9 +69,7 @@ class User < ActiveRecord::Base
   # Activates the user in the database.
   def activate
     @activated = true
-    self.activated_at = Time.now
-    self.activation_code = nil
-    save false
+    update_attribute :activated_at, Time.now
     UserMailer.deliver_signup_notification self
   end
 
