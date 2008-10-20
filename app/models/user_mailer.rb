@@ -1,9 +1,9 @@
 class UserMailer < ActionMailer::Base
-  def signup_notification(user)
-    setup_email(user)
+
+  def signup_notification user
+    setup_email user
     @recipients  = user.course.instructor.email
-    @subject    += "activation request for #{user.name}"
-    @body[:url]  = "http://learnstat.net/activate/#{user.activation_code}"
+    @subject    += "Signup notification for #{user.name}"
   end
   
   def activation(user)

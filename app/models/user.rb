@@ -71,7 +71,8 @@ class User < ActiveRecord::Base
     @activated = true
     self.activated_at = Time.now
     self.activation_code = nil
-    save(false)
+    save! false
+    UserMailer.deliver_signup_notification self
   end
 
   def activated?
