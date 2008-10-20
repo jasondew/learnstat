@@ -27,6 +27,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_create :make_activation_code 
   before_save :set_course
+  after_create :activate_if_valid
 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
@@ -59,6 +60,10 @@ class User < ActiveRecord::Base
   def exam_mean_score
     return if grades.empty?
     grades.inject(0.0) {|sum, grade| sum += grade.value unless grade.exam.final; sum } / grades.reject {|grade| grade.exam.final }.length
+  end
+
+  def activate_if_valid
+    activate if user.course.open?
   end
 
   # Activates the user in the database.
