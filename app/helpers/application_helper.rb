@@ -95,4 +95,18 @@ module ApplicationHelper
     logged_in? ? "[#{link_to 'Logout', logout_url }]" : "&nbsp;"
   end
 
+  def form_for_with_labels(record_or_name_or_array, *args, &proc)
+    args << args.extract_options!.merge( :builder => LabeledFormBuilder )
+    form_for_without_labels(record_or_name_or_array, *args, &proc)
+  end
+
+#  alias_method_chain :form_for, :labels
+
+  def fields_for_with_labels(record_or_name_or_array, *args, &proc)
+    args << args.extract_options!.merge( :builder => LabeledFormBuilder )
+    fields_for_without_labels(record_or_name_or_array, *args, &proc)
+  end
+
+#  alias_method_chain :fields_for, :labels
+
 end

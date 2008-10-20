@@ -17,8 +17,8 @@ class CreateCourses < ActiveRecord::Migration
       t.column :updated_at,             :datetime
     end
 
-    Course.create :title => 'Statistics Z110, Spring II, 2008', :department => 'STAT', :number => 'Z110',
-                  :semester => Course::SpringII, :year => 2008, :section => 851, :registration_code => 'stat110s08',
+    Course.create :title => 'Statistics Z110, Fall II, 2008', :department => 'STAT', :number => 'Z110',
+                  :semester => Course::FallII, :year => 2008, :section => 851, :registration_code => 'stat110f08',
                   :registration_closed_at => 1.week.from_now
   end
 
