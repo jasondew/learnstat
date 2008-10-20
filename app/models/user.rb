@@ -63,7 +63,7 @@ class User < ActiveRecord::Base
   end
 
   def activate_if_valid
-    activate if user.course.open?
+    activate if course.open?
   end
 
   # Activates the user in the database.
