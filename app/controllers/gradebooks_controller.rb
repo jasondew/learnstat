@@ -14,8 +14,10 @@ class GradebooksController < ApplicationController
       end
 
 #      @gradebook['Quiz Average'][student.id] = student.adjusted_mean_score(11)
-      @gradebook['Quiz Average'][student.id] = student.mean_score
-      @gradebook['Exam Average'][student.id] = student.exam_mean_score
+
+# removed until fixed
+#      @gradebook['Quiz Average'][student.id] = student.mean_score
+#      @gradebook['Exam Average'][student.id] = student.exam_mean_score
     end
   end
 
