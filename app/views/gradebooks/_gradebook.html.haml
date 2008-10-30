@@ -7,8 +7,8 @@
         %th
           = link_to gradeable.name, gradeable_path( gradeable )
           = link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
-      %th Quiz Average
-      %th Exam Average
+      -#%th Quiz Average
+      -#%th Exam Average
 
   %tboby
     - @students.each do |student|
