@@ -16,7 +16,7 @@
         %td.name= student.name
         - @course.gradeables.each do |gradeable|
           %td.data= percent_format gradebook[gradeable.name.underscore][student.id]
-        %td.data= percent_format gradebook['Quiz Average'][student.id]
-        %td.data= percent_format gradebook['Exam Average'][student.id]
+        -# %td.data= percent_format gradebook['Quiz Average'][student.id]
+        -# %td.data= percent_format gradebook['Exam Average'][student.id]
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?
