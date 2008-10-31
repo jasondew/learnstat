@@ -7,8 +7,8 @@
         %th
           = link_to gradeable.name, gradeable_path( gradeable )
           = link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
-      -#%th Quiz Average
-      -#%th Exam Average
+      %th Quiz Average
+      %th Exam Average
 
   %tboby
     - @students.each do |student|
@@ -16,7 +16,7 @@
         %td.name= student.name
         - @course.gradeables.each do |gradeable|
           %td.data= percent_format gradebook[gradeable.name.underscore][student.id]
-        -# %td.data= percent_format gradebook['Quiz Average'][student.id]
-        -# %td.data= percent_format gradebook['Exam Average'][student.id]
+        %td.data= percent_format gradebook['Quiz Average'][student.id]
+        %td.data= percent_format gradebook['Exam Average'][student.id]
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?

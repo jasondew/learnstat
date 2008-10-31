@@ -42,7 +42,7 @@ class Quiz < ActiveRecord::Base
 
   def grade_for(user)
     return unless user.question_responses.size > 0 and questions.size > 0
-    (user.correct_responses.find_all_by_quiz_id(self).size / questions.size.to_f)
+    (user.correct_responses.select {|response| response.quiz_id == id }.size / questions.size.to_f)
   end
 
   def percentile_for(user)

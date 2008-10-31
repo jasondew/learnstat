@@ -1,7 +1,6 @@
 # Filters added to this controller apply to all controllers in the application.
 # Likewise, all the methods added will be available for all controllers.
 
-#FIXME need to change the notice people get on account registration
 #FIXME need to show students that need to be activated on the roster page
 #FIXME add some cache_fu!
 
@@ -18,9 +17,6 @@ class ApplicationController < ActionController::Base
   session :session_key => '_learnstat_session_id'
 
   helper :all # include all helpers, all the time
-
-  # See ActionController::RequestForgeryProtection for details
-  # Uncomment the :secret if you're not using the cookie session store
   protect_from_forgery # :secret => '978aea9145ec181f5fb34aa5b844a4c8'
 
   def require_instructor
@@ -40,6 +36,8 @@ class ApplicationController < ActionController::Base
   def instructor?
     current_user && current_user.instructor?
   end
+
+  alias :instructor_required :"instructor?"
 
   def letter_grade_for(score)
     score = (score <= 1) ? score * 100 : score

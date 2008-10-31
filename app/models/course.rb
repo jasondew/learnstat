@@ -26,4 +26,8 @@ class Course < ActiveRecord::Base
     @enrollment ||= students.count
   end
 
+  def closed_questions
+    closed_quizzes.map {|quiz| quiz.questions }.flatten
+  end
+
 end

@@ -1,8 +1,12 @@
 class UsersController < ApplicationController
 
   skip_before_filter :login_required, :only => [:new, :create]
-  before_filter :instructor_required, :only => :password_reset
-  before_filter :get_course, :only => [:show, :edit]
+  before_filter :instructor_required, :only => [:destroy, :password_reset]
+  before_filter :get_course, :only => [:show, :edit, :destroy]
+
+  def index
+    redirect_to current_user_path
+  end
 
   def show
   end
@@ -51,8 +55,12 @@ class UsersController < ApplicationController
     end
   end
 
-  def index
-    redirect_to current_user_path
+  def destroy
+    @user = @course.students.find params[:id]
+    @user.destroy
+
+    flash[:notice] = 'User has been removed.'
+    redirect_to course_roster_path(@course)
   end
 
   private

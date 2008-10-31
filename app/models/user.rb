@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   has_many :documents
   has_many :grades
   has_many :question_responses
-  has_many :correct_responses, :class_name => 'QuestionResponse', :conditions => { :correct => true }
   has_many :audits
 
   # Virtual attribute for the unencrypted password
@@ -44,17 +43,23 @@ class User < ActiveRecord::Base
 
   def mean_score
     return if question_responses.empty?
-    return if course.quizzes.detect(&:open?)
 
-    correct_responses.size / question_responses.size.to_f
+    closed_quiz_questions = course.closed_questions.size
+    return if closed_quiz_questions == 0
+
+    correct_responses.size / closed_quiz_questions.to_f
   end
 
   def adjusted_mean_score(adjustment)
     return if question_responses.empty?
-    return if course.quizzes.detect(&:open?)
 
-    ams = (correct_responses.size + adjustment)/ question_responses.size.to_f
+    ams = (correct_responses.size + adjustment) / course.closed_questions.size.to_f
     ams > 100.0 ? 100.0 : ams
+  end
+
+  def correct_responses
+    closed_quiz_ids = course.closed_quizzes.map {|quiz| quiz.id }
+    question_responses.select {|response| response.correct and closed_quiz_ids.include?(response.quiz_id) }
   end
 
   def exam_mean_score
