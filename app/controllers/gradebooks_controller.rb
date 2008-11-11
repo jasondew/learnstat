@@ -3,7 +3,7 @@ class GradebooksController < ApplicationController
   before_filter :get_course
 
   def show
-    @quizzes = @course.quizzes(true)
+    @quizzes = @course.quizzes
     @gradebook = Hash.new {|h,k| h[k] = Array.new }
 
     @students = current_user.instructor? ? @course.students : [current_user]
