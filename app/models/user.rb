@@ -24,8 +24,9 @@ class User < ActiveRecord::Base
   validates_uniqueness_of   :blackboard_username, :case_sensitive => false
 
   before_save :encrypt_password
-  before_create :make_activation_code 
   before_save :set_course
+  before_create :make_activation_code 
+
   after_create :activate_if_valid
 
   # prevents a user from submitting a crafted form that bypasses activation
@@ -68,7 +69,7 @@ class User < ActiveRecord::Base
   end
 
   def activate_if_valid
-    activate if course.open?
+    activate if course and course.open?
   end
 
   # Activates the user in the database.
@@ -137,7 +138,10 @@ class User < ActiveRecord::Base
   protected
 
     def set_course
-      self.course = Course.find_by_registration_code(registration_code) unless self.course
+      return true if self.course
+      self.course = Course.find_by_registration_code registration_code
+      errors.add_to_base "Invalid registration code."
+      false
     end
 
     def encrypt_password
