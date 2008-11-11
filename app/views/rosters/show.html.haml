@@ -19,3 +19,4 @@
         %td
           = link_to_remote 'Reset Password', :url => reset_password_course_user_path(:course_id => @course, :id => student.id), :success => "alert(request.responseText)"
           = link_to 'Impersonate', impersonate_course_roster_path(:course_id => @course, :id => student.id), :method => :post
+          = link_to 'Remove', course_user_path(@course, student), :method => :delete, :confirm => "Are you sure?"

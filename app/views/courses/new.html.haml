@@ -1,0 +1,11 @@
+%h1 New course
+
+= error_messages_for :course
+
+- form_for_with_labels(:course, :url => courses_path) do |f|
+
+  %p= f.text_field :title
+
+  %p= submit_tag "Create"
+
+= link_to 'Back', courses_path

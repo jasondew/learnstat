@@ -8,7 +8,6 @@ class User < ActiveRecord::Base
   has_many :documents
   has_many :grades
   has_many :question_responses
-  has_many :correct_responses, :class_name => 'QuestionResponse', :conditions => { :correct => true }
   has_many :audits
 
   # Virtual attribute for the unencrypted password
@@ -27,6 +26,7 @@ class User < ActiveRecord::Base
   before_save :encrypt_password
   before_create :make_activation_code 
   before_save :set_course
+  after_create :activate_if_valid
 
   # prevents a user from submitting a crafted form that bypasses activation
   # anything else you want your user to change should be added here.
@@ -43,17 +43,23 @@ class User < ActiveRecord::Base
 
   def mean_score
     return if question_responses.empty?
-    return if course.quizzes.detect(&:open?)
 
-    correct_responses.size / question_responses.size.to_f
+    closed_quiz_questions = course.closed_questions.size
+    return if closed_quiz_questions == 0
+
+    correct_responses.size / closed_quiz_questions.to_f
   end
 
   def adjusted_mean_score(adjustment)
     return if question_responses.empty?
-    return if course.quizzes.detect(&:open?)
 
-    ams = (correct_responses.size + adjustment)/ question_responses.size.to_f
+    ams = (correct_responses.size + adjustment) / course.closed_questions.size.to_f
     ams > 100.0 ? 100.0 : ams
+  end
+
+  def correct_responses
+    closed_quiz_ids = course.closed_quizzes.map {|quiz| quiz.id }
+    question_responses.select {|response| response.correct and closed_quiz_ids.include?(response.quiz_id) }
   end
 
   def exam_mean_score
@@ -61,12 +67,16 @@ class User < ActiveRecord::Base
     grades.inject(0.0) {|sum, grade| sum += grade.value unless grade.exam.final; sum } / grades.reject {|grade| grade.exam.final }.length
   end
 
+  def activate_if_valid
+    activate if course.open?
+  end
+
   # Activates the user in the database.
   def activate
     @activated = true
-    self.activated_at = Time.now
-    self.activation_code = nil
-    save(false)
+    update_attribute :activated_at, Time.now
+    UserMailer.deliver_signup_notification self
+    UserMailer.deliver_instructor_signup_notification(self) unless instructor?
   end
 
   def activated?
