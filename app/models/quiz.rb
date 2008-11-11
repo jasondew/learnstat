@@ -90,7 +90,7 @@ class Quiz < ActiveRecord::Base
   private
 
   def future_due_date
-    errors.add( :due_at, 'date must be in the future' ) if due_at <= Time.now
+    errors.add( :due_at, 'date must be in the future' ) if due_at and due_at <= Time.now
   end
 
   def viewable_before_due
