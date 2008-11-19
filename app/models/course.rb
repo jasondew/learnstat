@@ -6,13 +6,19 @@ class Course < ActiveRecord::Base
 
   has_many :quizzes, :order => 'due_at desc'
   has_many :exams, :order => 'given_on'
-  has_many :open_quizzes, :class_name => 'Quiz', :conditions => [ "due_at >= ?", Time.now ], :order => 'due_at desc'
-  has_many :closed_quizzes, :class_name => 'Quiz', :conditions => [ "due_at < ?", Time.now ], :order => 'due_at desc'
 
   has_many :announcements, :extend => LatestMethod, :order => 'created_at desc'
   has_many :documents, :extend => LatestMethod, :order => 'created_at desc'
 
   include SemesterConstants
+
+  def open_quizzes
+    quizzes.select {|quiz| quiz.due_at >= Time.now }
+  end
+
+  def closed_quizzes
+    quizzes.select {|quiz| quiz.due_at < Time.now }
+  end
 
   def open?
     registration_closed_at >= Time.now
