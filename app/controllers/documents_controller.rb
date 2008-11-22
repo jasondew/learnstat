@@ -40,7 +40,7 @@ class DocumentsController < ApplicationController
 
     flash[:notice] = 'Document destroyed.'
 
-    redirect_to course_path(@course)
+    redirect_to course_documents_path(@course)
   end
 
 end
