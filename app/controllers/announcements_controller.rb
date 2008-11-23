@@ -25,7 +25,7 @@ class AnnouncementsController < ApplicationController
     respond_to do |format|
       if @announcement.save
         flash[:notice] = 'Announcement was successfully created.'
-        format.html { redirect_to course_path(@course) }
+        format.html { redirect_to course_announcements_path(@course) }
         format.xml  { head :created, :location => course_path(@course) }
       else
         format.html { render :action => "new" }
@@ -42,7 +42,7 @@ class AnnouncementsController < ApplicationController
     respond_to do |format|
       if @announcement.update_attributes(params[:announcement])
         flash[:notice] = 'Announcement was successfully updated.'
-        format.html { redirect_to course_path(@course) }
+        format.html { redirect_to course_announcements_path(@course) }
         format.xml  { head :ok }
       else
         format.html { render :action => "edit" }
@@ -58,7 +58,7 @@ class AnnouncementsController < ApplicationController
     @announcement.destroy
 
     respond_to do |format|
-      format.html { redirect_to course_path(@course) }
+      format.html { redirect_to course_announcements_path(@course) }
       format.xml  { head :ok }
     end
   end

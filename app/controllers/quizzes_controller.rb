@@ -33,7 +33,7 @@ class QuizzesController < ApplicationController
 
     if @quiz.save
       flash[:notice] = 'Quiz successfully created.'
-      redirect_to course_path(@course)
+      redirect_to course_quizzes_path(@course)
     else
       flash[:error] = 'Quiz not saved.'
       render :action => "new"
@@ -45,7 +45,7 @@ class QuizzesController < ApplicationController
 
     if @quiz.update_attributes(params[:quiz])
       flash[:notice] = 'Quiz successfully updated.'
-      redirect_to course_path(@course)
+      redirect_to course_quizzes_path(@course)
     else
       @questions = Question.find :all, :include => :choices
       render :action => "edit"
@@ -57,6 +57,6 @@ class QuizzesController < ApplicationController
     @quiz.destroy
 
     flash[:notice] = 'Quiz successfuly deleted.'
-    redirect_to course_path(@course)
+    redirect_to course_quizzes_path(@course)
   end
 end
