@@ -1,10 +1,9 @@
 module TextualDateTimes
 
-  #FIXME need to somehow save/recall the textual values, otherwise this breaks on edit/update
-
   def method_missing(method_name, *args)
     if method_name.to_s =~ /(.*)_textual$/
-      send($1)
+      time = send($1)
+      time ? time.strftime("%Y-%m-%d %H:%M") : nil
     elsif method_name.to_s =~ /(.*)_textual=$/
       send("#{$1}=", Chronic.parse(args.first))
     else

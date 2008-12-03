@@ -33,7 +33,7 @@ class QuizzesController < ApplicationController
 
     if @quiz.save
       flash[:notice] = 'Quiz successfully created.'
-      redirect_to course_quizzes_path(@course)
+      redirect_to edit_course_quiz_path(@course, @quiz)
     else
       flash[:error] = 'Quiz not saved.'
       render :action => "new"
