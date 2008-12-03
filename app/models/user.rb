@@ -55,7 +55,7 @@ class User < ActiveRecord::Base
     return if question_responses.empty?
 
     ams = (correct_responses.size + adjustment) / course.closed_questions.size.to_f
-    ams > 100.0 ? 100.0 : ams
+    ams > 1.0 ? 1.0 : ams
   end
 
   def correct_responses
