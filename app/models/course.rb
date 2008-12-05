@@ -1,5 +1,8 @@
 class Course < ActiveRecord::Base
 
+  LETTER_GRADES = [:F, :D, :C, :B, :A]
+  ALL_LETTER_GRADES = [[:F, 0], [:D, 60], [:"D+", 65], [:C, 70], [:"C+", 75], [:B, 80], [:"B+", 85], [:A, 90]]
+
   has_many :users
   has_many :students, :class_name => 'User', :conditions => { :instructor => false }, :order => 'last_name, first_name'
   has_one :instructor, :class_name => 'User', :conditions => { :instructor => true }

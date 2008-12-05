@@ -11,7 +11,7 @@ class GradeDistributionsController < ApplicationController
 
     distribution = []
 
-    LETTER_GRADES.each do |letter_grade|
+    Course::LETTER_GRADES.each do |letter_grade|
       bar = Hash.new
 
       bar[:label] = letter_grade.to_s

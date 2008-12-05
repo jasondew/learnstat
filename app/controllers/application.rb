@@ -9,8 +9,6 @@ class ApplicationController < ActionController::Base
   include ActionView::Helpers::NumberHelper
   include ExceptionNotifiable
 
-  LETTER_GRADES = [:F, :D, :C, :B, :A]
-
   before_filter :audit_request
   before_filter :login_required
 
@@ -24,11 +22,11 @@ class ApplicationController < ActionController::Base
   end
 
   def datetime_format(datetime)
-    return 'Not available' unless datetime
+    return 'N/A' unless datetime
     datetime.strftime("%A, %B %d at %I:%M%p")
   end
 
-  def percent_format(number, nil_text="Not available")
+  def percent_format(number, nil_text="N/A")
     return nil_text unless number
     number_to_percentage(number * 100, {:precision => 1})
   end
