@@ -1,4 +1,4 @@
-# This file is auto-generated from the current state of the database. Instead of editing this file, 
+# This file is auto-generated from the current state of the database. Instead of editing this file,
 # please use the migrations feature of Active Record to incrementally modify your database, and
 # then regenerate this schema definition.
 #
@@ -12,8 +12,8 @@
 ActiveRecord::Schema.define(:version => 13) do
 
   create_table "announcements", :force => true do |t|
-    t.integer  "course_id",  :limit => 11
-    t.integer  "user_id",    :limit => 11
+    t.integer  "course_id"
+    t.integer  "user_id"
     t.string   "title"
     t.text     "body"
     t.datetime "created_at"
@@ -22,7 +22,7 @@ ActiveRecord::Schema.define(:version => 13) do
   add_index "announcements", ["course_id"], :name => "index_announcements_on_course_id"
 
   create_table "audits", :force => true do |t|
-    t.integer  "user_id",    :limit => 11
+    t.integer  "user_id"
     t.text     "params"
     t.string   "url"
     t.string   "ip"
@@ -34,10 +34,10 @@ ActiveRecord::Schema.define(:version => 13) do
     t.string   "title"
     t.string   "department"
     t.string   "number"
-    t.integer  "semester",               :limit => 11
-    t.integer  "year",                   :limit => 11
-    t.integer  "section",                :limit => 11
-    t.integer  "instructor_id",          :limit => 11
+    t.integer  "semester"
+    t.integer  "year"
+    t.integer  "section"
+    t.integer  "instructor_id"
     t.string   "registration_code"
     t.datetime "registration_closed_at"
     t.datetime "created_at"
@@ -45,20 +45,20 @@ ActiveRecord::Schema.define(:version => 13) do
   end
 
   create_table "documents", :force => true do |t|
-    t.integer  "course_id",    :limit => 11
-    t.integer  "user_id",      :limit => 11
+    t.integer  "course_id"
+    t.integer  "user_id"
     t.string   "label"
     t.datetime "viewable_at"
     t.string   "content_type"
     t.string   "filename"
-    t.integer  "size",         :limit => 11
+    t.integer  "size"
     t.datetime "created_at"
   end
 
   add_index "documents", ["course_id"], :name => "index_documents_on_course_id"
 
   create_table "exams", :force => true do |t|
-    t.integer  "course_id",  :limit => 11
+    t.integer  "course_id"
     t.string   "name"
     t.datetime "given_on"
     t.boolean  "final"
@@ -69,9 +69,9 @@ ActiveRecord::Schema.define(:version => 13) do
   add_index "exams", ["course_id"], :name => "index_exams_on_course_id"
 
   create_table "grades", :force => true do |t|
-    t.integer  "user_id",    :limit => 11
-    t.integer  "course_id",  :limit => 11
-    t.integer  "exam_id",    :limit => 11
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "exam_id"
     t.float    "value"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -80,18 +80,18 @@ ActiveRecord::Schema.define(:version => 13) do
   add_index "grades", ["course_id"], :name => "index_grades_on_course_id"
 
   create_table "question_choices", :force => true do |t|
-    t.integer "question_id", :limit => 11
+    t.integer "question_id"
     t.text    "content"
   end
 
   add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
   create_table "question_responses", :force => true do |t|
-    t.integer  "user_id",            :limit => 11
-    t.integer  "course_id",          :limit => 11
-    t.integer  "quiz_id",            :limit => 11
-    t.integer  "quiz_question_id",   :limit => 11
-    t.integer  "question_choice_id", :limit => 11
+    t.integer  "user_id"
+    t.integer  "course_id"
+    t.integer  "quiz_id"
+    t.integer  "quiz_question_id"
+    t.integer  "question_choice_id"
     t.boolean  "correct"
     t.datetime "created_at"
   end
@@ -102,20 +102,20 @@ ActiveRecord::Schema.define(:version => 13) do
 
   create_table "questions", :force => true do |t|
     t.text    "content"
-    t.integer "answer",  :limit => 11
-    t.integer "chapter", :limit => 11
+    t.integer "answer"
+    t.integer "chapter"
   end
 
   create_table "quiz_questions", :force => true do |t|
-    t.integer "quiz_id",     :limit => 11
-    t.integer "question_id", :limit => 11
-    t.boolean "forgiven",                  :default => false
+    t.integer "quiz_id"
+    t.integer "question_id"
+    t.boolean "forgiven",    :default => false
   end
 
   add_index "quiz_questions", ["quiz_id"], :name => "index_quiz_questions_on_quiz_id"
 
   create_table "quizzes", :force => true do |t|
-    t.integer  "course_id",   :limit => 11
+    t.integer  "course_id"
     t.string   "name"
     t.datetime "due_at"
     t.datetime "viewable_at"
@@ -125,7 +125,7 @@ ActiveRecord::Schema.define(:version => 13) do
   add_index "quizzes", ["course_id"], :name => "index_quizzes_on_course_id"
 
   create_table "users", :force => true do |t|
-    t.integer  "course_id",                 :limit => 11
+    t.integer  "course_id"
     t.string   "login"
     t.string   "email"
     t.string   "first_name"
