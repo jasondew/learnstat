@@ -1,7 +1,5 @@
 class Quiz < ActiveRecord::Base
 
-  include TextualDateTimes
-
   belongs_to :course
   has_many :questions, :class_name => 'QuizQuestion'
   has_many :question_responses, :order => 'quiz_question_id'

@@ -1,7 +1,5 @@
 class Document < ActiveRecord::Base
 
-  include TextualDateTimes
-
   belongs_to :course
   belongs_to :user
 
