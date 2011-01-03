@@ -52,13 +52,6 @@ module ApplicationHelper
     end.join("\n")
   end
 
-  def messages
-    return if flash.empty?
-
-    flashes = flash.collect {|(key, value)| content_tag(:div, value, :class => key) }
-    content_tag(:div, flashes.join("\n"), :id => "messages")
-  end
-
   def menubar
     return unless logged_in? and @course
 
