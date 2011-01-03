@@ -1,13 +1,7 @@
+.DS_Store
+*.swp
+.bundle
 db/*.sqlite3
-config/database.yml
-config/deploy*
 log/*.log
 tmp/**/*
-doc/app
-doc/api
-*.swp
-.DS_Store
-public/documents/*
-index/*
-public/javascripts/all.js
-public/stylesheets/all.css
+capybara*

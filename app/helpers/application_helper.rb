@@ -1,5 +1,29 @@
-# Methods added to this helper will be available to all templates in the application.
 module ApplicationHelper
+
+  def flash_messages
+    %w(notice alert).map do |type|
+      content = flash[type.to_sym]
+      content_tag(:div, content, :id => type) unless content.blank?
+    end.compact.join.html_safe
+  end
+
+  def link_to_remove_fields form
+    form.input :_destroy, :as => :boolean, :label => "delete" unless form.object.new_record?
+  end
+
+  def link_to_add_fields name, form, association
+    new_object = form.object.class.reflect_on_association(association).klass.new
+
+    fields = form.simple_fields_for(association, new_object, :child_index => "new_#{association}") do |builder|
+      render(form.object.class.to_s.tableize + "/" + association.to_s.singularize + "_fields", :form => builder)
+    end
+
+    content_tag(:div, :class => "input new_nested_object_link") do
+      link_to_function(name, "add_fields(this, \"#{association}\", \"#{escape_javascript(fields)}\")")
+    end
+  end
+
+  # OLD STUFF BELOW
 
   MENU_ITEMS = [
     ['home',          "course_path(@course)",                         true ],

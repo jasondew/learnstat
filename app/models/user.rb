@@ -25,7 +25,7 @@ class User < ActiveRecord::Base
 
   before_save :encrypt_password
   before_save :set_course
-  before_create :make_activation_code 
+  before_create :make_activation_code
 
   after_create :activate_if_valid
 
@@ -111,7 +111,7 @@ class User < ActiveRecord::Base
   end
 
   def remember_token?
-    remember_token_expires_at && Time.now < remember_token_expires_at 
+    remember_token_expires_at && Time.now < remember_token_expires_at
   end
 
   # These create and unset the fields required for remembering users between browser closes
@@ -149,12 +149,12 @@ class User < ActiveRecord::Base
       self.salt = Digest::SHA1.hexdigest("--#{Time.now.to_s}--#{login}--") if new_record?
       self.crypted_password = encrypt(password)
     end
-    
+
     def password_required?
       crypted_password.blank? || !password.blank?
     end
-    
+
     def make_activation_code
       self.activation_code = Digest::SHA1.hexdigest( Time.now.to_s.split(//).sort_by {rand}.join )
-    end 
+    end
 end

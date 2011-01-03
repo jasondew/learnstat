@@ -1,31 +1,42 @@
-ActionController::Routing::Routes.draw do |map|
+Learnstat::Application.routes.draw do
+  resources :users
+  resource :session
+  resources :activations
 
-  map.resources :users
-  map.resources :activations
-
-  map.resource :session, :controller => 'sessions'
-
-  map.resources :courses do |course|
-    course.resources :announcements, :documents
-    course.resources :exams, :has_many => :grades, :has_one => :exam_distribution
-    course.resources :quizzes, :has_many => [:question_responses, :response_distributions], :has_one => :grade_distribution,
-                               :member => { :mark_viewable => :post } do |quiz|
-      quiz.resources :quiz_questions, :collection => { :search => :post }
+  resources :courses do
+    resources :announcements
+    resources :documents
+    resources :exams
+    resources :quizzes do
+      resources :quiz_questions do
+        collection do
+          post :search
+        end
+      end
     end
-    course.resource :gradebook
-    course.resource :roster, :member => { :impersonate => :post }
-    course.resources :users, :member => { :reset_password => :post }
+
+    resource :gradebook
+    resource :roster do
+      member do
+        post :impersonate
+      end
+    end
+
+    resources :users do
+      member do
+        post :reset_password
+      end
+    end
   end
 
-  map.resources :questions, :collection => { :search => :post } do |question|
-    question.resources :question_choices
+  resources :questions do
+    resources :question_choices
   end
 
-  map.signup '/signup', :controller => 'users',    :action => 'new'
-  map.login  '/login',  :controller => 'sessions', :action => 'new'
-  map.logout '/logout', :controller => 'sessions', :action => 'destroy'
-  map.activate '/activate/:activation_code', :controller => 'activations', :action => 'new'
+  match "/signup" => "users#new", :as => :signup
+  match "/login" => "sessions#new", :as => :login
+  match "/logout" => "sessions#destroy", :as => :logout
+  match "/activate/:activation_code" => "activations#new", :as => :activate
 
-  map.connect '', :controller => 'courses'
-
+  root "courses#index"
 end
