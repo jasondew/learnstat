@@ -10,20 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110103004019) do
-
-  create_table "access_tokens", :force => true do |t|
-    t.integer  "user_id"
-    t.string   "type",       :limit => 30
-    t.string   "key"
-    t.string   "token",      :limit => 1024
-    t.string   "secret"
-    t.boolean  "active"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
-  add_index "access_tokens", ["key"], :name => "index_access_tokens_on_key", :unique => true
+ActiveRecord::Schema.define(:version => 20110103041052) do
 
   create_table "announcements", :force => true do |t|
     t.integer  "course_id"
@@ -149,28 +136,26 @@ ActiveRecord::Schema.define(:version => 20110103004019) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "users", :force => true do |t|
-    t.string   "login"
-    t.string   "email"
+    t.string   "email",                                  :null => false
+    t.string   "first_name"
+    t.string   "last_name"
     t.string   "blackboard_username"
     t.string   "registration_code"
     t.boolean  "instructor",          :default => false
-    t.string   "crypted_password"
-    t.string   "password_salt"
+    t.string   "crypted_password",                       :null => false
+    t.string   "password_salt",                          :null => false
     t.string   "persistence_token",                      :null => false
     t.integer  "login_count",         :default => 0,     :null => false
+    t.integer  "failed_login_count",  :default => 0,     :null => false
     t.datetime "last_request_at"
-    t.datetime "last_login_at"
     t.datetime "current_login_at"
-    t.string   "last_login_ip"
+    t.datetime "last_login_at"
     t.string   "current_login_ip"
-    t.integer  "active_token_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.string   "last_login_ip"
   end
 
-  add_index "users", ["active_token_id"], :name => "index_users_on_active_token_id"
+  add_index "users", ["email"], :name => "index_users_on_email"
   add_index "users", ["last_request_at"], :name => "index_users_on_last_request_at"
-  add_index "users", ["login"], :name => "index_users_on_login"
   add_index "users", ["persistence_token"], :name => "index_users_on_persistence_token"
 
 end

@@ -1,15 +1,32 @@
 %h2 Register an Account
-
-%form.authentication_form{:action => authenticate_url, :method => :post}
-  %fieldset
-    / authentication_type should be "user" or "session", based on controller
-    %input{:type => :hidden, :name => :authentication_type, :value => :user}
-    %legend Click your Oauth or OpenID provider.
-    .oauth_providers
-      %ul
-        - %w(google facebook twitter).each do |name|
-          %li.oauth_provider
-            %img{:src => "/images/icons/#{name}.png"}
-            %input{:type => :radio, :id => "#{name}_oauth_provider", :name => :oauth_provider, :value => name}
-        .clearfix
-  %input.submit{:name => :submit, :type => :submit, :value => "Register"}/
+- form_for @user do |f|
+  #login_box
+    .block.options
+      %p.criteria Demographic Information
+      .required.form_field
+        %label{:for => "first_name"} First name:
+        = f.text_field :first_name
+      .required.form_field
+        %label{:for => "last_name"} Last name:
+        = f.text_field :last_name
+      .form_field
+        %label{:for => "blackboard_username"} Blackboard username:
+        = f.text_field :blackboard_username
+    .block.options
+      %p.criteria Account Information
+      .required.form_field
+        %label{:for => "email"} Email:
+        = f.text_field :email
+      .required.form_field
+        %label{:for => "password"} Choose password:
+        = f.password_field :password
+      .required.form_field
+        %label{:for => "password_confirmation"} Confirm password:
+        = f.password_field :password_confirmation
+      .required.form_field
+        %label{:for => "registration_code"} Registration code:
+        = f.text_field :registration_code
+    %br/
+    .block.submit
+      = image_submit_tag 'register.png', :alt => 'Register'
+%br/

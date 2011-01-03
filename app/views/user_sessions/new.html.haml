@@ -1,15 +1,27 @@
-%h2 Authenticate
+%h2 Welcome to learnSTAT!
 
-= form_for @user_session, :url => authenticate_path, :html => { :method => :post, :class => "authentication_form" } do |f|
-  = oauth_login_hidden_input
+= form_for UserSession.new, :url => login_path do
+  #login_box
 
-  %fieldset
-    .oauth_providers
-      %ul
-        - %w(google facebook twitter).each do |name|
-          %li.oauth_provider
-            = image_tag "/images/icons/#{name}.png"
-            = radio_button_tag :oauth_provider, name
-        .clearfix
+    .block.options
+      %p.criteria I already have an account.
 
-  = submit_tag "Login", :class => :submit
+      .form_field
+        %label{ :for => 'email' } Email:
+        = text_field_tag 'email', {}, :size => 20
+
+      .form_field
+        %label{ :for => 'password' } Password:
+        = password_field_tag 'password', {}, :size => 20
+
+      .form_field
+        %label{ :for => 'remember_me' } Remember me:
+        = check_box_tag 'remember_me'
+
+      %p.submit= image_submit_tag 'login.png', :alt => 'Login'
+
+    .block.options
+      %p.criteria I want to create an account.
+      %p.submit= link_to 'Create an Account', signup_url
+
+    %br

@@ -58,7 +58,7 @@ class ApplicationController < ActionController::Base
     @exam = Exam.find params[:exam_id]
   end
 
-  protected
+  # new stuff
 
   def logged_in?
     !! current_user_session
