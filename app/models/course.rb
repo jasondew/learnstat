@@ -1,3 +1,6 @@
+require "latest_method"
+require "semester_constants"
+
 class Course < ActiveRecord::Base
 
   LETTER_GRADES = [:F, :D, :C, :B, :A]
