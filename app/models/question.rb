@@ -4,7 +4,8 @@ class Question < ActiveRecord::Base
 
   has_many :choices, :class_name => 'QuestionChoice', :dependent => :delete_all, :order => 'id'
 
-  acts_as_ferret :fields => {:content => {:store => :yes}, :choice_texts => { }}, :remote => false
+  #FIXME replace ferret
+  # acts_as_ferret :fields => {:content => {:store => :yes}, :choice_texts => { }}, :remote => false
 
   def choice_texts
     choices.collect(&:content).join(" ")
