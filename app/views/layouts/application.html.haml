@@ -3,15 +3,16 @@
   %head
     %meta{:name => "google-site-verification", :content => "ZoqF7nZmCBi98S7ibVrO-VcDWCKA4N8krwhWxzOyouc"}
     %meta{:charset => "utf-8"}
+    = csrf_meta_tag
 
     %link{:rel => "shortcut icon", :href => "/favicon.ico"}
 
     %title learnSTAT
 
-    = stylesheet_link_tag 'application', 'lightbox', :cache => true
+    = stylesheet_link_tag 'application', 'lightbox'
     /[if lt IE 9] <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
 
-    = javascript_include_tag 'prototype', 'effects', 'controls', 'lightbox', 'application', :cache => true
+    = javascript_include_tag 'prototype', 'effects', 'controls', 'lightbox', 'application'
 
   %body
     = link_to content_tag(:h1, content_tag(:span, 'learnSTAT')), root_path
