@@ -90,10 +90,8 @@ module ApplicationHelper
 
   def small_block(title, content)
     content_tag(:div, :class => 'small_block') do
-      returning(Array.new) do |html|
-        html << content_tag(:div, title, :class => 'small_block_head')
-        html << content_tag(:div, content, :class => 'small_block_body')
-      end.join("\n").html_safe
+      [content_tag(:div, title, :class => 'small_block_head'),
+       content_tag(:div, content, :class => 'small_block_body')].join("\n").html_safe
     end
   end
 
