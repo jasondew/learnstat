@@ -44,24 +44,21 @@ module ApplicationHelper
   def navbar
     return unless logged_in?
 
-    returning(Array.new) do |html|
-      html << content_tag(:p, welcome_message, :class => 'left')
-      html << content_tag(:p, navbar_title, :class => 'middle')
-      html << content_tag(:p, user_information, :class => 'right')
-      html << content_tag(:br)
-    end.join("\n")
+    [content_tag(:p, welcome_message, :class => 'left'),
+     content_tag(:p, navbar_title, :class => 'middle'),
+     content_tag(:p, user_information, :class => 'right'),
+     content_tag(:br)].join("\n").html_safe
   end
 
   def menubar
     return unless logged_in? and @course
 
     content_tag(:div, :id => "menubar") do
-      returning(Array.new) do |html|
-        MENU_ITEMS.each do |(item, url_method, public_item)|
-          next unless instructor? or public_item
-          html << menu_link(item, eval(url_method), item_selected == item)
+      MENU_ITEMS.map do |(item, url_method, public_item)|
+        if instructor? or public_item
+          menu_link item, eval(url_method), item_selected == item
         end
-      end.join("\n")
+      end.compact.join("\n").html_safe
     end
   end
 
@@ -96,7 +93,7 @@ module ApplicationHelper
       returning(Array.new) do |html|
         html << content_tag(:div, title, :class => 'small_block_head')
         html << content_tag(:div, content, :class => 'small_block_body')
-      end.join("\n")
+      end.join("\n").html_safe
     end
   end
 
@@ -105,11 +102,11 @@ module ApplicationHelper
   end
 
   def welcome_message
-    logged_in? ? "Welcome, #{current_user.name}." : "&nbsp;"
+    (logged_in? ? "Welcome, #{current_user.name}." : "&nbsp;").html_safe
   end
 
   def user_information
-    logged_in? ? "[#{link_to 'Logout', logout_url }]" : "&nbsp;"
+    (logged_in? ? "[#{link_to 'Logout', logout_url }]" : "&nbsp;").html_safe
   end
 
   def form_for_with_labels(record_or_name_or_array, *args, &proc)

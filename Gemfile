@@ -22,6 +22,7 @@ group :development do
   gem "autotest-growl"
   gem "autotest-fsevent"
   gem "rspec-rails"
+  gem "cucumber-rails"
 end
 
 group :production do

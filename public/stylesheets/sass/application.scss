@@ -1,53 +1,30 @@
-html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  outline: 0;
-  font-size: 100%;
-  vertical-align: baseline;
-  background: transparent; }
+$red: #A94343;
+$green: #43A943;
+$blue: #437DA9;
+$brown: #A97643;
+$black: #222627;
+$white: #dfe9e1;
 
-body {
-  line-height: 1; }
-
-ol, ul {
-  list-style: none; }
-
-blockquote, q {
-  quotes: none; }
-
-blockquote:before, blockquote:after, q:before, q:after {
-  content: '';
-  content: none; }
-
-:focus {
-  outline: 0; }
-
-ins {
-  text-decoration: none; }
-
-del {
-  text-decoration: line-through; }
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0; }
+@import "reset";
+@import "mixins";
 
 body {
   font-family: verdana, arial, sans-serif;
   font-size: 11pt;
-  background: silver; }
+  background: silver;
+}
 
 br {
   clear: both;
-  height: 0; }
+  height: 0;
+}
 
 em {
   font-style: oblique;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
-img {
-  border: none; }
+img { border: none; }
 
 h1 {
   display: block;
@@ -56,20 +33,23 @@ h1 {
   height: 100px;
   border: 1px solid #111111;
   border-width: 0 1px;
-  background: white url("/images/learnstat-logo.png") no-repeat; }
-  h1 span {
-    display: none; }
+  background: white url("/images/learnstat-logo.png") no-repeat;
+
+  span { display: none; }
+}
 
 h2 {
   font-family: georgia, serif;
   font-size: 24px;
   color: #373737;
-  margin: 4px 10px; }
+  margin: 4px 10px;
+}
 
 h3 {
   font-family: georgia, serif;
   font-size: 16px;
-  margin: 4px 10px; }
+  margin: 4px 10px;
+}
 
 .block {
   background: white;
@@ -78,7 +58,8 @@ h3 {
   padding: 10px;
   border: 2px solid #333333;
   font-family: verdana, arial, sans-serif;
-  font-size: 14px; }
+  font-size: 14px;
+}
 
 #login_box {
   background: #696969;
@@ -87,21 +68,26 @@ h3 {
   border: 1px solid #333333;
   padding: 0;
   color: white;
-  font-family: georgia, serif; }
-  #login_box .options {
+  font-family: georgia, serif;
+
+  .options {
     float: left;
-    width: 262px; }
-  #login_box p.criteria {
+    width: 262px;
+  }
+
+  p.criteria {
     margin: 0 auto 10px auto;
     text-align: center;
     border-bottom: 1px solid #111111;
     font-family: arial, sans-serif;
     font-size: 16px;
     font-variant: small-caps;
-    font-weight: bold; }
-  #login_box div.input {
-    margin-bottom: 10px; }
-    #login_box div.input label {
+    font-weight: bold;
+  }
+
+  div.input {
+    margin-bottom: 10px;
+    label {
       display: block;
       float: left;
       clear: left;
@@ -109,11 +95,14 @@ h3 {
       margin-right: 5px;
       width: 90px;
       font-size: 10px;
-      font-weight: bold; }
-    #login_box div.input input.string, #login_box div.input input.email, #login_box div.input input.password {
-      width: 125px; }
-  #login_box .submit {
-    text-align: center; }
+      font-weight: bold;
+    }
+
+    input.string, input.email, input.password { width: 125px; }
+  }
+
+  .submit { text-align: center; }
+}
 
 #remember_me {
   vertical-align: top; }
@@ -128,9 +117,8 @@ div.block_head {
   font-size: 20px;
   font-weight: bold;
   margin: 0 auto; }
-
-div.block_head a {
-  color: white; }
+  div.block_head a {
+    color: white; }
 
 div.block_body {
   background: url("/images/rounded_bottom.png") bottom left no-repeat;
@@ -180,7 +168,7 @@ pre {
 
 a, a:link, a:visited, a:active {
   text-decoration: none;
-  color: #a94343; }
+  color: $red; }
 
 a:hover {
   text-decoration: underline; }
@@ -213,32 +201,26 @@ ul.quizzes li {
   text-align: center;
   padding: 4px 0 !important;
   padding: 0; }
-
-#navbar a {
-  color: #eeeeee; }
-
-#navbar a:hover {
-  color: #990000; }
-
-#navbar p {
-  padding: 0 4px;
-  color: #f0f0f0; }
-
-#navbar p.left {
-  float: left;
-  width: 185px;
-  text-align: left; }
-
-#navbar p.middle {
-  width: 400px;
-  float: left;
-  color: white;
-  text-align: center; }
-
-#navbar p.right {
-  float: right;
-  width: 185px;
-  text-align: right; }
+  #navbar a {
+    color: #eeeeee; }
+    #navbar a:hover {
+      color: #990000; }
+  #navbar p {
+    padding: 0 4px;
+    color: #f0f0f0; }
+  #navbar p.left {
+    float: left;
+    width: 185px;
+    text-align: left; }
+  #navbar p.middle {
+    width: 400px;
+    float: left;
+    color: white;
+    text-align: center; }
+  #navbar p.right {
+    float: right;
+    width: 185px;
+    text-align: right; }
 
 #messages * {
   text-align: center;
@@ -246,14 +228,11 @@ ul.quizzes li {
   border: 1px solid #dddddd;
   margin: 8px 0;
   background-color: #fffad7; }
-
 #messages .notice {
   color: black; }
-
 #messages .error {
   color: red;
   font-weight: bold; }
-
 #messages .warning {
   color: red; }
 
@@ -267,19 +246,16 @@ ul.quizzes li {
   font-weight: bold;
   font-variant: small-caps;
   text-align: center; }
-
-#menubar a {
-  color: #e0e0e0;
-  padding: 5px;
-  display: inline; }
-
-#menubar a img {
-  behavior: url(/iepngfix.htc);
-  vertical-align: bottom; }
-
-#menubar a:hover, #menubar a.selected {
-  background: url(/images/menu_background.png) bottom left repeat-x;
-  color: #111111; }
+  #menubar a {
+    color: #e0e0e0;
+    padding: 5px;
+    display: inline; }
+    #menubar a img {
+      behavior: url(/iepngfix.htc);
+      vertical-align: bottom; }
+    #menubar a:hover, #menubar a.selected {
+      background: url(/images/menu_background.png) bottom left repeat-x;
+      color: #111111; }
 
 #content {
   background: white;
@@ -289,7 +265,8 @@ ul.quizzes li {
   border: 1px solid #111111;
   border-width: 0 1px;
   min-height: 200px;
-  clear: both; }
+  clear: both;
+}
 
 #footer {
   margin: 0 auto;
@@ -300,21 +277,24 @@ ul.quizzes li {
   color: #f0f0f0;
   font-weight: bold;
   font-size: 85%;
-  font-variant: small-caps; }
+  font-variant: small-caps;
+}
 
-div.uploadStatus {
-  margin: 5px; }
+div.uploadStatus { margin: 5px; }
 
 div.progressBar {
-  margin: 5px; }
-  div.progressBar div.border {
+  margin: 5px;
+  div.border {
     background-color: white;
     border: 1px solid grey;
-    width: 100%; }
-  div.progressBar div.background {
+    width: 100%;
+  }
+  div.background {
     background-color: #333333;
     height: 18px;
-    width: 0%; }
+    width: 0%;
+  }
+}
 
 li.question {
   margin-bottom: 40px; }
@@ -325,17 +305,15 @@ li.question {
 
 li.added {
   border: 2px solid green; }
-
-li.added a {
-  display: none; }
+  li.added a {
+    display: none; }
 
 ol.answers {
   list-style-type: lower-alpha;
   margin-bottom: 25px; }
-
-ol.answers li:hover {
-  cursor: pointer;
-  background: #ccccff; }
+  ol.answers li:hover {
+    cursor: pointer;
+    background: #ccccff; }
 
 ol.answers li.selected {
   color: green; }
@@ -370,26 +348,20 @@ table {
   margin: 10px auto;
   font-size: 75%;
   border-bottom: 1px solid #333333; }
-
-table th {
-  background: #9b2f47;
-  color: white; }
-
-table th a, table th a:link, table th a:visited, table th a:active {
-  color: white; }
-
-table th, table td {
-  padding: 4px;
-  border: 1px solid #333333; }
-
-table td.name {
-  background: #d6abb5; }
-
-table td.name, table th.name {
-  border-right: 2px solid #333333; }
-
-table .data {
-  text-align: right; }
+  table th {
+    background: #9b2f47;
+    color: white; }
+    table th a, table th a:link, table th a:visited, table th a:active {
+      color: white; }
+  table th, table td {
+    padding: 4px;
+    border: 1px solid #333333; }
+  table td.name {
+    background: #d6abb5; }
+  table td.name, table th.name {
+    border-right: 2px solid #333333; }
+  table .data {
+    text-align: right; }
 
 .quiz_create select {
   width: 3.5em; }
@@ -398,20 +370,18 @@ table .data {
   width: 448px;
   margin: 10px 5px 10px 5px;
   float: left; }
-
-#announcements div.block_head {
-  background: url("/images/rounded_medium_top.png") top left no-repeat;
-  height: 20px;
-  width: 450px;
-  padding: 4px;
-  font-size: 18px;
-  font-weight: bold; }
-
-#announcements div.block_body {
-  background: url("/images/rounded_medium_bottom.png") bottom left no-repeat;
-  width: 442px;
-  padding: 8px;
-  margin-bottom: 10px; }
+  #announcements div.block_head {
+    background: url("/images/rounded_medium_top.png") top left no-repeat;
+    height: 20px;
+    width: 450px;
+    padding: 4px;
+    font-size: 18px;
+    font-weight: bold; }
+  #announcements div.block_body {
+    background: url("/images/rounded_medium_bottom.png") bottom left no-repeat;
+    width: 442px;
+    padding: 8px;
+    margin-bottom: 10px; }
 
 .instructor_link img {
   margin-right: 4px;
@@ -429,109 +399,108 @@ dl dd {
 .search {
   float: right; }
 
+
+// new styles
+
+
 .hidden {
-  display: none; }
+  display: none;
+}
 
 .right {
-  float: right; }
+  float: right;
+}
 
 .centered {
-  text-align: center; }
+  text-align: center;
+}
 
 .numeric {
-  text-align: right; }
+  text-align: right;
+}
 
-.working:before {
-  content: "working..."; }
+.working:before { content: "working..."; }
 
 .data-table {
   width: 100%;
-  margin: 0; }
-  .data-table td, .data-table th {
-    padding: 2px 6px; }
-  .data-table tbody {
-    border: 1px solid #aaaaaa; }
-  .data-table .odd {
-    background-color: #e3e3e3; }
-  .data-table .even {
-    background-color: #f9f9f9; }
+  margin: 0;
+  td, th { padding: 2px 6px; }
+  tbody { border: 1px solid #aaaaaa; }
+  .odd { background-color: #e3e3e3; }
+  .even { background-color: #f9f9f9; }
+}
 
-.dataTables_wrapper .fg-toolbar {
-  padding: 4px 8px; }
+.dataTables_wrapper {
+  .fg-toolbar { padding: 4px 8px; }
+}
 
-.dataTables_length {
-  float: right; }
-
-.dataTables_filter {
-  float: left; }
-
-.dataTables_info {
-  float: left; }
+.dataTables_length { float: right; }
+.dataTables_filter { float: left; }
+.dataTables_info { float: left; }
 
 .dataTables_paginate {
-  float: right; }
-  .dataTables_paginate span.fg-button {
-    padding: 0 10px; }
+  float: right;
+  span.fg-button { padding: 0 10px; }
+}
 
-.simple_form label {
-  float: left;
-  text-align: right;
-  margin: 2px 10px;
-  width: 90px;
-  font-size: 10px;
-  font-weight: bold; }
-.simple_form div.required {
-  color: red; }
-.simple_form div.field_with_errors input {
-  border: 2px solid red; }
-.simple_form div.field_with_errors span.error {
-  clear: left;
-  display: block;
-  float: left;
-  text-align: right;
-  font-size: 10px;
-  margin: 2px 10px;
-  width: 90px; }
-.simple_form div.input {
-  padding-bottom: 10px;
-  clear: both; }
-.simple_form div.boolean, .simple_form input[type='submit'] {
-  margin-left: 120px; }
-.simple_form div.boolean label {
-  float: none;
-  margin: 0; }
+.simple_form {
+  label {
+    float: left;
+    text-align: right;
+    margin: 2px 10px;
+    width: 90px;
+    font-size: 10px;
+    font-weight: bold;
+  }
+
+  div.required { color: red; }
+  div.field_with_errors {
+    input { border: 2px solid red; }
+    span.error {
+      clear: left;
+      display: block;
+      float: left;
+      text-align: right;
+      font-size: 10px;
+      margin: 2px 10px;
+      width: 90px;
+    }
+  }
+
+  div.input {
+    padding-bottom: 10px;
+    clear: both;
+  }
+
+  div.boolean, input[type='submit'] { margin-left: 120px; }
+  div.boolean label { float: none; margin: 0; }
+}
 
 #notice, #alert {
   width: 794px;
   clear: both;
   margin: 0px auto 6px auto;
   padding: .5em 0;
-  color: #dfe9e1;
+  color: $white;
   font-weight: bold;
   font-size: 2em;
   text-align: center;
   line-height: 1em;
-  border: 2px solid #222627;
+  border: 2px solid $black;
   -moz-border-radius: 8px;
   -webkit-border-radius: 8px;
   -moz-border-radius-topleft: 0px;
   -moz-border-radius-topright: 0px;
-  -moz-box-shadow: 0px 0px 15px #222627;
-  -webkit-box-shadow: 0px 0px 15px #222627; }
+  -moz-box-shadow: 0px 0px 15px $black;
+  -webkit-box-shadow: 0px 0px 15px $black;
+}
 
-#notice {
-  background: #437da9;
-  background: -moz-linear-gradient(from(#437da9), to(#64bbfd)) no-repeat #437da9;
-  background: -webkit-gradient(linear, left top, left bottom, from(#437da9), to(#64bbfd)) no-repeat #437da9; }
-
-#alert {
-  background: #a94343;
-  background: -moz-linear-gradient(from(#a94343), to(#fd6464)) no-repeat #a94343;
-  background: -webkit-gradient(linear, left top, left bottom, from(#a94343), to(#fd6464)) no-repeat #a94343; }
+#notice { @include gradient($blue, $blue*1.5); }
+#alert { @include gradient($red, $red*1.5); }
 
 .spacer {
   clear: both;
-  height: 1px; }
+  height: 1px;
+}
 
-.clear {
-  clear: both; }
+.clear { clear: both; }

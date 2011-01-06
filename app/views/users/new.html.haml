@@ -1,32 +1,23 @@
 %h2 Register an Account
-- form_for @user do |f|
+
+= simple_form_for @user do |form|
   #login_box
     .block.options
       %p.criteria Demographic Information
-      .required.form_field
-        %label{:for => "first_name"} First name:
-        = f.text_field :first_name
-      .required.form_field
-        %label{:for => "last_name"} Last name:
-        = f.text_field :last_name
-      .form_field
-        %label{:for => "blackboard_username"} Blackboard username:
-        = f.text_field :blackboard_username
+      = form.input :first_name
+      = form.input :last_name
+      = form.input :blackboard_username
+
     .block.options
       %p.criteria Account Information
-      .required.form_field
-        %label{:for => "email"} Email:
-        = f.text_field :email
-      .required.form_field
-        %label{:for => "password"} Choose password:
-        = f.password_field :password
-      .required.form_field
-        %label{:for => "password_confirmation"} Confirm password:
-        = f.password_field :password_confirmation
-      .required.form_field
-        %label{:for => "registration_code"} Registration code:
-        = f.text_field :registration_code
-    %br/
+      = form.input :email
+      = form.input :password
+      = form.input :password_confirmation
+      = form.input :registration_code
+
+    %br
+
     .block.submit
       = image_submit_tag 'register.png', :alt => 'Register'
-%br/
+
+%br

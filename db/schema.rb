@@ -136,6 +136,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   add_index "sessions", ["updated_at"], :name => "index_sessions_on_updated_at"
 
   create_table "users", :force => true do |t|
+    t.integer  "course_id"
     t.string   "email",                                  :null => false
     t.string   "first_name"
     t.string   "last_name"

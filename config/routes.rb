@@ -3,8 +3,8 @@ Learnstat::Application.routes.draw do
   resource :user_session
 
   match "/signup" => "users#new"
-  match "/login"  => "user_session#create"
-  match "/logout" => "user_session#destroy"
+  match "/login"  => "user_sessions#create"
+  match "/logout" => "user_sessions#destroy"
 
   resources :courses do
     resources :announcements

@@ -1,13 +1,35 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require "spec_helper"
 
 describe Exam do
 
+  it("should be valid from the factory") { Factory.build(:exam).should be_valid }
+
+  context "#grade_for" do
+    let(:exam) { Factory.build(:exam) }
+
+    it "should return the grade value when a grade exists" do
+      grade = Factory.build(:grade, :value => 92)
+      user = mock!.id { :user_id }.subject
+      mock(exam).grades { mock!.find_by_user_id(:user_id) { grade }.subject }
+
+      exam.grade_for(user).should == 0.92
+    end
+
+    it "should return ** when no grade exists" do
+      user = mock!.id { :user_id }.subject
+      mock(exam).grades { mock!.find_by_user_id(:user_id) { nil }.subject }
+
+      exam.grade_for(user).should == "**"
+    end
+  end
+
+=begin
   before(:each) do
     @exam = Exam.new
-    @course = mock_model(Course)
-    @grade = mock_model(Grade)
+    @course = Factory.build(:course)
+    @grade = Factory.build(:grade)
 
-    @grades = [mock_model(Grade, :value => 12, :+ => 24), mock_model(Grade, :value => 12, :+ => 24)]
+    @grades = [Factory.build(:grade, :value => 88), Factory.build(:grade, :value => 91)]
     @exam.stub!(:grades).and_return(@grades)
   end
 
@@ -16,7 +38,7 @@ describe Exam do
   end
 
   it "should be able to find the grade for a student when it exists" do
-    @user = mock_model(User)
+    @user = Factory.build(:user)
     @user.should_receive(:id).and_return(12)
     @grades.should_receive(:find_by_user_id).with(12).and_return(@grade)
     @grade.should_receive(:value).and_return(0.5)
@@ -25,7 +47,7 @@ describe Exam do
   end
 
   it "should be able to find the grade for a student when it doesn't exist" do
-    @user = mock_model(User)
+    @user = Factory.build(:user)
     @user.should_receive(:id).and_return(12)
     @grades.should_receive(:find_by_user_id).with(12).and_return(nil)
 
@@ -66,4 +88,6 @@ describe Exam do
 
     @exam.grade_attributes=(@attributes)
   end
+=end
+
 end

@@ -1,65 +1,28 @@
-# This file is copied to ~/spec when you run 'ruby script/generate rspec'
-# from the project root directory.
-ENV["RAILS_ENV"] = "test"
-require File.expand_path(File.dirname(__FILE__) + "/../config/environment")
-require 'spec/rails'
+# This file is copied to spec/ when you run 'rails generate rspec:install'
+ENV["RAILS_ENV"] ||= "test"
+require File.expand_path("../../config/environment", __FILE__)
+require "rspec/rails"
+require "spec/factories.rb"
 
-Spec::Runner.configure do |config|
+# Requires supporting ruby files with custom matchers and macros, etc,
+# in spec/support/ and its subdirectories.
+Dir[Rails.root.join("spec/support/**/*.rb")].each {|f| require f}
+
+RSpec.configure do |config|
+  # == Mock Framework
+  #
+  # If you prefer to use mocha, flexmock or RR, uncomment the appropriate line:
+  #
+  # config.mock_with :mocha
+  # config.mock_with :flexmock
+  config.mock_with :rr
+  # config.mock_with :rspec
+
+  # Remove this line if you're not using ActiveRecord or ActiveRecord fixtures
+  config.fixture_path = "#{::Rails.root}/spec/fixtures"
+
+  # If you're not using ActiveRecord, or you'd prefer not to run each of your
+  # examples within a transaction, remove the following line or assign false
+  # instead of true.
   config.use_transactional_fixtures = true
-  config.use_instantiated_fixtures  = false
-  config.fixture_path = RAILS_ROOT + '/spec/fixtures'
-
-  # You can declare fixtures for each behaviour like this:
-  #   describe "...." do
-  #     fixtures :table_a, :table_b
-  #
-  # Alternatively, if you prefer to declare them only once, you can
-  # do so here, like so ...
-  #
-  #   config.global_fixtures = :table_a, :table_b
-  #
-  # If you declare global fixtures, be aware that they will be declared
-  # for all of your examples, even those that don't use them.
-
-  config.global_fixtures = :users
 end
-
-  def user_attributes
-    { :login                 => 'new_user',
-      :first_name            => 'new',
-      :last_name             => 'user',
-      :email                 => 'some_random_email@sc.edu',
-      :password              => 'password', 
-      :password_confirmation => 'password',
-      :registration_code     => 'stat110f07'
-    }
-  end
-
-  def stub_actions(object, actions_and_return_values)
-    actions_and_return_values.each do |(action,return_value)|
-      object.stub!(action).and_return(return_value)
-    end
-  end
-
-  def login_as(user)
-    request.session[:user] = user ? users(user).id : nil
-  end
-
-  def auth_token(token)
-    CGI::Cookie.new('name' => 'auth_token', 'value' => token)
-  end
-
-  def cookie_for(user)
-    auth_token users(user).remember_token
-  end
-
-  def should_be_logged_in
-    response.session.should_not be_nil
-    response.session[:user].should_not be_nil
-  end
-
-  def should_not_be_logged_in
-    response.session.should_not be_nil
-    response.session[:user].should be_nil
-  end
-

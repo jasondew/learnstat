@@ -10,9 +10,10 @@ class User < ActiveRecord::Base
   has_many :question_responses
   has_many :audits
 
+  validates_presence_of :first_name, :last_name, :blackboard_username, :email, :password, :password_confirmation
   validates_uniqueness_of :blackboard_username, :case_sensitive => false
 
-  before_save :set_course
+  before_validation {|user| user.errors.add :registration_code, "is invalid" unless user.course }
 
   def to_s
     email
@@ -47,62 +48,10 @@ class User < ActiveRecord::Base
     grades.inject(0.0) {|sum, grade| sum += grade.value unless grade.exam.final; sum } / grades.reject {|grade| grade.exam.final }.length
   end
 
-  def facebook
-    if token = authenticated_with?(:facebook)
-      @facebook ||= JSON.parse(token.get("/me"))
-    end
-  end
+  def registration_code= code
+    return true if course
 
-  def twitter
-    if token = authenticated_with?(:twitter)
-      @twitter ||= JSON.parse(token.get("/account/verify_credentials.json").body)
-    end
-  end
-
-  def google
-    @google ||= "" # todo
-  end
-
-  # primitive profile to show what's possible
-  def profile
-    unless @profile
-      @profile = if facebook
-        {
-          :id     => facebook["id"],
-          :name   => facebook["name"],
-          :photo  => "https://graph.facebook.com/#{facebook["id"]}/picture",
-          :link   => facebook["link"],
-          :title  => "Facebook"
-        }
-      elsif twitter
-        {
-          :id     => twitter["id"],
-          :name   => twitter["name"],
-          :photo  => twitter["profile_image_url"],
-          :link   => "http://twitter.com/#{twitter["screen_name"]}",
-          :title  => "Twitter"
-        }
-      else
-        {
-          :id     => "unknown",
-          :name   => "User",
-          :photo  => "/images/icons/google.png",
-          :link   => "/images/icons/google.png",
-          :title  => "Google"
-        }
-      end
-    end
-
-    @profile
-  end
-
-  protected
-
-  def set_course
-    return true if self.course
-    self.course = Course.find_by_registration_code registration_code
-    errors.add_to_base "Invalid registration code."
-    false
+    self.course = Course.find_by_registration_code code
   end
 
 end

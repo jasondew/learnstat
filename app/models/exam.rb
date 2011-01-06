@@ -1,10 +1,11 @@
 class Exam < ActiveRecord::Base
 
   belongs_to :course
+
   has_many :grades
 
-  def grade_for(user)
-    if grade = grades.find_by_user_id( user.id )
+  def grade_for user
+    if (grade = grades.find_by_user_id(user.id))
       grade.value
     else
       '**'
