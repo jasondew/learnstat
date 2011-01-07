@@ -1,38 +1,5 @@
 module QuizzesHelper
 
-  def quiz_title(quiz)
-    returning(Array.new) do |html|
-      html << @quiz.name
-      html << link_to(image_tag('application_form_edit.png', :alt => 'Edit Quiz'), edit_course_quiz_path(@course, @quiz)) if current_user.instructor?
-    end.join("\n")
-  end
-
-  def quiz_instructions(quiz)
-    returning(Array.new) do |html|
-      if @quiz.closed?
-        html << "<strong>Completed Assignment:</strong> This assignment was due on #{datetime_format(@quiz.due_at)}."
-        html << "Your answer, if you provided one, is shown in green.  The correct answer to the question is shown underlined."
-        html << content_tag(:p, "Mean: #{percent_format @quiz.mean}, Standard Deviation: #{number_with_precision @quiz.standard_deviation, 2}",
-                            :class => "information")
-      else
-        html << "<strong>Instructions:</strong> Complete the following questions by clicking on the answer of your choice."
-        html << "You have until #{datetime_format(@quiz.due_at)} to complete this assignment.  No assignment, written or "
-        html << "otherwise, will be accepted after that time."
-      end
-    end.join("\n")
-  end
-
-  def quiz_instructor_information(quiz)
-    return unless instructor?
-
-    content_tag(:p) do
-      returning(Array.new) do |html|
-        html << content_tag(:div, "Participation: #{percent_format( @quiz.participation )}")
-        html << content_tag(:div, "Questions: #{@quiz.questions.count}")
-      end.join("\n")
-    end
-  end
-
   def instructor_quiz_links(quiz)
     return unless instructor?
 

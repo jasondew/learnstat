@@ -3,8 +3,7 @@ class Quiz < ActiveRecord::Base
   belongs_to :course
 
   has_many :questions, :class_name => "QuizQuestion"
-  has_many :question_responses, :order => "quiz_question_id"
-  has_many :correct_responses, :class_name => "QuestionResponse", :conditions => { :correct => true }, :order => "quiz_question_id"
+  has_many :question_responses, :through => :questions, :source => :question, :order => "quiz_questions.id"
 
   validates_presence_of :name, :due_at, :viewable_at
 
@@ -25,9 +24,13 @@ class Quiz < ActiveRecord::Base
   end
   extend ClassMethods
 
+  def to_s
+    name
+  end
+
   def mean
     return if question_responses.empty?
-    @mean_score ||= correct_responses.size / question_responses.size.to_f
+    @mean_score ||= question_responses.correct.count / question_responses.size.to_f
   end
 
   def standard_deviation
@@ -47,7 +50,7 @@ class Quiz < ActiveRecord::Base
 
   def grade_for(user)
     return unless user.question_responses.size > 0 and questions.size > 0
-    (user.correct_responses.select {|response| response.quiz_id == id }.size / questions.size.to_f)
+    (user.question_responses.correct.select {|response| response.quiz_id == id }.size / questions.size.to_f)
   end
 
   def percentile_for(user)
@@ -69,7 +72,7 @@ class Quiz < ActiveRecord::Base
   end
 
   def number_attempted
-    question_responses.collect {|response| response.user_id }.uniq.size
+    question_responses.map {|response| response.user_id }.uniq.size
   end
 
   def open?

@@ -1,6 +1,5 @@
 class CoursesController < ApplicationController
 
-  before_filter :require_user
   before_filter :redirect_students_to_show, :except => :show
 
   inherit_resources

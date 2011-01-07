@@ -64,11 +64,9 @@ class InitialSchema < ActiveRecord::Migration
     add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
     create_table "question_responses", :force => true do |t|
-      t.integer  "user_id"
-      t.integer  "quiz_question_id"
-      t.integer  "question_choice_id"
-      t.boolean  "correct"
-      t.datetime "created_at"
+      t.belongs_to :user, :quiz_question, :question_choice
+      t.boolean  :correct
+      t.timestamps
     end
 
     add_index "question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
@@ -82,19 +80,17 @@ class InitialSchema < ActiveRecord::Migration
     end
 
     create_table "quiz_questions", :force => true do |t|
-      t.integer "quiz_id"
-      t.integer "question_id"
-      t.boolean "forgiven",    :default => false
+      t.belongs_to :quiz, :question
+      t.boolean :forgiven, :default => false
     end
 
     add_index "quiz_questions", ["quiz_id"], :name => "index_quiz_questions_on_quiz_id"
 
     create_table "quizzes", :force => true do |t|
-      t.integer  "course_id"
-      t.string   "name"
-      t.datetime "due_at"
-      t.datetime "viewable_at"
-      t.datetime "created_at"
+      t.belongs_to :course
+      t.string :name
+      t.datetime :due_at, :viewable_at
+      t.timestamps
     end
 
     add_index "quizzes", ["course_id"], :name => "index_quizzes_on_course_id"

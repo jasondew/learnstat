@@ -1,9 +1,27 @@
-%h2= quiz_title(@quiz)
+%h2
+  = @quiz
+  - if instructor?
+    = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_course_quiz_path(@course, @quiz)
 
-%p.instructions= quiz_instructions(@quiz)
+%p.instructions
+  - if @quiz.closed?
 
-= quiz_instructor_information(@quiz)
+    %strong Completed Assignment:
+    == This assignment was due on #{datetime_format @quiz.due_at}.
+    Your answer, if you provided one, is shown in green.  The correct answer to the question is shown underlined.
+    %p.information== Mean: #{percent_format @quiz.mean}, Standard Deviation: #{number_with_precision @quiz.standard_deviation, :precision => 2}
 
-%ol.questions= render :partial => 'quiz_question', :collection => @quiz.questions
+  - else
 
-%p= link_to 'Done', course_path(@course)
+    %strong Instructions:
+    Complete the following questions by clicking on the answer of your choice.
+    == You have until #{datetime_format @quiz.due_at} to complete this assignment.  No assignment, written or otherwise, will be accepted after that time.
+
+- if instructor?
+
+  %p== Participation: #{percent_format @quiz.participation}
+  %p== Questions: #{@quiz.questions.count}
+
+%ol.questions= render @quiz.questions
+
+%p= link_to "Done", @course

@@ -10,6 +10,7 @@ module NavigationHelpers
 
     when /the documents page/ then course_documents_path(@course)
     when /the announcements page/ then course_announcements_path(@course)
+    when /the quizzes page/ then course_quizzes_path(@course)
     when /the roster page/ then course_roster_path(@course)
     when /the gradebook page/ then course_gradebook_path(@course)
     when /the account page/ then account_path

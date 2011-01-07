@@ -1,11 +1,3 @@
-%p
-  %label{:for => "name"} Name:
-  = f.text_field :name
-
-%p
-  %label{:for => "due_at"} Due:
-  = f.text_field :due_at_textual
-
-%p
-  %label{:for => "viewable_at"} Viewable at:
-  = f.text_field :viewable_at_textual
+= form.input :name
+= form.input :due_at
+= form.input :viewable_at

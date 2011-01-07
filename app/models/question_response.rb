@@ -12,6 +12,8 @@ class QuestionResponse < ActiveRecord::Base
   delegate :quiz, :to => :quiz_question
   delegate :course, :to => :user
 
+  scope :correct, :conditions => {:correct => true}
+
   private
 
   def timely_response
