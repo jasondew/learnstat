@@ -1,8 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-<% 1.upto(5) do |count| %>
-quiz_question_<%= count %>:
-  quiz_id: 1
-  question_id: <%= count %>
-  forgiven: false
-<% end %>

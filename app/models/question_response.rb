@@ -1,20 +1,21 @@
 class QuestionResponse < ActiveRecord::Base
 
   belongs_to :user
-  belongs_to :course
-  belongs_to :quiz
   belongs_to :quiz_question
   belongs_to :question_choice
 
-  validates_presence_of :user_id, :course_id, :quiz_id, :quiz_question_id, :question_choice_id
+  validates_presence_of :user_id, :quiz_question_id, :question_choice_id
   validate :timely_response
 
   before_save :ensure_uniqueness
 
+  delegate :quiz, :to => :quiz_question
+  delegate :course, :to => :user
+
   private
-  
+
   def timely_response
-    errors.add(:quiz_id, 'untimely response') unless quiz.open?
+    errors.add :quiz_id, "untimely response" unless quiz.open?
   end
 
   def ensure_uniqueness

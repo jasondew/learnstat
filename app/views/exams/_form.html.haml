@@ -1,18 +1,16 @@
-%p
-  %label{ :for => 'name'} Name: 
-  = f.text_field :name
-
-%p
-  %label{ :for => 'given_on_textual' } Given:
-  = f.text_field :given_on_textual
-
-%p
-  %label{ :for => 'final' } Final Exam?
-  = f.check_box :final
+%p= form.input :name
+%p= form.input :given_on, :as => :date
+%p= form.input :final, :as => :boolean
 
 %table
   %tr
     %th Name
     %th Grade
 
-  = render :partial => 'grade', :collection => @exam.grades
+  - @course.students.each do |student|
+    = form.fields_for :grades, @exam.grades.build(:user => student) do |grade_form|
+      %tr
+        %td= student.full_name
+        %td
+          = grade_form.hidden_field :user_id, :value => student.id
+          = grade_form.text_field :value, :size => 4

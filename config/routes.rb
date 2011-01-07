@@ -1,6 +1,7 @@
 Learnstat::Application.routes.draw do
   resources :users
   resource :user_session
+  resource :account
 
   match "/signup" => "users#new"
   match "/login"  => "user_sessions#create"

@@ -1,11 +1,9 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require "spec_helper"
 
 describe QuestionChoice do
-  before(:each) do
-    @question_choice = QuestionChoice.new
-  end
 
-  it "should be valid" do
-    @question_choice.should be_valid
-  end
+  let(:question_choice) { Factory.build(:question_choice) }
+
+  it("should be valid from the factory") { question_choice.should be_valid }
+
 end

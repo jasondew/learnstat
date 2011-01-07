@@ -32,7 +32,7 @@ module ApplicationHelper
     ['quizzes',       "course_quizzes_path(@course)",                 true ],
     ['roster',        "course_roster_path(@course)",                  false],
     ['grades',        "course_gradebook_path(@course)",               true ],
-    ['profile',       "edit_course_user_path(@course, current_user)", true ]
+    ['profile',       "account_path", true ]
   ]
 
   def render_collection(objects, name, wrapper = nil)
@@ -46,8 +46,8 @@ module ApplicationHelper
 
     [content_tag(:p, welcome_message, :class => 'left'),
      content_tag(:p, navbar_title, :class => 'middle'),
-     content_tag(:p, user_information, :class => 'right'),
-     content_tag(:br)].join("\n").html_safe
+     content_tag(:p, user_information, :class => 'right')
+     ].join("\n").html_safe
   end
 
   def menubar
@@ -72,14 +72,14 @@ module ApplicationHelper
 
   def item_selected
     case controller
-      when AnnouncementsController: 'announcements'
-      when DocumentsController: 'documents'
-      when QuizzesController: 'quizzes'
-      when UsersController: 'profile'
-      when GradebooksController: 'grades'
-      when CoursesController: 'home'
-      when RostersController: 'roster'
-      else 'home'
+      when AnnouncementsController then "announcements"
+      when DocumentsController then "documents"
+      when QuizzesController then "quizzes"
+      when AccountsController then "profile"
+      when GradebooksController then "grades"
+      when CoursesController then "home"
+      when RostersController then "roster"
+      else "home"
     end
   end
 
@@ -89,9 +89,9 @@ module ApplicationHelper
   end
 
   def small_block(title, content)
-    content_tag(:div, :class => 'small_block') do
-      [content_tag(:div, title, :class => 'small_block_head'),
-       content_tag(:div, content, :class => 'small_block_body')].join("\n").html_safe
+    content_tag(:div, :class => "small_block") do
+      [content_tag(:div, title, :class => "small_block_head"),
+       content_tag(:div, content, :class => "small_block_body")].join("\n").html_safe
     end
   end
 

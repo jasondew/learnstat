@@ -1,4 +1,8 @@
-.block_head= announcement_title(announcement)
+.block_head
+  = announcement.title
+  - if current_user.instructor?
+    = link_to image_tag("comment_edit.png", :alt => "Edit Announcement", :title => "Edit Announcement"), edit_course_announcement_path(@course, announcement)
+    = link_to image_tag("comment_delete.png", :alt => "Delete Announcement", :title => "Delete Announcement"), course_announcement_path(@course, announcement), :method => :delete, :confirm => "Are you sure?"
 
 .block_body
   = announcement.body

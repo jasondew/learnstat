@@ -1,9 +1,0 @@
-# Read about fixtures at http://ar.rubyonrails.org/classes/Fixtures.html
-
-<% 1.upto(5) do |count| %>
-question_<%= count %>:
-  id: <%= count %>
-  answer: 42
-  content: Some question text
-  chapter: 2
-<% end %>

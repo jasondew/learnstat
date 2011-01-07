@@ -1,6 +1,15 @@
 - if document.viewable_now? or instructor?
+  .block_head
+    = document.label
+    - if instructor?
+      = link_to image_tag("page_edit.png", :alt => "Edit Document"), edit_course_document_path(@course, document)
+      = link_to image_tag("page_delete.png", :alt => "Delete Document"), course_document_path(@course, document), :confirm => "Are you sure?", :method => :delete
+      %span.information.right
+        - if document.viewable_now?
+          viewable now
+        - else
+          == viewable on #{datetime_format document.viewable_at}
 
-  .block_head= document_title(document)
   .block_body
-    = link_to document.filename, document.public_filename
-    .block_information= document_information(document)
+    = link_to document.file_name, document.file_url
+    .block_information== added #{datetime_format document.viewable_at}

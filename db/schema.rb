@@ -49,11 +49,10 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
     t.integer  "course_id"
     t.integer  "user_id"
     t.string   "label"
+    t.string   "file"
     t.datetime "viewable_at"
-    t.string   "content_type"
-    t.string   "filename"
-    t.integer  "size"
     t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "documents", ["course_id"], :name => "index_documents_on_course_id"
@@ -61,7 +60,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   create_table "exams", :force => true do |t|
     t.integer  "course_id"
     t.string   "name"
-    t.datetime "given_on"
+    t.date     "given_on"
     t.boolean  "final"
     t.datetime "created_at"
     t.datetime "updated_at"
@@ -71,14 +70,13 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
 
   create_table "grades", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "course_id"
     t.integer  "exam_id"
-    t.float    "value"
+    t.decimal  "value",      :precision => 5, :scale => 2
     t.datetime "created_at"
     t.datetime "updated_at"
   end
 
-  add_index "grades", ["course_id"], :name => "index_grades_on_course_id"
+  add_index "grades", ["exam_id"], :name => "index_grades_on_exam_id"
 
   create_table "question_choices", :force => true do |t|
     t.integer "question_id"
@@ -89,16 +87,14 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
 
   create_table "question_responses", :force => true do |t|
     t.integer  "user_id"
-    t.integer  "course_id"
-    t.integer  "quiz_id"
     t.integer  "quiz_question_id"
     t.integer  "question_choice_id"
     t.boolean  "correct"
     t.datetime "created_at"
   end
 
-  add_index "question_responses", ["quiz_id", "user_id", "correct"], :name => "index_question_responses_on_quiz_id_and_user_id_and_correct"
-  add_index "question_responses", ["quiz_id"], :name => "index_question_responses_on_quiz_id"
+  add_index "question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
+  add_index "question_responses", ["quiz_question_id"], :name => "index_question_responses_on_quiz_question_id"
   add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
 
   create_table "questions", :force => true do |t|
@@ -153,6 +149,8 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
     t.datetime "last_login_at"
     t.string   "current_login_ip"
     t.string   "last_login_ip"
+    t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "users", ["email"], :name => "index_users_on_email"

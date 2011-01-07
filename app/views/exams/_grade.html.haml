@@ -1,7 +1,0 @@
-- fields_for "exam[grade_attributes][]", grade do |grade_form|
-  %tr
-    = hidden_field_tag "exam[grade_attributes][#{grade.id}][user_id]", grade.user_id
-    = hidden_field_tag "exam[grade_attributes][#{grade.id}][course_id]", grade.course_id
-
-    %td= grade.for
-    %td= grade_form.text_field :value, :size => 4

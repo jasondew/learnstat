@@ -31,3 +31,14 @@ Feature: user authentication
       | user[registration_code]     | il33th4x0r              |
     And I press "Register"
     Then I should see "is invalid"
+
+  Scenario: a user changing their account details
+    Given I am logged in
+    When I go to the edit account page
+    And I fill in the following:
+      | user[first_name]            | John         |
+      | user[password]              | NewPassword! |
+      | user[password_confirmation] | NewPassword! |
+    And I press "Update"
+    Then I should see a success message
+    And I should be able to reauthenticate with "NewPassword!"

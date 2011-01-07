@@ -4,14 +4,18 @@ $blue: #437DA9;
 $brown: #A97643;
 $black: #222627;
 $white: #dfe9e1;
+$gray: #333333;
 
 @import "reset";
 @import "mixins";
 
+html { background: $gray; }
+
 body {
   font-family: verdana, arial, sans-serif;
   font-size: 11pt;
-  background: silver;
+  background: $gray;
+  @include gradient($black / 2, $gray);
 }
 
 br {
@@ -31,7 +35,7 @@ h1 {
   margin: 0 auto;
   width: 798px;
   height: 100px;
-  border: 1px solid #111111;
+  border: 1px solid $black;
   border-width: 0 1px;
   background: white url("/images/learnstat-logo.png") no-repeat;
 
@@ -41,7 +45,7 @@ h1 {
 h2 {
   font-family: georgia, serif;
   font-size: 24px;
-  color: #373737;
+  color: $gray;
   margin: 4px 10px;
 }
 
@@ -56,7 +60,7 @@ h3 {
   color: black;
   margin: 10px 15px;
   padding: 10px;
-  border: 2px solid #333333;
+  border: 2px solid $gray;
   font-family: verdana, arial, sans-serif;
   font-size: 14px;
 }
@@ -65,7 +69,7 @@ h3 {
   background: #696969;
   width: 650px;
   margin: 10px auto;
-  border: 1px solid #333333;
+  border: 1px solid $gray;
   padding: 0;
   color: white;
   font-family: georgia, serif;
@@ -78,7 +82,7 @@ h3 {
   p.criteria {
     margin: 0 auto 10px auto;
     text-align: center;
-    border-bottom: 1px solid #111111;
+    border-bottom: 1px solid $black;
     font-family: arial, sans-serif;
     font-size: 16px;
     font-variant: small-caps;
@@ -104,16 +108,13 @@ h3 {
   .submit { text-align: center; }
 }
 
-#remember_me {
-  vertical-align: top; }
-
 div.block_head {
   color: white;
   background: url("/images/rounded_top.png") top left no-repeat;
   height: 26px;
   width: 720px;
   padding: 4px;
-  border-bottom: 1px solid #333333;
+  border-bottom: 1px solid $gray;
   font-size: 20px;
   font-weight: bold;
   margin: 0 auto; }
@@ -148,7 +149,7 @@ div.small_block_head {
   height: 20px;
   width: 292px;
   padding: 4px;
-  border-bottom: 1px solid #333333; }
+  border-bottom: 1px solid $gray; }
 
 div.small_block_body {
   background: url("/images/rounded_small_bottom.png") bottom left no-repeat;
@@ -168,20 +169,19 @@ pre {
 
 a, a:link, a:visited, a:active {
   text-decoration: none;
-  color: $red; }
+  color: $red;
+}
 
-a:hover {
-  text-decoration: underline; }
+a:hover { text-decoration: underline; }
 
-p {
-  padding: 5px 10px; }
+p { padding: 5px 10px; }
 
 p.instructions {
   width: 75%;
   margin: 10px;
   padding: 4px;
   border: 1px solid #999999;
-  color: #333333; }
+  color: $gray; }
 
 ul, ol {
   margin: 10px 35px; }
@@ -193,91 +193,97 @@ ul.quizzes li {
   margin: 0 auto;
   background: url(/images/stripes.png) top left repeat-x;
   width: 798px;
-  border: 1px solid #111111;
+  border: 1px solid $black;
   border-width: 1px;
   font-weight: bold;
   font-size: 85%;
   font-variant: small-caps;
   text-align: center;
   padding: 4px 0 !important;
-  padding: 0; }
-  #navbar a {
-    color: #eeeeee; }
-    #navbar a:hover {
-      color: #990000; }
-  #navbar p {
+  padding: 0;
+
+  a {
+    color: #eeeeee;
+    &:hover { color: #990000; }
+  }
+
+  p {
     padding: 0 4px;
-    color: #f0f0f0; }
-  #navbar p.left {
+    color: #f0f0f0;
+  }
+
+  p.left {
     float: left;
     width: 185px;
-    text-align: left; }
-  #navbar p.middle {
+    text-align: left;
+  }
+
+  p.middle {
     width: 400px;
     float: left;
     color: white;
-    text-align: center; }
-  #navbar p.right {
+    text-align: center;
+  }
+
+  p.right {
     float: right;
     width: 185px;
-    text-align: right; }
-
-#messages * {
-  text-align: center;
-  padding: 8px;
-  border: 1px solid #dddddd;
-  margin: 8px 0;
-  background-color: #fffad7; }
-#messages .notice {
-  color: black; }
-#messages .error {
-  color: red;
-  font-weight: bold; }
-#messages .warning {
-  color: red; }
+    text-align: right;
+  }
+}
 
 #menubar {
   margin: 0 auto;
-  background: url(/images/menu_gradient.png) top left repeat-x;
+  @include gradient($gray*5, $gray*3);
   width: 798px;
-  border: 1px solid #111111;
+  border: 1px solid $black;
   border-width: 0 1px;
   font-size: 110%;
   font-weight: bold;
   font-variant: small-caps;
-  text-align: center; }
-  #menubar a {
+  text-align: center;
+
+  a {
     color: #e0e0e0;
     padding: 5px;
-    display: inline; }
-    #menubar a img {
+
+    img {
       behavior: url(/iepngfix.htc);
-      vertical-align: bottom; }
-    #menubar a:hover, #menubar a.selected {
+      vertical-align: bottom;
+    }
+
+    &:hover, &.selected {
       background: url(/images/menu_background.png) bottom left repeat-x;
-      color: #111111; }
+      color: $black;
+    }
+  }
+}
 
 #content {
   background: white;
   margin: 0 auto;
   padding: 6px 0;
   width: 798px;
-  border: 1px solid #111111;
+  border: 1px solid $black;
   border-width: 0 1px;
   min-height: 200px;
   clear: both;
 }
 
 #footer {
+  clear: both;
   margin: 0 auto;
+  padding: 5px 0;
   text-align: center;
   background: url(/images/stripes.png) bottom left repeat-x;
   width: 798px;
-  border: 1px solid #111111;
-  color: #f0f0f0;
+  border: 1px solid $black;
+  color: $white;
   font-weight: bold;
   font-size: 85%;
   font-variant: small-caps;
+
+  a { color: $white; }
 }
 
 div.uploadStatus { margin: 5px; }
@@ -290,7 +296,7 @@ div.progressBar {
     width: 100%;
   }
   div.background {
-    background-color: #333333;
+    background-color: $gray;
     height: 18px;
     width: 0%;
   }
@@ -347,7 +353,7 @@ table {
   border-collapse: collapse;
   margin: 10px auto;
   font-size: 75%;
-  border-bottom: 1px solid #333333; }
+  border-bottom: 1px solid $gray; }
   table th {
     background: #9b2f47;
     color: white; }
@@ -355,11 +361,11 @@ table {
       color: white; }
   table th, table td {
     padding: 4px;
-    border: 1px solid #333333; }
+    border: 1px solid $gray; }
   table td.name {
     background: #d6abb5; }
   table td.name, table th.name {
-    border-right: 2px solid #333333; }
+    border-right: 2px solid $gray; }
   table .data {
     text-align: right; }
 

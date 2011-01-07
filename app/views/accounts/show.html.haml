@@ -1,0 +1,15 @@
+%h2 My Profile
+
+%p
+  %label Email:
+  = @user.email
+
+%p
+  %label First name:
+  = @user.first_name
+
+%p
+  %label Last name:
+  = @user.last_name
+
+%p= link_to "Edit My Profile", edit_account_path

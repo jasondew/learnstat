@@ -1,22 +1,26 @@
 class Quiz < ActiveRecord::Base
 
   belongs_to :course
-  has_many :questions, :class_name => 'QuizQuestion'
-  has_many :question_responses, :order => 'quiz_question_id'
-  has_many :correct_responses, :class_name => 'QuestionResponse', :conditions => { :correct => true }, :order => 'quiz_question_id'
 
-  def self.decode_completion_code(code)
-    begin
-      Marshal.load code.unpack('m')[0]
-    rescue Exception => e
-      return nil
-    end
-  end
+  has_many :questions, :class_name => "QuizQuestion"
+  has_many :question_responses, :order => "quiz_question_id"
+  has_many :correct_responses, :class_name => "QuestionResponse", :conditions => { :correct => true }, :order => "quiz_question_id"
 
-  validates_presence_of :name, :due_at
+  validates_presence_of :name, :due_at, :viewable_at
+
   validate :future_due_date
   validate :viewable_before_due
 
+  module ClassMethods
+    def decode_completion_code(code)
+      begin
+        Marshal.load code.unpack('m')[0]
+      rescue Exception => e
+        return nil
+      end
+    end
+  end
+  extend ClassMethods
 
   def mean
     return if question_responses.empty?

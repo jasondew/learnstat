@@ -1,5 +1,5 @@
 %h2 Documents
 
-= render_collection(@course.documents, 'document')
+= render @documents
 
-%p= instructor_link 'Add a document', 'page_add.png', new_course_document_path(@course)
+%p= instructor_link "Add a document", "page_add.png", new_course_document_path(@course)

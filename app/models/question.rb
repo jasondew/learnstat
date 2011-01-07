@@ -7,6 +7,8 @@ class Question < ActiveRecord::Base
   #FIXME replace ferret
   # acts_as_ferret :fields => {:content => {:store => :yes}, :choice_texts => { }}, :remote => false
 
+  validates_presence_of :content, :answer
+
   def choice_texts
     choices.collect(&:content).join(" ")
   end

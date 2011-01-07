@@ -23,27 +23,16 @@ module CoursesHelper
     end.join("\n")
   end
 
-  def format_announcements(announcements)
-    return content_tag(:p, "There are no announcements at this time.") if announcements.empty?
-
-    returning(Array.new) do |html|
-      html << announcements.collect {|announcement| render :partial => "announcements/announcement", :locals => { :announcement => announcement } }.join("\n")
-      html << content_tag(:div, link_to('View all announcements', course_announcements_path(@course)), :class => 'collection_link')
-    end.join("\n")
-  end
-
   def format_documents(documents)
     return content_tag(:p, "There are no documents at this time.") if documents.empty?
 
-    document_links = documents.collect do |document|
+    document_links = documents.map do |document|
       content_tag(:dt, link_to(document.label, course_document_path(@course, document))) +
         content_tag(:dd, "added #{datetime_format(document.created_at)}")
     end
 
-    returning(Array.new) do |html|
-      html << content_tag(:dl, document_links.join("\n"))
-      html << content_tag(:div, link_to('View all documents', course_documents_path(@course)), :class => 'collection_link')
-    end.join("\n")
+    [content_tag(:dl, document_links.join("\n").html_safe),
+     content_tag(:div, link_to('View all documents', course_documents_path(@course)), :class => 'collection_link')].join("\n").html_safe
   end
 
   def gradeable_path(gradeable)

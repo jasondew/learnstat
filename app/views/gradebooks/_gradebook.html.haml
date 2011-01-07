@@ -6,36 +6,39 @@
       - @course.gradeables.each do |gradeable|
         %th
           = link_to shorten(gradeable.name), gradeable_path( gradeable )
-          = link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
-      %th Quiz Avg.
-      %th Exam Avg.
+          -#FIXME= link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
+      - unless @course.gradeables.empty?
+        %th Quiz Avg.
+        %th Exam Avg.
 
   %tboby
     - @students.each do |student|
       %tr
         %td.name= student.name
         - @course.gradeables.each do |gradeable|
-          %td.data= percent_format gradebook[gradeable.name.underscore][student.id]
-        %td.data= percent_format gradebook['quiz_average'][student.id]
-        %td.data= percent_format gradebook['exam_average'][student.id]
+          %td.data= percent_format @gradebook[gradeable.name.underscore][student.id]
+
+        - unless @course.gradeables.empty?
+          %td.data= percent_format @gradebook['quiz_average'][student.id]
+          %td.data= percent_format @gradebook['exam_average'][student.id]
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?
 
-%h3 Final Exam Score Needed
+- unless @course.gradeables.empty?
+  %h3 Final Exam Score Needed
 
-%table
+  %table
 
-  %thead
-    %tr
-      %th.name Student
-      - Course::ALL_LETTER_GRADES.each do |(name, minimum)|
-        %th= name
-
-  %tbody
-    - @students.each do |student|
+    %thead
       %tr
-        %td.name= student.name
-
+        %th.name Student
         - Course::ALL_LETTER_GRADES.each do |(name, minimum)|
-          %td.data= percent_format minimum_final_grade_for(minimum, gradebook['quiz_average'][student.id], gradebook['exam_average'][student.id])
+          %th= name
 
+    %tbody
+      - @students.each do |student|
+        %tr
+          %td.name= student.name
+
+          - Course::ALL_LETTER_GRADES.each do |(name, minimum)|
+            %td.data= percent_format minimum_final_grade_for(minimum, @gradebook['quiz_average'][student.id], @gradebook['exam_average'][student.id])

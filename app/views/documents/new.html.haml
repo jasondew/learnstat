@@ -1,9 +1,7 @@
 %h2 New document
 
-= error_messages_for :document
-
-- form_for(:document, :url => course_documents_path(@course), :html => { :multipart => true } ) do |f|
-  = render :partial => 'form', :locals => { :f => f }
+= simple_form_for [@course, @document], :html => { :multipart => true } do |form|
+  = render "form", :form => form
   %p
-    = submit_tag "Upload"
-    = link_to 'Cancel', course_path(@course)
+    = form.submit "Create"
+    = link_to "Cancel", @course

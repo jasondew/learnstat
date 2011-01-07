@@ -208,7 +208,7 @@ DEPENDENCIES
   awesome_print
   capybara!
   carrierwave
-  coded_options (~> 0.2.0)
+  coded_options
   cucumber-rails
   database_cleaner
   exception_notification!

@@ -1,4 +1,6 @@
 class ApplicationController < ActionController::Base
+  include ActionView::Helpers::NumberHelper
+
   protect_from_forgery
 
   helper_method :current_user_session, :current_user, :logged_in?

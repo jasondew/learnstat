@@ -1,7 +1,12 @@
 %h2 Latest Announcements
 
-#announcements= format_announcements(@latest_announcements)
+#announcements
+  - if @latest_announcements.empty?
+    %p There are no announcements at this time.
+  - else
+    = render @latest_announcements
+    = link_to "View all announcements", course_announcements_path(@course), :class => "collection_link"
 
-= small_block('Latest Documents', format_documents(@latest_documents))
-= small_block('Open Quizzes', format_quizzes(@open_quizzes))
-= small_block('Latest Grades', format_grades(@latest_grades)) unless instructor?
+= small_block "Latest Documents", format_documents(@latest_documents)
+= small_block "Open Quizzes", format_quizzes(@open_quizzes)
+= small_block "Latest Grades", format_grades(@latest_grades) unless instructor?

@@ -1,5 +1,5 @@
 %h2 Announcements
 
-= render_collection @announcements, 'announcement'
+= render @announcements
 
-%p= instructor_link 'Add an announcement', 'newspaper_add.png', new_course_announcement_path(@course)
+%p= instructor_link "Add an announcement", "newspaper_add.png", new_course_announcement_path(@course)

@@ -1,46 +1,19 @@
 class DocumentsController < ApplicationController
 
   before_filter :require_instructor, :except => :show
-  before_filter :get_course
 
-  def index
-  end
+  inherit_resources
+  belongs_to :course
+  actions :all, :except => [:edit, :update]
 
   def show
-    @document = @course.documents.find params[:id]
-
-#    response.headers['X-Accel-Redirect'] = @document.full_filename
-#    response.headers['Content-Type'] = @document.content_type
-#    response.headers['Content-length'] = @document.size
-#    response.headers['Content-Disposition'] = %Q|attachment; filename="#{@document.filename}"|
-
-#    render :nothing => true
-    send_file @document.full_filename, :type => @document.content_type, :buffer_size => 32768
-  end
-
-  def new
-    @document = Document.new
+    resource
+    redirect_to @document.file_url
   end
 
   def create
-    @document = @course.documents.build params[:document]
-
-    if @document.save
-      flash[:notice] = 'Document was successfully created.'
-      redirect_to course_documents_path(@course)
-    else
-      flash[:error] = 'Document was not saved.'
-      render :action => "new"
-    end
-  end
-
-  def destroy
-    @document = @course.documents.find(params[:id])
-    @document.destroy
-
-    flash[:notice] = 'Document destroyed.'
-
-    redirect_to course_documents_path(@course)
+    params[:document][:user_id] = current_user.id
+    create! { @course }
   end
 
 end

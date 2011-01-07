@@ -1,29 +1,27 @@
 !!! 5
 %html{:lang => "en"}
   %head
-    %meta{:name => "google-site-verification", :content => "ZoqF7nZmCBi98S7ibVrO-VcDWCKA4N8krwhWxzOyouc"}
     %meta{:charset => "utf-8"}
     = csrf_meta_tag
-
     %link{:rel => "shortcut icon", :href => "/favicon.ico"}
 
     %title learnSTAT
 
-    = stylesheet_link_tag 'application', 'lightbox'
     /[if lt IE 9] <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-
-    = javascript_include_tag 'prototype', 'effects', 'controls', 'lightbox', 'application'
+    = stylesheet_link_tag "jquery-ui-1.8.5.custom", "application"
+    = javascript_include_tag "jquery-1.4.2.min", "jquery-ui-1.8.5.custom.min", "jquery.dataTables.min", "rails", "application"
 
   %body
     = link_to content_tag(:h1, content_tag(:span, 'learnSTAT')), root_path
 
-    #navbar= navbar
-    = menubar
+    #header
+      #navbar.ui-helper-clearfix= navbar
+      = menubar
 
-    #content
+    #content.ui-helper-clearfix
       = flash_messages
       = yield
-      %br
 
     #footer
-      %p== &copy; 2008 &mdash; #{Date.today.year} Jason Dew
+      == &copy; 2008 &mdash; #{Date.today.year}
+      = link_to "Catamorhpic Labs, LLC", "http://catamorphiclabs.com/"

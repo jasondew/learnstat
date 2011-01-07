@@ -11,6 +11,7 @@ class User < ActiveRecord::Base
   has_many :audits
 
   validates_presence_of :first_name, :last_name, :blackboard_username, :email, :password, :password_confirmation
+  validates_uniqueness_of :email, :case_sensitive => false
   validates_uniqueness_of :blackboard_username, :case_sensitive => false
 
   before_validation {|user| user.errors.add :registration_code, "is invalid" unless user.course }
@@ -19,8 +20,13 @@ class User < ActiveRecord::Base
     email
   end
 
-  alias :full_name :to_s
-  alias :name :to_s
+  def name
+    first_name
+  end
+
+  def full_name
+    "#{first_name} #{last_name}"
+  end
 
   def mean_score
     return if question_responses.empty?

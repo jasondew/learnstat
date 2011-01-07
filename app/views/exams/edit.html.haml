@@ -1,10 +1,8 @@
-%h2 Editing Exam
+%h2 Edit an Exam
 
-= error_messages_for :exam 
+= simple_form_for [@course, @exam] do |form|
+  = render "form", :form => form
 
-- form_for([@course,@exam]) do |f|
-  = render :partial => 'form', :locals => { :f => f }
-  %p= f.submit "Update"
-
-%p= link_to 'Show Exam', course_exam_path(@course,@exam)
-%p= link_to 'Back', @course
+  %p
+    = form.submit "Update"
+    = link_to 'Cancel', @course

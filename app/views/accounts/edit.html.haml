@@ -1,0 +1,10 @@
+= simple_form_for @user, :url => account_path do |form|
+  = form.input :first_name
+  = form.input :last_name
+  = form.input :blackboard_username
+  = form.input :password
+  = form.input :password_confirmation
+
+  %p
+    = form.submit "Update", :class => "button"
+    = link_to "Cancel", root_path, :class => "button"

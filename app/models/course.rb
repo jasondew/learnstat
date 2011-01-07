@@ -7,14 +7,14 @@ class Course < ActiveRecord::Base
   ALL_LETTER_GRADES = [[:F, 0], [:D, 60], [:"D+", 65], [:C, 70], [:"C+", 75], [:B, 80], [:"B+", 85], [:A, 90]]
 
   has_many :users
-  has_many :students, :class_name => 'User', :conditions => { :instructor => false }, :order => 'last_name, first_name'
-  has_one :instructor, :class_name => 'User', :conditions => { :instructor => true }
+  has_many :students, :class_name => "User", :conditions => { :instructor => false }, :order => "last_name, first_name"
+  has_one :instructor, :class_name => "User", :conditions => { :instructor => true }
 
-  has_many :quizzes, :order => 'due_at desc'
-  has_many :exams, :order => 'given_on'
+  has_many :quizzes, :order => "due_at desc"
+  has_many :exams, :order => "given_on"
 
-  has_many :announcements, :extend => LatestMethod, :order => 'created_at desc'
-  has_many :documents, :extend => LatestMethod, :order => 'created_at desc'
+  has_many :announcements, :extend => LatestMethod, :order => "created_at desc"
+  has_many :documents, :extend => LatestMethod, :order => "created_at desc"
 
   include SemesterConstants
 

@@ -2,11 +2,11 @@ require "spec_helper"
 
 describe Exam do
 
-  it("should be valid from the factory") { Factory.build(:exam).should be_valid }
+  let(:exam) { Factory.build(:exam) }
+
+  it("should be valid from the factory") { exam.should be_valid }
 
   context "#grade_for" do
-    let(:exam) { Factory.build(:exam) }
-
     it "should return the grade value when a grade exists" do
       grade = Factory.build(:grade, :value => 92)
       user = mock!.id { :user_id }.subject
@@ -23,71 +23,42 @@ describe Exam do
     end
   end
 
-=begin
-  before(:each) do
-    @exam = Exam.new
-    @course = Factory.build(:course)
-    @grade = Factory.build(:grade)
+  context "#mean" do
+    it "should return nil when there are no grades" do
+      stub(exam).grades { [] }
+      exam.mean.should be_nil
+    end
 
-    @grades = [Factory.build(:grade, :value => 88), Factory.build(:grade, :value => 91)]
-    @exam.stub!(:grades).and_return(@grades)
+    it "should return the mean score when there are grades" do
+      grades = stub!.size { 2 }.subject
+      stub(grades).sum(:value) { 180 }
+      stub(exam).grades { grades }
+
+      exam.mean.should == 90
+    end
   end
 
-  it "should be valid" do
-    @exam.should be_valid
+  context "#standard_deviation" do
+    it "should return nil when there are no grades" do
+      stub(exam).grades { [] }
+      exam.standard_deviation.should be_nil
+    end
+
+    it "should return nil when there is only one grade" do
+      stub(exam).grades { [:foo] }
+      exam.standard_deviation.should be_nil
+    end
+
+    it "should return the standard deviation when there are grades" do
+      grades = [stub!.value {  80 }.subject,
+                stub!.value {  90 }.subject,
+                stub!.value { 100 }.subject]
+
+      stub(exam).mean { 90 }
+      stub(exam).grades { grades }
+
+      exam.standard_deviation.should == 10
+    end
   end
-
-  it "should be able to find the grade for a student when it exists" do
-    @user = Factory.build(:user)
-    @user.should_receive(:id).and_return(12)
-    @grades.should_receive(:find_by_user_id).with(12).and_return(@grade)
-    @grade.should_receive(:value).and_return(0.5)
-
-    @exam.grade_for(@user).should == 0.5
-  end
-
-  it "should be able to find the grade for a student when it doesn't exist" do
-    @user = Factory.build(:user)
-    @user.should_receive(:id).and_return(12)
-    @grades.should_receive(:find_by_user_id).with(12).and_return(nil)
-
-    @exam.grade_for(@user).should == '**'
-  end
-
-  it "should return nil when asked for the mean score and there aren't any scores" do
-    @grades.should_receive(:size).and_return(0)
-
-    @exam.mean.should be_nil
-  end
-
-  it "should be able to calculate the mean score when there are scores" do
-    @grades.should_receive(:size).twice.and_return(2)
-    @grades.should_receive(:sum).with(:value).and_return(22)
-
-    @exam.mean.should == 11
-  end
-
-  it "should be able to calculate the standard deviation when there are enough scores" do
-    @exam.should_receive(:mean).twice.and_return(12)
-
-    @exam.standard_deviation.should == 0
-  end
-
-  it "should set grade attributes (hash version)" do
-    @attributes = [ {} ]
-    @grades.should_receive(:build).with({})
-
-    @exam.grade_attributes=(@attributes)
-  end
-
-  it "should set grade attributes (array version)" do
-    @attributes = [ [@grade.id, {}] ]
-
-    @grades.should_receive(:find).with(@grade.id).and_return(@grade)
-    @grade.should_receive(:update_attributes).with({})
-
-    @exam.grade_attributes=(@attributes)
-  end
-=end
 
 end

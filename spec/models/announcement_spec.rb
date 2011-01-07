@@ -1,11 +1,9 @@
-require File.dirname(__FILE__) + '/../spec_helper'
+require "spec_helper"
 
 describe Announcement do
-  before(:each) do
-    @announcement = Announcement.new
-  end
 
-  it "should be valid" do
-    @announcement.should be_valid
-  end
+  let(:announcement) { Factory.build(:announcement) }
+
+  it("should be valid from the factory") { announcement.should be_valid }
+
 end
