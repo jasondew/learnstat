@@ -1,6 +1,13 @@
 if Course.count == 0
   Course.create :title => "Statistics",
-                :registration_code => "stats"
+                :department => "STAT",
+                :number => "110",
+                :section => "801",
+                :semester_id => 1,
+                :year => 2010,
+                :registration_closes_at => 10.days.from_now,
+                :registration_code => "stats",
+                :user_id => 1
 end
 
 if User.count == 0
@@ -11,7 +18,8 @@ if User.count == 0
               :last_name => "Instructor",
               :blackboard_username => "instructor",
               :registration_code => "stats",
-              :instructor => true
+              :instructor => true,
+              :course_id => 1
 
   User.create :email => "student1@gmail.com",
               :password => "password",
@@ -19,7 +27,8 @@ if User.count == 0
               :first_name => "Student",
               :last_name => "One",
               :blackboard_username => "student1",
-              :registration_code => "stats"
+              :registration_code => "stats",
+              :course_id => 1
 
   User.create :email => "student2@gmail.com",
               :password => "password",
@@ -27,5 +36,6 @@ if User.count == 0
               :first_name => "Student",
               :last_name => "Two",
               :blackboard_username => "student2",
-              :registration_code => "stats"
+              :registration_code => "stats",
+              :course_id => 1
 end

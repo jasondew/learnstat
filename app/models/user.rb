@@ -31,7 +31,7 @@ class User < ActiveRecord::Base
   def mean_score
     return if question_responses.empty?
 
-    closed_quiz_questions = course.closed_questions.size
+    closed_quiz_questions = course.quizzes.closed.map {|quiz| quiz.questions.count }.sum
     return if closed_quiz_questions == 0
 
     correct_responses.size / closed_quiz_questions.to_f
@@ -45,7 +45,7 @@ class User < ActiveRecord::Base
   end
 
   def correct_responses
-    closed_quiz_ids = course.closed_quizzes.map {|quiz| quiz.id }
+    closed_quiz_ids = course.quizzes.closed.map {|quiz| quiz.id }
     question_responses.select {|response| response.correct and closed_quiz_ids.include?(response.quiz_id) }
   end
 

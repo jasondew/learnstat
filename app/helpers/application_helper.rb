@@ -52,6 +52,7 @@ module ApplicationHelper
 
   def menubar
     return unless logged_in? and @course
+    return if (controller.class == CoursesController and action_name != "show")
 
     content_tag(:div, :id => "menubar") do
       MENU_ITEMS.map do |(item, url_method, public_item)|
@@ -72,13 +73,13 @@ module ApplicationHelper
 
   def item_selected
     case controller
+      when CoursesController then "home"
       when AnnouncementsController then "announcements"
       when DocumentsController then "documents"
       when QuizzesController then "quizzes"
-      when AccountsController then "profile"
       when GradebooksController then "grades"
-      when CoursesController then "home"
       when RostersController then "roster"
+      when AccountsController then "profile"
       else "home"
     end
   end
@@ -96,7 +97,7 @@ module ApplicationHelper
   end
 
   def navbar_title
-    @course ? @course.title : ""
+    @course if @course
   end
 
   def welcome_message

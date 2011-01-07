@@ -32,15 +32,15 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   end
 
   create_table "courses", :force => true do |t|
+    t.integer  "user_id"
     t.string   "title"
     t.string   "department"
     t.string   "number"
-    t.integer  "semester"
-    t.integer  "year"
-    t.integer  "section"
-    t.integer  "instructor_id"
+    t.string   "section"
     t.string   "registration_code"
-    t.datetime "registration_closed_at"
+    t.integer  "year"
+    t.integer  "semester_id"
+    t.datetime "registration_closes_at"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

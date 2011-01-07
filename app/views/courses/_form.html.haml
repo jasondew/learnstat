@@ -1,0 +1,8 @@
+= form.input :title, :hint => "e.g., Introduction to Statistical Reasoning"
+= form.input :department, :hint => "e.g., STAT"
+= form.input :number, :hint => "e.g., 110"
+= form.input :section, :as => :string, :hint => "e.g., 801"
+= form.input :semester_id, :collection => Course::SEMESTER_OPTIONS
+= form.input :year, :as => :string
+= form.input :registration_code
+= form.input :registration_closes_at

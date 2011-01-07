@@ -501,7 +501,7 @@ dl dd {
   -webkit-box-shadow: 0px 0px 15px $black;
 }
 
-#notice { @include gradient($blue, $blue*1.5); }
+#notice { @include gradient($green/1.5, $green); }
 #alert { @include gradient($red, $red*1.5); }
 
 .spacer {

@@ -11,6 +11,9 @@ class Quiz < ActiveRecord::Base
   validate :future_due_date
   validate :viewable_before_due
 
+  scope :open, lambda { {:conditions => ["due_at >= ?", Time.now]} }
+  scope :closed, lambda { {:conditions => ["due_at < ?", Time.now]} }
+
   module ClassMethods
     def decode_completion_code(code)
       begin

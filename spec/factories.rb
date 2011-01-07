@@ -8,8 +8,19 @@ Factory.define(:user) do |f|
   f.association :course
 end
 
+Factory.define(:instructor, :parent => :user) do |f|
+  f.instructor true
+end
+
 Factory.define(:course) do |f|
-  f.title "Statistics"
+  f.user_id 1
+  f.department "STAT"
+  f.number "110"
+  f.section "801"
+  f.semester_id 1
+  f.year 2010
+  f.registration_code "stats"
+  f.registration_closes_at 10.days.from_now
 end
 
 Factory.define(:exam) do |f|

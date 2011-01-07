@@ -1,5 +1,7 @@
-Given /^a course with registration code "([^"]+)"$/ do |registration_code|
-  @course = Factory(:course, :registration_code => registration_code)
+Given /^a course(?:| with registration code "([^"]+)")$/ do |registration_code|
+  attributes = {}
+  attributes[:registration_code] = registration_code if registration_code
+  @course = Factory(:course, attributes)
 end
 
 Given /^a course with the following students:$/ do |attributes_table|

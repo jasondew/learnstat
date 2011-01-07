@@ -1,0 +1,12 @@
+%h2 Listing courses
+
+.block
+  %ul
+    - @courses.each do |course|
+      %li
+        = link_to course, course
+        %span.information== (#{course.enrollment} enrolled)
+        = link_to image_tag("group_edit.png", :alt => "Edit course"), edit_course_path(course)
+        = link_to image_tag("group_delete.png", :alt => "Remove course"), course, :confirm => "Are you sure?", :method => :delete
+
+%p= link_to "Add a course", new_course_path

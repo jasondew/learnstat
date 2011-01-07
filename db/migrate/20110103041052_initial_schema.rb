@@ -20,17 +20,13 @@ class InitialSchema < ActiveRecord::Migration
     end
 
     create_table "courses", :force => true do |t|
-      t.string   "title"
-      t.string   "department"
-      t.string   "number"
-      t.integer  "semester"
-      t.integer  "year"
-      t.integer  "section"
-      t.integer  "instructor_id"
-      t.string   "registration_code"
-      t.datetime "registration_closed_at"
-      t.datetime "created_at"
-      t.datetime "updated_at"
+      t.belongs_to :user
+
+      t.string :title, :department, :number, :section, :registration_code
+      t.integer :year, :semester_id
+      t.datetime :registration_closes_at
+
+      t.timestamps
     end
 
     create_table "documents", :force => true do |t|

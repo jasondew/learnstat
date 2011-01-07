@@ -17,6 +17,7 @@ Feature: user authentication
       | user[registration_code]     | stat110sp11             |
     And I press "Register"
     Then I should see a success message
+    And I should see "STAT 110"
 
   Scenario: user registration with an invalid registration code
     When I go to the home page
@@ -31,6 +32,7 @@ Feature: user authentication
       | user[registration_code]     | il33th4x0r              |
     And I press "Register"
     Then I should see "is invalid"
+    And I should not see "STAT 110"
 
   Scenario: a user changing their account details
     Given I am logged in

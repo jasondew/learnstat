@@ -1,54 +1,21 @@
 class CoursesController < ApplicationController
 
+  before_filter :require_user
   before_filter :redirect_students_to_show, :except => :show
 
-  def index
-    @courses = Course.find(:all)
-  end
+  inherit_resources
+  actions :all, :except => :show
 
   def show
     @course = Course.find params[:id]
     @latest_announcements = @course.announcements.latest
     @latest_documents = @course.documents.latest
-    @open_quizzes = @course.open_quizzes
     @latest_grades = @course.gradeables.size > 3 ? @course.gradeables[0..2] : @course.gradeables
   end
 
-  def new
-    @course = Course.new
-  end
-
-  def edit
-    @course = Course.find(params[:id])
-  end
-
   def create
-    @course = current_user.courses.build params[:course]
-
-    if @course.save
-      flash[:notice] = 'Course was successfully created.'
-      redirect_to @course
-    else
-      render :action => "new"
-    end
-  end
-
-  def update
-    @course = Course.find(params[:id])
-
-    if @course.update_attributes(params[:course])
-      flash[:notice] = 'Course was successfully updated.'
-      redirect_to @course
-    else
-      render :action => "edit"
-    end
-  end
-
-  def destroy
-    @course = Course.find(params[:id])
-    @course.destroy
-
-    redirect_to courses_path
+    params[:course][:user_id] = current_user.id
+    create!
   end
 
   private

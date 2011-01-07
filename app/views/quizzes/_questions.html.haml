@@ -1,5 +1,7 @@
 %h3 Available Questions
 
+-# FIXME!
+
 .search
   - form_remote_tag :url => search_course_quiz_quiz_questions_path(@course, @quiz), :update => 'quiz_questions' do
     = text_field_tag 'q'

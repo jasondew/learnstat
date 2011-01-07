@@ -2,6 +2,7 @@
 .sass-cache
 *.swp
 .bundle
+*.sqlite3-journal
 db/*.sqlite3
 log/*.log
 tmp/**/*

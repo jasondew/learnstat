@@ -8,5 +8,5 @@
     = link_to "View all announcements", course_announcements_path(@course), :class => "collection_link"
 
 = small_block "Latest Documents", format_documents(@latest_documents)
-= small_block "Open Quizzes", format_quizzes(@open_quizzes)
+= small_block "Open Quizzes", format_quizzes(@course.quizzes.open)
 = small_block "Latest Grades", format_grades(@latest_grades) unless instructor?
