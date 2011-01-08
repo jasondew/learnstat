@@ -1,16 +1,15 @@
 class QuizQuestionResponse < ActiveRecord::Base
 
-  belongs_to :user
+  belongs_to :quiz_response
   belongs_to :quiz_question
   belongs_to :question_choice
 
-  validates_presence_of :user_id, :quiz_question_id, :question_choice_id
+  validates_presence_of :quiz_response_id, :quiz_question_id, :question_choice_id
   validate :timely_response
 
   before_save :ensure_uniqueness
 
   delegate :quiz, :to => :quiz_question
-  delegate :course, :to => :user
 
   scope :correct, :conditions => {:correct => true}
 

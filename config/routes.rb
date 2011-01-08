@@ -18,10 +18,11 @@ Learnstat::Application.routes.draw do
   end
 
   resources :quizzes, :except => [:new, :create] do
-    resources :questions, :controller => "QuizQuestions" do
-      resources :response, :controller => "QuizQuestionResponses"
-    end
+    resources :questions, :controller => "QuizQuestions", :only => [:new, :create]
+    resources :responses, :controller => "QuizResponses", :except => [:index, :destroy]
   end
+
+  resources :quiz_questions, :except => [:new, :create]
 
   resources :questions do
     resources :choices, :controller => "QuestionChoices"

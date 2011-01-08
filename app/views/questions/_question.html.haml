@@ -1,5 +1,6 @@
-%p
+%p.question
   = question.content
   %ul= render question.choices
 
-%p= link_to "View question", question
+- if instructor?
+  %p= link_to "View question", question

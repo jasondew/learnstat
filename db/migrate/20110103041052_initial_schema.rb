@@ -50,7 +50,7 @@ class InitialSchema < ActiveRecord::Migration
 
     create_table "grades", :force => true do |t|
       t.belongs_to :user, :exam
-      t.decimal :value, :precision => 5, :scale => 2
+      t.decimal :value, :scale => 5, :precision => 4
       t.timestamps
     end
 
@@ -64,14 +64,14 @@ class InitialSchema < ActiveRecord::Migration
     add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
     create_table "quiz_question_responses", :force => true do |t|
-      t.belongs_to :user, :quiz_question, :question_choice
+      t.belongs_to :quiz_response, :quiz_question, :question_choice
       t.boolean  :correct
       t.timestamps
     end
 
-    add_index "quiz_question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
-    add_index "quiz_question_responses", ["quiz_question_id"], :name => "index_question_responses_on_quiz_question_id"
-    add_index "quiz_question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
+    add_index "quiz_question_responses", ["quiz_question_id", "correct"], :name => "index_question_responses_on_quiz_question_id_and_correct"
+    add_index "quiz_question_responses", ["quiz_response_id", "correct"], :name => "index_question_responses_on_quiz_response_id_and_correct"
+    add_index "quiz_question_responses", ["quiz_response_id"], :name => "index_question_responses_on_quiz_response_id"
 
     create_table "questions", :force => true do |t|
       t.text    "content"
@@ -85,6 +85,12 @@ class InitialSchema < ActiveRecord::Migration
     end
 
     add_index "quiz_questions", ["quiz_id"], :name => "index_quiz_questions_on_quiz_id"
+
+    create_table :quiz_responses do |t|
+      t.belongs_to :quiz, :user
+      t.decimal :grade, :scale => 5, :precision => 4
+      t.timestamps
+    end
 
     create_table "quizzes", :force => true do |t|
       t.belongs_to :course
@@ -147,6 +153,8 @@ class InitialSchema < ActiveRecord::Migration
     remove_index "quizzes", :name => "index_quizzes_on_course_id"
 
     drop_table "quizzes"
+
+    drop_table :quiz_responses
 
     remove_index "quiz_questions", :name => "index_quiz_questions_on_quiz_id"
 

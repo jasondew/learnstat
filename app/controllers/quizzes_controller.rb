@@ -14,6 +14,11 @@ class QuizzesController < ApplicationController
     create! { @quiz }
   end
 
+  def edit
+    @course = resource.course
+    edit!
+  end
+
   def update
     update! { @quiz }
   end

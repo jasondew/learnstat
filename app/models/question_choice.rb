@@ -4,4 +4,8 @@ class QuestionChoice < ActiveRecord::Base
 
   validates_presence_of :content
 
+  def to_s
+    content
+  end
+
 end

@@ -10,6 +10,10 @@ class Question < ActiveRecord::Base
   validates_presence_of :content, :chapter, :answer
   validates_numericality_of :chapter
 
+  def to_s
+    content
+  end
+
   def choice_texts
     choices.collect(&:content).join(" ")
   end

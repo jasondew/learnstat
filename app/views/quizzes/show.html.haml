@@ -22,7 +22,15 @@
   %p== Participation: #{percent_format @quiz.participation}
   %p== Questions: #{@quiz.questions.count}
 
-%ol.questions= render @quiz.questions
+- if instructor?
 
-- if instructor? and @quiz.open?
+  %ol.questions= render @quiz.questions
+
+- elsif @quiz.open?
+
+  = simple_form_for @quiz.responses.build, :url => quiz_responses_path(@quiz) do |form|
+    %ol.questions= render @quiz.quiz_questions, :form => form
+    %p= form.submit "Submit answers"
+
+- if instructor? and not @quiz.viewable?
   = link_to "Add question", new_quiz_question_path(@quiz)

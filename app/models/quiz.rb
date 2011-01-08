@@ -4,6 +4,7 @@ class Quiz < ActiveRecord::Base
 
   has_many :quiz_questions
   has_many :questions, :through => :quiz_questions
+  has_many :responses, :class_name => "QuizResponse"
 
   validates_presence_of :name, :due_at, :viewable_at
 
@@ -87,7 +88,7 @@ class Quiz < ActiveRecord::Base
     due_at < Time.now
   end
 
-  def viewable_now?
+  def viewable?
     viewable_at <= Time.now
   end
 

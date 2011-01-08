@@ -1,4 +1,4 @@
-- if quiz.viewable_now? or instructor?
+- if quiz.viewable? or instructor?
 
   .block_head
     = link_to quiz, quiz
@@ -15,7 +15,7 @@
 
     - if instructor?
       .block_information
-        - if quiz.viewable_now?
+        - if quiz.viewable?
           Viewable now
         - else
           = datetime_format quiz.viewable_at

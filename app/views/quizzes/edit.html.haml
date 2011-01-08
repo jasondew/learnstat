@@ -1,7 +1,7 @@
 %h2 Edit quiz
 
-= simple_form_for [@course, @quiz] do |form|
+= simple_form_for @quiz do |form|
   = render "form", :form => form
   %p
     = form.submit "Update"
-    = link_to "Back", @course
+    = link_to "Back", course_quizzes_path(@course)
