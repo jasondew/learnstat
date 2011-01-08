@@ -7,6 +7,16 @@ class QuizQuestionResponse < ActiveRecord::Base
   validates_presence_of :quiz_question_id, :question_choice_id
   validates_uniqueness_of :quiz_question_id, :scope => :quiz_response_id
 
+  before_save :score!
+
   scope :correct, :conditions => {:correct => true}
+
+  delegate :question, :to => :quiz_question
+
+  private
+
+  def score!
+    self.correct = (question_choice_id == question.answer)
+  end
 
 end

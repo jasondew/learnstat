@@ -5,7 +5,7 @@ class QuizResponse < ActiveRecord::Base
 
   has_many :quiz_question_responses
 
-  accepts_nested_attributes_for :quiz_question_responses
+  accepts_nested_attributes_for :quiz_question_responses, :reject_if => lambda {|attributes| attributes[:question_choice_id].blank? }
 
   validate :timely
 

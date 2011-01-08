@@ -43,3 +43,9 @@ Feature: quizzes
     When I go to the quizzes page
     Then I should see "Quiz 1"
     And I should not see "Take quiz"
+
+  Scenario: student trying to view a hidden quiz
+    Given I am logged in as a student in the course
+    And a hidden quiz named "Quiz 1"
+    When I go to the quizzes page
+    Then I should not see "Quiz 1"

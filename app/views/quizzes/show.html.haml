@@ -30,7 +30,9 @@
 
   = simple_form_for @quiz.responses.build, :url => quiz_responses_path(@quiz) do |form|
     %ol.questions= render @quiz.quiz_questions, :form => form
-    %p= form.submit "Submit answers"
+    %p
+      = form.submit "Submit answers"
+      = link_to "Cancel", course_quizzes_path(@quiz)
 
 - if instructor? and not @quiz.viewable?
   = link_to "Add question", new_quiz_question_path(@quiz)

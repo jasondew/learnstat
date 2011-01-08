@@ -1,0 +1,8 @@
+%p= @quiz_response.inspect
+
+%p= @quiz_response.errors.full_messages.to_sentence
+
+- @quiz_response.quiz_question_responses.each do |qqr|
+  %p
+    = qqr.inspect
+    = qqr.errors.full_messages.to_sentence

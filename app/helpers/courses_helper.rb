@@ -4,7 +4,7 @@ module CoursesHelper
     return content_tag(:p, "There are no grades posted at this time.") if grades.empty?
 
     grades.map do |gradeable|
-      content_tag(:div, "#{gradeable.name} &ndash; #{percent_format gradeable.grade_for(current_user), 'Not attempted'}")
+      content_tag(:div, "#{gradeable.name} &mdash; #{percent_format gradeable.grade_for(current_user), 'Not attempted'}".html_safe)
     end.join.html_safe
   end
 

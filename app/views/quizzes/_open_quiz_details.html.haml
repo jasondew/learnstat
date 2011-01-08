@@ -12,5 +12,8 @@
   -# FIXME %p= link_to_function('Show completion code', "Effect.Appear('completion_code')")
   -# FIXME %p= quiz.completion_code_for(current_user), :style => "display: none; width: 80%", :id => "completion_code"
 
+  - if quiz.open?
+    %p= link_to "Change quiz answers", quiz
+
 - else
   %p= link_to "Take quiz", quiz

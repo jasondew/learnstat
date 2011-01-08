@@ -1,6 +1,6 @@
-%p.question
+%li
   = question.content
-  %ul= render question.choices
+  %ol.answers= render question.choices
 
-- if instructor?
-  %p= link_to "View question", question
+  - if instructor?
+    %p= link_to "View question", question

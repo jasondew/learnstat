@@ -14,3 +14,7 @@ end
 Given /^a closed quiz named "([^"]+)"$/ do |quiz_name|
   @quiz = Factory(:closed_quiz, :course => @course, :name => quiz_name)
 end
+
+Given /^a hidden quiz named "([^"]+)"$/ do |quiz_name|
+  @quiz = Factory(:hidden_quiz, :course => @course, :name => quiz_name)
+end

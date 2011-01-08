@@ -38,11 +38,7 @@ html {
 
 body {
   font-family: verdana, arial, sans-serif;
-  font-size: 11pt;
-  background: #333333;
-  background: #111313;
-  background: -moz-linear-gradient(from(#111313), to(#333333)) no-repeat #111313;
-  background: -webkit-gradient(linear, left top, left bottom, from(#111313), to(#333333)) no-repeat #111313; }
+  font-size: 11pt; }
 
 br {
   clear: both;
@@ -201,9 +197,6 @@ p.instructions {
 ul, ol {
   margin: 10px 35px; }
 
-ul.quizzes li {
-  margin-bottom: 20px; }
-
 #navbar {
   margin: 0 auto;
   background: url(/images/stripes.png) top left repeat-x;
@@ -251,7 +244,7 @@ ul.quizzes li {
   text-align: center; }
   #menubar a {
     color: #e0e0e0;
-    padding: 5px; }
+    padding: 0 5px; }
     #menubar a img {
       behavior: url(/iepngfix.htc);
       vertical-align: bottom; }
@@ -305,25 +298,21 @@ li.question {
   display: block;
   text-align: right; }
 
-li.added {
-  border: 2px solid green; }
-
-li.added a {
-  display: none; }
+ol.questions {
+  list-style-type: decimal; }
+  ol.questions li {
+    margin-bottom: 20px; }
 
 ol.answers {
-  list-style-type: lower-alpha;
-  margin-bottom: 25px; }
-
-ol.answers li:hover {
-  cursor: pointer;
-  background: #ccccff; }
-
-ol.answers li.selected {
-  color: green; }
-
-ol.answers li.answer {
-  text-decoration: underline; }
+  list-style-type: lower-alpha; }
+  ol.answers li {
+    margin: 0;
+    padding: 5px; }
+    ol.answers li:hover {
+      cursor: pointer;
+      background: #437da9; }
+    ol.answers li.answer {
+      text-decoration: underline; }
 
 .chosen-question {
   border: 2px solid red; }
@@ -477,7 +466,7 @@ dl dd {
 .simple_form div.input {
   padding-bottom: 10px;
   clear: both; }
-.simple_form div.boolean, .simple_form input[type='submit'] {
+.simple_form div.boolean {
   margin-left: 120px; }
 .simple_form div.boolean label {
   float: none;
