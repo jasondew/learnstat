@@ -9,4 +9,12 @@ class UsersController < ApplicationController
     create! { @user.course }
   end
 
+  def update
+    update! { @user.course }
+  end
+
+  def destroy
+    destroy! { @user.course }
+  end
+
 end

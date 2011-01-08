@@ -63,15 +63,15 @@ class InitialSchema < ActiveRecord::Migration
 
     add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
-    create_table "question_responses", :force => true do |t|
+    create_table "quiz_question_responses", :force => true do |t|
       t.belongs_to :user, :quiz_question, :question_choice
       t.boolean  :correct
       t.timestamps
     end
 
-    add_index "question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
-    add_index "question_responses", ["quiz_question_id"], :name => "index_question_responses_on_quiz_question_id"
-    add_index "question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
+    add_index "quiz_question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
+    add_index "quiz_question_responses", ["quiz_question_id"], :name => "index_question_responses_on_quiz_question_id"
+    add_index "quiz_question_responses", ["user_id"], :name => "index_question_responses_on_user_id"
 
     create_table "questions", :force => true do |t|
       t.text    "content"
@@ -154,17 +154,17 @@ class InitialSchema < ActiveRecord::Migration
 
     drop_table "questions"
 
-    remove_index "question_responses", :name => "index_question_responses_on_user_id"
-    remove_index "question_responses", :name => "index_question_responses_on_quiz_id"
-    remove_index "question_responses", :name => "index_question_responses_on_quiz_id_and_user_id_and_correct"
+    remove_index "quiz_question_responses", :name => "index_question_responses_on_user_id"
+    remove_index "quiz_question_responses", :name => "index_question_responses_on_quiz_question_id"
+    remove_index "quiz_question_responses", :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
 
-    drop_table "question_responses"
+    drop_table "quiz_question_responses"
 
     remove_index "question_choices", :name => "index_question_choices_on_question_id"
 
     drop_table "question_choices"
 
-    remove_index "grades", :name => "index_grades_on_course_id"
+    remove_index "grades", :name => "index_grades_on_exam_id"
 
     drop_table "grades"
 

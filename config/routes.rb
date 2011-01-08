@@ -8,7 +8,7 @@ Learnstat::Application.routes.draw do
   match "/logout" => "user_sessions#destroy"
 
   resources :courses do
-    resources :quizzes, :only => [:new, :create]
+    resources :quizzes, :only => [:index, :new, :create]
     resources :announcements
     resources :documents
     resources :exams
@@ -18,7 +18,9 @@ Learnstat::Application.routes.draw do
   end
 
   resources :quizzes, :except => [:new, :create] do
-    resources :questions, :controller => "QuizQuestions"
+    resources :questions, :controller => "QuizQuestions" do
+      resources :response, :controller => "QuizQuestionResponses"
+    end
   end
 
   resources :questions do

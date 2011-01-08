@@ -4,7 +4,6 @@ class Quiz < ActiveRecord::Base
 
   has_many :quiz_questions
   has_many :questions, :through => :quiz_questions
-  has_many :question_responses, :through => :quiz_questions, :source => :question, :order => "quiz_questions.id"
 
   validates_presence_of :name, :due_at, :viewable_at
 
@@ -27,6 +26,10 @@ class Quiz < ActiveRecord::Base
 
   def to_s
     name
+  end
+
+  def question_responses
+    quiz_questions.map(&:responses).flatten
   end
 
   def mean

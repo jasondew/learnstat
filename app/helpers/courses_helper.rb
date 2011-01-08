@@ -12,7 +12,7 @@ module CoursesHelper
     return content_tag(:p, "There are no open quizzes at this time.") if quizzes.empty?
 
     quiz_links = quizzes.map do |quiz|
-      content_tag(:dt, link_to(quiz.name, course_quiz_path(@course, quiz))) + content_tag(:dd, "due #{datetime_format(quiz.due_at)}")
+      content_tag(:dt, link_to(quiz.name, quiz)) + content_tag(:dd, "due #{datetime_format(quiz.due_at)}")
     end
 
     [content_tag(:dl, quiz_links.join("\n").html_safe),

@@ -5,7 +5,7 @@
     = render question
 
     = form_for @quiz_question, :url => quiz_questions_path(@quiz) do |form|
-      = hidden_field_tag :question_id, :value => question.id
+      = hidden_field_tag "quiz_question[question_id]", question.id
       = form.submit "Add to quiz"
 
 = link_to "Back", @quiz

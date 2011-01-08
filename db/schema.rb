@@ -79,19 +79,16 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   add_index "grades", ["exam_id"], :name => "index_grades_on_exam_id"
 
   create_table "question_choices", :force => true do |t|
-    t.belongs_to :question
-    t.text :context
+    t.integer "question_id"
+    t.text    "content"
   end
 
   add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"
 
   create_table "question_responses", :force => true do |t|
-    t.integer  "user_id"
-    t.integer  "quiz_question_id"
-    t.integer  "question_choice_id"
-    t.boolean  "correct"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+    t.belongs_to :user, :quiz_question, :question_choice
+    t.boolean :correct
+    t.timestamps
   end
 
   add_index "question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"

@@ -59,7 +59,7 @@ Factory.define(:question_choice) do |f|
   f.content "The wrong answer"
 end
 
-Factory.define(:question_response) do |f|
+Factory.define(:quiz_question_response) do |f|
   f.association :quiz_question
   f.association :user
   f.association :question_choice
