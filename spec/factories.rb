@@ -40,6 +40,7 @@ end
 
 Factory.define(:question) do |f|
   f.content "What is the square root of pi?"
+  f.chapter 1
   f.answer 2
 end
 
@@ -60,7 +61,7 @@ Factory.define(:question_choice) do |f|
 end
 
 Factory.define(:quiz_question_response) do |f|
+  f.quiz_response_id 1
   f.association :quiz_question
-  f.association :user
   f.association :question_choice
 end

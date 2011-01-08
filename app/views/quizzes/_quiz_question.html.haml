@@ -1,5 +1,0 @@
-%li{ question_attributes(quiz_question) }
-  %p= question_text(@course, @quiz, quiz_question)
-  %p= link_to_function 'Show Answer', "$('#{dom_id(quiz_question)}').getElementsByClassName('hidden-answer')[0].className = 'answer'" if @quiz.closed? and instructor?
-
-  %ol.answers= render :partial => 'question_choice', :collection => quiz_question.choices, :locals => { :quiz_question => quiz_question }
