@@ -1,16 +1,5 @@
 module QuizzesHelper
 
-  def instructor_quiz_links(quiz)
-    return unless instructor?
-
-    returning(Array.new) do |html|
-      html << link_to( image_tag( 'application_form_edit.png', :alt => 'Edit Quiz' ), edit_course_quiz_path( @course, quiz ) )
-      html << link_to( image_tag( 'application_form_delete.png', :alt => 'Delete Quiz' ), course_quiz_path( @course, quiz ),
-                       :confirm => 'Are you sure?', :method => :delete )
-      html << link_to( image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), course_quiz_grade_distribution_path( @course, quiz ), :rel => 'lightbox' )
-    end.join("\n")
-  end
-
   def quiz_question_links(question, quiz_question)
     returning(Array.new) do |html|
       if quiz_question 
@@ -20,7 +9,7 @@ module QuizzesHelper
         html << link_to_remote( image_tag( 'table_add.png', :alt => 'Add Question' ), :url => course_quiz_quiz_questions_path(@course, @quiz),
                                 :with => %Q|"question_id=#{question.id}"|, :method => :post ) 
       end
- 
+
       html << link_to( image_tag( 'table_edit.png', :alt => 'Edit Question' ), edit_question_path(question), :popup => true )
       html << link_to( image_tag( 'table_delete.png', :alt => 'Delete Question' ), question_path(question), :confirm => 'Are you sure?', :method => :delete )
     end.join("\n")
@@ -28,48 +17,6 @@ module QuizzesHelper
 
   def quiz_information(quiz)
     return unless instructor?
-    viewable = quiz.viewable_now? ? 'now' : datetime_format(quiz.viewable_at)
-    "Viewable #{viewable}"
-  end
-
-  def quiz_details(quiz)
-    quiz.open? ? open_quiz_details(quiz) : closed_quiz_details(quiz)
-  end
-
-  def open_quiz_details(quiz)
-    returning(Array.new) do |html|
-      html << content_tag(:div, "Due on: #{datetime_format(quiz.due_at)}")
-
-      if instructor?
-        if quiz.viewable_now?
-          html << content_tag(:div, "Participation so far: #{percent_format quiz.participation}")
-        else
-          html << content_tag(:div, link_to("Make viewable now", mark_viewable_course_quiz_path(@course, quiz), :method => :post))
-        end
-      else
-        if quiz.attempted_by? current_user
-          html << content_tag(:div, "Status: #{quiz.answers_from(current_user).size} of #{quiz.questions.size} questions attempted")
-          html << content_tag(:div, link_to_function('Show completion code', "Effect.Appear('completion_code')"))
-          html << content_tag(:div, quiz.completion_code_for(current_user), :style => "display: none; width: 80%", :id => "completion_code")
-          html << content_tag(:div, link_to('Take Quiz', course_quiz_path(@course, quiz)))
-        end
-      end
-    end.join("\n")
-  end
-
-  def closed_quiz_details(quiz)
-    returning(Array.new) do |html|
-      if instructor?
-        html << content_tag(:div, "Participation: #{percent_format quiz.participation}")
-      else
-        html << content_tag(:div, "Your Score: #{percent_format quiz.grade_for(current_user)}")
-        html << content_tag(:div, "Percentile Rank: #{percent_format quiz.percentile_for(current_user)}")
-      end
-
-      html << content_tag(:div, "Mean Score: #{percent_format quiz.mean}")
-      html << content_tag(:div, "Standard Deviation: #{number_with_precision quiz.standard_deviation, 2}")
-      html << content_tag(:div, "Range: #{percent_format quiz.scores.min} to #{percent_format quiz.scores.max}")
-    end.join("\n")
   end
 
   def question_text(course, quiz, quiz_question)

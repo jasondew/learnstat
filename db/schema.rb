@@ -91,6 +91,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
     t.integer  "question_choice_id"
     t.boolean  "correct"
     t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "question_responses", ["quiz_question_id", "user_id", "correct"], :name => "index_question_responses_on_qq_id_and_user_id_and_correct"
@@ -117,6 +118,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
     t.datetime "due_at"
     t.datetime "viewable_at"
     t.datetime "created_at"
+    t.datetime "updated_at"
   end
 
   add_index "quizzes", ["course_id"], :name => "index_quizzes_on_course_id"

@@ -24,4 +24,5 @@
 
 %ol.questions= render @quiz.questions
 
-%p= link_to "Done", @course
+- if instructor? and @quiz.open?
+  = link_to "Add question", new_quiz_question_path(@quiz)

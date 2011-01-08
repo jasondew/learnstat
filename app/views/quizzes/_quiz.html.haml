@@ -1,9 +1,21 @@
 - if quiz.viewable_now? or instructor?
-  
+
   .block_head
-    = link_to quiz.name, course_quiz_path( @course, quiz )
-    = instructor_quiz_links(quiz)
+    = link_to quiz.name, [@course, quiz]
+    - if instructor?
+      = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_course_quiz_path(@course, quiz)
+      = link_to image_tag("application_form_delete.png", :alt => "Delete quiz" ), [@course, quiz], :confirm => "Are you sure?", :method => :delete
+      -#= link_to image_tag("chart_pie.png", :alt => "Grade distribution"), course_quiz_grade_distribution_path(@course, quiz), :rel => "lightbox"
 
   .block_body
-    = quiz_details(quiz)
-    .block_information= quiz_information(quiz)
+    - if quiz.open?
+      = render "open_quiz_details", :quiz => quiz
+    - else
+      = render "closed_quiz_details", :quiz => quiz
+
+    - if instructor?
+      .block_information
+        - if quiz.viewable_now?
+          Viewable now
+        - else
+          = datetime_format quiz.viewable_at

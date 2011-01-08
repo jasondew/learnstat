@@ -1,0 +1,14 @@
+%p== Due on: #{datetime_format quiz.due_at}
+
+- if instructor?
+
+  - if quiz.viewable_now?
+    %p== Participation so far: #{percent_format quiz.participation}
+  - else
+    -# FIXME %p= link_to "Make viewable now", mark_viewable_course_quiz_path(@course, quiz), :method => :post
+
+- elsif quiz.attempted_by? current_user
+  %p== Status: #{quiz.answers_from(current_user).size} of #{quiz.questions.size} questions attempted
+  -# FIXME %p= link_to_function('Show completion code', "Effect.Appear('completion_code')")
+  -# FIXME %p= quiz.completion_code_for(current_user), :style => "display: none; width: 80%", :id => "completion_code"
+  %p= link_to "Take Quiz", [@course, quiz]

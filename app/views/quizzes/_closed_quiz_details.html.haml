@@ -1,0 +1,9 @@
+- if instructor?
+  %p== Participation: #{percent_format quiz.participation}
+- else
+  %p== Your Score: #{percent_format quiz.grade_for current_user}
+  %p== Percentile Rank: #{percent_format quiz.percentile_for current_user}
+
+%p== Mean Score: #{percent_format quiz.mean}
+%p== Standard Deviation: #{number_with_precision quiz.standard_deviation, :precision => 2}
+%p== Range: #{percent_format quiz.scores.min} to #{percent_format quiz.scores.max}
