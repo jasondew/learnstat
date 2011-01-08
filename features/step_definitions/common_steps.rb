@@ -22,10 +22,10 @@ Then /^I should be able to reauthenticate with "([^"]*)"$/ do |password|
   Then %{I should see "Welcome, #{@user.name}."}
 end
 
-Then /I should see an error message/ do
+Then /^I should see an error message$/ do
   page.should have_css("#alert")
 end
 
-Then /I should see a success message/ do
+Then /^I should see a success message$/ do
   page.should have_css("#notice")
 end

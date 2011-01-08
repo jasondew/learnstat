@@ -50,6 +50,15 @@ Factory.define(:quiz) do |f|
   f.viewable_at { Time.now }
 end
 
+Factory.define(:open_quiz, :parent => :quiz) do |f|
+  f.due_at { 2.days.from_now }
+end
+
+Factory.define(:closed_quiz, :parent => :quiz) do |f|
+  f.viewable_at { 10.days.ago }
+  f.due_at { 1.second.ago }
+end
+
 Factory.define(:quiz_question) do |f|
   f.association :quiz
   f.association :question

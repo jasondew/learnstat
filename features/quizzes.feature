@@ -7,20 +7,39 @@ Feature: quizzes
     Given a course with the following students:
       | first_name |
       | Jason      |
+      | Patricia   |
+    And a question with the following choices:
+      | right answer   |
+      | wrong answer 1 |
+      | wrong answer 2 |
 
   Scenario: adding a quiz
     Given I am logged in as an instructor
     When I go to the quizzes page
     And I follow "Add a quiz"
     And I fill in "Quiz 1" for "quiz[name]"
+    And I select "2016" from "quiz[viewable_at(1i)]"
     And I select "2016" from "quiz[due_at(1i)]"
     And I press "Create"
-    Then I should see "Quiz 1"
+    And I follow "Add question"
+    And I press "Add to quiz"
+    Then I should see a success message
+    And I should see "Questions: 1"
 
   Scenario: student taking an open quiz
     Given I am logged in as a student in the course
+    And an open quiz named "Quiz 1"
+    And a quiz question
     When I go to the quizzes page
+    Then I should see "Quiz 1"
+    When I follow "Take quiz"
+    And I choose "quiz_response_quiz_question_responses_attributes_0_question_choice_id_1"
+    And I press "Submit answers"
+    Then I should see "1 of 1 questions attempted"
 
   Scenario: student trying to take a closed quiz
     Given I am logged in as a student in the course
+    And a closed quiz named "Quiz 1"
     When I go to the quizzes page
+    Then I should see "Quiz 1"
+    And I should not see "Take quiz"

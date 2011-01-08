@@ -1,13 +1,13 @@
 class User < ActiveRecord::Base
 
+  extend ActiveSupport::Memoizable
+
   acts_as_authentic
 
   belongs_to :course
 
-  has_many :announcements
-  has_many :documents
   has_many :grades
-  has_many :question_responses
+  has_many :quiz_responses
   has_many :audits
 
   validates_presence_of :first_name, :last_name, :blackboard_username, :email, :password, :password_confirmation
@@ -29,7 +29,7 @@ class User < ActiveRecord::Base
   end
 
   def mean_score
-    return if question_responses.empty?
+    return if quiz_responses.empty?
 
     closed_quiz_questions = course.quizzes.closed.map {|quiz| quiz.questions.count }.sum
     return if closed_quiz_questions == 0
@@ -38,16 +38,21 @@ class User < ActiveRecord::Base
   end
 
   def adjusted_mean_score(adjustment)
-    return if question_responses.empty?
+    return if quiz_responses.empty?
 
-    ams = (correct_responses.size + adjustment) / course.closed_questions.size.to_f
+    ams = (correct_question_responses.size + adjustment) / correct_question_responses.size.to_f
     ams > 1.0 ? 1.0 : ams
   end
 
-  def correct_responses
-    closed_quiz_ids = course.quizzes.closed.map {|quiz| quiz.id }
-    question_responses.select {|response| response.correct and closed_quiz_ids.include?(response.quiz_id) }
+  def closed_question_responses
+    quiz_responses.closed.map(&:quiz_question_responses).flatten
   end
+  memoize :closed_question_responses
+
+  def correct_question_responses
+    closed_question_responses.select(&:correct)
+  end
+  memoize :correct_question_responses
 
   def exam_mean_score
     return if grades.empty?

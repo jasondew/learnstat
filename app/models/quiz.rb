@@ -1,5 +1,7 @@
 class Quiz < ActiveRecord::Base
 
+  extend ActiveSupport::Memoizable
+
   belongs_to :course
 
   has_many :quiz_questions
@@ -8,7 +10,6 @@ class Quiz < ActiveRecord::Base
 
   validates_presence_of :name, :due_at, :viewable_at
 
-  validate :future_due_date
   validate :viewable_before_due
 
   scope :open, lambda { {:conditions => ["due_at >= ?", Time.now]} }
@@ -29,13 +30,9 @@ class Quiz < ActiveRecord::Base
     name
   end
 
-  def question_responses
-    quiz_questions.map(&:responses).flatten
-  end
-
   def mean
-    return if question_responses.empty?
-    @mean_score ||= question_responses.correct.count / question_responses.size.to_f
+    return if responses.empty?
+    correct_quiz_question_responses.size / quiz_question_responses.size.to_f
   end
 
   def standard_deviation
@@ -45,17 +42,22 @@ class Quiz < ActiveRecord::Base
     (scores.collect {|score| (score - mean) ** 2 }.sum / (scores.size - 1.0)) ** 0.5
   end
 
+  def quiz_question_responses
+    responses.map(&:quiz_question_responses).flatten
+  end
+  memoize :quiz_question_responses
+
+  def correct_quiz_question_responses
+    quiz_question_responses.select(&:correct)
+  end
+
   def scores
-    @scores ||= course.students.collect {|student| grade_for(student) }.compact
+    responses.map(&:score)
   end
+  memoize :scores
 
-  def responses_for(question_id)
-    question_responses.find_all_by_quiz_question_id question_id
-  end
-
-  def grade_for(user)
-    return unless user.question_responses.size > 0 and quiz_questions.size > 0
-    (user.question_responses.correct.select {|response| response.quiz_id == id }.size / quiz_questions.size.to_f)
+  def grade_for user
+    response_by(user).andand.score or 0
   end
 
   def percentile_for(user)
@@ -63,8 +65,8 @@ class Quiz < ActiveRecord::Base
     (scores.sort.index(grade_for(user)) + 1 ) / scores.size.to_f
   end
 
-  def attempted_by?(user)
-    question_responses.collect {|response| response.user_id }.include? user.id
+  def attempted_by? user
+    !! responses.by(user).first
   end
 
   def completion_code_for(user)
@@ -77,11 +79,11 @@ class Quiz < ActiveRecord::Base
   end
 
   def number_attempted
-    question_responses.map {|response| response.user_id }.uniq.size
+    responses.count
   end
 
   def open?
-    due_at >= Time.now and viewable_at <= Time.now
+    due_at >= Time.now and viewable?
   end
 
   def closed?
@@ -92,22 +94,22 @@ class Quiz < ActiveRecord::Base
     viewable_at <= Time.now
   end
 
-  def responses_from(user)
-    answers_from(user).collect {|response| response.question_choice_id }
+  def responses_from user
+    answers_from(user).map(&:question_choice_id)
   end
 
-  def answers_from(user)
-    question_responses.find_all_by_user_id(user)
+  def answers_from user
+    response_by(user).quiz_question_responses
+  end
+
+  def response_by user
+    responses.by(user).first
   end
 
   private
 
-  def future_due_date
-    errors.add( :due_at, 'date must be in the future' ) if due_at and due_at <= Time.now
-  end
-
   def viewable_before_due
-    errors.add( :viewable_at, 'date must be before the due date' ) if viewable_at and viewable_at > self.due_at
+    errors.add :viewable_at, "date must be before the due date" if viewable_at and viewable_at > due_at
   end
 
 end
