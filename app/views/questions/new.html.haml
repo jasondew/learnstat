@@ -1,0 +1,7 @@
+%h2 New question
+
+= simple_form_for @question do |form|
+  = render "form", :form => form
+  %p
+    = form.submit "Create"
+    = link_to "Back", root_path

@@ -8,33 +8,21 @@ Learnstat::Application.routes.draw do
   match "/logout" => "user_sessions#destroy"
 
   resources :courses do
+    resources :quizzes, :only => [:new, :create]
     resources :announcements
     resources :documents
     resources :exams
-    resources :quizzes do
-      resources :quiz_questions do
-        collection do
-          post :search
-        end
-      end
-    end
 
     resource :gradebook
-    resource :roster do
-      member do
-        post :impersonate
-      end
-    end
+    resource :roster
+  end
 
-    resources :users do
-      member do
-        post :reset_password
-      end
-    end
+  resources :quizzes, :except => [:new, :create] do
+    resources :questions, :controller => "QuizQuestions"
   end
 
   resources :questions do
-    resources :question_choices
+    resources :choices, :controller => "QuestionChoices"
   end
 
   root :to => "courses#index"

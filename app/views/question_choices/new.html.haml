@@ -1,0 +1,7 @@
+%h2 New question choice
+
+= simple_form_for @question_choice, :url => question_choices_path(@question) do |form|
+  = render "form", :form => form
+  %p
+    = form.submit "Create"
+    = link_to "Back", root_path

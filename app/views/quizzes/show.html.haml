@@ -1,7 +1,7 @@
 %h2
   = @quiz
   - if instructor?
-    = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_course_quiz_path(@course, @quiz)
+    = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_quiz_path(@quiz)
 
 %p.instructions
   - if @quiz.closed?

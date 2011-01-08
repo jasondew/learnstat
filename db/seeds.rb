@@ -39,3 +39,11 @@ if User.count == 0
               :registration_code => "stats",
               :course_id => 1
 end
+
+#FIXME: add other chapters questions
+if Question.count == 0
+  File.readlines("#{Rails.root}/db/chapters1-9.sql").each do |sql|
+    next if sql.blank?
+    ActiveRecord::Base.connection.execute sql
+  end
+end

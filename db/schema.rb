@@ -79,8 +79,8 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   add_index "grades", ["exam_id"], :name => "index_grades_on_exam_id"
 
   create_table "question_choices", :force => true do |t|
-    t.integer "question_id"
-    t.text    "content"
+    t.belongs_to :question
+    t.text :context
   end
 
   add_index "question_choices", ["question_id"], :name => "index_question_choices_on_question_id"

@@ -1,10 +1,10 @@
 - if quiz.viewable_now? or instructor?
 
   .block_head
-    = link_to quiz.name, [@course, quiz]
+    = link_to quiz, quiz
     - if instructor?
-      = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_course_quiz_path(@course, quiz)
-      = link_to image_tag("application_form_delete.png", :alt => "Delete quiz" ), [@course, quiz], :confirm => "Are you sure?", :method => :delete
+      = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_quiz_path(quiz)
+      = link_to image_tag("application_form_delete.png", :alt => "Delete quiz" ), quiz, :confirm => "Are you sure?", :method => :delete
       -#= link_to image_tag("chart_pie.png", :alt => "Grade distribution"), course_quiz_grade_distribution_path(@course, quiz), :rel => "lightbox"
 
   .block_body

@@ -2,8 +2,9 @@ class Quiz < ActiveRecord::Base
 
   belongs_to :course
 
-  has_many :questions, :class_name => "QuizQuestion"
-  has_many :question_responses, :through => :questions, :source => :question, :order => "quiz_questions.id"
+  has_many :quiz_questions
+  has_many :questions, :through => :quiz_questions
+  has_many :question_responses, :through => :quiz_questions, :source => :question, :order => "quiz_questions.id"
 
   validates_presence_of :name, :due_at, :viewable_at
 
@@ -49,8 +50,8 @@ class Quiz < ActiveRecord::Base
   end
 
   def grade_for(user)
-    return unless user.question_responses.size > 0 and questions.size > 0
-    (user.question_responses.correct.select {|response| response.quiz_id == id }.size / questions.size.to_f)
+    return unless user.question_responses.size > 0 and quiz_questions.size > 0
+    (user.question_responses.correct.select {|response| response.quiz_id == id }.size / quiz_questions.size.to_f)
   end
 
   def percentile_for(user)

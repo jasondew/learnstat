@@ -1,0 +1,7 @@
+%h2 Edit question choice
+
+= simple_form_for @question_choice, :url => question_choice_path(@question, @question_choice) do |form|
+  = render "form", :form => form
+  %p
+    = form.submit "Update"
+    = link_to "Back", root_path

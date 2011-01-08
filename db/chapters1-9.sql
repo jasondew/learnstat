@@ -1,6 +1,3 @@
-TRUNCATE questions;
-TRUNCATE question_choices;
-
 INSERT INTO questions (id, content, chapter) VALUES (1, 'Does using a cell phone while driving make an accident more likely?  Researchers compared telephone company and police records to find 699 people who had cell phones and were also involved in an auto accident.  Using phone billing records, they compared cell phone use in the period of the accident with cell phone use the same period on a previous day.  Result: the risk of an accident was 4 times higher when using a cell phone.  This study is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1, 1, 'a randomized comparative experiment.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2, 1, 'an experiment, but without randomization.');
@@ -15,7 +12,7 @@ UPDATE questions SET answer = 6 WHERE id=2;
 INSERT INTO question_choices (id, question_id, content) VALUES (7, 2, 'the risk of an accident.');
 INSERT INTO question_choices (id, question_id, content) VALUES (8, 2, 'whether or not the subject owned a cell phone.');
 
-INSERT INTO questions (id, content, chapter) VALUES (3, 'Does using a cell phone while driving make an accident more likely?  Researchers compared telephone company and police records to find 699 people who had cell phones and were also involved in an auto accident.  Using phone billing records, they compared cell phone use in the period of the accident with cell phone use the same period on a previous day.  Result: the risk of an accident was 4 times higher when using a cell phone.The researchers also recorded the manufacturer of each subject\'s cell phone (Motorola, Nokia, and so on).  This variable is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (3, "Does using a cell phone while driving make an accident more likely?  Researchers compared telephone company and police records to find 699 people who had cell phones and were also involved in an auto accident.  Using phone billing records, they compared cell phone use in the period of the accident with cell phone use the same period on a previous day.  Result: the risk of an accident was 4 times higher when using a cell phone.The researchers also recorded the manufacturer of each subject's cell phone (Motorola, Nokia, and so on).  This variable is", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (9, 3, 'categorical.');
 UPDATE questions SET answer = 9 WHERE id=3;
 INSERT INTO question_choices (id, question_id, content) VALUES (10, 3, 'quantitative.');
@@ -163,14 +160,14 @@ INSERT INTO question_choices (id, question_id, content) VALUES (92, 23, 'we got 
 UPDATE questions SET answer = 92 WHERE id=23;
 INSERT INTO question_choices (id, question_id, content) VALUES (93, 23, '95% of all adults would believe the statement');
 
-INSERT INTO questions (id, content, chapter) VALUES (24, 'Does coaching raise SAT scores?  Because many students score higher on a second try even without coaching, a study looked at an SRS of 4200 students who took the SAT twice.  Of these, 500 had taken coaching courses between their two attempts at the SAT.  The study compared the average increase in scores (out of the total possible score of 1600) for students who were coached with the average increase for students who were not coached.Because students\' SAT scores vary a lot when they retake the test, the difference between the average increases for coached and uncoached students was not statistically significant.  This means that', 129);
+INSERT INTO questions (id, content, chapter) VALUES (24, 'Does coaching raise SAT scores?  Because many students score higher on a second try even without coaching, a study looked at an SRS of 4200 students who took the SAT twice.  Of these, 500 had taken coaching courses between their two attempts at the SAT.  The study compared the average increase in scores (out of the total possible score of 1600) for students who were coached with the average increase for students who were not coached.Because students&apos; SAT scores vary a lot when they retake the test, the difference between the average increases for coached and uncoached students was not statistically significant.  This means that', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (94, 24, 'we cannot make a 95% confidence statement');
 INSERT INTO question_choices (id, question_id, content) VALUES (95, 24, 'the increase makes no difference in getting into college');
 INSERT INTO question_choices (id, question_id, content) VALUES (96, 24, 'a difference this big could easily occur just by chance even if coaching really has no effect');
 UPDATE questions SET answer = 96 WHERE id=24;
 INSERT INTO question_choices (id, question_id, content) VALUES (97, 24, 'the study was badly designed');
 
-INSERT INTO questions (id, content, chapter) VALUES (25, 'Does coaching raise SAT scores?  Because many students score higher on a second try even without coaching, a study looked at an SRS of 4200 students who took the SAT twice.  Of these, 500 had taken coaching courses between their two attempts at the SAT.  The study compared the average increase in scores (out of the total possible score of 1600) for students who were coached with the average increase for students who were not coached.The SAT study doesn\'t show that coaching <em>causes</em> a greater increase in SAT scores.  One plausible reason is that', 129);
+INSERT INTO questions (id, content, chapter) VALUES (25, "Does coaching raise SAT scores?  Because many students score higher on a second try even without coaching, a study looked at an SRS of 4200 students who took the SAT twice.  Of these, 500 had taken coaching courses between their two attempts at the SAT.  The study compared the average increase in scores (out of the total possible score of 1600) for students who were coached with the average increase for students who were not coached.The SAT study doesn't show that coaching <em>causes</em> a greater increase in SAT scores.  One plausible reason is that", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (98, 25, 'more students were not coached than were coached');
 INSERT INTO question_choices (id, question_id, content) VALUES (99, 25, '4200 students is too few to draw a conclusion');
 INSERT INTO question_choices (id, question_id, content) VALUES (100, 25, 'students who chose coaching were different (in particular, they were richer) than students who had no coaching');
@@ -227,41 +224,41 @@ INSERT INTO question_choices (id, question_id, content) VALUES (128, 32, 'in man
 INSERT INTO question_choices (id, question_id, content) VALUES (129, 32, 'we are 95% confident that if we take one more sample the result will fall between 56% and 64%');
 
 INSERT INTO questions (id, content, chapter) VALUES (33, 'Gallup conducts its polls by telephone, so people without phones are always excluded from the Gallup sample.  Any errors in the final result due to excluding people without phones', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (130, 33, 'are included in Gallup\'s announced margin of error');
+INSERT INTO question_choices (id, question_id, content) VALUES (130, 33, "are included in Gallup's announced margin of error");
 INSERT INTO question_choices (id, question_id, content) VALUES (131, 33, 'are in addition to the announced margin of error');
 UPDATE questions SET answer = 131 WHERE id=33;
 INSERT INTO question_choices (id, question_id, content) VALUES (132, 33, 'can be ignored, because these people are not part of the population');
 INSERT INTO question_choices (id, question_id, content) VALUES (133, 33, 'can be ignored, because this is a nonsampling error');
 
-INSERT INTO questions (id, content, chapter) VALUES (34, 'Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America\'s Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The design of this study is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (34, "Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America's Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The design of this study is", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (134, 34, 'a completely randomized experiment');
 INSERT INTO question_choices (id, question_id, content) VALUES (135, 34, 'a randomized block experiment');
 INSERT INTO question_choices (id, question_id, content) VALUES (136, 34, 'a multistage national sample survey');
 INSERT INTO question_choices (id, question_id, content) VALUES (137, 34, 'an observational study that compares several treatments');
 UPDATE questions SET answer = 137 WHERE id=34;
 
-INSERT INTO questions (id, content, chapter) VALUES (35, 'Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America\'s Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The explanatory and response variables are:', 129);
+INSERT INTO questions (id, content, chapter) VALUES (35, "Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America's Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The explanatory and response variables are:", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (138, 35, 'explanatory = elderly Medicare beneficiaries; response = 30-day mortality');
 INSERT INTO question_choices (id, question_id, content) VALUES (139, 35, 'explanatory = type of hospital; response = 30-day mortality');
 UPDATE questions SET answer = 139 WHERE id=35;
 INSERT INTO question_choices (id, question_id, content) VALUES (140, 35, 'explanatory = 30-day mortality; response = type of hospital');
 INSERT INTO question_choices (id, question_id, content) VALUES (141, 35, 'explanatory = type of hospital; response = heart attack or not');
 
-INSERT INTO questions (id, content, chapter) VALUES (36, 'Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America\'s Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The &quot;odds ratio&quot; compares two death rates.  So the finding &quot;odds ratio 0.87&quot; means that on the average the chance of dying at a highly ranked hospital is only 87% as great as at other hospitals. The summary then gives a confidence statement about this odds ratio.  &quot;95 percent confidence&quot; means that', 129);
+INSERT INTO questions (id, content, chapter) VALUES (36, "Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America's Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The &quot;odds ratio&quot; compares two death rates.  So the finding &quot;odds ratio 0.87&quot; means that on the average the chance of dying at a highly ranked hospital is only 87% as great as at other hospitals. The summary then gives a confidence statement about this odds ratio.  &quot;95 percent confidence&quot; means that", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (142, 36, 'the interval 0.76 to 1.00 came from a method that catches the true ratio in 95% of all samples');
 UPDATE questions SET answer = 142 WHERE id=36;
 INSERT INTO question_choices (id, question_id, content) VALUES (143, 36, '95% of all the hospitals had a mortality rate between 0.76 and 1.00');
 INSERT INTO question_choices (id, question_id, content) VALUES (144, 36, 'the mortality rate at highly ranked hospitals varies between 76% and 100% of the rate at other hospitals');
 INSERT INTO question_choices (id, question_id, content) VALUES (145, 36, 'we can be between 76% and 100% confident that the study results are correct');
 
-INSERT INTO questions (id, content, chapter) VALUES (37, 'Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America\'s Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The population about which the study draws conclusions is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (37, "Here is a shortened version of the summary of a paper in the <em>New England Journal of Medicine</em> that compares the fate of heart attack victims in three types of hospitals.  (&quot;Acute myocardial infarction&quot; is medical jargon for a heart attack.)  The next four questions concern this summary.<br /><br /><strong>Background</strong> &quot;America's Best Hospitals,&quot; published annually by <em>U.S. News &amp; World Report</em>, assesses the quality of hospitals.  It is not known whether patients admitted to hospitals ranked at the top in cardiology have lower short term mortality from acute myocardial infarction than those admitted to other hospitals.<br /><br /><strong>Methods</strong>. Using data from the Cooperative Cardiovascular Project on 149,177 elderly Medicare beneficiaries with acute myocardial infarction in 1994 or 1995, we examined the care and outcomes of patients admitted to three types of hospitals: those ranked high in cardiology (top ranked hospitals); hospitals not in the top rank that had onsite facilities for cardiac catheterization, coronary angioplasty, and bypass surgery (similarly equipped hospitals); and the remaining hospitals (non-similarly equipped hospitals). We compared 30-day mortality ...<br /><br /><strong>Results</strong>. Admission to a top ranked hospital was associated with lower adjusted 30-day mortality (odds ratio, 0.87; 95 percent confidence interval, 0.76 to 1.00).The population about which the study draws conclusions is", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (146, 37, 'all adult residents of the U.S.');
 INSERT INTO question_choices (id, question_id, content) VALUES (147, 37, 'all heart attack victims');
 INSERT INTO question_choices (id, question_id, content) VALUES (148, 37, 'elderly Medicare beneficiaries who are heart attack victims');
 UPDATE questions SET answer = 148 WHERE id=37;
 INSERT INTO question_choices (id, question_id, content) VALUES (149, 37, 'doctors 40 years old or older');
 
-INSERT INTO questions (id, content, chapter) VALUES (38, 'A psychologist says that scores on a test for &quot;authoritarian personality&quot; can\'t be trusted because the test counts religious belief as authoritarian.  The psychologist is attacking the test\'s', 129);
+INSERT INTO questions (id, content, chapter) VALUES (38, "A psychologist says that scores on a test for &quot;authoritarian personality&quot; can't be trusted because the test counts religious belief as authoritarian.  The psychologist is attacking the test's", 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (150, 38, 'validity');
 UPDATE questions SET answer = 150 WHERE id=38;
 INSERT INTO question_choices (id, question_id, content) VALUES (151, 38, 'reliability');
@@ -272,7 +269,7 @@ INSERT INTO questions (id, content, chapter) VALUES (39, 'Confounding often defe
 INSERT INTO question_choices (id, question_id, content) VALUES (154, 39, 'this was an observational study, so cause and effect conclusions are not possible');
 INSERT INTO question_choices (id, question_id, content) VALUES (155, 39, 'the effects of several variables are mixed up, so we cannot say which is causing the response');
 UPDATE questions SET answer = 155 WHERE id=39;
-INSERT INTO question_choices (id, question_id, content) VALUES (156, 39, 'we don\'t know which is the response variable and which is the explanatory variable');
+INSERT INTO question_choices (id, question_id, content) VALUES (156, 39, "we don't know which is the response variable and which is the explanatory variable");
 INSERT INTO question_choices (id, question_id, content) VALUES (157, 39, 'we would get widely varied results if we repeated the study many times');
 
 INSERT INTO questions (id, content, chapter) VALUES (40, 'In a table of random digits,', 129);
@@ -296,7 +293,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (168, 42, 'the 10
 UPDATE questions SET answer = 168 WHERE id=42;
 INSERT INTO question_choices (id, question_id, content) VALUES (169, 42, '95% of the 1028 adults who were interviewed.');
 
-INSERT INTO questions (id, content, chapter) VALUES (43, 'A recent Gallup poll asked &quot;Do you consider pro wrestling to be a  sport, or not?&quot;  Of the people asked, 81% said &quot;No.&quot;  Here is what Gallup says about the accuracy of this poll:<br /><br />The results below are based on telephone interviews with a randomly selected national sample of 1,028 adults, 18 years and older, conducted August 16&#8211;18, 1999. For results based on this sample, one can say with 95 percent confidence that the maximum error attributable to sampling and other random effects is plus or minus 3 percentage points. In addition to sampling error, question wording and practical difficulties in conducting surveys can introduce error or bias into the findings of public opinion polls.In Gallup\'s statement, &quot;95% confidence&quot; means', 129);
+INSERT INTO questions (id, content, chapter) VALUES (43, 'A recent Gallup poll asked &quot;Do you consider pro wrestling to be a  sport, or not?&quot;  Of the people asked, 81% said &quot;No.&quot;  Here is what Gallup says about the accuracy of this poll:<br /><br />The results below are based on telephone interviews with a randomly selected national sample of 1,028 adults, 18 years and older, conducted August 16&#8211;18, 1999. For results based on this sample, one can say with 95 percent confidence that the maximum error attributable to sampling and other random effects is plus or minus 3 percentage points. In addition to sampling error, question wording and practical difficulties in conducting surveys can introduce error or bias into the findings of public opinion polls.In Gallup&apos;s statement, &quot;95% confidence&quot; means', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (170, 43, 'We know that 95% of all adults would give the same answer that this poll found.');
 INSERT INTO question_choices (id, question_id, content) VALUES (171, 43, 'If Gallup repeated this poll many times, 95% of all the polls would find that 81% of the people interviewed think pro wrestling is not a sport.');
 INSERT INTO question_choices (id, question_id, content) VALUES (172, 43, 'This poll is one of the 95% of all Gallup polls that give correct results.');
@@ -345,7 +342,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (196, 49, 'two.')
 INSERT INTO question_choices (id, question_id, content) VALUES (197, 49, 'three.');
 INSERT INTO question_choices (id, question_id, content) VALUES (198, 49, 'four.');
 UPDATE questions SET answer = 198 WHERE id=49;
-INSERT INTO question_choices (id, question_id, content) VALUES (199, 49, 'can\'t tell from the information given.');
+INSERT INTO question_choices (id, question_id, content) VALUES (199, 49, 'can&apos;t tell from the information given.');
 
 INSERT INTO questions (id, content, chapter) VALUES (50, 'Want to stop smoking?  Nicotine patches may help, and so may taking a drug that fights depression.  A report in a recent issue of the <em>New England Journal of Medicine</em> describes a study of what works best.  Here is part of the summary:<br /><br />Use of nicotine replacement therapies and the antidepressant bupropion helps people stop smoking. We conducted a double-blind, placebo-controlled comparison of sustained-release bupropion (244 subjects), a nicotine patch (244 subjects), bupropion and a nicotine patch (245 subjects), and placebo (160 subjects) for smoking cessation.<br /><br /><strong>Results</strong>. The abstinence rates at 12 months were 15.6 percent in the placebo group, as compared with 16.4 percent in the nicotine patch group, 30.3 percent in the bupropion group, and 35.5 percent in the group given bupropion and the nicotine patch.The response variable in this experiment is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (200, 50, 'the combination of drug (bupropion or placebo) and nicotine patch.');
@@ -382,7 +379,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (218, 54, 'a matc
 INSERT INTO question_choices (id, question_id, content) VALUES (219, 54, 'a block design.');
 UPDATE questions SET answer = 219 WHERE id=54;
 
-INSERT INTO questions (id, content, chapter) VALUES (55, 'Studies with human subjects must be approved in advance by an Institutional Review Board.  The Board\'s main purpose is to', 129);
+INSERT INTO questions (id, content, chapter) VALUES (55, 'Studies with human subjects must be approved in advance by an Institutional Review Board.  The Board&apos;s main purpose is to', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (220, 55, 'be sure that the study is scientifically interesting.');
 INSERT INTO question_choices (id, question_id, content) VALUES (221, 55, 'be sure that the study uses good statistical techniques.');
 INSERT INTO question_choices (id, question_id, content) VALUES (222, 55, 'be sure that the study will have some benefit to society.');
@@ -396,49 +393,49 @@ INSERT INTO question_choices (id, question_id, content) VALUES (225, 56, 'Genera
 INSERT INTO question_choices (id, question_id, content) VALUES (226, 56, 'Federal Employment Survey.');
 INSERT INTO question_choices (id, question_id, content) VALUES (227, 56, 'Gallup Poll.');
 
-INSERT INTO questions (id, content, chapter) VALUES (57, 'An article in <em>USA Today</em> on August 9, 1999 said that &quot;a nationally representative survey of 3,617 Americans&quot; shows that &quot;People who attend religious services at least once a month live significantly longer than those who don\'t.&quot;  But churchgoers are more likely to be nonsmokers and to have good health habits.  Does attending religious services cause longer life?', 129);
+INSERT INTO questions (id, content, chapter) VALUES (57, 'An article in <em>USA Today</em> on August 9, 1999 said that &quot;a nationally representative survey of 3,617 Americans&quot; shows that &quot;People who attend religious services at least once a month live significantly longer than those who don&apos;t.&quot;  But churchgoers are more likely to be nonsmokers and to have good health habits.  Does attending religious services cause longer life?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (228, 57, 'Yes, because this study is a comparative experiment.');
-INSERT INTO question_choices (id, question_id, content) VALUES (229, 57, 'We can\'t say: the effects of going to church are confounded with the effects of other behavior such as not smoking.');
+INSERT INTO question_choices (id, question_id, content) VALUES (229, 57, 'We can&apos;t say: the effects of going to church are confounded with the effects of other behavior such as not smoking.');
 UPDATE questions SET answer = 229 WHERE id=57;
 INSERT INTO question_choices (id, question_id, content) VALUES (230, 57, 'Yes, because a sample survey with a large sample size will have a small margin of error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (231, 57, 'No, we can be sure that only physical habits like not smoking can affect how long we live.');
 
-INSERT INTO questions (id, content, chapter) VALUES (58, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.This study is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (58, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.This study is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (232, 58, 'a randomized comparative experiment.');
 INSERT INTO question_choices (id, question_id, content) VALUES (233, 58, 'an experiment, but there is no control group.');
 INSERT INTO question_choices (id, question_id, content) VALUES (234, 58, 'a census.');
 INSERT INTO question_choices (id, question_id, content) VALUES (235, 58, 'a sample survey.');
 UPDATE questions SET answer = 235 WHERE id=58;
 
-INSERT INTO questions (id, content, chapter) VALUES (59, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The study design appears to be', 129);
+INSERT INTO questions (id, content, chapter) VALUES (59, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The study design appears to be', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (236, 59, 'a completely randomized experimental design.');
 INSERT INTO question_choices (id, question_id, content) VALUES (237, 59, 'a block experimental design.');
 INSERT INTO question_choices (id, question_id, content) VALUES (238, 59, 'a simple random sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (239, 59, 'a multistage random sample.');
 UPDATE questions SET answer = 239 WHERE id=59;
 
-INSERT INTO questions (id, content, chapter) VALUES (60, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The number 77.3% is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (60, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The number 77.3% is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (240, 60, 'a statistic, because it describes a sample.');
 UPDATE questions SET answer = 240 WHERE id=60;
 INSERT INTO question_choices (id, question_id, content) VALUES (241, 60, 'a statistic, because it describes a population.');
 INSERT INTO question_choices (id, question_id, content) VALUES (242, 60, 'a parameter, because it describes a sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (243, 60, 'a parameter, because it describes a population.');
 
-INSERT INTO questions (id, content, chapter) VALUES (61, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The phrase &quot;significantly less likely&quot; means that when we compare the charity work of doctors with more than 85% of their practice in managed care with other doctors,', 129);
+INSERT INTO questions (id, content, chapter) VALUES (61, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.The phrase &quot;significantly less likely&quot; means that when we compare the charity work of doctors with more than 85% of their practice in managed care with other doctors,', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (244, 61, 'the difference in charity work is very large.');
 INSERT INTO question_choices (id, question_id, content) VALUES (245, 61, 'the difference in charity work is so large that it would rarely occur just by chance in choosing a sample.');
 UPDATE questions SET answer = 245 WHERE id=61;
-INSERT INTO question_choices (id, question_id, content) VALUES (246, 61, 'the difference in charity work is large enough to affect doctors\' income.');
+INSERT INTO question_choices (id, question_id, content) VALUES (246, 61, 'the difference in charity work is large enough to affect doctors&apos; income.');
 INSERT INTO question_choices (id, question_id, content) VALUES (247, 61, 'the difference in charity work is less than we would expect just by chance in choosing a sample.');
 
-INSERT INTO questions (id, content, chapter) VALUES (62, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.Some doctors who did not give any charity care may say that they did.  If so, the study suffers from', 129);
+INSERT INTO questions (id, content, chapter) VALUES (62, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.Some doctors who did not give any charity care may say that they did.  If so, the study suffers from', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (248, 62, 'a large margin of error to take account of possible failure to be truthful.');
 INSERT INTO question_choices (id, question_id, content) VALUES (249, 62, 'sampling errors that require a better random sampling design.');
 INSERT INTO question_choices (id, question_id, content) VALUES (250, 62, 'bias: the sample result will systematically underestimate the true percent of doctors who give charity care.');
 INSERT INTO question_choices (id, question_id, content) VALUES (251, 62, 'bias: the sample result will systematically overestimate the true percent of doctors who give charity care.');
 UPDATE questions SET answer = 251 WHERE id=62;
 
-INSERT INTO questions (id, content, chapter) VALUES (63, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient\'s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.For a simple random sample of size 10,881, the margin of error for 95% confidence is about', 129);
+INSERT INTO questions (id, content, chapter) VALUES (63, 'Do doctors in managed care plans give less charity care?  Researchers chose 60 communities at random, then chose doctors at random in each community.  In all, they interviewed 10,881 doctors.  Overall, 77.3% of the doctors said they had given some care free or at reduced rates because of the patient&apos;s financial need in the month before the interview.  Doctors who received at least 85% of their practice income from managed care plans were significantly less likely than other doctors to provide charity care.For a simple random sample of size 10,881, the margin of error for 95% confidence is about', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (252, 63, '+/- 9.6% .');
 INSERT INTO question_choices (id, question_id, content) VALUES (253, 63, '+/- 3% .');
 INSERT INTO question_choices (id, question_id, content) VALUES (254, 63, '+/- 0.96% .');
@@ -492,7 +489,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (280, 70, '1 in 1
 INSERT INTO question_choices (id, question_id, content) VALUES (281, 70, '1 in 1000, because every three-digit group has the same chance to come up.');
 UPDATE questions SET answer = 281 WHERE id=70;
 INSERT INTO question_choices (id, question_id, content) VALUES (282, 70, 'no chance, because 999 is not a random group of digits.');
-INSERT INTO question_choices (id, question_id, content) VALUES (283, 70, 'can\'t say&#8212;it is completely random.');
+INSERT INTO question_choices (id, question_id, content) VALUES (283, 70, 'can&apos;t say&#8212;it is completely random.');
 
 INSERT INTO questions (id, content, chapter) VALUES (71, 'In one of the first attempts to discover the speed of light, Simon Newcomb in 1882 made 66 measurements of the time light takes to travel between the Washington Monument and his laboratory on the Potomac River.  Why did Newcomb repeat his measurement 66 times and the take the average of the 66 as his final result?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (284, 71, 'Averaging several measurements reduces any bias that is present in his instruments.');
@@ -679,7 +676,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (394, 94, '90%');
 INSERT INTO question_choices (id, question_id, content) VALUES (395, 94, '99%');
 INSERT INTO question_choices (id, question_id, content) VALUES (396, 94, '50%');
 
-INSERT INTO questions (id, content, chapter) VALUES (95, 'A survey was sent to a simple random sample of college sophomores. The sample size was 300. When asked whether or not they liked Willie Nelson\'s music, 35 of these students did not give any answer. This is an example of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (95, 'A survey was sent to a simple random sample of college sophomores. The sample size was 300. When asked whether or not they liked Willie Nelson&apos;s music, 35 of these students did not give any answer. This is an example of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (397, 95, 'a stratified sample');
 INSERT INTO question_choices (id, question_id, content) VALUES (398, 95, 'a census');
 INSERT INTO question_choices (id, question_id, content) VALUES (399, 95, 'bias');
@@ -818,10 +815,10 @@ INSERT INTO question_choices (id, question_id, content) VALUES (481, 111, 'Both 
 INSERT INTO questions (id, content, chapter) VALUES (112, 'An ad for a new heartburn treatment says that it &quot;reduces heartburn by 300 percent.&quot; What does this mean?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (482, 112, 'It means that there is 3 times as much heartburn before using the treatment as there is after using it.');
 INSERT INTO question_choices (id, question_id, content) VALUES (483, 112, 'It means there is only seven-tenths as much heartburn after using the treatment, because 300/1000 = 0.3, or three-tenths.');
-INSERT INTO question_choices (id, question_id, content) VALUES (484, 112, 'It\'s nonsense, because removing 100 percent of the heartburn already removes all of it.');
+INSERT INTO question_choices (id, question_id, content) VALUES (484, 112, 'It&apos;s nonsense, because removing 100 percent of the heartburn already removes all of it.');
 UPDATE questions SET answer = 484 WHERE id=112;
-INSERT INTO question_choices (id, question_id, content) VALUES (485, 112, 'It\'s nonsense, because heartburn is a categorical variable, so percents don\'t make sense.');
-INSERT INTO question_choices (id, question_id, content) VALUES (486, 112, 'It\'s nonsense because percents only make sense for counts, and amount of heartburn isn\'t a count.');
+INSERT INTO question_choices (id, question_id, content) VALUES (485, 112, 'It&apos;s nonsense, because heartburn is a categorical variable, so percents don&apos;t make sense.');
+INSERT INTO question_choices (id, question_id, content) VALUES (486, 112, 'It&apos;s nonsense because percents only make sense for counts, and amount of heartburn isn&apos;t a count.');
 
 INSERT INTO questions (id, content, chapter) VALUES (113, 'Ethical standards for randomized, controlled clinical trials include', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (487, 113, 'not asking subjects to agree to participate without first informing them of the nature of the study and possible risks and benefits.');
@@ -834,7 +831,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (491, 113, 'All o
 INSERT INTO questions (id, content, chapter) VALUES (114, 'It was difficult to establish the causal link between cigarette smoking and lung cancer because', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (492, 114, 'random allocation of subjects to smoking is unethical.');
 INSERT INTO question_choices (id, question_id, content) VALUES (493, 114, 'observational studies generally cannot rule out confounding.');
-INSERT INTO question_choices (id, question_id, content) VALUES (494, 114, 'those who choose to smoke may be genetically at greater risk for lung cancer than those who don\'t choose to smoke.');
+INSERT INTO question_choices (id, question_id, content) VALUES (494, 114, 'those who choose to smoke may be genetically at greater risk for lung cancer than those who don&apos;t choose to smoke.');
 INSERT INTO question_choices (id, question_id, content) VALUES (495, 114, 'experiments done on animals may not be valid for humans.');
 INSERT INTO question_choices (id, question_id, content) VALUES (496, 114, 'All of the above');
 UPDATE questions SET answer = 496 WHERE id=114;
@@ -856,11 +853,11 @@ INSERT INTO question_choices (id, question_id, content) VALUES (505, 116, 'stati
 INSERT INTO question_choices (id, question_id, content) VALUES (506, 116, 'parameter, statistic, chance variation, probability.');
 
 INSERT INTO questions (id, content, chapter) VALUES (117, 'A newspaper article was headlined, &quot;Marrying young can be beneficial.&quot; The article said: Marriage is a good thing when it comes to cutting back on drinking and drugs. A University of Michigan Institute for Social Research study of 33,000 young adults showed that young, unmarried adults usually increased their alcohol, marijuana and cocaine use when they left home, often to attend college. Those same people, however, decreased their drug and alcohol use when they got engaged or married.  Couples who lived together but were not engaged or married showed no such drop in drug use.The strongest reason for having reservations about the claim made in the first sentence of the quote is', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (507, 117, 'you don\'t agree with the claim.');
+INSERT INTO question_choices (id, question_id, content) VALUES (507, 117, 'you don&apos;t agree with the claim.');
 INSERT INTO question_choices (id, question_id, content) VALUES (508, 117, 'the sample size is too small.');
 INSERT INTO question_choices (id, question_id, content) VALUES (509, 117, 'the study was limited to Michigan.');
 INSERT INTO question_choices (id, question_id, content) VALUES (510, 117, 'there is no control group.');
-INSERT INTO question_choices (id, question_id, content) VALUES (511, 117, 'it\'s an observational study.');
+INSERT INTO question_choices (id, question_id, content) VALUES (511, 117, 'it&apos;s an observational study.');
 UPDATE questions SET answer = 511 WHERE id=117;
 
 INSERT INTO questions (id, content, chapter) VALUES (118, 'A newspaper article was headlined, &quot;Marrying young can be beneficial.&quot; The article said: Marriage is a good thing when it comes to cutting back on drinking and drugs. A University of Michigan Institute for Social Research study of 33,000 young adults showed that young, unmarried adults usually increased their alcohol, marijuana and cocaine use when they left home, often to attend college. Those same people, however, decreased their drug and alcohol use when they got engaged or married.  Couples who lived together but were not engaged or married showed no such drop in drug use.The explanatory variable in this study is', 129);
@@ -900,8 +897,8 @@ INSERT INTO question_choices (id, question_id, content) VALUES (532, 122, 'less 
 INSERT INTO question_choices (id, question_id, content) VALUES (533, 122, 'greater than +/- 2%, because there are fewer than 3,800 people 18 to 24 in the sample.');
 UPDATE questions SET answer = 533 WHERE id=122;
 INSERT INTO question_choices (id, question_id, content) VALUES (534, 122, 'equal to +/- 2%, because this result comes from the same sample survey.');
-INSERT INTO question_choices (id, question_id, content) VALUES (535, 122, 'less than +/- 2%, because only some of the population is between 18 and 24, so it\'s easier to estimate facts about them.');
-INSERT INTO question_choices (id, question_id, content) VALUES (536, 122, 'greater than +/- 2%, because only some of the population is between 18 and 24, so it\'s harder to estimate facts about them.');
+INSERT INTO question_choices (id, question_id, content) VALUES (535, 122, 'less than +/- 2%, because only some of the population is between 18 and 24, so it&apos;s easier to estimate facts about them.');
+INSERT INTO question_choices (id, question_id, content) VALUES (536, 122, 'greater than +/- 2%, because only some of the population is between 18 and 24, so it&apos;s harder to estimate facts about them.');
 
 INSERT INTO questions (id, content, chapter) VALUES (123, 'A national sample survey interviewed 3,800 people age 18 and older nationwide by telephone. One question asked was whether they agreed with this statement: &quot;Some people say we should have a third major political party in this country in addition to the Democrats and Republicans.&quot;A possible source of nonsampling error in this sample survey is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (537, 123, 'some people chosen for the sample refused to answer questions.');
@@ -944,14 +941,14 @@ UPDATE questions SET answer = 560 WHERE id=127;
 INSERT INTO question_choices (id, question_id, content) VALUES (561, 127, 'All of (A), (B), and (C) are correct.');
 
 INSERT INTO questions (id, content, chapter) VALUES (128, 'You want to take an SRS of 50 of the 816 students who live in a college dormitory.  You label the students 001 to 816 in alphabetical order. In the table of random digits you read the entries<br /><br /> 96746  12149  37823  71868  18442  35119  62103  39244Which of these statements about the table of random digits is true?', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (562, 128, 'Every row must have exactly the same number of 0\'s and 1\'s.');
-INSERT INTO question_choices (id, question_id, content) VALUES (563, 128, 'In the entire table, there are exactly the same number of 0\'s and 1\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (562, 128, 'Every row must have exactly the same number of 0&apos;s and 1&apos;s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (563, 128, 'In the entire table, there are exactly the same number of 0&apos;s and 1&apos;s.');
 INSERT INTO question_choices (id, question_id, content) VALUES (564, 128, 'If you look at 100 consecutive pairs of digits anywhere in the table, exactly 1 pair is 00.');
 INSERT INTO question_choices (id, question_id, content) VALUES (565, 128, 'All of these are true.');
 INSERT INTO question_choices (id, question_id, content) VALUES (566, 128, 'None of these is true.');
 UPDATE questions SET answer = 566 WHERE id=128;
 
-INSERT INTO questions (id, content, chapter) VALUES (129, 'You want to ask a sample of undergraduates at State Tech how they feel about a proposal to delay future Spring Breaks by a week. Opinions may differ depending on the class of the student, especially because seniors will have left before the policy is changed. So you take separate SRS\'s of seniors and non-seniors and combine them to form your sample.You used a', 129);
+INSERT INTO questions (id, content, chapter) VALUES (129, 'You want to ask a sample of undergraduates at State Tech how they feel about a proposal to delay future Spring Breaks by a week. Opinions may differ depending on the class of the student, especially because seniors will have left before the policy is changed. So you take separate SRS&apos;s of seniors and non-seniors and combine them to form your sample.You used a', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (567, 129, 'simple random sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (568, 129, 'stratified random sample.');
 UPDATE questions SET answer = 568 WHERE id=129;
@@ -959,16 +956,16 @@ INSERT INTO question_choices (id, question_id, content) VALUES (569, 129, 'multi
 INSERT INTO question_choices (id, question_id, content) VALUES (570, 129, 'completely randomized experiment.');
 INSERT INTO question_choices (id, question_id, content) VALUES (571, 129, 'randomized block experiment.');
 
-INSERT INTO questions (id, content, chapter) VALUES (130, 'You want to ask a sample of undergraduates at State Tech how they feel about a proposal to delay future Spring Breaks by a week. Opinions may differ depending on the class of the student, especially because seniors will have left before the policy is changed. So you take separate SRS\'s of seniors and non-seniors and combine them to form your sample.The results of your Spring Break survey are as follows: 72% of the non-seniors favor delaying Spring Break by a week, but only 28% of the seniors do. If you wanted an estimate of the percentage of all State Tech undergraduates who favor delaying the break, which of the following would be the most reasonable?', 129);
+INSERT INTO questions (id, content, chapter) VALUES (130, 'You want to ask a sample of undergraduates at State Tech how they feel about a proposal to delay future Spring Breaks by a week. Opinions may differ depending on the class of the student, especially because seniors will have left before the policy is changed. So you take separate SRS&apos;s of seniors and non-seniors and combine them to form your sample.The results of your Spring Break survey are as follows: 72% of the non-seniors favor delaying Spring Break by a week, but only 28% of the seniors do. If you wanted an estimate of the percentage of all State Tech undergraduates who favor delaying the break, which of the following would be the most reasonable?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (572, 130, '28% because seniors are more experienced.');
 INSERT INTO question_choices (id, question_id, content) VALUES (573, 130, '100% because both groups should be combined and 72 + 28 =100.');
-INSERT INTO question_choices (id, question_id, content) VALUES (574, 130, '72% because seniors\' opinions don\'t matter.');
+INSERT INTO question_choices (id, question_id, content) VALUES (574, 130, '72% because seniors&apos; opinions don&apos;t matter.');
 INSERT INTO question_choices (id, question_id, content) VALUES (575, 130, '50% because 50 is the average of 28 and 72');
 INSERT INTO question_choices (id, question_id, content) VALUES (576, 130, '61% = (3/4)(72%) + (1/4)(28%), taking into account that there are about three times as many non-seniors as seniors.');
 UPDATE questions SET answer = 576 WHERE id=130;
 
 INSERT INTO questions (id, content, chapter) VALUES (131, '&quot;Congress passed a ban on the sale of assault weapons.  Now there is a move to repeal that ban. Do you agree that the ban on sale of assault weapons should be repealed?&quot; You ask that question to an SRS of 1000 adults in Texas (population 18 million people) and to a separate SRS of 1000 adults in Indiana (population 5.7 million people).  You make 95% confidence statements about the percents of all adults in both states who agree.Your margin of error for Indiana is', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (577, 131, 'the same as in Texas, because the two SRS\'s are the same size.');
+INSERT INTO question_choices (id, question_id, content) VALUES (577, 131, 'the same as in Texas, because the two SRS&apos;s are the same size.');
 UPDATE questions SET answer = 577 WHERE id=131;
 INSERT INTO question_choices (id, question_id, content) VALUES (578, 131, 'larger than in Texas, because there are fewer people in Indiana.');
 INSERT INTO question_choices (id, question_id, content) VALUES (579, 131, 'smaller than in Texas, because there are fewer people in Indiana.');
@@ -981,9 +978,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (583, 132, 'This 
 INSERT INTO question_choices (id, question_id, content) VALUES (584, 132, 'This is a bad idea, because allowing people to volunteer may result in large bias.');
 UPDATE questions SET answer = 584 WHERE id=132;
 INSERT INTO question_choices (id, question_id, content) VALUES (585, 132, 'This is a bad idea, because there is no control group.');
-INSERT INTO question_choices (id, question_id, content) VALUES (586, 132, 'This is a bad idea, because the study isn\'t double-blind.');
+INSERT INTO question_choices (id, question_id, content) VALUES (586, 132, 'This is a bad idea, because the study isn&apos;t double-blind.');
 
-INSERT INTO questions (id, content, chapter) VALUES (133, 'You wonder if your new TV commercial for Rock \'n Roll beer is more effective than the old one. So you design an experiment. Random samples of men and of women are each randomly allocated to two groups.  One group views the old commercial, while the other views the new one.  The amount of Rock \'n Roll beer bought by each subject in the next 48 hours is recorded.  What type of experimental design is this?', 129);
+INSERT INTO questions (id, content, chapter) VALUES (133, 'You wonder if your new TV commercial for Rock &apos;n Roll beer is more effective than the old one. So you design an experiment. Random samples of men and of women are each randomly allocated to two groups.  One group views the old commercial, while the other views the new one.  The amount of Rock &apos;n Roll beer bought by each subject in the next 48 hours is recorded.  What type of experimental design is this?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (587, 133, 'This is a randomized block design.');
 UPDATE questions SET answer = 587 WHERE id=133;
 INSERT INTO question_choices (id, question_id, content) VALUES (588, 133, 'This is a matched pairs design.');
@@ -1032,7 +1029,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (615, 138, 'strat
 INSERT INTO question_choices (id, question_id, content) VALUES (616, 138, 'internal validity.');
 
 INSERT INTO questions (id, content, chapter) VALUES (139, 'Does taking large amounts of vitamins protect against cancer?  To study this question, researchers enrolled 29,000 Finnish men, all smokers over the age of 50.  Half of the men took vitamin supplements, and others took a dummy pill that has no active ingredient.  The researchers followed all the men for eight years. At the end of the study, men in the vitamin group were no less likely to have cancer than men in the other group. This study cast doubt on the popular idea that taking lots of vitamins can reduce the risk of cancer.<br /><br />The study design looked like this:<br /><br /><img src="/images/freeman/candc/f1-134.jpg" /><br />A weakness of this study is that', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (617, 139, 'it isn\'t clear that the results apply to women.');
+INSERT INTO question_choices (id, question_id, content) VALUES (617, 139, 'it isn&apos;t clear that the results apply to women.');
 UPDATE questions SET answer = 617 WHERE id=139;
 INSERT INTO question_choices (id, question_id, content) VALUES (618, 139, 'observational studies give only weak evidence for causation.');
 INSERT INTO question_choices (id, question_id, content) VALUES (619, 139, 'the people who took vitamins may have had other good habits.');
@@ -1047,7 +1044,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (624, 140, 'ethni
 INSERT INTO question_choices (id, question_id, content) VALUES (625, 140, 'yearly salary, age.');
 INSERT INTO question_choices (id, question_id, content) VALUES (626, 140, 'age, date hired.');
 
-INSERT INTO questions (id, content, chapter) VALUES (141, 'A company used to give IQ tests to all job applicants.  This is now illegal because IQ is not related to the performance of workers in all the company\'s jobs.  That is, IQ as a measure of future performance on the job is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (141, 'A company used to give IQ tests to all job applicants.  This is now illegal because IQ is not related to the performance of workers in all the company&apos;s jobs.  That is, IQ as a measure of future performance on the job is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (627, 141, 'biased.');
 INSERT INTO question_choices (id, question_id, content) VALUES (628, 141, 'invalid.');
 UPDATE questions SET answer = 628 WHERE id=141;
@@ -1077,7 +1074,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (643, 144, '288')
 UPDATE questions SET answer = 643 WHERE id=144;
 INSERT INTO question_choices (id, question_id, content) VALUES (644, 144, '89');
 INSERT INTO question_choices (id, question_id, content) VALUES (645, 144, 'Between 240 and 336, because of the margin of error.');
-INSERT INTO question_choices (id, question_id, content) VALUES (646, 144, 'We can\'t say exactly, because we are only 95% confident.');
+INSERT INTO question_choices (id, question_id, content) VALUES (646, 144, 'We can&apos;t say exactly, because we are only 95% confident.');
 
 INSERT INTO questions (id, content, chapter) VALUES (145, 'Amy wants to spend a summer in France after she graduates.  She is worried that this will be too expensive because the dollar buys fewer French francs now.  When Amy entered college, a dollar was worth 6.5 francs.  Now a dollar is worth only 5.25 francs.  By about what percent has the value of the dollar in francs decreased?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (647, 145, '10%');
@@ -1089,11 +1086,11 @@ INSERT INTO question_choices (id, question_id, content) VALUES (651, 145, '81%')
 
 INSERT INTO questions (id, content, chapter) VALUES (146, 'An ad for a new mouth rinse says that it &quot;reduces plaque on teeth by 300 percent.&quot;  What does this mean?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (652, 146, 'It means that three-tenths of the plaque is removed, because 300/1000 = 0.3, or three-tenths.');
-INSERT INTO question_choices (id, question_id, content) VALUES (653, 146, 'It\'s nonsense, because plaque is a categorical variable, so percents don\'t make sense.');
+INSERT INTO question_choices (id, question_id, content) VALUES (653, 146, 'It&apos;s nonsense, because plaque is a categorical variable, so percents don&apos;t make sense.');
 INSERT INTO question_choices (id, question_id, content) VALUES (654, 146, 'It means that there is 3 times as much plaque before using the rinse as there is after using it.');
-INSERT INTO question_choices (id, question_id, content) VALUES (655, 146, 'It\'s nonsense, because removing 100 percent of the plaque already removes all of it.');
+INSERT INTO question_choices (id, question_id, content) VALUES (655, 146, 'It&apos;s nonsense, because removing 100 percent of the plaque already removes all of it.');
 UPDATE questions SET answer = 655 WHERE id=146;
-INSERT INTO question_choices (id, question_id, content) VALUES (656, 146, 'It\'s nonsense because percents only make sense for counts, and amount of plaque isn\'t a count.');
+INSERT INTO question_choices (id, question_id, content) VALUES (656, 146, 'It&apos;s nonsense because percents only make sense for counts, and amount of plaque isn&apos;t a count.');
 
 INSERT INTO questions (id, content, chapter) VALUES (147, 'All statistical studies that collect data from people should follow some basic ethical standards.  Some of these ethical standards are:', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (657, 147, 'Always use random selection to choose among people.');
@@ -1119,7 +1116,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (670, 149, 'match
 UPDATE questions SET answer = 670 WHERE id=149;
 INSERT INTO question_choices (id, question_id, content) VALUES (671, 149, 'double-blind design.');
 
-INSERT INTO questions (id, content, chapter) VALUES (150, 'You want to ask a sample of professors at your school how they feel about the tenure system for faculty.  You realize that opinions may differ depending on the rank of the professor, especially because assistant professors do not have tenure.  So you take separate SRS\'s of assistant, associate, and full professors and combine them to form your sample.  You used a', 129);
+INSERT INTO questions (id, content, chapter) VALUES (150, 'You want to ask a sample of professors at your school how they feel about the tenure system for faculty.  You realize that opinions may differ depending on the rank of the professor, especially because assistant professors do not have tenure.  So you take separate SRS&apos;s of assistant, associate, and full professors and combine them to form your sample.  You used a', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (672, 150, 'simple random sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (673, 150, 'stratified random sample.');
 UPDATE questions SET answer = 673 WHERE id=150;
@@ -1129,7 +1126,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (676, 150, 'rando
 
 INSERT INTO questions (id, content, chapter) VALUES (151, 'The general term for the kind of samples recommended by statisticians is <em>probability sample</em>.  Which of these are accurate statements about all probability samples of <em>n</em> individuals?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (677, 151, 'All samples of size <em>n</em> can be chosen, and all have the same chance to be chosen.');
-INSERT INTO question_choices (id, question_id, content) VALUES (678, 151, 'There may be some samples of size <em>n</em> that can\'t be chosen.');
+INSERT INTO question_choices (id, question_id, content) VALUES (678, 151, 'There may be some samples of size <em>n</em> that can&apos;t be chosen.');
 INSERT INTO question_choices (id, question_id, content) VALUES (679, 151, 'There may be samples of size <em>n</em> that can be chosen, but have different chances to be chosen.');
 INSERT INTO question_choices (id, question_id, content) VALUES (680, 151, 'Both (B) and (C) are true.');
 UPDATE questions SET answer = 680 WHERE id=151;
@@ -1151,11 +1148,11 @@ INSERT INTO question_choices (id, question_id, content) VALUES (690, 153, '4.5%.
 UPDATE questions SET answer = 690 WHERE id=153;
 INSERT INTO question_choices (id, question_id, content) VALUES (691, 153, '20%');
 
-INSERT INTO questions (id, content, chapter) VALUES (154, 'Sale of eggs that are contaminated with salmonella can cause food poisoning among consumers.  A large egg producer takes an SRS of 200 eggs from all the eggs shipped in one day.  The laboratory reports that 9 of these eggs had salmonella contamination.  Unknown to the producer, 0.1% (one-tenth of one percent) of all eggs shipped had salmonella.A statistician tells the producer that the margin of error for a 95% confidence statement for these data is about plus or minus 3 percentage points.  The producer therefore reports that between 1.5% and 7.5% (that\'s 4.5% +/- 3%) of all eggs are contaminated. This isn\'t right&#8212;only 0.1% are contaminated.  What went wrong?', 129);
+INSERT INTO questions (id, content, chapter) VALUES (154, 'Sale of eggs that are contaminated with salmonella can cause food poisoning among consumers.  A large egg producer takes an SRS of 200 eggs from all the eggs shipped in one day.  The laboratory reports that 9 of these eggs had salmonella contamination.  Unknown to the producer, 0.1% (one-tenth of one percent) of all eggs shipped had salmonella.A statistician tells the producer that the margin of error for a 95% confidence statement for these data is about plus or minus 3 percentage points.  The producer therefore reports that between 1.5% and 7.5% (that&apos;s 4.5% +/- 3%) of all eggs are contaminated. This isn&apos;t right&#8212;only 0.1% are contaminated.  What went wrong?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (692, 154, 'The 4.5% is wrong&#8212;see my answer to the previous problem for the correct estimate.');
 INSERT INTO question_choices (id, question_id, content) VALUES (693, 154, 'A 95% confidence statement is only right for 95% of all possible samples.  This must be one of the 5% for which we get an incorrect conclusion.');
 UPDATE questions SET answer = 693 WHERE id=154;
-INSERT INTO question_choices (id, question_id, content) VALUES (694, 154, 'The 4.5% is correct, and it\'s impossible for the truth to lie outside the margin of error, so there must be another mistake.  Maybe the laboratory counted contaminated eggs incorrectly.');
+INSERT INTO question_choices (id, question_id, content) VALUES (694, 154, 'The 4.5% is correct, and it&apos;s impossible for the truth to lie outside the margin of error, so there must be another mistake.  Maybe the laboratory counted contaminated eggs incorrectly.');
 
 INSERT INTO questions (id, content, chapter) VALUES (155, 'Sale of eggs that are contaminated with salmonella can cause food poisoning among consumers.  A large egg producer takes an SRS of 200 eggs from all the eggs shipped in one day.  The laboratory reports that 9 of these eggs had salmonella contamination.  Unknown to the producer, 0.1% (one-tenth of one percent) of all eggs shipped had salmonella.If the producer took an SRS of 400 eggs instead of 200, the new margin of error would be', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (695, 155, 'the same as before, because the population of eggs is the same.');
@@ -1163,7 +1160,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (696, 155, 'small
 UPDATE questions SET answer = 696 WHERE id=155;
 INSERT INTO question_choices (id, question_id, content) VALUES (697, 155, 'larger than before, because the sample is larger.');
 INSERT INTO question_choices (id, question_id, content) VALUES (698, 155, 'random in size, could be either larger or smaller than before.');
-INSERT INTO question_choices (id, question_id, content) VALUES (699, 155, 'can\'t tell, because the size of the sample doesn\'t control the margin of error.');
+INSERT INTO question_choices (id, question_id, content) VALUES (699, 155, 'can&apos;t tell, because the size of the sample doesn&apos;t control the margin of error.');
 
 INSERT INTO questions (id, content, chapter) VALUES (156, 'The histograms below describe the values taken by three sample statistics in several hundred samples from the same population.  The true value of the population parameter is marked on each histogram.<br /> <img src="/images/freeman/candc/f1-156.jpg" /><br />The name for the pattern of values that a statistic takes when we sample repeatedly from the same population is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (700, 156, 'the bias of the statistic.');
@@ -1220,7 +1217,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (731, 162, 'Expla
 INSERT INTO question_choices (id, question_id, content) VALUES (732, 162, 'Explanatory: whether a species went extinct. Response: the body mass of the species.');
 INSERT INTO question_choices (id, question_id, content) VALUES (733, 162, 'Explanatory: the ice age.  Response: the body mass of a species.');
 
-INSERT INTO questions (id, content, chapter) VALUES (163, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers\' union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.In this situation, the <em>population</em> is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (163, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers&apos; union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.In this situation, the <em>population</em> is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (734, 163, 'the 1347 teachers who mail back the questionnaire.');
 INSERT INTO question_choices (id, question_id, content) VALUES (735, 163, 'the 2500 teachers to whom you mailed the questionnaire.');
 INSERT INTO question_choices (id, question_id, content) VALUES (736, 163, 'all members of the National Education Association.');
@@ -1228,7 +1225,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (737, 163, 'all A
 UPDATE questions SET answer = 737 WHERE id=163;
 INSERT INTO question_choices (id, question_id, content) VALUES (738, 163, 'all American school students.');
 
-INSERT INTO questions (id, content, chapter) VALUES (164, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers\' union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.The <em>sampling frame</em> is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (164, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers&apos; union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.The <em>sampling frame</em> is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (739, 164, 'the 1347 teachers who mail back the questionnaire.');
 INSERT INTO question_choices (id, question_id, content) VALUES (740, 164, 'the 2500 teachers to whom you mailed the questionnaire.');
 INSERT INTO question_choices (id, question_id, content) VALUES (741, 164, 'all members of the National Education Association.');
@@ -1236,7 +1233,7 @@ UPDATE questions SET answer = 741 WHERE id=164;
 INSERT INTO question_choices (id, question_id, content) VALUES (742, 164, 'all American school teachers.');
 INSERT INTO question_choices (id, question_id, content) VALUES (743, 164, 'all American school students.');
 
-INSERT INTO questions (id, content, chapter) VALUES (165, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers\' union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.The <em>sample</em> is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (165, 'You want to know the opinions of American school teachers about establishing a national test for high school graduation.  You obtain a list of the members of the National Education Association (the largest teachers&apos; union) and mail a questionnaire to 2500 teachers chosen at random from this list.  In all 1347 teachers return the questionnaire.The <em>sample</em> is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (744, 165, 'the 1347 teachers who mail back the questionnaire.');
 UPDATE questions SET answer = 744 WHERE id=165;
 INSERT INTO question_choices (id, question_id, content) VALUES (745, 165, 'the 2500 teachers to whom you mailed the questionnaire.');
@@ -1272,7 +1269,7 @@ INSERT INTO questions (id, content, chapter) VALUES (169, 'In a table of random 
 INSERT INTO question_choices (id, question_id, content) VALUES (764, 169, 'every pair of digits has chance 1/100 to be any of the 100 possible pairs 00, 01,  ... , 99.');
 UPDATE questions SET answer = 764 WHERE id=169;
 INSERT INTO question_choices (id, question_id, content) VALUES (765, 169, 'if a pair of digits is 00, the next pair cannot also be 00.');
-INSERT INTO question_choices (id, question_id, content) VALUES (766, 169, 'every row has exactly the same number of 0\'s and 1\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (766, 169, 'every row has exactly the same number of 0&apos;s and 1&apos;s.');
 INSERT INTO question_choices (id, question_id, content) VALUES (767, 169, '(A) and (B) but not (C).');
 INSERT INTO question_choices (id, question_id, content) VALUES (768, 169, 'All of (A), (B), and (C).');
 
@@ -1292,7 +1289,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (776, 171, 'the d
 INSERT INTO question_choices (id, question_id, content) VALUES (777, 171, 'subjects are not told either their treatment or their medical condition.');
 INSERT INTO question_choices (id, question_id, content) VALUES (778, 171, 'all individual data are kept confidential.');
 
-INSERT INTO questions (id, content, chapter) VALUES (172, 'Corn variety #1 yielded 140 bushels per acre last year at a research farm.  This year, corn variety #2, planted in the same location, yielded only 110 bushels per acre.  Unfortunately, we don\'t know whether the difference is due to the superiority of variety #1 or to the effect of this year\'s drought.  This is an example of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (172, 'Corn variety #1 yielded 140 bushels per acre last year at a research farm.  This year, corn variety #2, planted in the same location, yielded only 110 bushels per acre.  Unfortunately, we don&apos;t know whether the difference is due to the superiority of variety #1 or to the effect of this year&apos;s drought.  This is an example of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (779, 172, 'bias due to voluntary response.');
 INSERT INTO question_choices (id, question_id, content) VALUES (780, 172, 'random sampling error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (781, 172, 'confounding.');
@@ -1302,7 +1299,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (783, 172, 'nonsa
 
 INSERT INTO questions (id, content, chapter) VALUES (173, 'You must choose a simple random sample of 7 lots from a shipment of 80 lots of vaccine for testing.  You label the lots 01, 02, 03, ..., 80 and then use the random number table to select your sample. The chance that any one lot is chosen for the sample is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (784, 173, 'random because the sample is random.');
-INSERT INTO question_choices (id, question_id, content) VALUES (785, 173, 'can\'t say without looking at the random number table.');
+INSERT INTO question_choices (id, question_id, content) VALUES (785, 173, 'can&apos;t say without looking at the random number table.');
 INSERT INTO question_choices (id, question_id, content) VALUES (786, 173, '1 in 80.');
 INSERT INTO question_choices (id, question_id, content) VALUES (787, 173, '7 in 80.');
 UPDATE questions SET answer = 787 WHERE id=173;
@@ -1348,13 +1345,13 @@ INSERT INTO question_choices (id, question_id, content) VALUES (812, 178, 'Rando
 UPDATE questions SET answer = 812 WHERE id=178;
 INSERT INTO question_choices (id, question_id, content) VALUES (813, 178, 'The first students to appear go to Group 1.');
 
-INSERT INTO questions (id, content, chapter) VALUES (179, 'A study compares the effect on college students of two different TV advertisements for spring break in Gulf Shores, Alabama.  Call the ads &quot;Ad #1&quot; and &quot;Ad #2.&quot; We want to know which ad makes more students want to visit Gulf Shores during spring break.  The subjects are 90 students taking a course in hotel management.  The design of the study looks like this: <br /><br /><img src="/images/freeman/candc/f1-182.jpg" /><br />What is Group 2\'s treatment (at the point marked &quot;Question B&quot; in the diagram)?', 129);
+INSERT INTO questions (id, content, chapter) VALUES (179, 'A study compares the effect on college students of two different TV advertisements for spring break in Gulf Shores, Alabama.  Call the ads &quot;Ad #1&quot; and &quot;Ad #2.&quot; We want to know which ad makes more students want to visit Gulf Shores during spring break.  The subjects are 90 students taking a course in hotel management.  The design of the study looks like this: <br /><br /><img src="/images/freeman/candc/f1-182.jpg" /><br />What is Group 2&apos;s treatment (at the point marked &quot;Question B&quot; in the diagram)?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (814, 179, 'A placebo.');
 INSERT INTO question_choices (id, question_id, content) VALUES (815, 179, 'Ad #2.');
 UPDATE questions SET answer = 815 WHERE id=179;
 INSERT INTO question_choices (id, question_id, content) VALUES (816, 179, 'One of the ads, chosen at random.');
 INSERT INTO question_choices (id, question_id, content) VALUES (817, 179, 'Watch TV, but see no advertisement.');
-INSERT INTO question_choices (id, question_id, content) VALUES (818, 179, 'Can\'t say because of double-blindness.');
+INSERT INTO question_choices (id, question_id, content) VALUES (818, 179, 'Can&apos;t say because of double-blindness.');
 
 INSERT INTO questions (id, content, chapter) VALUES (180, 'A study compares the effect on college students of two different TV advertisements for spring break in Gulf Shores, Alabama.  Call the ads &quot;Ad #1&quot; and &quot;Ad #2.&quot; We want to know which ad makes more students want to visit Gulf Shores during spring break.  The subjects are 90 students taking a course in hotel management.  The design of the study looks like this: <br /><br /><img src="/images/freeman/candc/f1-182.jpg" /><br />The response variable should be named in the outline at (Question C).  The response variable in this study is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (819, 180, 'whether a student wants to visit Gulf Shores.');
@@ -1365,7 +1362,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (822, 180, 'rando
 INSERT INTO question_choices (id, question_id, content) VALUES (823, 180, 'Ad #2.');
 
 INSERT INTO questions (id, content, chapter) VALUES (181, 'A study compares the effect on college students of two different TV advertisements for spring break in Gulf Shores, Alabama.  Call the ads &quot;Ad #1&quot; and &quot;Ad #2.&quot; We want to know which ad makes more students want to visit Gulf Shores during spring break.  The subjects are 90 students taking a course in hotel management.  The design of the study looks like this: <br /><br /><img src="/images/freeman/candc/f1-182.jpg" /><br />A weakness of this study is', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (824, 181, 'This is an observational study, so we can\'t conclude that the ad viewed causes the response.');
+INSERT INTO question_choices (id, question_id, content) VALUES (824, 181, 'This is an observational study, so we can&apos;t conclude that the ad viewed causes the response.');
 INSERT INTO question_choices (id, question_id, content) VALUES (825, 181, 'The design is biased in favor of Ad #1.');
 INSERT INTO question_choices (id, question_id, content) VALUES (826, 181, 'The double-blind technique was not used.');
 INSERT INTO question_choices (id, question_id, content) VALUES (827, 181, 'Because the students all come from one course, the findings may not extend to all college students.');
@@ -1378,7 +1375,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (830, 182, 'great
 INSERT INTO question_choices (id, question_id, content) VALUES (831, 182, 'the same as for the national sample, +/- 3 percentage points.');
 UPDATE questions SET answer = 831 WHERE id=182;
 INSERT INTO question_choices (id, question_id, content) VALUES (832, 182, 'Could be either greater or less than +/- 3 percentage points.');
-INSERT INTO question_choices (id, question_id, content) VALUES (833, 182, 'Can\'t say before the sample is chosen.');
+INSERT INTO question_choices (id, question_id, content) VALUES (833, 182, 'Can&apos;t say before the sample is chosen.');
 
 INSERT INTO questions (id, content, chapter) VALUES (183, 'Which of the following is a source of <em>nonsampling error</em> in a sample survey?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (834, 183, 'Voluntary response sampling.');
@@ -1406,9 +1403,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (848, 185, 'relia
 
 INSERT INTO questions (id, content, chapter) VALUES (186, 'An example of a categorical variable is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (849, 186, 'the name of the college a student attends.');
-INSERT INTO question_choices (id, question_id, content) VALUES (850, 186, 'a student\'s weight in kilograms.');
-INSERT INTO question_choices (id, question_id, content) VALUES (851, 186, 'a student\'s class rank, such as 25th out of 364.');
-INSERT INTO question_choices (id, question_id, content) VALUES (852, 186, 'a student\'s sex (male or female).');
+INSERT INTO question_choices (id, question_id, content) VALUES (850, 186, 'a student&apos;s weight in kilograms.');
+INSERT INTO question_choices (id, question_id, content) VALUES (851, 186, 'a student&apos;s class rank, such as 25th out of 364.');
+INSERT INTO question_choices (id, question_id, content) VALUES (852, 186, 'a student&apos;s sex (male or female).');
 INSERT INTO question_choices (id, question_id, content) VALUES (853, 186, 'Both (A) and (D).');
 UPDATE questions SET answer = 853 WHERE id=186;
 
@@ -1499,11 +1496,11 @@ UPDATE questions SET answer = 902 WHERE id=198;
 INSERT INTO question_choices (id, question_id, content) VALUES (903, 198, 'completely eliminate measurement error.');
 
 INSERT INTO questions (id, content, chapter) VALUES (199, 'Which of these statements about a random number table is true?', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (904, 199, 'Each line contains exactly the same number of 0\'s and 1\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (904, 199, 'Each line contains exactly the same number of 0&apos;s and 1&apos;s.');
 INSERT INTO question_choices (id, question_id, content) VALUES (905, 199, 'The chance that any pair of adjacent digits is 88 is 1/100.');
 UPDATE questions SET answer = 905 WHERE id=199;
 INSERT INTO question_choices (id, question_id, content) VALUES (906, 199, 'The chance that any pair of adjacent digits is 89 is 1/99.');
-INSERT INTO question_choices (id, question_id, content) VALUES (907, 199, 'No row of the table can consist of all 9\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (907, 199, 'No row of the table can consist of all 9&apos;s.');
 
 INSERT INTO questions (id, content, chapter) VALUES (200, 'Which of the following statements about a randomized block design with two treatments is <em>not</em> true?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (908, 200, 'Every subject has a 50/50 chance of being given the first treatment.');
@@ -1599,7 +1596,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (960, 212, 'is no
 UPDATE questions SET answer = 960 WHERE id=212;
 INSERT INTO question_choices (id, question_id, content) VALUES (961, 212, 'is not included in the margin of error, because leaving out people with no phone has no effect on the outcome of the poll.');
 
-INSERT INTO questions (id, content, chapter) VALUES (213, 'It is hard to measure &quot;intelligence.&quot;  Let\'s do it the easy way: measure height in inches, and call the result &quot;intelligence.&quot; Not only is this method easy, it gives the same number every time we repeat the measurement on the same person.  Measuring intelligence this way is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (213, 'It is hard to measure &quot;intelligence.&quot;  Let&apos;s do it the easy way: measure height in inches, and call the result &quot;intelligence.&quot; Not only is this method easy, it gives the same number every time we repeat the measurement on the same person.  Measuring intelligence this way is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (962, 213, 'not reliable and not valid.');
 INSERT INTO question_choices (id, question_id, content) VALUES (963, 213, 'highly reliable but not valid.');
 UPDATE questions SET answer = 963 WHERE id=213;
@@ -1644,7 +1641,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (985, 218, 'The r
 INSERT INTO questions (id, content, chapter) VALUES (219, 'Any statistical study that uses human subjects requires <em>informed consent</em>.  This means that', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (986, 219, 'a review board must agree that the study is worthwhile and will not harm the subjects.');
 INSERT INTO question_choices (id, question_id, content) VALUES (987, 219, 'the authors of the study must agree to inform the public of the study results.');
-INSERT INTO question_choices (id, question_id, content) VALUES (988, 219, 'the authors of the study must inform a review board about it and obtain the board\'s consent to go ahead.');
+INSERT INTO question_choices (id, question_id, content) VALUES (988, 219, 'the authors of the study must inform a review board about it and obtain the board&apos;s consent to go ahead.');
 INSERT INTO question_choices (id, question_id, content) VALUES (989, 219, 'the nature of the study must be explained in advance to the subjects and they must voluntarily agree to take part.');
 UPDATE questions SET answer = 989 WHERE id=219;
 
@@ -1655,8 +1652,8 @@ UPDATE questions SET answer = 991 WHERE id=220;
 INSERT INTO question_choices (id, question_id, content) VALUES (992, 220, 'always have a placebo group; use the double-blind method.');
 INSERT INTO question_choices (id, question_id, content) VALUES (993, 220, 'use a block design; use chance to assign subjects to treatments.');
 
-INSERT INTO questions (id, content, chapter) VALUES (221, 'The Physicians\' Health Study gave half of a group of 22,000 male M.D.\'s aspirin.  The other half received a placebo.  After five years there were 189 heart attacks in the placebo group and 104 in the aspirin group.  One of the response variables in the Physicians\' Health Study was', 129);
-INSERT INTO question_choices (id, question_id, content) VALUES (994, 221, 'the 22,000 male M.D.\'s.');
+INSERT INTO questions (id, content, chapter) VALUES (221, 'The Physicians&apos; Health Study gave half of a group of 22,000 male M.D.&apos;s aspirin.  The other half received a placebo.  After five years there were 189 heart attacks in the placebo group and 104 in the aspirin group.  One of the response variables in the Physicians&apos; Health Study was', 129);
+INSERT INTO question_choices (id, question_id, content) VALUES (994, 221, 'the 22,000 male M.D.&apos;s.');
 INSERT INTO question_choices (id, question_id, content) VALUES (995, 221, 'whether a subject took aspirin or a placebo.');
 INSERT INTO question_choices (id, question_id, content) VALUES (996, 221, 'whether or not a subject had a heart attack.');
 UPDATE questions SET answer = 996 WHERE id=221;
@@ -1664,9 +1661,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (997, 221, 'the 1
 
 INSERT INTO questions (id, content, chapter) VALUES (222, 'Some common sources of nonsampling error in samples of human populations are', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (998, 222, 'using voluntary response samples; some subjects lie.');
-INSERT INTO question_choices (id, question_id, content) VALUES (999, 222, 'some subjects lie; some subjects can\'t be contacted.');
+INSERT INTO question_choices (id, question_id, content) VALUES (999, 222, 'some subjects lie; some subjects can&apos;t be contacted.');
 UPDATE questions SET answer = 999 WHERE id=222;
-INSERT INTO question_choices (id, question_id, content) VALUES (1000, 222, 'some subjects can\'t be contacted; drawing a sample from names in a telephone directory.');
+INSERT INTO question_choices (id, question_id, content) VALUES (1000, 222, 'some subjects can&apos;t be contacted; drawing a sample from names in a telephone directory.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1001, 222, 'Both (B) and (C).');
 INSERT INTO question_choices (id, question_id, content) VALUES (1002, 222, 'All of (A), (B), and (C).');
 
@@ -1677,7 +1674,7 @@ UPDATE questions SET answer = 1004 WHERE id=223;
 INSERT INTO question_choices (id, question_id, content) VALUES (1005, 223, 'a violation of confidentiality.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1006, 223, 'the effect of confounding in an observational study.');
 
-INSERT INTO questions (id, content, chapter) VALUES (224, 'If we choose a simple random sample (SRS) from a population, we can be sure that the ______________ which we compute from our SRS is a/an _______________ estimate of the population\'s true _______________.  We also know that we can reduce the _____________ of our result as desired by taking a large enough sample.  The appropriate sequence of words to complete this statement is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (224, 'If we choose a simple random sample (SRS) from a population, we can be sure that the ______________ which we compute from our SRS is a/an _______________ estimate of the population&apos;s true _______________.  We also know that we can reduce the _____________ of our result as desired by taking a large enough sample.  The appropriate sequence of words to complete this statement is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1007, 224, 'parameter, variation, statistic, unbiasedness');
 INSERT INTO question_choices (id, question_id, content) VALUES (1008, 224, 'parameter, unbiased, statistic, variation');
 INSERT INTO question_choices (id, question_id, content) VALUES (1009, 224, 'statistic, variation, parameter, unbiasedness');
@@ -1691,7 +1688,7 @@ UPDATE questions SET answer = 1012 WHERE id=225;
 INSERT INTO question_choices (id, question_id, content) VALUES (1013, 225, 'We can be certain that between 28% and 34% of all adult Americans feel that Clinton colors his hair.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1014, 225, 'We are 95% confident that 31% of all adult Americans feel that Clinton colors his hair.');
 
-INSERT INTO questions (id, content, chapter) VALUES (226, 'Michelle\'s income two years ago was $420,000.  Last year her income was only $100,000.  The percent change in Michelle\'s income was', 129);
+INSERT INTO questions (id, content, chapter) VALUES (226, 'Michelle&apos;s income two years ago was $420,000.  Last year her income was only $100,000.  The percent change in Michelle&apos;s income was', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1015, 226, '76.2% decrease');
 UPDATE questions SET answer = 1015 WHERE id=226;
 INSERT INTO question_choices (id, question_id, content) VALUES (1016, 226, '320% decrease');
@@ -1752,9 +1749,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1048, 233, 'exac
 INSERT INTO questions (id, content, chapter) VALUES (234, 'The General Social Survey (GSS), conducted by the National Opinion Research Center at the University of Chicago, is a major source of data on social attitudes in the U.S.  Once each year 1500 adults are interviewed in their homes all across the country.  The subjects are asked their opinions about sex and marriage, attitudes toward women, welfare, foreign policy and many other issues.If the GSS interviewed 1500 adults from Illinois (population 12,000,000) rather than 1500 from the entire U.S. (population 260,000,000) the margin of error for 95% confidence would be', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1049, 234, 'smaller because Illinois has a smaller population.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1050, 234, 'larger because Illinois has a smaller population.');
-INSERT INTO question_choices (id, question_id, content) VALUES (1051, 234, 'the same because population size doesn\'t matter.');
+INSERT INTO question_choices (id, question_id, content) VALUES (1051, 234, 'the same because population size doesn&apos;t matter.');
 UPDATE questions SET answer = 1051 WHERE id=234;
-INSERT INTO question_choices (id, question_id, content) VALUES (1052, 234, 'either smaller or larger because it\'s random.');
+INSERT INTO question_choices (id, question_id, content) VALUES (1052, 234, 'either smaller or larger because it&apos;s random.');
 
 INSERT INTO questions (id, content, chapter) VALUES (235, 'The General Social Survey (GSS), conducted by the National Opinion Research Center at the University of Chicago, is a major source of data on social attitudes in the U.S.  Once each year 1500 adults are interviewed in their homes all across the country.  The subjects are asked their opinions about sex and marriage, attitudes toward women, welfare, foreign policy and many other issues.A potential source of nonsampling error in the GSS is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1053, 235, 'some subjects refuse to give their opinions.');
@@ -1798,21 +1795,21 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1075, 240, '7.0%
 INSERT INTO question_choices (id, question_id, content) VALUES (1076, 240, '6.6%.');
 UPDATE questions SET answer = 1076 WHERE id=240;
 
-INSERT INTO questions (id, content, chapter) VALUES (241, 'A news article about airport flight delays said, &quot;Chicago\'s O\'Hare Field scheduled 114,370 flights.  Nearly 10 percent, 1136, were canceled.&quot; The correct percentage canceled was', 129);
+INSERT INTO questions (id, content, chapter) VALUES (241, 'A news article about airport flight delays said, &quot;Chicago&apos;s O&apos;Hare Field scheduled 114,370 flights.  Nearly 10 percent, 1136, were canceled.&quot; The correct percentage canceled was', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1077, 241, 'near one-tenth of one percent.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1078, 241, 'near one percent.');
 UPDATE questions SET answer = 1078 WHERE id=241;
 INSERT INTO question_choices (id, question_id, content) VALUES (1079, 241, 'near 10 percent.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1080, 241, 'near 100 percent.');
 
-INSERT INTO questions (id, content, chapter) VALUES (242, 'A researcher creates a machine that will measure the total electrical activity in a human brain over a short period of time. She claims that this measures the intelligence of the brain\'s owner.  A psychologist says that\'s not true because the amount of electrical activity isn\'t related to ability to solve problems. The psychologist is claiming that electrical activity as a measure of intelligence is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (242, 'A researcher creates a machine that will measure the total electrical activity in a human brain over a short period of time. She claims that this measures the intelligence of the brain&apos;s owner.  A psychologist says that&apos;s not true because the amount of electrical activity isn&apos;t related to ability to solve problems. The psychologist is claiming that electrical activity as a measure of intelligence is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1081, 242, 'invalid.');
 UPDATE questions SET answer = 1081 WHERE id=242;
 INSERT INTO question_choices (id, question_id, content) VALUES (1082, 242, 'biased.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1083, 242, 'not reliable.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1084, 242, 'not precise.');
 
-INSERT INTO questions (id, content, chapter) VALUES (243, 'You are designing a clinical trial to see whether added calcium in the diet will reduce the blood pressure of middle-aged men.  You plan to give added calcium to a group of men and see whether their blood pressure is lower after six weeks.If you don\'t include a control group, your data will be invalid because of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (243, 'You are designing a clinical trial to see whether added calcium in the diet will reduce the blood pressure of middle-aged men.  You plan to give added calcium to a group of men and see whether their blood pressure is lower after six weeks.If you don&apos;t include a control group, your data will be invalid because of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1085, 243, 'the placebo effect.');
 UPDATE questions SET answer = 1085 WHERE id=243;
 INSERT INTO question_choices (id, question_id, content) VALUES (1086, 243, 'lack of confidentiality.');
@@ -1833,14 +1830,14 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1095, 245, 'the 
 UPDATE questions SET answer = 1095 WHERE id=245;
 INSERT INTO question_choices (id, question_id, content) VALUES (1096, 245, 'confounding.');
 
-INSERT INTO questions (id, content, chapter) VALUES (246, 'A study shows that patients who receive surgery for intestinal cancer live much longer after treatment than patients who are treated without surgery.  But doctors operate only on patients in relatively good condition, so we can\'t conclude that surgery lengthens the patients\' lives.This is an example of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (246, 'A study shows that patients who receive surgery for intestinal cancer live much longer after treatment than patients who are treated without surgery.  But doctors operate only on patients in relatively good condition, so we can&apos;t conclude that surgery lengthens the patients&apos; lives.This is an example of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1097, 246, 'double-blind technique.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1098, 246, 'internal inconsistency.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1099, 246, 'the placebo effect.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1100, 246, 'confounding.');
 UPDATE questions SET answer = 1100 WHERE id=246;
 
-INSERT INTO questions (id, content, chapter) VALUES (247, 'A study shows that patients who receive surgery for intestinal cancer live much longer after treatment than patients who are treated without surgery.  But doctors operate only on patients in relatively good condition, so we can\'t conclude that surgery lengthens the patients\' lives.The response variable in the study is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (247, 'A study shows that patients who receive surgery for intestinal cancer live much longer after treatment than patients who are treated without surgery.  But doctors operate only on patients in relatively good condition, so we can&apos;t conclude that surgery lengthens the patients&apos; lives.The response variable in the study is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1101, 247, 'intestinal cancer.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1102, 247, 'length of life after treatment.');
 UPDATE questions SET answer = 1102 WHERE id=247;
@@ -1862,7 +1859,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1111, 249, 'redu
 INSERT INTO question_choices (id, question_id, content) VALUES (1112, 249, 'all of the above.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1113, 249, '(A) and (B) but not (C).');
 
-INSERT INTO questions (id, content, chapter) VALUES (250, 'A member of Congress receives 1128 letters about proposed legislation that would provide government insurance for nursing- home care.  Over 80% oppose the legislation.  This sample can\'t be trusted because', 129);
+INSERT INTO questions (id, content, chapter) VALUES (250, 'A member of Congress receives 1128 letters about proposed legislation that would provide government insurance for nursing- home care.  Over 80% oppose the legislation.  This sample can&apos;t be trusted because', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1114, 250, 'there is no control group.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1115, 250, 'it includes people with no interest in the issue.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1116, 250, 'there is bias due to voluntary response.');
@@ -1892,7 +1889,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1130, 253, 'syst
 UPDATE questions SET answer = 1130 WHERE id=253;
 INSERT INTO question_choices (id, question_id, content) VALUES (1131, 253, 'stratified random sampling.');
 
-INSERT INTO questions (id, content, chapter) VALUES (254, 'The Dean of Students at Mountain Tech is interested in finding out how prevalent cheating is.  She sends a questionnaire to 1000 randomly chosen students and receives 700 replies.  Those asked to fill out the questionnaire are told not to put their names on either the questionnaire or on the return envelope.  Thus, no one in the Dean\'s office has any idea who sent in which response. After the replies are processed, statistics describing the entire sample are published, but no one outside the Dean\'s office is allowed to see individual questionnaires.  This survey is', 129);
+INSERT INTO questions (id, content, chapter) VALUES (254, 'The Dean of Students at Mountain Tech is interested in finding out how prevalent cheating is.  She sends a questionnaire to 1000 randomly chosen students and receives 700 replies.  Those asked to fill out the questionnaire are told not to put their names on either the questionnaire or on the return envelope.  Thus, no one in the Dean&apos;s office has any idea who sent in which response. After the replies are processed, statistics describing the entire sample are published, but no one outside the Dean&apos;s office is allowed to see individual questionnaires.  This survey is', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1132, 254, 'both anonymous and confidential.');
 UPDATE questions SET answer = 1132 WHERE id=254;
 INSERT INTO question_choices (id, question_id, content) VALUES (1133, 254, 'anonymous but not necessarily confidential.');
@@ -2000,35 +1997,35 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1195, 267, 'a co
 INSERT INTO question_choices (id, question_id, content) VALUES (1196, 267, 'a double-blind experiment.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1197, 267, 'voluntary response sampling.');
 
-INSERT INTO questions (id, content, chapter) VALUES (268, 'Professor Lilli Gans wishes to study the relationship between a person\'s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.Professor Gans has obtained', 129);
+INSERT INTO questions (id, content, chapter) VALUES (268, 'Professor Lilli Gans wishes to study the relationship between a person&apos;s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.Professor Gans has obtained', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1198, 268, 'a simple random sample from her class.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1199, 268, 'a systematic random sample from her class.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1200, 268, 'a stratified random sample, where the strata are students with different political opinions.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1201, 268, 'a stratified random sample, where the strata are students with different zodiac signs.');
 UPDATE questions SET answer = 1201 WHERE id=268;
 
-INSERT INTO questions (id, content, chapter) VALUES (269, 'Professor Lilli Gans wishes to study the relationship between a person\'s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.Professor Gans asks the students filling out her questionnaire to put their names on the front so she can ask for clarification or elaboration of some answers later.  However, she promises that no one other than she will find out who gave what answer.  Professor Gans is promising', 129);
+INSERT INTO questions (id, content, chapter) VALUES (269, 'Professor Lilli Gans wishes to study the relationship between a person&apos;s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.Professor Gans asks the students filling out her questionnaire to put their names on the front so she can ask for clarification or elaboration of some answers later.  However, she promises that no one other than she will find out who gave what answer.  Professor Gans is promising', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1202, 269, 'informed consent.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1203, 269, 'anonymity.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1204, 269, 'confidentiality.');
 UPDATE questions SET answer = 1204 WHERE id=269;
 INSERT INTO question_choices (id, question_id, content) VALUES (1205, 269, 'unbiasedness.');
 
-INSERT INTO questions (id, content, chapter) VALUES (270, 'Professor Lilli Gans wishes to study the relationship between a person\'s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.One of the questions in Professor Gans\' questionnaire asks whether the student has ever given money to the American Nazi Party.  Any students who have done so are likely to lie and say &quot;No,&quot; rather than admit the truth.  This is an example of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (270, 'Professor Lilli Gans wishes to study the relationship between a person&apos;s zodiac sign and the his or her political opinions.  She obtains the birthdays of all 816 students enrolled in her Astrology 101 course.  Then she uses a random digits table to choose 10 students from each of the twelve zodiac signs.  For example, students born from March 21 until April 19 have the Aries zodiac sign, and Professor Gans chooses 10 Aries students at random.  She uses a different part of the table of random digits to choose students having each sign.  After obtaining her sample, Professor Gans has the selected students fill out a questionnaire.One of the questions in Professor Gans&apos; questionnaire asks whether the student has ever given money to the American Nazi Party.  Any students who have done so are likely to lie and say &quot;No,&quot; rather than admit the truth.  This is an example of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1206, 270, 'confounding');
 INSERT INTO question_choices (id, question_id, content) VALUES (1207, 270, 'anecdotal evidence.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1208, 270, 'sampling error');
 INSERT INTO question_choices (id, question_id, content) VALUES (1209, 270, 'nonsampling error');
 UPDATE questions SET answer = 1209 WHERE id=270;
 
-INSERT INTO questions (id, content, chapter) VALUES (271, 'Professor Faulpelz asks a random sample of high school freshmen about their TV viewing habits.  Four years later, he obtains their final high school grade-point averages and compares these with the answers about TV viewing habits.  He finds that students who watch a lot of TV get lower grades than those who don\'t.  When it comes to high school GPA, the answers to the Faulpelz questionnaire on TV viewing habits', 129);
+INSERT INTO questions (id, content, chapter) VALUES (271, 'Professor Faulpelz asks a random sample of high school freshmen about their TV viewing habits.  Four years later, he obtains their final high school grade-point averages and compares these with the answers about TV viewing habits.  He finds that students who watch a lot of TV get lower grades than those who don&apos;t.  When it comes to high school GPA, the answers to the Faulpelz questionnaire on TV viewing habits', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1210, 271, 'have predictive validity.');
 UPDATE questions SET answer = 1210 WHERE id=271;
 INSERT INTO question_choices (id, question_id, content) VALUES (1211, 271, 'are invalid because they are biased against students whose parents watch TV a lot.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1212, 271, 'are invalid because there were no controls.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1213, 271, 'are invalid because of convenience sampling.');
 
-INSERT INTO questions (id, content, chapter) VALUES (272, 'Is &quot;tartar control&quot; Crest toothpaste is more effective at preventing tartar build-up on teeth than regular Crest toothpaste? Researchers recruit 200 volunteers (109 men and 91 women) who first get a free tooth cleaning.  Then the researchers randomly assign 100 to the tartar control group and 100 to the regular toothpaste group.  All 200 people are given unmarked tubes of the appropriate toothpaste and instructed on how often to brush their teeth each day.  They are not told which group they are in, and the two kinds of toothpaste look the same.  After 6 months, they are rated on tartar build-up by dentists who don\'t know who was in each group.This is an example of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (272, 'Is &quot;tartar control&quot; Crest toothpaste is more effective at preventing tartar build-up on teeth than regular Crest toothpaste? Researchers recruit 200 volunteers (109 men and 91 women) who first get a free tooth cleaning.  Then the researchers randomly assign 100 to the tartar control group and 100 to the regular toothpaste group.  All 200 people are given unmarked tubes of the appropriate toothpaste and instructed on how often to brush their teeth each day.  They are not told which group they are in, and the two kinds of toothpaste look the same.  After 6 months, they are rated on tartar build-up by dentists who don&apos;t know who was in each group.This is an example of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1214, 272, 'matched-pairs design.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1215, 272, 'a completely randomized design.');
 UPDATE questions SET answer = 1215 WHERE id=272;
@@ -2036,7 +2033,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1216, 272, 'a bl
 INSERT INTO question_choices (id, question_id, content) VALUES (1217, 272, 'more than one of the above.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1218, 272, 'None of the above.');
 
-INSERT INTO questions (id, content, chapter) VALUES (273, 'Is &quot;tartar control&quot; Crest toothpaste is more effective at preventing tartar build-up on teeth than regular Crest toothpaste? Researchers recruit 200 volunteers (109 men and 91 women) who first get a free tooth cleaning.  Then the researchers randomly assign 100 to the tartar control group and 100 to the regular toothpaste group.  All 200 people are given unmarked tubes of the appropriate toothpaste and instructed on how often to brush their teeth each day.  They are not told which group they are in, and the two kinds of toothpaste look the same.  After 6 months, they are rated on tartar build-up by dentists who don\'t know who was in each group.The study also made use of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (273, 'Is &quot;tartar control&quot; Crest toothpaste is more effective at preventing tartar build-up on teeth than regular Crest toothpaste? Researchers recruit 200 volunteers (109 men and 91 women) who first get a free tooth cleaning.  Then the researchers randomly assign 100 to the tartar control group and 100 to the regular toothpaste group.  All 200 people are given unmarked tubes of the appropriate toothpaste and instructed on how often to brush their teeth each day.  They are not told which group they are in, and the two kinds of toothpaste look the same.  After 6 months, they are rated on tartar build-up by dentists who don&apos;t know who was in each group.The study also made use of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1219, 273, 'computer-assisted interviewing.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1220, 273, 'anonymity of subjects.');
 INSERT INTO question_choices (id, question_id, content) VALUES (1221, 273, 'the placebo effect.');
@@ -2049,7 +2046,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (1224, 274, 'smal
 INSERT INTO question_choices (id, question_id, content) VALUES (1225, 274, 'larger for Wabash than for Purdue.');
 UPDATE questions SET answer = 1225 WHERE id=274;
 INSERT INTO question_choices (id, question_id, content) VALUES (1226, 274, 'about the same at both schools.');
-INSERT INTO question_choices (id, question_id, content) VALUES (1227, 274, 'either smaller or larger for Wabash&#8212;can\'t tell without seeing the sample results.');
+INSERT INTO question_choices (id, question_id, content) VALUES (1227, 274, 'either smaller or larger for Wabash&#8212;can&apos;t tell without seeing the sample results.');
 
 INSERT INTO questions (id, content, chapter) VALUES (275, 'If we took a SRS of 1700 people from California (population 32 million) and a SRS of 1000 people from Detroit (population 1 million) which sample would have the smaller margin of error?', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1228, 275, 'Detroit, because 1000/1,000,000 is more than 1700/32,000,000.');
@@ -2109,11 +2106,11 @@ INSERT INTO questions (id, content, chapter) VALUES (282, 'An experiment is cond
 INSERT INTO question_choices (id, question_id, content) VALUES (1261, 282, '2 cups of coffee');
 INSERT INTO question_choices (id, question_id, content) VALUES (1262, 282, 'the time the class is held');
 INSERT INTO question_choices (id, question_id, content) VALUES (1263, 282, 'class attendance');
-INSERT INTO question_choices (id, question_id, content) VALUES (1264, 282, 'teacher\'s performance');
+INSERT INTO question_choices (id, question_id, content) VALUES (1264, 282, 'teacher&apos;s performance');
 INSERT INTO question_choices (id, question_id, content) VALUES (1265, 282, 'exam performance');
 UPDATE questions SET answer = 1265 WHERE id=282;
 
-INSERT INTO questions (id, content, chapter) VALUES (283, 'An experiment is conducted to determine whether the caffeine in two cups of regular coffee, taken each morning before class, can improve the performance of a typical student on a statistics exam.<br /><br />Suppose all students in the 8:30 section are given the treatment (2 cups of coffee) and all students in the 9:30 section are not permitted to have any caffeine before class.Instead of giving all students in the 8:30 section 2 cups of coffee, students in the 8:30 section are randomly assigned to a treatment group (2 cups of coffee) or a control group (2 cups of decaffeinated coffee).  The coffee is so bad that students cannot tell whether they are in the treatment or the control group.  As is turns out, students in both groups do better on the exam than students in the 9:30 section, who weren\'t given anything.  This could be the result of', 129);
+INSERT INTO questions (id, content, chapter) VALUES (283, 'An experiment is conducted to determine whether the caffeine in two cups of regular coffee, taken each morning before class, can improve the performance of a typical student on a statistics exam.<br /><br />Suppose all students in the 8:30 section are given the treatment (2 cups of coffee) and all students in the 9:30 section are not permitted to have any caffeine before class.Instead of giving all students in the 8:30 section 2 cups of coffee, students in the 8:30 section are randomly assigned to a treatment group (2 cups of coffee) or a control group (2 cups of decaffeinated coffee).  The coffee is so bad that students cannot tell whether they are in the treatment or the control group.  As is turns out, students in both groups do better on the exam than students in the 9:30 section, who weren&apos;t given anything.  This could be the result of', 129);
 INSERT INTO question_choices (id, question_id, content) VALUES (1266, 283, 'the placebo effect.');
 UPDATE questions SET answer = 1266 WHERE id=283;
 INSERT INTO question_choices (id, question_id, content) VALUES (1267, 283, 'an observational study.');
