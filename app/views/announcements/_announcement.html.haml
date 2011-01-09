@@ -5,5 +5,5 @@
     = link_to image_tag("comment_delete.png", :alt => "Delete Announcement", :title => "Delete Announcement"), course_announcement_path(@course, announcement), :method => :delete, :confirm => "Are you sure?"
 
 .block_body
-  = announcement.body
+  = announcement.body.html_safe
   .block_information= "Posted by #{announcement.user.full_name} on #{datetime_format(announcement.created_at)}"
