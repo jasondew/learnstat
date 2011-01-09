@@ -1,4 +1,3 @@
-
 INSERT INTO questions (id, content, chapter) VALUES (596, 'The most recent value of the Consumer Price Index (1982&#8211;84 = 100) is 165.0.  This means that', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2724, 596, 'household income has increased by 65% since 1982&#8211;84.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2725, 596, '1999 is 165% of 1982.');
@@ -15,7 +14,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2731, 597, 'the 
 INSERT INTO question_choices (id, question_id, content) VALUES (2732, 597, 'the government uses small samples, so there is a lot of sampling variability in the CPI.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2733, 597, 'prices are recorded in only a few places, and some of these are places where prices are higher than in Indiana.');
 
-INSERT INTO questions (id, content, chapter) VALUES (598, 'The Consumer Price Index (1982&#8211;84 = 100) in mid-1999 was about 165.0. The CPI in 1930 (same base) was 16.7.  The New York Yankees paid Babe Ruth $80,000 in 1930, an enormous salary for an athlete in those days.  The buying power of the Babe\'s salary in 1999 dollars is about', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (598, 'The Consumer Price Index (1982&#8211;84 = 100) in mid-1999 was about 165.0. The CPI in 1930 (same base) was 16.7.  The New York Yankees paid Babe Ruth $80,000 in 1930, an enormous salary for an athlete in those days.  The buying power of the Babe&apos;s salary in 1999 dollars is about', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2734, 598, '$8,097');
 INSERT INTO question_choices (id, question_id, content) VALUES (2735, 598, '$479,042');
 INSERT INTO question_choices (id, question_id, content) VALUES (2736, 598, '$790,419');
@@ -33,7 +32,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2743, 599, 'Conf
 
 INSERT INTO questions (id, content, chapter) VALUES (600, 'A study compares computer-based instruction with a text for teaching statistics.The proper way to design such a study is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2744, 600, 'Take an SRS of algebra students to see which method they are using.');
-INSERT INTO question_choices (id, question_id, content) VALUES (2745, 600, 'Have a group of students use the computer and compare them with last year\'s class, which used a textbook.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2745, 600, 'Have a group of students use the computer and compare them with last year&apos;s class, which used a textbook.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2746, 600, 'Do a randomized comparative experiment in which half the students are assigned to the computer and half to a text.');
 UPDATE questions SET answer = 2746 WHERE id=600;
 INSERT INTO question_choices (id, question_id, content) VALUES (2747, 600, 'Compare students at Harvard, which uses a text, with students at Prairie View, where they use computers.');
@@ -74,7 +73,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2767, 605, '$675
 INSERT INTO question_choices (id, question_id, content) VALUES (2768, 605, '$330,000 is the mean, because income distributions are slewed to the right');
 INSERT INTO question_choices (id, question_id, content) VALUES (2769, 605, '$675,000 is the mean, because income distributions are skewed to the right');
 UPDATE questions SET answer = 2769 WHERE id=605;
-INSERT INTO question_choices (id, question_id, content) VALUES (2770, 605, 'can\'t say, because income distributions are often not skewed');
+INSERT INTO question_choices (id, question_id, content) VALUES (2770, 605, 'can&apos;t say, because income distributions are often not skewed');
 
 INSERT INTO questions (id, content, chapter) VALUES (606, 'The box in the center of a boxplot marks', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2771, 606, 'the full range covered by the data');
@@ -222,7 +221,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2859, 623, '4.5 
 INSERT INTO questions (id, content, chapter) VALUES (624, 'Which of the following statements about correlation <em>r</em> is <strong>false</strong>?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2860, 624, '');
 INSERT INTO question_choices (id, question_id, content) VALUES (2861, 624, '');
-INSERT INTO question_choices (id, question_id, content) VALUES (2862, 624, 'It makes no sense to talk about a correlation between a student\'s major and her income.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2862, 624, 'It makes no sense to talk about a correlation between a student&apos;s major and her income.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2863, 624, 'The value of ');
 INSERT INTO question_choices (id, question_id, content) VALUES (2864, 624, '');
 UPDATE questions SET answer = 2864 WHERE id=624;
@@ -232,7 +231,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2865, 625, 'If e
 INSERT INTO question_choices (id, question_id, content) VALUES (2866, 625, 'The probability that there are exactly 4 zeros in a line of 40 digits is exactly 0.5.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2867, 625, 'The number of zeros in a line of 40 digits will vary, but on the average there will be 4 zeros per line.');
 UPDATE questions SET answer = 2867 WHERE id=625;
-INSERT INTO question_choices (id, question_id, content) VALUES (2868, 625, 'There can never be 4 zeros in a row because that pattern isn\'t random.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2868, 625, 'There can never be 4 zeros in a row because that pattern isn&apos;t random.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2869, 625, 'Both (C) and (D) are true.');
 
 INSERT INTO questions (id, content, chapter) VALUES (626, 'You want to estimate the proportion of undergraduates at a college who favor eliminating evening exams.  You will choose an SRS.  If you enlarge your SRS from 250 to 1000 students, the sample proportion p ', 17224);
@@ -244,7 +243,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2874, 626, 'will
 UPDATE questions SET answer = 2874 WHERE id=626;
 
 INSERT INTO questions (id, content, chapter) VALUES (627, 'Which of the following are sources of nonsampling errors?', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (2875, 627, 'You can\'t ever contact some of the students in your sample.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2875, 627, 'You can&apos;t ever contact some of the students in your sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2876, 627, 'Some of the students you contact refuse to answer.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2877, 627, 'You choose students by walking through the crowd at a football game.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2878, 627, '(A) and (B) but not (C).');
@@ -282,7 +281,7 @@ UPDATE questions SET answer = 2896 WHERE id=631;
 INSERT INTO question_choices (id, question_id, content) VALUES (2897, 631, 'All data are produced by the states&#8212;there are no federal statistical agencies.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2898, 631, 'All data are produced by private firms&#8212;there are no federal statistical agencies.');
 
-INSERT INTO questions (id, content, chapter) VALUES (632, 'The price of fresh oranges falls early in each year when the orange harvest in Florida is ready, then rises late in the year when oranges from that year\'s harvest begin to run out.  This is an example of', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (632, 'The price of fresh oranges falls early in each year when the orange harvest in Florida is ready, then rises late in the year when oranges from that year&apos;s harvest begin to run out.  This is an example of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2899, 632, 'trend in a time series.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2900, 632, 'erratic fluctuations in a time series.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2901, 632, 'seasonal variation in a time series.');
@@ -298,7 +297,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2907, 633, '$51,
 UPDATE questions SET answer = 2907 WHERE id=633;
 INSERT INTO question_choices (id, question_id, content) VALUES (2908, 633, 'One of the numbers must be wrong because income distributions are close to symmetric.');
 
-INSERT INTO questions (id, content, chapter) VALUES (634, 'You have decided to buy a yacht, specifically, a Nautor\'s Swan 68 sailing yacht.  This lovely boat cost $384,300 in 1976, when the CPI was 57.  The CPI at the beginning of 2000 was about 168, and the yacht then cost $2,300,000.  What is the 1976 yacht price expressed in 2000 dollars?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (634, 'You have decided to buy a yacht, specifically, a Nautor&apos;s Swan 68 sailing yacht.  This lovely boat cost $384,300 in 1976, when the CPI was 57.  The CPI at the beginning of 2000 was about 168, and the yacht then cost $2,300,000.  What is the 1976 yacht price expressed in 2000 dollars?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2909, 634, '$130,388');
 INSERT INTO question_choices (id, question_id, content) VALUES (2910, 634, '$780,357');
 INSERT INTO question_choices (id, question_id, content) VALUES (2911, 634, '$1,132,674');
@@ -316,8 +315,8 @@ INSERT INTO questions (id, content, chapter) VALUES (636, 'A recent monthly pres
 INSERT INTO question_choices (id, question_id, content) VALUES (2917, 636, 'Data are seasonally adjusted if we take out changes that occur in about the same size and same time every year.');
 UPDATE questions SET answer = 2917 WHERE id=636;
 INSERT INTO question_choices (id, question_id, content) VALUES (2918, 636, 'Data are seasonally adjusted when we ignore the effects of one-time events such as strikes and hurricanes.');
-INSERT INTO question_choices (id, question_id, content) VALUES (2919, 636, 'Data are seasonally adjusted if we report the average for this month over several past years, not just this one month\'s data.');
-INSERT INTO question_choices (id, question_id, content) VALUES (2920, 636, 'Data are seasonally adjusted if we report the average for the past four months, not just this month\'s data.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2919, 636, 'Data are seasonally adjusted if we report the average for this month over several past years, not just this one month&apos;s data.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2920, 636, 'Data are seasonally adjusted if we report the average for the past four months, not just this month&apos;s data.');
 
 INSERT INTO questions (id, content, chapter) VALUES (637, 'A recent monthly press release on the Consumer Price Index says: &quot;The Consumer Price Index for All Urban Consumers (CPI-U) rose 0.2 percent in October, before seasonal adjustment, to a level of 168.2 (1982&#8211;84=100), the Bureau of Labor Statistics of the U.S. Department of Labor reported today.&quot;The CPI was 163.3 in September, 1998 and 167.9 in September, 1999. By what percent did the CPI increase in this 12-month period?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2921, 637, '0.5%');
@@ -410,7 +409,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2973, 649, 'Exac
 UPDATE questions SET answer = 2973 WHERE id=649;
 INSERT INTO question_choices (id, question_id, content) VALUES (2974, 649, 'Above the third quartile.');
 
-INSERT INTO questions (id, content, chapter) VALUES (650, 'A study of fathers\' involvement in their children\'s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>How many fathers were interviewed?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (650, 'A study of fathers&apos; involvement in their children&apos;s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>How many fathers were interviewed?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2975, 650, '135');
 INSERT INTO question_choices (id, question_id, content) VALUES (2976, 650, '444');
 INSERT INTO question_choices (id, question_id, content) VALUES (2977, 650, '580');
@@ -418,7 +417,7 @@ UPDATE questions SET answer = 2977 WHERE id=650;
 INSERT INTO question_choices (id, question_id, content) VALUES (2978, 650, '444,000');
 INSERT INTO question_choices (id, question_id, content) VALUES (2979, 650, '580,000');
 
-INSERT INTO questions (id, content, chapter) VALUES (651, 'A study of fathers\' involvement in their children\'s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>How many fathers from single-parent families were interviewed?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (651, 'A study of fathers&apos; involvement in their children&apos;s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>How many fathers from single-parent families were interviewed?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2980, 651, '38');
 UPDATE questions SET answer = 2980 WHERE id=651;
 INSERT INTO question_choices (id, question_id, content) VALUES (2981, 651, '444');
@@ -426,26 +425,26 @@ INSERT INTO question_choices (id, question_id, content) VALUES (2982, 651, '580'
 INSERT INTO question_choices (id, question_id, content) VALUES (2983, 651, '38,000');
 INSERT INTO question_choices (id, question_id, content) VALUES (2984, 651, '444,000');
 
-INSERT INTO questions (id, content, chapter) VALUES (652, 'A study of fathers\' involvement in their children\'s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>What percent of single-parent fathers attended all the conferences?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (652, 'A study of fathers&apos; involvement in their children&apos;s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>What percent of single-parent fathers attended all the conferences?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2985, 652, 'about 39%');
 UPDATE questions SET answer = 2985 WHERE id=652;
 INSERT INTO question_choices (id, question_id, content) VALUES (2986, 652, 'about 23%');
 INSERT INTO question_choices (id, question_id, content) VALUES (2987, 652, 'about 11%');
 INSERT INTO question_choices (id, question_id, content) VALUES (2988, 652, 'about 2.5%');
 
-INSERT INTO questions (id, content, chapter) VALUES (653, 'A study of fathers\' involvement in their children\'s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>We can summarize the relationship between family status and fathers\' attendance at parent-teacher conferences by saying', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (653, 'A study of fathers&apos; involvement in their children&apos;s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>We can summarize the relationship between family status and fathers&apos; attendance at parent-teacher conferences by saying', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2989, 653, 'Few fathers are single parents, more are nonresident, and most are in two-parent families.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2990, 653, 'Fathers in two-parent families are much more likely to attend than other fathers, and nonresident fathers rarely attend.');
 INSERT INTO question_choices (id, question_id, content) VALUES (2991, 653, 'Nonresident fathers rarely attend, and single-parent fathers are somewhat more likely to attend than fathers in two-parent families.');
 UPDATE questions SET answer = 2991 WHERE id=653;
 INSERT INTO question_choices (id, question_id, content) VALUES (2992, 653, 'Most fathers attended no school conferences, and only about a quarter attended all.');
 
-INSERT INTO questions (id, content, chapter) VALUES (654, 'A study of fathers\' involvement in their children\'s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>The chi-square statistic for this two-way table is <em>X</em><sup>2</sup> = 54.8 with <em>P</em>-value <em>P</em> &lt; 0.001.  We can conclude that', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (2993, 654, 'There is very strong evidence that family status and fathers\' attendance at school conferences are related in the population of all fathers.');
+INSERT INTO questions (id, content, chapter) VALUES (654, 'A study of fathers&apos; involvement in their children&apos;s education interviews a sample of fathers of school-age children. One question concerns regularly scheduled parent-teacher conferences.  Here is a two-way table of the results:<br><br><img src="/images/freeman/candc/f3-53.jpg"><br>The chi-square statistic for this two-way table is <em>X</em><sup>2</sup> = 54.8 with <em>P</em>-value <em>P</em> &lt; 0.001.  We can conclude that', 17224);
+INSERT INTO question_choices (id, question_id, content) VALUES (2993, 654, 'There is very strong evidence that family status and fathers&apos; attendance at school conferences are related in the population of all fathers.');
 UPDATE questions SET answer = 2993 WHERE id=654;
-INSERT INTO question_choices (id, question_id, content) VALUES (2994, 654, 'There is very strong evidence that family status and fathers\' attendance at school conferences are related among the fathers in this sample.');
-INSERT INTO question_choices (id, question_id, content) VALUES (2995, 654, 'We lack strong evidence that family status and fathers\' attendance at school conferences are related in the population of all fathers.');
-INSERT INTO question_choices (id, question_id, content) VALUES (2996, 654, 'We lack strong evidence that family status and fathers\' attendance at school conferences are related among the fathers in this sample.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2994, 654, 'There is very strong evidence that family status and fathers&apos; attendance at school conferences are related among the fathers in this sample.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2995, 654, 'We lack strong evidence that family status and fathers&apos; attendance at school conferences are related in the population of all fathers.');
+INSERT INTO question_choices (id, question_id, content) VALUES (2996, 654, 'We lack strong evidence that family status and fathers&apos; attendance at school conferences are related among the fathers in this sample.');
 
 INSERT INTO questions (id, content, chapter) VALUES (655, 'Here is a two-way table of the numbers of college students (U.S. citizens only) classified by racial/ethnic group and by whether they attend a public or a private college.  The entries are in thousands of students.<br><br><img src="/images/freeman/candc/f3-58.jpg"><br>How many non-Hispanic black college students are there?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (2997, 655, '1121');
@@ -506,7 +505,7 @@ UPDATE questions SET answer = 3029 WHERE id=662;
 INSERT INTO question_choices (id, question_id, content) VALUES (3030, 662, 'less than for adults, because the teen sample is smaller.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3031, 662, 'less than for adults, because there are fewer teens in the population.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3032, 662, 'the same as for adults, because they both come from the same sample survey.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3033, 662, 'can\'t say, because it depends on what percent of each population was in the sample.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3033, 662, 'can&apos;t say, because it depends on what percent of each population was in the sample.');
 
 INSERT INTO questions (id, content, chapter) VALUES (663, 'Computer voice recognition software is getting better.  Some companies claim that their software correctly recognizes 98% of all words spoken by a trained user.To simulate recognizing a single word when the probability of being correct is 0.98, you would use random digits as follows:', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3034, 663, 'two digits simulate one word; 00 to 97 mean &quot;correct.&quot;');
@@ -515,7 +514,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3035, 663, 'two 
 INSERT INTO question_choices (id, question_id, content) VALUES (3036, 663, 'one digit simulates one word; 0 to 9 mean &quot;correct.&quot;');
 INSERT INTO question_choices (id, question_id, content) VALUES (3037, 663, 'three digits simulate one word; 001 to 098 mean &quot;correct.&quot;');
 
-INSERT INTO questions (id, content, chapter) VALUES (664, 'Cmputer voice recognition software is getting better.  Some companies claim that their software correctly recognizes 98% of all words spoken by a trained user.The program recognizes words (or not) independently.  To simulate the program\'s performance on 10 words, use your method from the previous problem and these random digits:<br><br>60970  70024  17868  29843  61790  90656  87964  18883<br><br>The number of words correct out of the 10 is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (664, 'Cmputer voice recognition software is getting better.  Some companies claim that their software correctly recognizes 98% of all words spoken by a trained user.The program recognizes words (or not) independently.  To simulate the program&apos;s performance on 10 words, use your method from the previous problem and these random digits:<br><br>60970  70024  17868  29843  61790  90656  87964  18883<br><br>The number of words correct out of the 10 is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3038, 664, '10');
 INSERT INTO question_choices (id, question_id, content) VALUES (3039, 664, '9');
 UPDATE questions SET answer = 3039 WHERE id=664;
@@ -858,7 +857,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3244, 708, 'mean
 INSERT INTO question_choices (id, question_id, content) VALUES (3245, 708, 'mean = 15, median = 21.6');
 INSERT INTO question_choices (id, question_id, content) VALUES (3246, 708, 'mean = 21.6, median = 15');
 UPDATE questions SET answer = 3246 WHERE id=708;
-INSERT INTO question_choices (id, question_id, content) VALUES (3247, 708, 'Can\'t tell without knowing the results of the three losses.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3247, 708, 'Can&apos;t tell without knowing the results of the three losses.');
 
 INSERT INTO questions (id, content, chapter) VALUES (709, 'A college football team wins 8 games and loses 3 during its season.  The margins of victory in the 8 wins are (in points scored):<br><br>11 14 12 16 25 45 1 49The relationship between the mean and median margin of victory is typical of distributions which, like this one, are', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3248, 709, 'nearly symmetric.');
@@ -868,13 +867,13 @@ UPDATE questions SET answer = 3250 WHERE id=709;
 INSERT INTO question_choices (id, question_id, content) VALUES (3251, 709, 'all positive.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3252, 709, 'football-shaped.');
 
-INSERT INTO questions (id, content, chapter) VALUES (710, 'A college football team wins 8 games and loses 3 during its season.  The margins of victory in the 8 wins are (in points scored):<br><br>11 14 12 16 25 45 1 49Suppose the &quot;margins of victory&quot; in the team\'s three losses were also reported, as negative numbers; for example, the &quot;margin of victory&quot; in a 42 to 17 was <em>-</em>25. What effect would including these three negative numbers, in addition to the eight positive numbers, have on the mean and median?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (710, 'A college football team wins 8 games and loses 3 during its season.  The margins of victory in the 8 wins are (in points scored):<br><br>11 14 12 16 25 45 1 49Suppose the &quot;margins of victory&quot; in the team&apos;s three losses were also reported, as negative numbers; for example, the &quot;margin of victory&quot; in a 42 to 17 was <em>-</em>25. What effect would including these three negative numbers, in addition to the eight positive numbers, have on the mean and median?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3253, 710, 'Both the mean and the median would be smaller.');
 UPDATE questions SET answer = 3253 WHERE id=710;
 INSERT INTO question_choices (id, question_id, content) VALUES (3254, 710, 'The mean would be smaller, but the median would stay the same.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3255, 710, 'The median would be smaller, but the mean would stay the same.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3256, 710, 'Both the mean and the median would stay the same.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3257, 710, 'Can\'t tell without knowing the results of all three losses.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3257, 710, 'Can&apos;t tell without knowing the results of all three losses.');
 
 INSERT INTO questions (id, content, chapter) VALUES (711, 'A high correlation between two variables does not always mean that changes in one cause changes in the other. The best way to get good evidence that cause-and-effect is present is to', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3258, 711, 'arrange the data in a two-way table.');
@@ -892,7 +891,7 @@ UPDATE questions SET answer = 3265 WHERE id=712;
 INSERT INTO question_choices (id, question_id, content) VALUES (3266, 712, 'scatterplot');
 INSERT INTO question_choices (id, question_id, content) VALUES (3267, 712, 'stemplot');
 
-INSERT INTO questions (id, content, chapter) VALUES (713, 'Here are the attendance figures for the lectures in a large class.<br><br><img src="/images/freeman/candc/f3-115.jpg"><br>For each of the 423 students in the class, the instructor puts into a box one ticket, with the student\'s name on it, for each lecture the student attended, then choose the lucky winner of an autographed copy of the final exam by drawing out one ticket at random.  What kind of sampling is this?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (713, 'Here are the attendance figures for the lectures in a large class.<br><br><img src="/images/freeman/candc/f3-115.jpg"><br>For each of the 423 students in the class, the instructor puts into a box one ticket, with the student&apos;s name on it, for each lecture the student attended, then choose the lucky winner of an autographed copy of the final exam by drawing out one ticket at random.  What kind of sampling is this?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3268, 713, 'Simple random sampling because each ticket has the same chance of being selected.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3269, 713, 'Simple random sampling because each person has the same chance of being selected.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3270, 713, 'Multistage cluster sampling because there are multiple tickets for each person.');
@@ -948,7 +947,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3301, 719, '57.5
 UPDATE questions SET answer = 3301 WHERE id=719;
 
 INSERT INTO questions (id, content, chapter) VALUES (720, 'How can Igor have a higher GPA than Desdemona in hard courses, also have a higher GPA in easy courses, and yet have an overall GPA which is lower than hers?', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3302, 720, 'It\'s impossible.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3302, 720, 'It&apos;s impossible.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3303, 720, 'It could happen. Igor could have taken mostly hard courses while Desdemona took mostly easy courses.');
 UPDATE questions SET answer = 3303 WHERE id=720;
 INSERT INTO question_choices (id, question_id, content) VALUES (3304, 720, 'It could happen. Igor could have taken mostly easy courses while Desdemona took mostly hard courses.');
@@ -989,18 +988,18 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3326, 724, 'impo
 
 INSERT INTO questions (id, content, chapter) VALUES (725, 'If we roll a pair of fair dice and count the number of aces (one dot) showing, the probability model is as follows:<br><br></p><table border=0 width="257"><tr><td valign="top" align="left" width="56"><strong>Count of aces</strong><br></p></td><td valign="top" align="center" width="42"><strong>Probability</strong><br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">0<br></p></td><td valign="top" align="center" width="42">?<br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">1<br></p></td><td valign="top" align="center" width="42">10/36<br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">2<br></p></td><td valign="top" align="center" width="42">1/36<br></p></td><td valign="top" align="center" width="159"></td></tr></table>Back in the 17th century, some gamblers thought that the probability of at least one ace (i.e., 1 or more aces) was 1/6 <em>+ </em>1/6. Is that true?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3327, 725, 'Yes.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3328, 725, 'No, it\'s larger than 1/6 ');
-INSERT INTO question_choices (id, question_id, content) VALUES (3329, 725, 'No, it\'s smaller than 1/6 ');
+INSERT INTO question_choices (id, question_id, content) VALUES (3328, 725, 'No, it&apos;s larger than 1/6 ');
+INSERT INTO question_choices (id, question_id, content) VALUES (3329, 725, 'No, it&apos;s smaller than 1/6 ');
 UPDATE questions SET answer = 3329 WHERE id=725;
-INSERT INTO question_choices (id, question_id, content) VALUES (3330, 725, 'Sometimes it\'s larger and sometimes it\'s smaller.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3330, 725, 'Sometimes it&apos;s larger and sometimes it&apos;s smaller.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3331, 725, 'Impossible to say.');
 
 INSERT INTO questions (id, content, chapter) VALUES (726, 'If we roll a pair of fair dice and count the number of aces (one dot) showing, the probability model is as follows:<br><br></p><table border=0 width="257"><tr><td valign="top" align="left" width="56"><strong>Count of aces</strong><br></p></td><td valign="top" align="center" width="42"><strong>Probability</strong><br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">0<br></p></td><td valign="top" align="center" width="42">?<br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">1<br></p></td><td valign="top" align="center" width="42">10/36<br></p></td><td valign="top" align="center" width="159"></td></tr></table><table border=0 width="257"><tr><td valign="top" align="left" width="56">2<br></p></td><td valign="top" align="center" width="42">1/36<br></p></td><td valign="top" align="center" width="159"></td></tr></table>How does the expected value of the number of aces compare with 1/6 <em>+</em> 1/6?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3332, 726, 'It equals 1/6 ');
 UPDATE questions SET answer = 3332 WHERE id=726;
-INSERT INTO question_choices (id, question_id, content) VALUES (3333, 726, 'It\'s larger than 1/6 ');
-INSERT INTO question_choices (id, question_id, content) VALUES (3334, 726, 'It\'s smaller than 1/6 ');
-INSERT INTO question_choices (id, question_id, content) VALUES (3335, 726, 'Sometimes it\'s larger and sometimes it\'s smaller.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3333, 726, 'It&apos;s larger than 1/6 ');
+INSERT INTO question_choices (id, question_id, content) VALUES (3334, 726, 'It&apos;s smaller than 1/6 ');
+INSERT INTO question_choices (id, question_id, content) VALUES (3335, 726, 'Sometimes it&apos;s larger and sometimes it&apos;s smaller.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3336, 726, 'Impossible to say.');
 
 INSERT INTO questions (id, content, chapter) VALUES (727, 'A news report says, &quot;New research suggests that an active social life may increase resistance to respiratory infections.  In a recent study, 300 healthy volunteers were given nasal sprays of cold virus, then quarantined for five days.  The volunteers were asked about relationships with spouse, children, friends, neighbors, and coworkers.  Those who had only one to three types of relationships were four times as likely to get a cold as those six or more types. The most significant factor for resisting the cold virus seemed to be the diversity rather than the sheer quantity of social contacts.&quot;How would you categorize this study?', 17224);
@@ -1013,10 +1012,10 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3341, 727, 'A vo
 
 INSERT INTO questions (id, content, chapter) VALUES (728, 'A news report says, &quot;New research suggests that an active social life may increase resistance to respiratory infections.  In a recent study, 300 healthy volunteers were given nasal sprays of cold virus, then quarantined for five days.  The volunteers were asked about relationships with spouse, children, friends, neighbors, and coworkers.  Those who had only one to three types of relationships were four times as likely to get a cold as those six or more types. The most significant factor for resisting the cold virus seemed to be the diversity rather than the sheer quantity of social contacts.&quot;Why do these results fall short of demonstrating that by broadening our social networks we can increase our resistance to respiratory infections? (Pick the best answer.)', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3342, 728, 'Volunteers were used.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3343, 728, 'We\'re not told the age of the volunteers.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3344, 728, 'We\'re not told what day of the week they got the nasal spray.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3343, 728, 'We&apos;re not told the age of the volunteers.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3344, 728, 'We&apos;re not told what day of the week they got the nasal spray.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3345, 728, 'Maybe the subjects lied about their relationships.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3346, 728, 'Some other variables, associated with the breadth of one\'s social network, may be the real causes of higher resistance to colds.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3346, 728, 'Some other variables, associated with the breadth of one&apos;s social network, may be the real causes of higher resistance to colds.');
 UPDATE questions SET answer = 3346 WHERE id=728;
 
 INSERT INTO questions (id, content, chapter) VALUES (729, 'A cording to the FBI Uniform Crime Report, the robbery rate in the United States is 202 per 100,000 people.  At that rate, how many robberies would there be in a state the size of Indiana (5.8 million people)?', 17224);
@@ -1035,47 +1034,47 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3354, 730, '1992
 INSERT INTO question_choices (id, question_id, content) VALUES (3355, 730, '1993');
 INSERT INTO question_choices (id, question_id, content) VALUES (3356, 730, '1994');
 
-INSERT INTO questions (id, content, chapter) VALUES (731, 'There are separate CPI\'s for various components of the market basket. For example, the CPI for Cable TV (1982&#8211;84=100) was 200.7 in 1996.If there were no adjustments for quality improvements, then how much did Cable TV rates increase from the base period to 1996?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (731, 'There are separate CPI&apos;s for various components of the market basket. For example, the CPI for Cable TV (1982&#8211;84=100) was 200.7 in 1996.If there were no adjustments for quality improvements, then how much did Cable TV rates increase from the base period to 1996?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3357, 731, 'By 24.8%.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3358, 731, 'By 200%.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3359, 731, 'They doubled.');
 UPDATE questions SET answer = 3359 WHERE id=731;
 INSERT INTO question_choices (id, question_id, content) VALUES (3360, 731, 'Both (B) and (C) are true.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3361, 731, 'Impossible to say because the CPI doesn\'t measure prices.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3361, 731, 'Impossible to say because the CPI doesn&apos;t measure prices.');
 
-INSERT INTO questions (id, content, chapter) VALUES (732, 'There are separate CPI\'s for various components of the market basket. For example, the CPI for Cable TV (1982&#8211;84=100) was 200.7 in 1996.If there were adjustments in the Cable TV index due to quality improvements (e.g., more channels now than in 1984), would the increase in Cable TV rates be greater, smaller, or the same as in the previous question?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (732, 'There are separate CPI&apos;s for various components of the market basket. For example, the CPI for Cable TV (1982&#8211;84=100) was 200.7 in 1996.If there were adjustments in the Cable TV index due to quality improvements (e.g., more channels now than in 1984), would the increase in Cable TV rates be greater, smaller, or the same as in the previous question?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3362, 732, 'Greater.');
 UPDATE questions SET answer = 3362 WHERE id=732;
 INSERT INTO question_choices (id, question_id, content) VALUES (3363, 732, 'Smaller.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3364, 732, 'The same.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3365, 732, 'Could be either greater or smaller.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3366, 732, 'The question doesn\'t make sense.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3366, 732, 'The question doesn&apos;t make sense.');
 
 INSERT INTO questions (id, content, chapter) VALUES (733, 'The difference between an experiment and an observational study is', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3367, 733, 'Observational studies don\'t have explanatory and response variables.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3368, 733, 'Experiments don\'t have placebos.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3367, 733, 'Observational studies don&apos;t have explanatory and response variables.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3368, 733, 'Experiments don&apos;t have placebos.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3369, 733, 'An experiment imposes treatments on subjects, while an observational study accepts existing treatments.');
 UPDATE questions SET answer = 3369 WHERE id=733;
 INSERT INTO question_choices (id, question_id, content) VALUES (3370, 733, 'Experiments are double-blind, while observational studies are only single-blind.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3371, 733, 'All of the above.');
 
-INSERT INTO questions (id, content, chapter) VALUES (734, 'A  auto assembly plant reports these sales figures for the models it makes:<br><br></p><table border=0 width="459"><tr><td valign="top" align="left" width="120"><strong>Vehicle</strong><br></p></td><td valign="top" align="center" width="90"><strong>Nov 97</strong><br></p></td><td valign="top" align="center" width="80"><strong>YTD-97</strong><br></p></td><td valign="top" align="center" width="86"><strong>Nov 96</strong><br></p></td><td valign="top" align="center" width="82"><strong>YTD-96</strong><br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Subaru Legacy<br></p></td><td valign="top" align="center" width="90">8,570<br></p></td><td valign="top" align="center" width="80">83,994<br></p></td><td valign="top" align="center" width="86">8,615<br></p></td><td valign="top" align="center" width="82">85,256<br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Isuzu Rodeo<br></p></td><td valign="top" align="center" width="90">4,536<br></p></td><td valign="top" align="center" width="80">57,810<br></p></td><td valign="top" align="center" width="86">3,889<br></p></td><td valign="top" align="center" width="82">57,099<br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Honda Passport<br></p></td><td valign="top" align="center" width="90">1,569<br></p></td><td valign="top" align="center" width="80">20,567<br></p></td><td valign="top" align="center" width="86">2,259<br></p></td><td valign="top" align="center" width="82">25,982<br></p></td></tr></table><br>By what percent did November Honda Passport sales drop from \'96 to \'97? <br></p>', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (734, 'A  auto assembly plant reports these sales figures for the models it makes:<br><br></p><table border=0 width="459"><tr><td valign="top" align="left" width="120"><strong>Vehicle</strong><br></p></td><td valign="top" align="center" width="90"><strong>Nov 97</strong><br></p></td><td valign="top" align="center" width="80"><strong>YTD-97</strong><br></p></td><td valign="top" align="center" width="86"><strong>Nov 96</strong><br></p></td><td valign="top" align="center" width="82"><strong>YTD-96</strong><br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Subaru Legacy<br></p></td><td valign="top" align="center" width="90">8,570<br></p></td><td valign="top" align="center" width="80">83,994<br></p></td><td valign="top" align="center" width="86">8,615<br></p></td><td valign="top" align="center" width="82">85,256<br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Isuzu Rodeo<br></p></td><td valign="top" align="center" width="90">4,536<br></p></td><td valign="top" align="center" width="80">57,810<br></p></td><td valign="top" align="center" width="86">3,889<br></p></td><td valign="top" align="center" width="82">57,099<br></p></td></tr></table><table border=0 width="459"><tr><td valign="top" align="left" width="120">Honda Passport<br></p></td><td valign="top" align="center" width="90">1,569<br></p></td><td valign="top" align="center" width="80">20,567<br></p></td><td valign="top" align="center" width="86">2,259<br></p></td><td valign="top" align="center" width="82">25,982<br></p></td></tr></table><br>By what percent did November Honda Passport sales drop from &apos;96 to &apos;97? <br></p>', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3372, 734, '69%');
 INSERT INTO question_choices (id, question_id, content) VALUES (3373, 734, '44%');
 INSERT INTO question_choices (id, question_id, content) VALUES (3374, 734, '31%');
 UPDATE questions SET answer = 3374 WHERE id=734;
 INSERT INTO question_choices (id, question_id, content) VALUES (3375, 734, '21%');
-INSERT INTO question_choices (id, question_id, content) VALUES (3376, 734, 'They didn\'t drop. They rose by 44%');
+INSERT INTO question_choices (id, question_id, content) VALUES (3376, 734, 'They didn&apos;t drop. They rose by 44%');
 
 INSERT INTO questions (id, content, chapter) VALUES (735, 'A magazine article on preventing cancer says, &quot;Eating one serving of tofu a week may cut your risk of breast cancer 15 percent, recent research suggests.&quot; If the data comes from an observational study, then', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3377, 735, 'the results must be false.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3378, 735, 'the results must be true.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3379, 735, 'there may be lurking variables.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3380, 735, 'perhaps those who chose to eat more tofu are, for some reason, less susceptible to breast cancer than those who didn\'t.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3380, 735, 'perhaps those who chose to eat more tofu are, for some reason, less susceptible to breast cancer than those who didn&apos;t.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3381, 735, 'Both (C) and (D) are true.');
 UPDATE questions SET answer = 3381 WHERE id=735;
 
-INSERT INTO questions (id, content, chapter) VALUES (736, 'A box has 10 tickets in it, two of which are winning tickets. You draw a ticket at random. If it\'s a winning ticket, you win. If not, you get another chance, as follows: your losing ticket is replaced in the box by a winning ticket (so now there are 10 tickets, as before, but 3 of them are winning tickets). You get to draw again, at random. To simulate this, we could let', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (736, 'A box has 10 tickets in it, two of which are winning tickets. You draw a ticket at random. If it&apos;s a winning ticket, you win. If not, you get another chance, as follows: your losing ticket is replaced in the box by a winning ticket (so now there are 10 tickets, as before, but 3 of them are winning tickets). You get to draw again, at random. To simulate this, we could let', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3382, 736, '0, 1 = win at first draw; 20, 21, 22, 30, 31, 32, ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3383, 736, '00, ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3384, 736, '0, 1 = win at first draw; 2, 3, 4 = win at second draw; 5, 6, 7, 8, 9 = lose.');
@@ -1097,7 +1096,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3393, 738, 'Both
 INSERT INTO question_choices (id, question_id, content) VALUES (3394, 738, 'The first probability increases, but the second one decreases.');
 UPDATE questions SET answer = 3394 WHERE id=738;
 INSERT INTO question_choices (id, question_id, content) VALUES (3395, 738, 'The first probability decreases, but the second one increases.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3396, 738, 'We don\'t know until we toss the coin.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3396, 738, 'We don&apos;t know until we toss the coin.');
 
 INSERT INTO questions (id, content, chapter) VALUES (739, 'A game involving a pair of dice pays you 3 with probability 17/36, costs you 2 with probability 14/36, and costs you 4 with probability 5/36.What is your probability of losing money in one play of the game?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3397, 739, '0');
@@ -1120,9 +1119,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3407, 741, 'smal
 INSERT INTO question_choices (id, question_id, content) VALUES (3408, 741, 'bigger');
 INSERT INTO question_choices (id, question_id, content) VALUES (3409, 741, 'the same');
 UPDATE questions SET answer = 3409 WHERE id=741;
-INSERT INTO question_choices (id, question_id, content) VALUES (3410, 741, 'the question can\'t be answered');
+INSERT INTO question_choices (id, question_id, content) VALUES (3410, 741, 'the question can&apos;t be answered');
 
-INSERT INTO questions (id, content, chapter) VALUES (742, 'A sample of credit card holders charged, on the average, about 300 more this year, without an annual fee, than they did last year with one. Unfortunately we don\'t know whether the increase is due to not having an annual fee or to better economic conditions this year than last. This is an example of', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (742, 'A sample of credit card holders charged, on the average, about 300 more this year, without an annual fee, than they did last year with one. Unfortunately we don&apos;t know whether the increase is due to not having an annual fee or to better economic conditions this year than last. This is an example of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3411, 742, 'bias due to involuntary response.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3412, 742, 'measurement error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3413, 742, 'the placebo effect.');
@@ -1179,7 +1178,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3444, 748, 'Almo
 
 INSERT INTO questions (id, content, chapter) VALUES (749, 'A <em>census</em> is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3445, 749, 'a simple random sample from the population.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3446, 749, 'a count of a nation\'s people.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3446, 749, 'a count of a nation&apos;s people.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3447, 749, 'a sample that does not use chance selection.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3448, 749, 'a sample that attempts to include the entire population.');
 UPDATE questions SET answer = 3448 WHERE id=749;
@@ -1295,11 +1294,11 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3516, 763, '47.5
 UPDATE questions SET answer = 3516 WHERE id=763;
 
 INSERT INTO questions (id, content, chapter) VALUES (764, 'George has an average bowling score of 180 and bowls in a league where the average for all bowlers is 150 and the standard deviation is 20.  Bill has an average bowling score of 190 and bowls in a league where the average is 160 and the standard deviation is 15. Who ranks higher in his own league, George or Bill?', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3517, 764, 'Bill, because his 190 is higher than George\'s 180.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3518, 764, 'Bill, because his standard score is higher than George\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3517, 764, 'Bill, because his 190 is higher than George&apos;s 180.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3518, 764, 'Bill, because his standard score is higher than George&apos;s.');
 UPDATE questions SET answer = 3518 WHERE id=764;
 INSERT INTO question_choices (id, question_id, content) VALUES (3519, 764, 'Bill and George have the same rank in their leagues, because both are 30 pins above the mean.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3520, 764, 'George, because his standard score is higher than Bill\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3520, 764, 'George, because his standard score is higher than Bill&apos;s.');
 
 INSERT INTO questions (id, content, chapter) VALUES (765, 'Scores of adults on the Wechsler Adult Intelligence Scale (a common &quot;IQ&quot; test) follow a normal distribution.  The middle 95% of scores on this test range from 70 to 130.  What is the standard deviation of the test scores?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3521, 765, '20 points');
@@ -1334,10 +1333,10 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3539, 768, '70')
 INSERT INTO question_choices (id, question_id, content) VALUES (3540, 768, '82');
 
 INSERT INTO questions (id, content, chapter) VALUES (769, 'Here is an assignment of probabilities to the face that comes up when rolling a die once:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="101"><strong>Outcome</strong><br></p></td><td valign="top" align="left" width="60">1<br></p></td><td valign="top" align="left" width="53">2<br></p></td><td valign="top" align="left" width="53">3<br></p></td><td valign="top" align="left" width="54">4<br></p></td><td valign="top" align="left" width="48">5<br></p></td><td valign="top" align="left" width="251">6<br></p></td></tr></table><table border=0 width="624"><tr><td valign="top" align="left" width="101"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="60">1/7<br></p></td><td valign="top" align="left" width="53">2/7<br></p></td><td valign="top" align="left" width="53">0<br></p></td><td valign="top" align="left" width="54">3/7<br></p></td><td valign="top" align="left" width="48">0<br></p></td><td valign="top" align="left" width="251">1/7<br></p></td></tr></table><br>Which of the following is true?<br></p>', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3541, 769, 'This isn\'t a legitimate assignment of probability, because every face of a die must have probability 1/6.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3542, 769, 'This isn\'t a legitimate assignment of probability, because it gives probability zero to rolling a 3 or a 5.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3543, 769, 'This isn\'t a legitimate assignment of probability, because the probabilities do not add to exactly 1.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3544, 769, 'This isn\'t a legitimate assignment of probability, because we must actually roll the die many times to learn the true probabilities.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3541, 769, 'This isn&apos;t a legitimate assignment of probability, because every face of a die must have probability 1/6.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3542, 769, 'This isn&apos;t a legitimate assignment of probability, because it gives probability zero to rolling a 3 or a 5.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3543, 769, 'This isn&apos;t a legitimate assignment of probability, because the probabilities do not add to exactly 1.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3544, 769, 'This isn&apos;t a legitimate assignment of probability, because we must actually roll the die many times to learn the true probabilities.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3545, 769, 'This is a legitimate assignment of probability.');
 UPDATE questions SET answer = 3545 WHERE id=769;
 
@@ -1379,7 +1378,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3567, 774, '0.25
 UPDATE questions SET answer = 3567 WHERE id=774;
 INSERT INTO question_choices (id, question_id, content) VALUES (3568, 774, '0.35');
 INSERT INTO question_choices (id, question_id, content) VALUES (3569, 774, '0.75');
-INSERT INTO question_choices (id, question_id, content) VALUES (3570, 774, 'Can\'t tell from the information given.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3570, 774, 'Can&apos;t tell from the information given.');
 
 INSERT INTO questions (id, content, chapter) VALUES (775, 'A household is a group of people living together at the same address.  Choose one American household at random and record how many people it contains.  Here are the probabilities:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="149"><strong>Number of people</strong><br></p></td><td valign="top" align="left" width="48">1<br></p></td><td valign="top" align="left" width="48">2<br></p></td><td valign="top" align="left" width="48">3<br></p></td><td valign="top" align="left" width="48">4<br></p></td><td valign="top" align="left" width="48">5<br></p></td><td valign="top" align="left" width="48">6<br></p></td><td valign="top" align="left" width="186">7 or more<br></p></td></tr></table><table border=0 width="624"><tr><td valign="top" align="left" width="149"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="48">?<br></p></td><td valign="top" align="left" width="48">0.32<br></p></td><td valign="top" align="left" width="48">0.17<br></p></td><td valign="top" align="left" width="48">0.16<br></p></td><td valign="top" align="left" width="48">0.07<br></p></td><td valign="top" align="left" width="48">0.02<br></p></td><td valign="top" align="left" width="186">0.01<br></p></td></tr></table>What is the probability that a randomly chosen household contains 4 or more people?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3571, 775, '0.10');
@@ -1387,7 +1386,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3572, 775, '0.16
 INSERT INTO question_choices (id, question_id, content) VALUES (3573, 775, '0.26');
 UPDATE questions SET answer = 3573 WHERE id=775;
 INSERT INTO question_choices (id, question_id, content) VALUES (3574, 775, '0.90');
-INSERT INTO question_choices (id, question_id, content) VALUES (3575, 775, 'Can\'t tell from the information given.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3575, 775, 'Can&apos;t tell from the information given.');
 
 INSERT INTO questions (id, content, chapter) VALUES (776, 'A household is a group of people living together at the same address.  Choose one American household at random and record how many people it contains.  Here are the probabilities:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="149"><strong>Number of people</strong><br></p></td><td valign="top" align="left" width="48">1<br></p></td><td valign="top" align="left" width="48">2<br></p></td><td valign="top" align="left" width="48">3<br></p></td><td valign="top" align="left" width="48">4<br></p></td><td valign="top" align="left" width="48">5<br></p></td><td valign="top" align="left" width="48">6<br></p></td><td valign="top" align="left" width="186">7 or more<br></p></td></tr></table><table border=0 width="624"><tr><td valign="top" align="left" width="149"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="48">?<br></p></td><td valign="top" align="left" width="48">0.32<br></p></td><td valign="top" align="left" width="48">0.17<br></p></td><td valign="top" align="left" width="48">0.16<br></p></td><td valign="top" align="left" width="48">0.07<br></p></td><td valign="top" align="left" width="48">0.02<br></p></td><td valign="top" align="left" width="186">0.01<br></p></td></tr></table>Ten percent of U.S. households contain 5 or more people.  You want to simulate choosing a household at random and recording whether or not it contains 5 or more people.  Which of these are correct assignments of digits for this simulation?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3576, 776, 'Odd = Yes (5 or more people); Even = No (not 5 or more people)');
@@ -1397,7 +1396,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3579, 776, 'All 
 INSERT INTO question_choices (id, question_id, content) VALUES (3580, 776, '(B) and (C) are correct, but (A) is not.');
 UPDATE questions SET answer = 3580 WHERE id=776;
 
-INSERT INTO questions (id, content, chapter) VALUES (777, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.Jason\'s guess on any one question gives no information about his guess on any other question.  The statistical term for this is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (777, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.Jason&apos;s guess on any one question gives no information about his guess on any other question.  The statistical term for this is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3581, 777, 'absence of bias');
 INSERT INTO question_choices (id, question_id, content) VALUES (3582, 777, 'absence of confounding');
 INSERT INTO question_choices (id, question_id, content) VALUES (3583, 777, 'law of large numbers');
@@ -1405,7 +1404,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3584, 777, 'inde
 UPDATE questions SET answer = 3584 WHERE id=777;
 INSERT INTO question_choices (id, question_id, content) VALUES (3585, 777, 'expected value');
 
-INSERT INTO questions (id, content, chapter) VALUES (778, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.You want to simulate whether Jason\'s answers to 10 questions are right or wrong.  One correct way to do this is:', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (778, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.You want to simulate whether Jason&apos;s answers to 10 questions are right or wrong.  One correct way to do this is:', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3586, 778, 'One digit from the random digit table simulates one answer, with 5 = right and all other digits = wrong.  Ten digits from the table simulate 10 answers.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3587, 778, 'One digit from the random digit table simulates one answer, with 0 or 1 = right and all other digits = wrong.  Ten digits from the table simulate 10 answers.');
 UPDATE questions SET answer = 3587 WHERE id=778;
@@ -1413,7 +1412,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3588, 778, 'One 
 INSERT INTO question_choices (id, question_id, content) VALUES (3589, 778, 'Two digits from the random digit table simulate one answer, with 00 to 20 = right and 21 to 99 = wrong.  Ten pairs of digits simulate 10 answers.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3590, 778, 'Two digits from the random digit table simulate one answer, with 00 to 05 = right and 06 to 99 = wrong.  Ten pairs of digits simulate 10 answers.');
 
-INSERT INTO questions (id, content, chapter) VALUES (779, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.Here is part of the table of random digits:<br><br>14459  26066  14201  88371  65103  62253  50490  61181<br><br>Use your chosen method from the previous question to simulate Jason\'s answers to 10 multiple choice questions.  The number he gets right is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (779, 'The next five questions concern the following situation: A multiple choice exam offers 5 choices for each question.  Jason just guesses the answers, so he has probability 1/5 of getting any one answer right.Here is part of the table of random digits:<br><br>14459  26066  14201  88371  65103  62253  50490  61181<br><br>Use your chosen method from the previous question to simulate Jason&apos;s answers to 10 multiple choice questions.  The number he gets right is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3591, 779, 'none');
 INSERT INTO question_choices (id, question_id, content) VALUES (3592, 779, 'one');
 INSERT INTO question_choices (id, question_id, content) VALUES (3593, 779, 'two');
@@ -1435,7 +1434,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3602, 781, '3');
 INSERT INTO question_choices (id, question_id, content) VALUES (3603, 781, '2');
 UPDATE questions SET answer = 3603 WHERE id=781;
 INSERT INTO question_choices (id, question_id, content) VALUES (3604, 781, '1');
-INSERT INTO question_choices (id, question_id, content) VALUES (3605, 781, 'Can\'t tell from the information given.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3605, 781, 'Can&apos;t tell from the information given.');
 
 INSERT INTO questions (id, content, chapter) VALUES (782, 'The business magazine <em>Forbes</em> claims that the &quot;average&quot; wealth of its subscribers either is $800,000 or $2.2 million, depending on how we measure &quot;average.&quot;  One of these numbers is the median and one is the mean.', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3606, 782, 'The median is $2.2 million because it is pulled up by a few very rich subscribers.');
@@ -1445,7 +1444,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3608, 782, 'Ther
 INSERT INTO question_choices (id, question_id, content) VALUES (3609, 782, 'The median is $2.2 million because the median is the better measure of center for strongly skewed distributions.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3610, 782, 'The mean is $2.2 million because the mean is the better measure of center for normal distributions.');
 
-INSERT INTO questions (id, content, chapter) VALUES (783, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll\'s sample to be an SRS of all adults.Which of these is a correct 95% confidence statement?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (783, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll&apos;s sample to be an SRS of all adults.Which of these is a correct 95% confidence statement?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3611, 783, 'With 95% confidence, the percent of the sample who expect pollution to increase is between 60.6% and 63.4%.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3612, 783, 'With 95% confidence, the percent of the sample who expect pollution to increase is between 59.2% and 64.8%.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3613, 783, 'With 95% confidence, the percent of all adults who expect pollution to increase is between 60.6% and 63.4%.');
@@ -1453,7 +1452,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3614, 783, 'With
 UPDATE questions SET answer = 3614 WHERE id=783;
 INSERT INTO question_choices (id, question_id, content) VALUES (3615, 783, 'With 95% confidence, the percent of all adults who expect pollution to increase is between 59% and 65%.');
 
-INSERT INTO questions (id, content, chapter) VALUES (784, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll\'s sample to be an SRS of all adults.The poll was conducted by telephone. This causes some bias, because people without phones cannot be in the sample.  How is this bias reflected in the confidence statement?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (784, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll&apos;s sample to be an SRS of all adults.The poll was conducted by telephone. This causes some bias, because people without phones cannot be in the sample.  How is this bias reflected in the confidence statement?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3616, 784, 'The margin of error includes the effect of this bias, because the margin of error includes all sources of error in the poll.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3617, 784, 'The margin of error includes the effect of this bias, because the margin of error includes all sampling errors and this is a sampling error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3618, 784, 'This bias is not included in the margin of error because people without phones are not part of the population.');
@@ -1461,7 +1460,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3619, 784, 'This
 INSERT INTO question_choices (id, question_id, content) VALUES (3620, 784, 'This bias is not included in the margin of error, because the margin of error includes only the chance variation in choosing the SRS.');
 UPDATE questions SET answer = 3620 WHERE id=784;
 
-INSERT INTO questions (id, content, chapter) VALUES (785, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll\'s sample to be an SRS of all adults.The sample for the poll included 985 whites and 249 people of other races.  The margin of error for a 95% confidence interval for the opinion of people of other races is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (785, 'A poll of 1,234 adults found that 62% expect an increase in environmental pollution in the next decade.  Take the poll&apos;s sample to be an SRS of all adults.The sample for the poll included 985 whites and 249 people of other races.  The margin of error for a 95% confidence interval for the opinion of people of other races is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3621, 785, 'larger than for whites, because the sample is smaller.');
 UPDATE questions SET answer = 3621 WHERE id=785;
 INSERT INTO question_choices (id, question_id, content) VALUES (3622, 785, 'smaller than for whites, because the sample is smaller.');
@@ -1504,8 +1503,8 @@ UPDATE questions SET answer = 3645 WHERE id=789;
 INSERT INTO questions (id, content, chapter) VALUES (790, 'You have invented a drug that you think will relieve anxiety and help students score better on exams.  You want to test the drug on a group of statistics students who are about to take their final exam.What is a reasonable response variable for the experiment?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3646, 790, 'Whether a student received the drug or the dummy pill.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3647, 790, 'The chemical composition of your drug.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3648, 790, 'A student\'s overall GPA.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3649, 790, 'A student\'s score on a statistics final exam.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3648, 790, 'A student&apos;s overall GPA.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3649, 790, 'A student&apos;s score on a statistics final exam.');
 UPDATE questions SET answer = 3649 WHERE id=790;
 INSERT INTO question_choices (id, question_id, content) VALUES (3650, 790, 'Whether a student liked the taste of the drug.');
 
@@ -1669,13 +1668,13 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3748, 810, '0.41
 INSERT INTO question_choices (id, question_id, content) VALUES (3749, 810, '0.59 ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3750, 810, '0.59 ');
 
-INSERT INTO questions (id, content, chapter) VALUES (811, 'A poll of 1,190 adults found that 702 said they would prefer balancing the budget over cutting taxes.A member of Congress thinks that 95% confidence isn\'t enough. He wants to be 99% confident.  How would the margin of error of a 99% confidence interval based on the same sample compare with the 95% interval you found in the previous question?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (811, 'A poll of 1,190 adults found that 702 said they would prefer balancing the budget over cutting taxes.A member of Congress thinks that 95% confidence isn&apos;t enough. He wants to be 99% confident.  How would the margin of error of a 99% confidence interval based on the same sample compare with the 95% interval you found in the previous question?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3751, 811, 'It would be smaller, because it omits only 1% of the possible samples instead of 5%.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3752, 811, 'It would be the same, because the sample is the same.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3753, 811, 'It would be larger, because higher confidence requires a larger margin of error.');
 UPDATE questions SET answer = 3753 WHERE id=811;
-INSERT INTO question_choices (id, question_id, content) VALUES (3754, 811, 'Can\'t tell, because the margin of error is random.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3755, 811, 'Can\'t tell, because it depends on the size of the population.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3754, 811, 'Can&apos;t tell, because the margin of error is random.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3755, 811, 'Can&apos;t tell, because it depends on the size of the population.');
 
 INSERT INTO questions (id, content, chapter) VALUES (812, 'A poll of 1,190 adults found that 702 said they would prefer balancing the budget over cutting taxes.Another member of Congress is satisfied with 95% confidence, but she wants a smaller margin of error. How can we get a smaller margin of error, still with 95% confidence?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3756, 812, 'Take a larger sample, because larger samples result in smaller margins of error.');
@@ -1693,7 +1692,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3763, 813, 'a sa
 INSERT INTO question_choices (id, question_id, content) VALUES (3764, 813, 'a census.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3765, 813, 'a time series.');
 
-INSERT INTO questions (id, content, chapter) VALUES (814, 'Cn pleasant aromas help people work more efficiently?  Researchers did this study to find out.  Twenty-two students worked a paper-and-pencil maze six times.  On three tries, they wore a mask with floral scents.  On the other three tries they wore a mask with no scent.  The six tries were done in random order and each used a different maze.  The researchers found that the subjects took less time to complete the maze when wearing the scented mask.Because the subjects in the experiment were all college students under 25 years old, it isn\'t clear that the conclusions of the study apply to other groups such as older people and workers who are not students. This is an issue of', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (814, 'Cn pleasant aromas help people work more efficiently?  Researchers did this study to find out.  Twenty-two students worked a paper-and-pencil maze six times.  On three tries, they wore a mask with floral scents.  On the other three tries they wore a mask with no scent.  The six tries were done in random order and each used a different maze.  The researchers found that the subjects took less time to complete the maze when wearing the scented mask.Because the subjects in the experiment were all college students under 25 years old, it isn&apos;t clear that the conclusions of the study apply to other groups such as older people and workers who are not students. This is an issue of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3766, 814, 'confounding.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3767, 814, 'ability to generalize conclusions.');
 UPDATE questions SET answer = 3767 WHERE id=814;
@@ -1754,7 +1753,7 @@ UPDATE questions SET answer = 3800 WHERE id=821;
 INSERT INTO question_choices (id, question_id, content) VALUES (3801, 821, '86');
 INSERT INTO question_choices (id, question_id, content) VALUES (3802, 821, '77');
 INSERT INTO question_choices (id, question_id, content) VALUES (3803, 821, '70');
-INSERT INTO question_choices (id, question_id, content) VALUES (3804, 821, 'Can\'t tell from the table.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3804, 821, 'Can&apos;t tell from the table.');
 
 INSERT INTO questions (id, content, chapter) VALUES (822, 'A study of drug addicts in Amsterdam recorded how often each addict had recently injected drugs and whether or not the addict was infected with HIV, the virus that causes AIDS.   Here is a two-way table of the numbers of addicts in each condition:<br><br><img src="/images/freeman/candc/f3-224.jpg"><br>About what percent of addicts who inject daily are infected with HIV?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3805, 822, '20.5%.');
@@ -1790,26 +1789,26 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3824, 825, '');
 
 INSERT INTO questions (id, content, chapter) VALUES (826, 'The change in scales in 1995 (For math scores, the mean under the old scale in the 1990s was about 470 and the standard deviation was about 110) makes it hard to compare scores on the 1994 math SAT (mean 470, standard deviation 110) and the 1996 math SAT (mean 500, standard deviation 100).  Jane took the SAT in 1994 and scored 500.  Her sister Colleen took the SAT in 1996 and scored 520.  Who did better on the exam, and how can you tell?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3825, 826, 'Colleen&#8212;she scored 20 points higher than Jane.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3826, 826, 'Colleen&#8212;her standard score is higher than Jane\'s.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3827, 826, 'Jane&#8212;her standard score is higher than Colleen\'s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3826, 826, 'Colleen&#8212;her standard score is higher than Jane&apos;s.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3827, 826, 'Jane&#8212;her standard score is higher than Colleen&apos;s.');
 UPDATE questions SET answer = 3827 WHERE id=826;
 INSERT INTO question_choices (id, question_id, content) VALUES (3828, 826, 'Jane&#8212;the standard deviation was bigger in 1994.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3829, 826, 'Can\'t tell from the information given.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3829, 826, 'Can&apos;t tell from the information given.');
 
-INSERT INTO questions (id, content, chapter) VALUES (827, 'The risk of an investment is measured by the variability of the changes in its value over a fixed period, such as a year.  More variation from year to year means more risk.  The government\'s Securities and Exchange Commission wants to require mutual funds to tell investors how risky they are.  A news article (<em>New</em> <em>York Times</em>, April 2, 1995) says that some people think that &quot;the proposed risk descriptions, especially one that goes by the daunting name standard deviation&quot; are hard to understand.  Explain to a friend what the standard deviation means, using the fact that the changes in a mutual fund\'s value over many years have a roughly normal distribution.', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3830, 827, 'The standard deviation is the distance between the first and third quartiles, so it spans half the yearly changes in the fund\'s value.');
+INSERT INTO questions (id, content, chapter) VALUES (827, 'The risk of an investment is measured by the variability of the changes in its value over a fixed period, such as a year.  More variation from year to year means more risk.  The government&apos;s Securities and Exchange Commission wants to require mutual funds to tell investors how risky they are.  A news article (<em>New</em> <em>York Times</em>, April 2, 1995) says that some people think that &quot;the proposed risk descriptions, especially one that goes by the daunting name standard deviation&quot; are hard to understand.  Explain to a friend what the standard deviation means, using the fact that the changes in a mutual fund&apos;s value over many years have a roughly normal distribution.', 17224);
+INSERT INTO question_choices (id, question_id, content) VALUES (3830, 827, 'The standard deviation is the distance between the first and third quartiles, so it spans half the yearly changes in the fund&apos;s value.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3831, 827, 'The standard deviation is the largest change we ever expect to see in a year.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3832, 827, 'The yearly change in the fund\'s value will be greater than the standard deviation half the time and less than the standard deviation half the time.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3833, 827, 'Start with the average (mean) change in the fund\'s value over many years; the actual change will be within one standard deviation of that average in about 68% of all years.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3832, 827, 'The yearly change in the fund&apos;s value will be greater than the standard deviation half the time and less than the standard deviation half the time.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3833, 827, 'Start with the average (mean) change in the fund&apos;s value over many years; the actual change will be within one standard deviation of that average in about 68% of all years.');
 UPDATE questions SET answer = 3833 WHERE id=827;
-INSERT INTO question_choices (id, question_id, content) VALUES (3834, 827, 'Start with the average (mean) change in the fund\'s value over many years; the actual change will be within one standard deviation of that average in about 95% of all years.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3834, 827, 'Start with the average (mean) change in the fund&apos;s value over many years; the actual change will be within one standard deviation of that average in about 95% of all years.');
 
 INSERT INTO questions (id, content, chapter) VALUES (828, 'Cina has 1.2 billion people.  Marketers want to know which international brands they have heard of.  A large study showed that 62% of all Chinese adults have heard of Coca-Cola.  You want to simulate choosing 10 Chinese at random and asking each if he or she has heard of Coca-Cola.One correct way to assign random digits to simulate the answer is:', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3835, 828, 'One digit simulates one person\'s answer; odd means &quot;Yes&quot; and even mean &quot;No.&quot;');
-INSERT INTO question_choices (id, question_id, content) VALUES (3836, 828, 'One digit simulates one person\'s answer; 0 to 6 mean &quot;Yes&quot; and 7 to 9 mean &quot;No.&quot;');
-INSERT INTO question_choices (id, question_id, content) VALUES (3837, 828, 'Two digits simulate one person\'s answer; 00 to 61 mean &quot;Yes&quot; and 62 to 99 mean &quot;No.&quot;');
+INSERT INTO question_choices (id, question_id, content) VALUES (3835, 828, 'One digit simulates one person&apos;s answer; odd means &quot;Yes&quot; and even mean &quot;No.&quot;');
+INSERT INTO question_choices (id, question_id, content) VALUES (3836, 828, 'One digit simulates one person&apos;s answer; 0 to 6 mean &quot;Yes&quot; and 7 to 9 mean &quot;No.&quot;');
+INSERT INTO question_choices (id, question_id, content) VALUES (3837, 828, 'Two digits simulate one person&apos;s answer; 00 to 61 mean &quot;Yes&quot; and 62 to 99 mean &quot;No.&quot;');
 UPDATE questions SET answer = 3837 WHERE id=828;
-INSERT INTO question_choices (id, question_id, content) VALUES (3838, 828, 'Two digits simulate one person\'s answer; 00 to 62 mean &quot;Yes&quot; and 63 to 99 mean &quot;No.&quot;');
+INSERT INTO question_choices (id, question_id, content) VALUES (3838, 828, 'Two digits simulate one person&apos;s answer; 00 to 62 mean &quot;Yes&quot; and 63 to 99 mean &quot;No.&quot;');
 INSERT INTO question_choices (id, question_id, content) VALUES (3839, 828, 'There are 1.2 billion possible answers, which is too many to simulate.');
 
 INSERT INTO questions (id, content, chapter) VALUES (829, 'Cina has 1.2 billion people.  Marketers want to know which international brands they have heard of.  A large study showed that 62% of all Chinese adults have heard of Coca-Cola.  You want to simulate choosing 10 Chinese at random and asking each if he or she has heard of Coca-Cola.Use the correct assignment of digits and the random digits below to simulate the answers of 10 Chinese. Read across the row of random digits from left to right.  How many of these 10 Chinese have heard of Coca-Cola?<br><br>19223 95034 05756 28713 96409 12531 42544 82853', 17224);
@@ -1820,21 +1819,21 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3843, 829, '7');
 UPDATE questions SET answer = 3843 WHERE id=829;
 INSERT INTO question_choices (id, question_id, content) VALUES (3844, 829, '8');
 
-INSERT INTO questions (id, content, chapter) VALUES (830, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The poll conducted telephone interviews with 1497 adults. These 1497 people make up the', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (830, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The poll conducted telephone interviews with 1497 adults. These 1497 people make up the', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3845, 830, 'population.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3846, 830, 'sampling frame.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3847, 830, 'sample.');
 UPDATE questions SET answer = 3847 WHERE id=830;
 INSERT INTO question_choices (id, question_id, content) VALUES (3848, 830, 'response variable.');
 
-INSERT INTO questions (id, content, chapter) VALUES (831, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The poll omitted people without telephones, and also left out Alaska and Hawaii to reduce cost.  These omissions may cause a small bias.  If so, that bias is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (831, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The poll omitted people without telephones, and also left out Alaska and Hawaii to reduce cost.  These omissions may cause a small bias.  If so, that bias is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3849, 831, 'a sampling error.');
 UPDATE questions SET answer = 3849 WHERE id=831;
 INSERT INTO question_choices (id, question_id, content) VALUES (3850, 831, 'a nonsampling error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3851, 831, 'due to voluntary response.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3852, 831, 'due to absence of a control group.');
 
-INSERT INTO questions (id, content, chapter) VALUES (832, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.One question asked was:  &quot;Many women have better jobs and more opportunities than they did 20 years ago.  Do you think women have had to give up too much in the process, or not?&quot;  Of the 1025 women who were asked, 492 said &quot;Yes.&quot;  Take these 1025 women to be an SRS of all adult women.  Which of these is a correct 95% confidence interval for the proportion of all adult women who would say &quot;Yes&quot; to this statement?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (832, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.One question asked was:  &quot;Many women have better jobs and more opportunities than they did 20 years ago.  Do you think women have had to give up too much in the process, or not?&quot;  Of the 1025 women who were asked, 492 said &quot;Yes.&quot;  Take these 1025 women to be an SRS of all adult women.  Which of these is a correct 95% confidence interval for the proportion of all adult women who would say &quot;Yes&quot; to this statement?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3853, 832, '0.48 ');
 UPDATE questions SET answer = 3853 WHERE id=832;
 INSERT INTO question_choices (id, question_id, content) VALUES (3854, 832, '0.48 ');
@@ -1842,21 +1841,21 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3855, 832, '0.48
 INSERT INTO question_choices (id, question_id, content) VALUES (3856, 832, '0.492 ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3857, 832, '0.492 ');
 
-INSERT INTO questions (id, content, chapter) VALUES (833, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.In the previous question, you obtained a 95% confidence interval for this telephone sample.  The bias due to leaving out people without a telephone', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (833, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.In the previous question, you obtained a 95% confidence interval for this telephone sample.  The bias due to leaving out people without a telephone', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3858, 833, 'is included in the margin of error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3859, 833, 'is not included in the margin of error, because leaving out people with no phone is a nonsampling error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3860, 833, 'is not included in the margin of error, because leaving out people with no phone has no effect on the outcome of the poll.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3861, 833, 'is not included in the margin of error, because the margin of error only covers the chance variation in a random sample.');
 UPDATE questions SET answer = 3861 WHERE id=833;
 
-INSERT INTO questions (id, content, chapter) VALUES (834, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The poll questioned 1025 women and 472 men.  The design of the sample choose separate samples of men and women and planned to interview more women than men.  This is a', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (834, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The poll questioned 1025 women and 472 men.  The design of the sample choose separate samples of men and women and planned to interview more women than men.  This is a', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3862, 834, 'systematic random sample.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3863, 834, 'completely randomized design.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3864, 834, 'stratified random sample.');
 UPDATE questions SET answer = 3864 WHERE id=834;
 INSERT INTO question_choices (id, question_id, content) VALUES (3865, 834, 'simple random sample.');
 
-INSERT INTO questions (id, content, chapter) VALUES (835, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The 472 men were also asked the question, &quot;Many women have better jobs and more opportunities than they did 20 years ago.  Do you think women have had to give up too much in the process, or not?&quot;  above, and 212 of them said &quot;Yes.&quot;  The margin of error for a 95% confidence interval for men would be', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (835, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The 472 men were also asked the question, &quot;Many women have better jobs and more opportunities than they did 20 years ago.  Do you think women have had to give up too much in the process, or not?&quot;  above, and 212 of them said &quot;Yes.&quot;  The margin of error for a 95% confidence interval for men would be', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3866, 835, 'larger than for women, because fewer men were asked.');
 UPDATE questions SET answer = 3866 WHERE id=835;
 INSERT INTO question_choices (id, question_id, content) VALUES (3867, 835, 'smaller than for women, because fewer men were asked.');
@@ -1864,14 +1863,14 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3868, 835, 'larg
 INSERT INTO question_choices (id, question_id, content) VALUES (3869, 835, 'smaller than for women, because fewer men said &quot;Yes.&quot;');
 INSERT INTO question_choices (id, question_id, content) VALUES (3870, 835, 'the same as for women.');
 
-INSERT INTO questions (id, content, chapter) VALUES (836, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The poll interviewed 1025 women and 472 men; 47% of the women and 37% of the men said they do not get enough time to themselves. Which of these statements is true?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (836, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The poll interviewed 1025 women and 472 men; 47% of the women and 37% of the men said they do not get enough time to themselves. Which of these statements is true?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3871, 836, 'The result for women has both less bias and lower variability because the sample of women is larger.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3872, 836, 'Both results have the same bias and the same variability.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3873, 836, 'Both results are equally variable.  The result for women has less bias because the sample of women is larger.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3874, 836, 'Both results have the same bias.  The result for women is less variable because the sample of women is larger.');
 UPDATE questions SET answer = 3874 WHERE id=836;
 
-INSERT INTO questions (id, content, chapter) VALUES (837, 'The <em>New York Times</em> conducted a poll on women\'s issues in June of 1989.The <em>Times</em> gave 95% confidence intervals.  The term &quot;95% confidence&quot; means', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (837, 'The <em>New York Times</em> conducted a poll on women&apos;s issues in June of 1989.The <em>Times</em> gave 95% confidence intervals.  The term &quot;95% confidence&quot; means', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3875, 837, 'If we took many samples, the confidence interval would cover the true population result in 95% of them.');
 UPDATE questions SET answer = 3875 WHERE id=837;
 INSERT INTO question_choices (id, question_id, content) VALUES (3876, 837, 'The sampling frame lists 95% of all American adults.');
@@ -1899,7 +1898,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3888, 840, 'a do
 INSERT INTO question_choices (id, question_id, content) VALUES (3889, 840, 'a response variable.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3890, 840, 'a comparative.');
 
-INSERT INTO questions (id, content, chapter) VALUES (841, 'Does taking vitamins prevent colon cancer?  A study assigned 864 subjects at random to four groups.  One group took beta-carotene, another took vitamins C and E, a third took all three, and the fourth group took only a dummy pill.  After four years, there was no difference among the groups in the formation of polyps in the colon that precede cancer.Neither the subjects nor the medical personnel who worked with them knew what any subject\'s pills contained.  We say that the study was', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (841, 'Does taking vitamins prevent colon cancer?  A study assigned 864 subjects at random to four groups.  One group took beta-carotene, another took vitamins C and E, a third took all three, and the fourth group took only a dummy pill.  After four years, there was no difference among the groups in the formation of polyps in the colon that precede cancer.Neither the subjects nor the medical personnel who worked with them knew what any subject&apos;s pills contained.  We say that the study was', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3891, 841, 'double-blind.');
 UPDATE questions SET answer = 3891 WHERE id=841;
 INSERT INTO question_choices (id, question_id, content) VALUES (3892, 841, 'comparative.');
@@ -1922,7 +1921,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3902, 843, '000,
 INSERT INTO question_choices (id, question_id, content) VALUES (3903, 843, 'Both (B) and (C) are correct.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3904, 843, 'All of (A), (B), and (C) are correct.');
 
-INSERT INTO questions (id, content, chapter) VALUES (844, 'Scores on the SAT exams have approximately a normal distribution with mean 500 and standard deviation 100.  Julie scores 400 on the math SAT.  What percent of scores are higher than Julie\'s?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (844, 'Scores on the SAT exams have approximately a normal distribution with mean 500 and standard deviation 100.  Julie scores 400 on the math SAT.  What percent of scores are higher than Julie&apos;s?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3905, 844, '16%');
 INSERT INTO question_choices (id, question_id, content) VALUES (3906, 844, '32%');
 INSERT INTO question_choices (id, question_id, content) VALUES (3907, 844, '68%');
@@ -1930,7 +1929,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3908, 844, '84%'
 UPDATE questions SET answer = 3908 WHERE id=844;
 INSERT INTO question_choices (id, question_id, content) VALUES (3909, 844, 'None of these.');
 
-INSERT INTO questions (id, content, chapter) VALUES (845, 'Jason scores 380 on the math SAT.  (SAT scores have mean 500 and standard deviation 100.)  Jason\'s standard score is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (845, 'Jason scores 380 on the math SAT.  (SAT scores have mean 500 and standard deviation 100.)  Jason&apos;s standard score is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3910, 845, '');
 INSERT INTO question_choices (id, question_id, content) VALUES (3911, 845, '');
 UPDATE questions SET answer = 3911 WHERE id=845;
@@ -1945,9 +1944,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3916, 846, 'the 
 INSERT INTO question_choices (id, question_id, content) VALUES (3917, 846, 'the correlation.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3918, 846, 'the margin of error.');
 
-INSERT INTO questions (id, content, chapter) VALUES (847, 'You read that &quot;the correlation between a person\'s sex and his or her occupation is <em>r</em> =0.32 .&quot;  This statement is improper because', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (847, 'You read that &quot;the correlation between a person&apos;s sex and his or her occupation is <em>r</em> =0.32 .&quot;  This statement is improper because', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3919, 847, '0.32 is not a possible value for a correlation.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3920, 847, 'correlation can\'t be used to describe association between two categorical variables.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3920, 847, 'correlation can&apos;t be used to describe association between two categorical variables.');
 UPDATE questions SET answer = 3920 WHERE id=847;
 INSERT INTO question_choices (id, question_id, content) VALUES (3921, 847, 'the association is negative, so the correlation must be less than zero.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3922, 847, 'the five-number summary is a better description of these data.');
@@ -1971,9 +1970,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3931, 850, 'tuit
 INSERT INTO question_choices (id, question_id, content) VALUES (3932, 850, 'tuition went up in real terms.');
 UPDATE questions SET answer = 3932 WHERE id=850;
 INSERT INTO question_choices (id, question_id, content) VALUES (3933, 850, 'tuition went down in real terms.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3934, 850, 'can\'t tell without more information.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3934, 850, 'can&apos;t tell without more information.');
 
-INSERT INTO questions (id, content, chapter) VALUES (851, 'Grades in STAT 001 are based on total points out of 500 possible; the final exam contributes 100 of the 500 points.  Students with higher totals out of the 400 points before the final tend to do better on the final than students with lower pre-final totals.  In fact, the linear relationship between pre-final total and final exam score explains about half of the variation seen in the class\'s final exam scores.', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (851, 'Grades in STAT 001 are based on total points out of 500 possible; the final exam contributes 100 of the 500 points.  Students with higher totals out of the 400 points before the final tend to do better on the final than students with lower pre-final totals.  In fact, the linear relationship between pre-final total and final exam score explains about half of the variation seen in the class&apos;s final exam scores.', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3935, 851, 'The correlation between pre-exam total and final exam score is about ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3936, 851, 'The correlation between pre-exam total and final exam score is about  ');
 INSERT INTO question_choices (id, question_id, content) VALUES (3937, 851, 'The correlation between pre-exam total and final exam score is about ');
@@ -2055,25 +2054,25 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3981, 861, 'use 
 INSERT INTO question_choices (id, question_id, content) VALUES (3982, 861, 'avoid placebos, get informed consent.');
 
 INSERT INTO questions (id, content, chapter) VALUES (862, 'The evidence that smoking causes lung cancer is very strong.  But it is not the strongest possible statistical evidence because', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (3983, 862, 'we can\'t do experiments to compare smokers and non-smokers.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3983, 862, 'we can&apos;t do experiments to compare smokers and non-smokers.');
 UPDATE questions SET answer = 3983 WHERE id=862;
 INSERT INTO question_choices (id, question_id, content) VALUES (3984, 862, 'only smokers have been studied.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3985, 862, 'the studies of the effects of smoking are not double-blind.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3986, 862, 'all the studies of the effects of smoking involve animals, not humans.');
 
-INSERT INTO questions (id, content, chapter) VALUES (863, 'A study of the starting salaries of graduates of Mountain Tech shows that male graduates earn more on the average than female graduates.  But starting salaries for men and women are nearly the same when we look at each of Mountain Tech\'s schools (engineering, liberal arts, and so on) separately.  This is an example of', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (863, 'A study of the starting salaries of graduates of Mountain Tech shows that male graduates earn more on the average than female graduates.  But starting salaries for men and women are nearly the same when we look at each of Mountain Tech&apos;s schools (engineering, liberal arts, and so on) separately.  This is an example of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3987, 863, 'using the mean when the median would be more appropriate.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3988, 863, 'an experiment without a control group.');
 INSERT INTO question_choices (id, question_id, content) VALUES (3989, 863, 'internal inconsistency&#8212;there must be an arithmetic mistake.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3990, 863, 'Simpson\'s paradox&#8212;there must be more men in the schools whose graduates earn higher salaries.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3990, 863, 'Simpson&apos;s paradox&#8212;there must be more men in the schools whose graduates earn higher salaries.');
 UPDATE questions SET answer = 3990 WHERE id=863;
 
 INSERT INTO questions (id, content, chapter) VALUES (864, 'Students who study German in high school tend to score higher on tests of English grammar than students who do not study German. Which is true:', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3991, 864, 'This shows that studying German improves your knowledge of English grammar.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3992, 864, 'Students who choose to study German are probably already good at grammar, so we can\'t conclude anything about cause and effect.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3992, 864, 'Students who choose to study German are probably already good at grammar, so we can&apos;t conclude anything about cause and effect.');
 UPDATE questions SET answer = 3992 WHERE id=864;
-INSERT INTO question_choices (id, question_id, content) VALUES (3993, 864, 'This makes no sense because you can\'t compute the correlation between studying German and English grammar test scores.');
-INSERT INTO question_choices (id, question_id, content) VALUES (3994, 864, 'There is a positive correlation between whether or not a student studied German and the student\'s English grammar test score.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3993, 864, 'This makes no sense because you can&apos;t compute the correlation between studying German and English grammar test scores.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3994, 864, 'There is a positive correlation between whether or not a student studied German and the student&apos;s English grammar test score.');
 
 INSERT INTO questions (id, content, chapter) VALUES (865, 'In the good old days (1986) the U.S. dollar was worth 1.85 Swiss Francs.  A decade later in 1996, the dollar was worth 1.33 Swiss Francs.  The value of the dollar in Swiss Francs went down by about', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (3995, 865, '72%');
@@ -2081,9 +2080,9 @@ INSERT INTO question_choices (id, question_id, content) VALUES (3996, 865, '28%'
 UPDATE questions SET answer = 3996 WHERE id=865;
 INSERT INTO question_choices (id, question_id, content) VALUES (3997, 865, '39%');
 INSERT INTO question_choices (id, question_id, content) VALUES (3998, 865, '139%');
-INSERT INTO question_choices (id, question_id, content) VALUES (3999, 865, 'Can\'t tell without knowing the CPI for 1986.');
+INSERT INTO question_choices (id, question_id, content) VALUES (3999, 865, 'Can&apos;t tell without knowing the CPI for 1986.');
 
-INSERT INTO questions (id, content, chapter) VALUES (866, 'How can we measure intelligence?  One way is to measure the size of the brain.  New technology makes it possible to measure the volume of a person\'s brain in cubic inches without injury.  What is more, the measurement gives close to the same answer when we repeat it.  But how big the brain is has no relation to how smart a person is.  As a measure of intelligence, brain volume is', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (866, 'How can we measure intelligence?  One way is to measure the size of the brain.  New technology makes it possible to measure the volume of a person&apos;s brain in cubic inches without injury.  What is more, the measurement gives close to the same answer when we repeat it.  But how big the brain is has no relation to how smart a person is.  As a measure of intelligence, brain volume is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4000, 866, 'reliable but invalid.');
 UPDATE questions SET answer = 4000 WHERE id=866;
 INSERT INTO question_choices (id, question_id, content) VALUES (4001, 866, 'valid but not reliable.');
@@ -2092,7 +2091,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4003, 866, 'not 
 
 INSERT INTO questions (id, content, chapter) VALUES (867, 'Cal miners often develop serious respiratory illnesses.  It is usually thought that these are caused by coal dust in the mines. But coal miners as a group are heavy smokers, and this may explain some of the illnesses.  This is an example of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4004, 867, 'a randomized comparative experiment.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4005, 867, 'Simpson\'s paradox.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4005, 867, 'Simpson&apos;s paradox.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4006, 867, 'confounding between two variables.');
 UPDATE questions SET answer = 4006 WHERE id=867;
 INSERT INTO question_choices (id, question_id, content) VALUES (4007, 867, 'the placebo effect.');
@@ -2112,8 +2111,8 @@ UPDATE questions SET answer = 4014 WHERE id=869;
 INSERT INTO question_choices (id, question_id, content) VALUES (4015, 869, 'can be either much smaller or much larger than the California margin of error.');
 
 INSERT INTO questions (id, content, chapter) VALUES (870, 'Some common sources of <em>nonsampling error</em> in samples of human populations are', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (4016, 870, 'voluntary response samples; can\'t contact some subjects.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4017, 870, 'can\'t contact some subjects; some subjects refuse to answer.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4016, 870, 'voluntary response samples; can&apos;t contact some subjects.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4017, 870, 'can&apos;t contact some subjects; some subjects refuse to answer.');
 UPDATE questions SET answer = 4017 WHERE id=870;
 INSERT INTO question_choices (id, question_id, content) VALUES (4018, 870, 'some subjects refuse to answer; using telephone directory as the sample frame.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4019, 870, 'All of these.');
@@ -2174,7 +2173,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4050, 878, 'larg
 UPDATE questions SET answer = 4050 WHERE id=878;
 INSERT INTO question_choices (id, question_id, content) VALUES (4051, 878, 'the same for California and for the nation.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4052, 878, 'smaller for California than for the nation.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4053, 878, 'random, so we can\'t make a comparison.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4053, 878, 'random, so we can&apos;t make a comparison.');
 
 INSERT INTO questions (id, content, chapter) VALUES (879, 'A recent survey of 113,000 randomly selected U.S. adults studied the religious affiliation of Americans.An example of a nonsampling error that could affect the results of this survey is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4054, 879, 'some people refused to talk about their religion.');
@@ -2211,7 +2210,7 @@ UPDATE questions SET answer = 4071 WHERE id=883;
 INSERT INTO question_choices (id, question_id, content) VALUES (4072, 883, '0 to 4 = made, 5 to 9 = missed.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4073, 883, 'Either a or c is correct.');
 
-INSERT INTO questions (id, content, chapter) VALUES (884, 'The Chicago Cubs have 27 players on their roster.  The distribution of players\' salaries is strongly skewed to the right, with many players making &quot;only&quot; several hundred thousand dollars and a few stars making millions.  A good numerical description of this distribution is given by', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (884, 'The Chicago Cubs have 27 players on their roster.  The distribution of players&apos; salaries is strongly skewed to the right, with many players making &quot;only&quot; several hundred thousand dollars and a few stars making millions.  A good numerical description of this distribution is given by', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4074, 884, 'the expected value.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4075, 884, 'the mean and standard deviation.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4076, 884, 'the correlation coefficient.');
@@ -2225,7 +2224,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4080, 885, '0.74
 UPDATE questions SET answer = 4080 WHERE id=885;
 INSERT INTO question_choices (id, question_id, content) VALUES (4081, 885, '0.69');
 
-INSERT INTO questions (id, content, chapter) VALUES (886, 'A grocery chain runs a prize game by giving each customer a ticket that may win a prize when a box is scratched.  Printed on the ticket are the following probabilities for a customer who shops once a week:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="66"><strong>Amount won</strong><br></p></td><td valign="top" align="left" width="114"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="443"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$500<br></p></td><td valign="top" align="center" width="50">0.01<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$50<br></p></td><td valign="top" align="center" width="50">0.05<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$10<br></p></td><td valign="top" align="center" width="50">0.20<br></p></td><td valign="top" align="center" width="154"></td></tr></table>What is the expected value of a customer\'s winnings in this game?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (886, 'A grocery chain runs a prize game by giving each customer a ticket that may win a prize when a box is scratched.  Printed on the ticket are the following probabilities for a customer who shops once a week:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="66"><strong>Amount won</strong><br></p></td><td valign="top" align="left" width="114"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="443"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$500<br></p></td><td valign="top" align="center" width="50">0.01<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$50<br></p></td><td valign="top" align="center" width="50">0.05<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$10<br></p></td><td valign="top" align="center" width="50">0.20<br></p></td><td valign="top" align="center" width="154"></td></tr></table>What is the expected value of a customer&apos;s winnings in this game?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4082, 886, '$9.50');
 UPDATE questions SET answer = 4082 WHERE id=886;
 INSERT INTO question_choices (id, question_id, content) VALUES (4083, 886, '$54.50');
@@ -2235,16 +2234,16 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4085, 886, '$0.2
 INSERT INTO questions (id, content, chapter) VALUES (887, 'A grocery chain runs a prize game by giving each customer a ticket that may win a prize when a box is scratched.  Printed on the ticket are the following probabilities for a customer who shops once a week:<br><br></p><table border=0 width="624"><tr><td valign="top" align="left" width="66"><strong>Amount won</strong><br></p></td><td valign="top" align="left" width="114"><strong>Probability</strong><br></p></td><td valign="top" align="left" width="443"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$500<br></p></td><td valign="top" align="center" width="50">0.01<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$50<br></p></td><td valign="top" align="center" width="50">0.05<br></p></td><td valign="top" align="center" width="154"></td></tr></table><table border=0 width="273"><tr><td valign="top" align="left" width="67">$10<br></p></td><td valign="top" align="center" width="50">0.20<br></p></td><td valign="top" align="center" width="154"></td></tr></table>If several thousand customers play the grocery store game, you expect that the mean amount they win will be close to', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4086, 887, 'the probability of winning something.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4087, 887, 'the median amount they win.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4088, 887, 'the expected value of a customer\'s winnings.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4088, 887, 'the expected value of a customer&apos;s winnings.');
 UPDATE questions SET answer = 4088 WHERE id=887;
 INSERT INTO question_choices (id, question_id, content) VALUES (4089, 887, '$500.');
 
 INSERT INTO questions (id, content, chapter) VALUES (888, 'A poker player is dealt poor hands for several hours.  He decides to bet heavily on the last hand of the evening on the grounds that after many bad hands he is due for a winner.', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (4090, 888, 'He\'s right, because the winnings have to average out.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4091, 888, 'He\'s wrong, because successive deals are independent of each other.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4090, 888, 'He&apos;s right, because the winnings have to average out.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4091, 888, 'He&apos;s wrong, because successive deals are independent of each other.');
 UPDATE questions SET answer = 4091 WHERE id=888;
-INSERT INTO question_choices (id, question_id, content) VALUES (4092, 888, 'He\'s right, because successive deals are independent of each other.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4093, 888, 'He\'s wrong, because his expected winnings are $0 and he\'s below that now.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4092, 888, 'He&apos;s right, because successive deals are independent of each other.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4093, 888, 'He&apos;s wrong, because his expected winnings are $0 and he&apos;s below that now.');
 
 INSERT INTO questions (id, content, chapter) VALUES (889, '</A>', 17224);
 
@@ -2303,26 +2302,26 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4120, 899, '0.55
 UPDATE questions SET answer = 4120 WHERE id=899;
 INSERT INTO question_choices (id, question_id, content) VALUES (4121, 899, '0.55 ');
 
-INSERT INTO questions (id, content, chapter) VALUES (900, 'A writer says that the correlation between the family income of a high school senior and the student\'s college board score is <em>r</em> = 0.4. This means that', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (900, 'A writer says that the correlation between the family income of a high school senior and the student&apos;s college board score is <em>r</em> = 0.4. This means that', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4122, 900, 'students from high-income families tend to have lower scores than students from low-income families.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4123, 900, 'students from high-income families tend to have higher scores than students from low-income families.');
 UPDATE questions SET answer = 4123 WHERE id=900;
 INSERT INTO question_choices (id, question_id, content) VALUES (4124, 900, 'the writer made a mistake because 0.4 is not a possible value of the correlation.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4125, 900, 'this is an example of Simpson\'s paradox.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4125, 900, 'this is an example of Simpson&apos;s paradox.');
 
 INSERT INTO questions (id, content, chapter) VALUES (901, 'A study observes 200 men who run regularly and 200 men who choose not to run.  A personality test shows that the runners are more optimistic and outgoing. Does this prove that running causes a change in personality?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4126, 901, 'Yes&#8212;the personality is the response variable.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4127, 901, 'No&#8212;the more optimistic men may have chosen to run, so there is confounding.');
 UPDATE questions SET answer = 4127 WHERE id=901;
 INSERT INTO question_choices (id, question_id, content) VALUES (4128, 901, 'Yes&#8212;this is an experiment, so it establishes causation.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4129, 901, 'No&#8212;it\'s a case of Simpson\'s paradox.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4129, 901, 'No&#8212;it&apos;s a case of Simpson&apos;s paradox.');
 
 INSERT INTO questions (id, content, chapter) VALUES (902, 'Which of the following pairs of variables is most likely to show a negative correlation?', 17224);
-INSERT INTO question_choices (id, question_id, content) VALUES (4130, 902, 'a person\'s income and her years of education.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4131, 902, 'a car\'s top speed and its gas mileage (miles per gallon).');
+INSERT INTO question_choices (id, question_id, content) VALUES (4130, 902, 'a person&apos;s income and her years of education.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4131, 902, 'a car&apos;s top speed and its gas mileage (miles per gallon).');
 UPDATE questions SET answer = 4131 WHERE id=902;
-INSERT INTO question_choices (id, question_id, content) VALUES (4132, 902, 'a student\'s grade index and his IQ score.');
-INSERT INTO question_choices (id, question_id, content) VALUES (4133, 902, 'a man\'s height and his income.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4132, 902, 'a student&apos;s grade index and his IQ score.');
+INSERT INTO question_choices (id, question_id, content) VALUES (4133, 902, 'a man&apos;s height and his income.');
 
 INSERT INTO questions (id, content, chapter) VALUES (903, 'Below is a table of persons aged 18 to 21 years by school enrollment status and sex, collected by the Current Population Survey.<br><br></p><table border=0 width="322"><tr><td valign="top" align="left" width="184"><strong>Number of Persons (thousands)</strong><br></p></td><td valign="top" align="center" width="138"></td></tr></table><table border=0 width="343"><tr><td valign="top" align="left" width="152"><em>Female</em><br></p></td><td valign="top" align="center" width="114"><em>Male</em><br></p></td><td valign="top" align="center" width="76"></td></tr></table><table border=0 width="336"><tr><td valign="top" align="left" width="122">High school drop-outs<br></p></td><td valign="top" align="right" width="122">965<br></p></td><td valign="top" align="right" width="90">1122<br></p></td></tr></table><table border=0 width="336"><tr><td valign="top" align="left" width="122">Enrolled in high school<br></p></td><td valign="top" align="right" width="122">355<br></p></td><td valign="top" align="right" width="90">695<br></p></td></tr></table><table border=0 width="336"><tr><td valign="top" align="left" width="122">HS graduate, not in college<br></p></td><td valign="top" align="right" width="122">2865<br></p></td><td valign="top" align="right" width="90">2540<br></p></td></tr></table><table border=0 width="336"><tr><td valign="top" align="left" width="122">HS graduate, in college<br></p></td><td valign="top" align="right" width="122"><u>3068</u><br></p></td><td valign="top" align="right" width="90"><u>2659</u><br></p></td></tr></table><table border=0 width="336"><tr><td valign="top" align="left" width="122">Total<br></p></td><td valign="top" align="right" width="122">7252<br></p></td><td valign="top" align="right" width="90">7016<br></p></td></tr></table>How many persons age 18 to 21 are there?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4134, 903, '14,268');
@@ -2345,7 +2344,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4143, 905, 'youn
 INSERT INTO question_choices (id, question_id, content) VALUES (4144, 905, 'almost all high school graduates go on to college.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4145, 905, 'high school graduates are mainly men.');
 
-INSERT INTO questions (id, content, chapter) VALUES (906, 'Kevin thinks he can use ESP to predict the outcome of rolling a fair die.  You agree to pay him $3 if he can correctly predict the results of the next roll.  Kevin has to pay you $1 if he is wrong.  If Kevin doesn\'t have any psychic powers, which of the following is closest to the expected value of your net winnings on this bet?', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (906, 'Kevin thinks he can use ESP to predict the outcome of rolling a fair die.  You agree to pay him $3 if he can correctly predict the results of the next roll.  Kevin has to pay you $1 if he is wrong.  If Kevin doesn&apos;t have any psychic powers, which of the following is closest to the expected value of your net winnings on this bet?', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4146, 906, '&#8211;$0.70');
 INSERT INTO question_choices (id, question_id, content) VALUES (4147, 906, '');
 INSERT INTO question_choices (id, question_id, content) VALUES (4148, 906, '$0');
@@ -2390,7 +2389,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4170, 911, 'a de
 INSERT INTO question_choices (id, question_id, content) VALUES (4171, 911, 'nonrandom sampling error.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4172, 911, 'a matched pair design.');
 
-INSERT INTO questions (id, content, chapter) VALUES (912, 'You are chatting with the principal of a local high school.  The topic of SAT scores comes up, and the principal mentions that SAT scores at the school are normally distributed.  She doesn\'t remember the mean or the standard deviation, but she does remember that the first and third quartiles are 500 and 600.  The standard deviation of SAT verbal scores is closest to', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (912, 'You are chatting with the principal of a local high school.  The topic of SAT scores comes up, and the principal mentions that SAT scores at the school are normally distributed.  She doesn&apos;t remember the mean or the standard deviation, but she does remember that the first and third quartiles are 500 and 600.  The standard deviation of SAT verbal scores is closest to', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4173, 912, '550 points');
 INSERT INTO question_choices (id, question_id, content) VALUES (4174, 912, '00 points');
 INSERT INTO question_choices (id, question_id, content) VALUES (4175, 912, '75 points');
@@ -2406,7 +2405,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4181, 913, 'a pr
 INSERT INTO question_choices (id, question_id, content) VALUES (4182, 913, 'Both (C) and (D).');
 UPDATE questions SET answer = 4182 WHERE id=913;
 
-INSERT INTO questions (id, content, chapter) VALUES (914, 'One source of error in pre-election polls is that some people in the sample say they will vote but then don\'t vote. This is an example of', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (914, 'One source of error in pre-election polls is that some people in the sample say they will vote but then don&apos;t vote. This is an example of', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4183, 914, 'nonsampling error.');
 UPDATE questions SET answer = 4183 WHERE id=914;
 INSERT INTO question_choices (id, question_id, content) VALUES (4184, 914, 'random sampling error.');
@@ -2414,7 +2413,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4185, 914, 'nonr
 INSERT INTO question_choices (id, question_id, content) VALUES (4186, 914, 'incorrect randomization.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4187, 914, 'the placebo effect.');
 
-INSERT INTO questions (id, content, chapter) VALUES (915, 'Most people can roll their tongues, but many people can\'t. Whether or not a person can roll his tongue is genetically determined. Suppose we are interested in determining what fraction of students can roll their tongues. We get a simple random sample of 400 students and find that 317 can roll their tongues. The margin of error for a 95% confidence interval for the true percentage of tongue-rollers among students is closest to', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (915, 'Most people can roll their tongues, but many people can&apos;t. Whether or not a person can roll his tongue is genetically determined. Suppose we are interested in determining what fraction of students can roll their tongues. We get a simple random sample of 400 students and find that 317 can roll their tongues. The margin of error for a 95% confidence interval for the true percentage of tongue-rollers among students is closest to', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4188, 915, '0.8%');
 INSERT INTO question_choices (id, question_id, content) VALUES (4189, 915, '2.0%');
 INSERT INTO question_choices (id, question_id, content) VALUES (4190, 915, '3.0%');
@@ -2489,7 +2488,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4231, 924, 'grea
 UPDATE questions SET answer = 4231 WHERE id=924;
 INSERT INTO question_choices (id, question_id, content) VALUES (4232, 924, 'less than');
 INSERT INTO question_choices (id, question_id, content) VALUES (4233, 924, 'about equal to');
-INSERT INTO question_choices (id, question_id, content) VALUES (4234, 924, 'can\'t tell from the information given');
+INSERT INTO question_choices (id, question_id, content) VALUES (4234, 924, 'can&apos;t tell from the information given');
 
 INSERT INTO questions (id, content, chapter) VALUES (925, 'Suppose that the distribution of MATH SAT scores from your state this year is normally distributed with mean 480 and standard deviation 100 for males, and mean 440 and standard deviation 120 for females.Mary took the MATH SAT and scored 640.  She did better than _____% of female students taking the test.', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4235, 925, '99.9');
@@ -2499,7 +2498,7 @@ INSERT INTO question_choices (id, question_id, content) VALUES (4238, 925, '95')
 UPDATE questions SET answer = 4238 WHERE id=925;
 INSERT INTO question_choices (id, question_id, content) VALUES (4239, 925, '90');
 
-INSERT INTO questions (id, content, chapter) VALUES (926, 'Suppose that the distribution of MATH SAT scores from your state this year is normally distributed with mean 480 and standard deviation 100 for males, and mean 440 and standard deviation 120 for females.How well did Mary\'s score of 640 rate in terms of the scores of male students?  Mary did better than ____% of male students taking the test.', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (926, 'Suppose that the distribution of MATH SAT scores from your state this year is normally distributed with mean 480 and standard deviation 100 for males, and mean 440 and standard deviation 120 for females.How well did Mary&apos;s score of 640 rate in terms of the scores of male students?  Mary did better than ____% of male students taking the test.', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4240, 926, '99.9');
 INSERT INTO question_choices (id, question_id, content) VALUES (4241, 926, '99');
 INSERT INTO question_choices (id, question_id, content) VALUES (4242, 926, '97');
@@ -2515,7 +2514,7 @@ UPDATE questions SET answer = 4247 WHERE id=927;
 INSERT INTO question_choices (id, question_id, content) VALUES (4248, 927, 'The chance that the 100th toss will be a head depends somewhat on the results of the first 99 tosses.');
 INSERT INTO question_choices (id, question_id, content) VALUES (4249, 927, 'All of the above statements are true.');
 
-INSERT INTO questions (id, content, chapter) VALUES (928, 'Suppose that the distribution of MATH SAT scores from your state this year is normally distributed with mean 480 and standard deviation 100 for males, and mean 440 and standard deviation 120 for females.A certain random experiment can result in one of four different possible outcomes, which we\'ll call A, B, C, and D.  It has been determined that the probabilities of these outcomes are as follows:<br><br></p><table border=0 width="163"><tr><td valign="top" align="left" width="35">A<br></p></td><td valign="top" align="center" width="26">B<br></p></td><td valign="top" align="center" width="58">C<br></p></td><td valign="top" align="center" width="42">D<br></p></td></tr></table><table border=0 width="163"><tr><td valign="top" align="left" width="35">1<br></p></td><td valign="top" align="center" width="26">0<br></p></td><td valign="top" align="center" width="58">?<br></p></td><td valign="top" align="center" width="42">2<br></p></td></tr></table><br>What is the probability of outcome C? <br></p>', 17224);
+INSERT INTO questions (id, content, chapter) VALUES (928, 'Suppose that the distribution of MATH SAT scores from your state this year is normally distributed with mean 480 and standard deviation 100 for males, and mean 440 and standard deviation 120 for females.A certain random experiment can result in one of four different possible outcomes, which we&apos;ll call A, B, C, and D.  It has been determined that the probabilities of these outcomes are as follows:<br><br></p><table border=0 width="163"><tr><td valign="top" align="left" width="35">A<br></p></td><td valign="top" align="center" width="26">B<br></p></td><td valign="top" align="center" width="58">C<br></p></td><td valign="top" align="center" width="42">D<br></p></td></tr></table><table border=0 width="163"><tr><td valign="top" align="left" width="35">1<br></p></td><td valign="top" align="center" width="26">0<br></p></td><td valign="top" align="center" width="58">?<br></p></td><td valign="top" align="center" width="42">2<br></p></td></tr></table><br>What is the probability of outcome C? <br></p>', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4250, 928, '0.75');
 INSERT INTO question_choices (id, question_id, content) VALUES (4251, 928, '0.50');
 UPDATE questions SET answer = 4251 WHERE id=928;
@@ -2537,7 +2536,7 @@ UPDATE questions SET answer = 4260 WHERE id=930;
 INSERT INTO question_choices (id, question_id, content) VALUES (4261, 930, 'must have been between 1985 and 1993');
 INSERT INTO question_choices (id, question_id, content) VALUES (4262, 930, 'must have been between 1990 and 1993');
 INSERT INTO question_choices (id, question_id, content) VALUES (4263, 930, 'is 1982&#8211;84 as usual');
-INSERT INTO question_choices (id, question_id, content) VALUES (4264, 930, 'can\'t tell from the information given');
+INSERT INTO question_choices (id, question_id, content) VALUES (4264, 930, 'can&apos;t tell from the information given');
 
 INSERT INTO questions (id, content, chapter) VALUES (931, 'A number with 60% of the data <em>above</em> it is', 17224);
 INSERT INTO question_choices (id, question_id, content) VALUES (4265, 931, 'the 60th percentile');

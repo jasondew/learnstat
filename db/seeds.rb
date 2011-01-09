@@ -40,10 +40,13 @@ if User.count == 0
               :course_id => 1
 end
 
-#FIXME: add other chapters questions
+Question.delete_all
+QuestionChoice.delete_all
 if Question.count == 0
-  File.readlines("#{Rails.root}/db/chapters1-9.sql").each do |sql|
-    next if sql.blank?
-    ActiveRecord::Base.connection.execute sql
+  %w(chapters1-9.sql chapters10-16.sql chapters17-24.sql).each do |filename|
+    File.readlines("#{Rails.root}/db/#{filename}").each do |sql|
+      next if sql.blank?
+      ActiveRecord::Base.connection.execute sql
+    end
   end
 end

@@ -1,6 +1,11 @@
 %h2 Add quiz question
 
-- Question.includes(:choices).limit(10).all.each do |question|
+= form_tag new_quiz_question_path(@quiz), :method => :get do
+  %p
+    = text_field_tag :search, params[:search]
+    = submit_tag "Search"
+
+- @questions.each do |question|
   .block
     = render question
 
