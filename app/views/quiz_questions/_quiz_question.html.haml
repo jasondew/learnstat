@@ -1,9 +1,9 @@
 %li
-  = quiz_question.question
+  = quiz_question.question.to_s.html_safe
   = form.simple_fields_for :quiz_question_responses, quiz_question.responses.build do |response_form|
     = response_form.hidden_field :quiz_question_id, :value => quiz_question.id
     %ol.answers
       - quiz_question.question.choices.each do |choice|
         %li
           = response_form.radio_button :question_choice_id, choice.id
-          = choice
+          = choice.to_s.html_safe

@@ -12,7 +12,7 @@ class Quiz < ActiveRecord::Base
 
   validate :viewable_before_due
 
-  scope :viewable, lambda { where("viewable_at >= ?", Time.now) }
+  scope :viewable, lambda { where("viewable_at <= ?", Time.now) }
   scope :open, lambda { where("due_at >= ?", Time.now) }
   scope :closed, lambda { where("due_at < ?", Time.now) }
 

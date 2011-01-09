@@ -1,5 +1,5 @@
 %li
-  = question.content
+  = question.content.html_safe
   %ol.answers= render question.choices
 
   - if instructor?
