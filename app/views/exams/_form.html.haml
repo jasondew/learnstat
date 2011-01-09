@@ -7,7 +7,7 @@
     %th Name
     %th Grade
 
-  - @course.students.each do |student|
+  - @exam.course.students.each do |student|
     = form.fields_for :grades, @exam.grades.build(:user => student) do |grade_form|
       %tr
         %td= student.full_name

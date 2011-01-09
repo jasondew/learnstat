@@ -12,8 +12,9 @@ class Quiz < ActiveRecord::Base
 
   validate :viewable_before_due
 
-  scope :open, lambda { {:conditions => ["due_at >= ?", Time.now]} }
-  scope :closed, lambda { {:conditions => ["due_at < ?", Time.now]} }
+  scope :viewable, lambda { where("viewable_at >= ?", Time.now) }
+  scope :open, lambda { where("due_at >= ?", Time.now) }
+  scope :closed, lambda { where("due_at < ?", Time.now) }
 
   module ClassMethods
     def decode_completion_code(code)
@@ -52,12 +53,12 @@ class Quiz < ActiveRecord::Base
   end
 
   def scores
-    responses.map(&:score)
+    responses.map(&:grade)
   end
   memoize :scores
 
   def grade_for user
-    response_by(user).andand.score or 0
+    response_by(user).andand.grade or 0.0
   end
 
   def percentile_for(user)

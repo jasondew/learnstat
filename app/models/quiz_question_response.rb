@@ -17,6 +17,7 @@ class QuizQuestionResponse < ActiveRecord::Base
 
   def score!
     self.correct = (question_choice_id == question.answer)
+    true
   end
 
 end

@@ -12,11 +12,13 @@ class QuizResponse < ActiveRecord::Base
   scope :by, lambda {|user| where(:user_id => user.id) }
   scope :closed, lambda { includes(:quiz).where("quizzes.due_at <= ?", Time.now) }
 
-  def score
-    quiz_question_responses.correct.count / quiz_question_responses.count.to_f
-  end
+  after_create :calculate_grade!
 
   private
+
+  def calculate_grade!
+    update_attribute :grade, (quiz_question_responses.correct.count / quiz_question_responses.count.to_f)
+  end
 
   def timely
     errors.add_to_base "response is not timely" unless quiz.open?

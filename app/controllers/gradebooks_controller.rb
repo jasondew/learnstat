@@ -13,7 +13,7 @@ class GradebooksController < ApplicationController
         @gradebook[gradeable.name.underscore][student.id] = gradeable.grade_for(student)
       end
 
-      @gradebook['quiz_average'][student.id] = student.adjusted_mean_score(12)
+      @gradebook['quiz_average'][student.id] = student.mean_score
       @gradebook['exam_average'][student.id] = student.exam_mean_score
     end
   end

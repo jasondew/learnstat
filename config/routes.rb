@@ -11,11 +11,13 @@ Learnstat::Application.routes.draw do
     resources :quizzes, :only => [:index, :new, :create]
     resources :announcements
     resources :documents
-    resources :exams
+    resources :exams, :only => [:new, :create]
 
     resource :gradebook
     resource :roster
   end
+
+  resources :exams, :only => [:show, :edit, :update]
 
   resources :quizzes, :except => [:new, :create] do
     resources :questions, :controller => "QuizQuestions", :only => [:new, :create]

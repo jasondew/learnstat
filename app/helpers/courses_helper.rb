@@ -31,13 +31,6 @@ module CoursesHelper
      content_tag(:div, link_to('View all documents', course_documents_path(@course)), :class => 'collection_link')].join("\n").html_safe
   end
 
-  def gradeable_path(gradeable)
-    case gradeable
-      when Quiz: course_quiz_path(@course, gradeable)
-      when Exam: course_exam_path(@course, gradeable)
-    end
-  end
-
   def gradeable_report_path(gradeable)
     case gradeable
       when Quiz: course_quiz_grade_distribution_path(@course, gradeable)

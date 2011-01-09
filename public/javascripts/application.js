@@ -1,6 +1,9 @@
 $(document).ready(function() {
   $(".accessible").hide();
   $(".unaccessible").show();
+  $(".answers li").click(function() {
+    $(this).find("input").attr("checked", true);
+  });
 });
 
 function add_fields(link, association, content) {
