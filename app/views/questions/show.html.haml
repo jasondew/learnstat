@@ -5,6 +5,7 @@
     - @question.choices.each do |question_choice|
       %li
         = question_choice.content
+        = content_tag(:em, "(correct answer)") if @question.correct_answer?(question_choice.id)
         = link_to image_tag("table_edit.png", :alt => "Edit choice"), edit_question_choice_path(@question, question_choice)
         = link_to image_tag("table_delete.png", :alt => "Delete choice"), question_choice_path(@question, question_choice), :confirm => "Are you sure?", :method => :delete
 

@@ -8,7 +8,7 @@ class Question < ActiveRecord::Base
   # acts_as_ferret :fields => {:content => {:store => :yes}, :choice_texts => { }}, :remote => false
 
   validates_presence_of :content, :chapter, :answer
-  validates_numericality_of :chapter
+  validates_numericality_of :chapter, :answer
 
   def to_s
     content
