@@ -1,5 +1,5 @@
 %p
-  = @question.content
+  = @question.content.html_safe
 
   %ul
     - @question.choices.each do |question_choice|
