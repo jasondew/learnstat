@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   create_table "grades", :force => true do |t|
     t.integer  "user_id"
     t.integer  "exam_id"
-    t.decimal  "value",      :precision => 4, :scale => 5
+    t.decimal  "value",      :precision => 5, :scale => 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   create_table "quiz_responses", :force => true do |t|
     t.integer  "quiz_id"
     t.integer  "user_id"
-    t.decimal  "grade",      :precision => 4, :scale => 5
+    t.decimal  "grade",      :precision => 5, :scale => 4
     t.datetime "created_at"
     t.datetime "updated_at"
   end

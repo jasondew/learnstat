@@ -7,6 +7,8 @@ class QuizzesController < ApplicationController
 
   def show
     @course = resource.course
+    @quiz_response = QuizResponse.where(:quiz_id => @quiz.id, :user_id => current_user.id).first
+
     show!
   end
 
