@@ -46,4 +46,8 @@ Learnstat::Application.configure do
 
   # Send deprecation notices to registered listeners
   config.active_support.deprecation = :notify
+
+  config.middleware.use ExceptionNotifier, :email_prefix         => "[learnSTAT #{Rails.env}] ",
+                                           :sender_address       => %{"learnSTAT exception notifier" <do-not-reply@exceptions.com>},
+                                           :exception_recipients => ENV["EXCEPTION_NOTIFICATION_RECIPIENTS"]
 end
