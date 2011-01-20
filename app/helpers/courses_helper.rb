@@ -11,7 +11,7 @@ module CoursesHelper
   def format_quizzes(quizzes)
     return content_tag(:p, "There are no open quizzes at this time.") if quizzes.empty?
 
-    quiz_links = quizzes.map do |quiz|
+    quiz_links = quizzes.viewable.map do |quiz|
       content_tag(:dt, link_to(quiz.name, quiz)) + content_tag(:dd, "due #{datetime_format(quiz.due_at)}")
     end
 

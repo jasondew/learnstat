@@ -50,7 +50,7 @@ class InitialSchema < ActiveRecord::Migration
 
     create_table "grades", :force => true do |t|
       t.belongs_to :user, :exam
-      t.decimal :value, :scale => 5, :precision => 4
+      t.decimal :value, :precision => 5, :scale => 4
       t.timestamps
     end
 
@@ -88,7 +88,7 @@ class InitialSchema < ActiveRecord::Migration
 
     create_table :quiz_responses do |t|
       t.belongs_to :quiz, :user
-      t.decimal :grade, :scale => 5, :precision => 4
+      t.decimal :grade, :precision => 5, :scale => 4
       t.timestamps
     end
 

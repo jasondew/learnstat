@@ -8,13 +8,13 @@ Feature: quizzes
       | first_name |
       | Jason      |
       | Patricia   |
+
+  Scenario: adding a quiz
+    Given I am logged in as an instructor
     And a question with the following choices:
       | right answer   |
       | wrong answer 1 |
       | wrong answer 2 |
-
-  Scenario: adding a quiz
-    Given I am logged in as an instructor
     When I go to the quizzes page
     And I follow "Add a quiz"
     And I fill in "Quiz 1" for "quiz[name]"
@@ -29,7 +29,6 @@ Feature: quizzes
   Scenario: student taking an open quiz
     Given I am logged in as a student in the course
     And an open quiz named "Quiz 1"
-    And a quiz question
     When I go to the quizzes page
     Then I should see "Quiz 1"
     When I follow "Take quiz"
@@ -49,3 +48,18 @@ Feature: quizzes
     And a hidden quiz named "Quiz 1"
     When I go to the quizzes page
     Then I should not see "Quiz 1"
+
+  Scenario: a student retaking a quiz
+    Given I am logged in as a student in the course
+    And an open quiz named "Quiz 1" with 2 questions
+    When I go to the quizzes page
+    And I follow "Take quiz"
+    And I choose "quiz_response_quiz_question_responses_attributes_0_question_choice_id_1"
+    And I press "Submit answers"
+    Then I should see "1 of 2 questions attempted"
+    When I go to the quizzes page
+    And I follow "Change quiz answers"
+    And I choose "quiz_response_quiz_question_responses_attributes_0_question_choice_id_1"
+    And I choose "quiz_response_quiz_question_responses_attributes_1_question_choice_id_2"
+    And I press "Submit answers"
+    Then I should see "2 of 2 questions attempted"
