@@ -17,21 +17,17 @@ class User < ActiveRecord::Base
   before_validation {|user| user.errors.add :registration_code, "is invalid" unless user.course }
 
   def to_s
-    email
+    name
   end
 
   def name
-    first_name
-  end
-
-  def full_name
-    "#{first_name} #{last_name}"
+    "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
   def mean_score adjustment=0.0
     return if closed_question_responses.empty?
 
-    adjusted_mean = (correct_question_responses.size + adjustment) / closed_question_responses.size.to_f
+    adjusted_mean = (correct_question_responses.size + adjustment) / QuizQuestion.count.to_f
     adjusted_mean > 1.0 ? 1.0 : adjusted_mean
   end
 

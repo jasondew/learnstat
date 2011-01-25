@@ -10,7 +10,7 @@
   - @exam.course.students.each do |student|
     = form.fields_for :grades, @exam.grades.build(:user => student) do |grade_form|
       %tr
-        %td= student.full_name
+        %td= student
         %td
           = grade_form.hidden_field :user_id, :value => student.id
           = grade_form.text_field :value, :size => 4

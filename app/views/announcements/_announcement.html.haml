@@ -6,4 +6,4 @@
 
 .block_body
   = announcement.body.html_safe
-  .block_information= "Posted by #{announcement.user.full_name} on #{datetime_format(announcement.created_at)}"
+  .block_information= "Posted by #{announcement.user} on #{datetime_format(announcement.created_at)}"

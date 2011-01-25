@@ -4,6 +4,7 @@
   %thead
     %tr
       %th Student
+      %th Email
       %th Blackboard ID
       %th Last Logged On
       %th Actions
@@ -11,7 +12,8 @@
   %tbody
     - @course.students.each do |student|
       %tr
-        %td= mail_to student.email, student.full_name
+        %td= student
+        %td= mail_to student.email, student.email
         %td= student.blackboard_username
         %td= datetime_format student.last_login_at
         %td
