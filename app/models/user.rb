@@ -27,7 +27,7 @@ class User < ActiveRecord::Base
   def mean_score adjustment=0.0
     return if closed_question_responses.empty?
 
-    adjusted_mean = (correct_question_responses.size + adjustment) / QuizQuestion.count.to_f
+    adjusted_mean = (correct_question_responses.size + adjustment) / Quiz.closed.map {|quiz| quiz.questions.count }.sum.to_f
     adjusted_mean > 1.0 ? 1.0 : adjusted_mean
   end
 
