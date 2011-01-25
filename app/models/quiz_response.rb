@@ -3,11 +3,12 @@ class QuizResponse < ActiveRecord::Base
   belongs_to :user
   belongs_to :quiz
 
-  has_many :quiz_question_responses
+  has_many :quiz_question_responses, :dependent => :destroy
 
   accepts_nested_attributes_for :quiz_question_responses, :reject_if => lambda {|attributes| attributes[:question_choice_id].blank? }
 
   validate :timely
+  validates_uniqueness_of :quiz_id, :scope => :user_id
 
   scope :by, lambda {|user| where(:user_id => user.id) }
   scope :closed, lambda { includes(:quiz).where("quizzes.due_at <= ?", Time.now) }

@@ -3,18 +3,7 @@ Given /^a question with the following choices:$/ do |choices|
   choices.raw.map {|content| Factory(:question_choice, :question => @question, :content => content.first) }
 end
 
-Given /^a quiz question$/ do
-  Factory(:quiz_question, :quiz => @quiz, :question => @question)
-end
-
-Given /^an open quiz named "([^"]+)"$/ do |quiz_name|
-  @quiz = Factory(:open_quiz, :course => @course, :name => quiz_name)
-end
-
-Given /^a closed quiz named "([^"]+)"$/ do |quiz_name|
-  @quiz = Factory(:closed_quiz, :course => @course, :name => quiz_name)
-end
-
-Given /^a hidden quiz named "([^"]+)"$/ do |quiz_name|
-  @quiz = Factory(:hidden_quiz, :course => @course, :name => quiz_name)
+Given /^an? (\w+) quiz named "([^"]+)"(?:| with (\d+) questions?)$/ do |quiz_type, quiz_name, question_count|
+  @quiz = Factory("#{quiz_type}_quiz", :course => @course, :name => quiz_name)
+  (question_count.to_i - 1).times { Factory(:quiz_question, :quiz => @quiz) } if question_count
 end
