@@ -58,7 +58,7 @@ class Quiz < ActiveRecord::Base
   memoize :scores
 
   def grade_for user
-    response_by(user).andand.grade or 0.0
+    response_by(user).andand.grade
   end
 
   def percentile_for(user)
