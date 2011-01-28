@@ -22,7 +22,9 @@
   %p== Participation: #{percent_format @quiz.participation}
   %p== Questions: #{@quiz.questions.count}
 
-- if instructor?
+  %ol.questions= render @quiz.questions
+
+- elsif @quiz.closed?
 
   %ol.questions= render @quiz.questions
 

@@ -65,9 +65,6 @@ end
 Factory.define(:quiz_question) do |f|
   f.association :quiz
   f.association :question
-  f.after_create do |quiz_question|
-
-  end
 end
 
 Factory.define(:quiz_question_response) do |f|
@@ -80,11 +77,11 @@ Factory.define(:question) do |f|
   f.content "What is the square root of pi?"
   f.chapter 1
   f.answer 2
-  f.choices { [Factory.build(:question_choice)] }
+  f.choices { [Factory.build(:question_choice), Factory.build(:question_choice)] }
 
   f.after_create {|question| question.update_attribute :answer, question.choice_ids.first }
 end
 
 Factory.define(:question_choice) do |f|
-  f.content "The answer"
+  f.sequence(:content) {|i| "answer #{i}" }
 end
