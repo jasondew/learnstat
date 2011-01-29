@@ -1,0 +1,10 @@
+%ol.questions
+  - quiz_response.quiz_question_responses.each do |quiz_question_response|
+    - question = quiz_question_response.question
+
+    %li{:class => quiz_question_response.correct? ? "correct" : "incorrect"}
+      = question.content.html_safe
+      %ol.answers
+        - question.choices.each do |question_choice|
+          %li{:class => question_choice_classes(question, question_choice, quiz_question_response)}
+            = question_choice.content.html_safe

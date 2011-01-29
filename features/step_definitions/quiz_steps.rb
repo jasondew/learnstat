@@ -6,7 +6,7 @@ end
 Given /^an? (\w+) quiz named "([^"]+)"(?:| with (\d+) questions?)$/ do |quiz_type, quiz_name, question_count|
   @quiz = Factory("#{quiz_type}_quiz", :course => @course, :name => quiz_name)
   @quiz_questions = []
-  (question_count.to_i - 1).times { @quiz_questions << Factory(:quiz_question, :quiz => @quiz) } if question_count
+  question_count.to_i.times { @quiz_questions << Factory(:quiz_question, :quiz => @quiz) } if question_count
 end
 
 Given /^a response with (\d+) correct$/ do |number_correct_string|
@@ -15,9 +15,11 @@ Given /^a response with (\d+) correct$/ do |number_correct_string|
 
   @quiz_questions.each do |quiz_question|
     correct = number_correct > 0
-    choice = quiz_question.responses.detect {|response| response.correct? == correct }
+    choice_id = correct ? quiz_question.question.answer : -1
 
-    @quiz_response.quiz_question_responses.build :quiz_question => quiz_question, :question_choice => choice, :correct => correct
+    @quiz_response.quiz_question_responses.build :quiz_question => quiz_question, :question_choice_id => choice_id
     number_correct -= 1
   end
+
+  @quiz_response.save :validate => false
 end

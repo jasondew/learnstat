@@ -3,16 +3,23 @@
   - if instructor?
     = link_to image_tag("application_form_edit.png", :alt => "Edit quiz"), edit_quiz_path(@quiz)
 
-%p.instructions
-  - if @quiz.closed?
-
+- if @quiz.closed?
+  %p.instructions
     %strong Completed Assignment:
     == This assignment was due on #{datetime_format @quiz.due_at}.
-    Your answer, if you provided one, is shown in green.  The correct answer to the question is shown underlined.
-    %p.information== Mean: #{percent_format @quiz.mean}, Standard Deviation: #{number_with_precision @quiz.standard_deviation, :precision => 2}
+    Correctly answered questions will be shown with a
+    %span.correct green background
+    and incorrectly answered questions are shown with a
+    %span.incorrect red background.
+    Also, the response you gave will be
+    %span.response underlined
+    and the correct response will be
+    %span.answer in bold.
 
-  - else
+  %p.information== Mean: #{percent_format @quiz.mean}, Standard Deviation: #{number_with_precision @quiz.standard_deviation, :precision => 2}
 
+- else
+  %p.instructions
     %strong Instructions:
     Complete the following questions by clicking on the answer of your choice.
     == You have until #{datetime_format @quiz.due_at} to complete this assignment.  No assignment, written or otherwise, will be accepted after that time.
@@ -26,7 +33,10 @@
 
 - elsif @quiz.closed?
 
-  %ol.questions= render @quiz.questions
+  - if response = @quiz.response_by(current_user)
+    = render response
+  - else
+    No response submitted for this quiz.
 
 - elsif @quiz.open?
 

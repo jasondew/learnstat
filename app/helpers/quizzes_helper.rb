@@ -57,4 +57,11 @@ module QuizzesHelper
     "choose_answer('#{dom_id(quiz_question)}', '#{dom_id(choice)}', '#{path}', '#{parameters}')"
   end
 
+  def question_choice_classes question, question_choice, quiz_question_response
+    classes = []
+    classes << "answer" if question.correct_answer?(question_choice.id)
+    classes << "response" if question_choice.id == quiz_question_response.question_choice_id
+    classes.join(" ")
+  end
+
 end

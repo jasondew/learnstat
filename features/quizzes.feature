@@ -28,7 +28,7 @@ Feature: quizzes
 
   Scenario: student taking an open quiz
     Given I am logged in as a student in the course
-    And an open quiz named "Quiz 1"
+    And an open quiz named "Quiz 1" with 1 question
     When I go to the quizzes page
     Then I should see "Quiz 1"
     When I follow "Take quiz"
@@ -60,7 +60,7 @@ Feature: quizzes
     When I go to the quizzes page
     And I follow "Change quiz answers"
     And I choose "quiz_response_quiz_question_responses_attributes_0_question_choice_id_1"
-    And I choose "quiz_response_quiz_question_responses_attributes_1_question_choice_id_2"
+    And I choose "quiz_response_quiz_question_responses_attributes_1_question_choice_id_4"
     And I press "Submit answers"
     Then I should see "2 of 2 questions attempted"
 
@@ -70,4 +70,5 @@ Feature: quizzes
     And a response with 1 correct
     When I go to the quizzes page
     And I follow "Quiz 1"
-    Then show me the page
+    Then I should see "answer" within ".correct"
+    And I should see "answer" within ".incorrect"

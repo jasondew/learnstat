@@ -42,10 +42,6 @@ Factory.define(:quiz) do |f|
   f.name "Quiz 1"
   f.due_at { 2.days.from_now }
   f.viewable_at { Time.now }
-  f.after_create do |quiz|
-    quiz.quiz_questions << Factory(:quiz_question, :quiz => quiz)
-    quiz.save
-  end
 end
 
 Factory.define(:open_quiz, :parent => :quiz) do |f|

@@ -175,9 +175,9 @@ a:hover { text-decoration: underline; }
 p { padding: 5px 10px; }
 
 p.instructions {
-  width: 75%;
-  margin: 10px;
-  padding: 4px;
+  margin: 10px 40px;
+  padding: 6px;
+  line-height: 1.25em;
   border: 1px solid #999999;
   color: $gray;
 }
@@ -306,7 +306,10 @@ li.question { margin-bottom: 40px; }
 
 ol.questions {
   list-style-type: decimal;
-  li { margin-bottom: 20px; }
+  li {
+    line-height: 1.25em;
+    margin-bottom: 20px;
+  }
 }
 
 ol.answers {
@@ -320,8 +323,6 @@ ol.answers {
       cursor: pointer;
       background: $blue;
     }
-
-    &.answer { text-decoration: underline; }
   }
 }
 
@@ -508,3 +509,8 @@ dl dd {
 }
 
 .clear { clear: both; }
+
+.correct { background: transparentize($green, 0.7); }
+.incorrect { background: transparentize($red, 0.7); }
+.answer { font-weight: bold; }
+.response { text-decoration: underline; }

@@ -188,9 +188,9 @@ p {
   padding: 5px 10px; }
 
 p.instructions {
-  width: 75%;
-  margin: 10px;
-  padding: 4px;
+  margin: 10px 40px;
+  padding: 6px;
+  line-height: 1.25em;
   border: 1px solid #999999;
   color: #333333; }
 
@@ -301,6 +301,7 @@ li.question {
 ol.questions {
   list-style-type: decimal; }
   ol.questions li {
+    line-height: 1.25em;
     margin-bottom: 20px; }
 
 ol.answers {
@@ -311,8 +312,6 @@ ol.answers {
     ol.answers li:hover {
       cursor: pointer;
       background: #437da9; }
-    ol.answers li.answer {
-      text-decoration: underline; }
 
 .chosen-question {
   border: 2px solid red; }
@@ -506,3 +505,15 @@ dl dd {
 
 .clear {
   clear: both; }
+
+.correct {
+  background: rgba(67, 169, 67, 0.3); }
+
+.incorrect {
+  background: rgba(169, 67, 67, 0.3); }
+
+.answer {
+  font-weight: bold; }
+
+.response {
+  text-decoration: underline; }
