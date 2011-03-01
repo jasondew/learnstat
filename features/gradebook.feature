@@ -27,4 +27,4 @@ Feature: gradebook
     Then I should see "11.7%"
     Then I should see "45.0%"
     Then I should see "78.3%"
-    Then I should see "N/A"
+    Then I should not see "N/A"
