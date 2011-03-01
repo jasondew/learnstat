@@ -1,10 +1,16 @@
 Given /^I am logged in(:?| as an instructor)$/ do |instructor|
-  @user = Factory(:user, :email => "demo@user.com", :password => "demodemo", :password_confirmation => "demodemo", :instructor => !!instructor)
+  @count = (@count || 0) + 1
+  @user_email = "user#{@count}@gmail.com"
+
+  unless @user and @user.instructor == instructor
+    @user = Factory(:user, :email => @user_email, :password => "demodemo", :password_confirmation => "demodemo", :instructor => !!instructor)
+  end
+
   @user.course = @course if @course
 
   visit "/login"
 
-  fill_in "user_session_email", :with => "demo@user.com"
+  fill_in "user_session_email", :with => @user_email
   fill_in "user_session_password", :with => "demodemo"
 
   click "Login"

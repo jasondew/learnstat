@@ -15,7 +15,7 @@ module GradebooksHelper
   def minimum_final_grade_for minimum, quiz_average, exam_average
     return unless quiz_average and exam_average
 
-    needed = (minimum - 30 * quiz_average - 45 * exam_average) / 25.0
+    needed = (minimum - 35 * quiz_average - 45 * exam_average + 5) / 15.0
 
     return 0 if needed <= 0
     return nil if needed > 1
