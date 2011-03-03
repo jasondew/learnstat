@@ -10,6 +10,10 @@
       - unless @course.gradeables.empty?
         %th Quiz Avg.
         %th Exam Avg.
+        - if @final_done
+          %th Final Exam
+          %th Course Avg.
+
 
   %tbody
     - @students.each do |student|
@@ -21,6 +25,10 @@
         - unless @course.gradeables.empty?
           %td.data= percent_format @gradebook['quiz_average'][student.id]
           %td.data= percent_format @gradebook['exam_average'][student.id]
+          - if @final_done
+            %td.data= percent_format @gradebook['final_exam'][student.id]
+            %td.data= percent_format @gradebook['course_average'][student.id]
+
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?
 

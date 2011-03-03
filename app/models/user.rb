@@ -43,7 +43,13 @@ class User < ActiveRecord::Base
 
   def exam_mean_score
     return if grades.empty?
-    grades.inject(0.0) {|sum, grade| sum += grade.value unless grade.exam.final; sum } / grades.reject {|grade| grade.exam.final }.length
+    exam_grades = grades.reject(&:final?).map(&:value)
+    exam_grades.sum / exam_grades.length.to_f
+  end
+
+  def final_grade
+    return unless (final_exam = grades.detect(&:final?))
+    35 * mean_score + 45 * exam_mean_score + 15 * final_exam.value + 5
   end
 
   def registration_code= code
