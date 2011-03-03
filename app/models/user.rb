@@ -48,8 +48,8 @@ class User < ActiveRecord::Base
   end
 
   def final_grade
-    return unless (final_exam = grades.detect(&:final?))
-    35 * mean_score + 45 * exam_mean_score + 15 * final_exam.value + 5
+    return unless (final_exam_grade = grades.detect {|grade| grade.exam.final? })
+    0.35 * mean_score + 0.45 * exam_mean_score + 0.15 * final_exam_grade.value + 0.05
   end
 
   def registration_code= code
