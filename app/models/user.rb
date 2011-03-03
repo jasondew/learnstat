@@ -43,7 +43,7 @@ class User < ActiveRecord::Base
 
   def exam_mean_score
     return if grades.empty?
-    exam_grades = grades.reject(&:final?).map(&:value)
+    exam_grades = grades.reject {|grade| grade.exam.final? }.map(&:value)
     exam_grades.sum / exam_grades.length.to_f
   end
 
