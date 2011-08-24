@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110103041052) do
+ActiveRecord::Schema.define(:version => 20110824111240) do
 
   create_table "announcements", :force => true do |t|
     t.integer  "course_id"
@@ -71,7 +71,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   create_table "grades", :force => true do |t|
     t.integer  "user_id"
     t.integer  "exam_id"
-    t.decimal  "value",      :precision => 5, :scale => 4
+    t.decimal  "value",      :precision => 4, :scale => 5
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -115,7 +115,7 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
   create_table "quiz_responses", :force => true do |t|
     t.integer  "quiz_id"
     t.integer  "user_id"
-    t.decimal  "grade",      :precision => 5, :scale => 4
+    t.decimal  "grade",      :precision => 4, :scale => 5
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -143,17 +143,16 @@ ActiveRecord::Schema.define(:version => 20110103041052) do
 
   create_table "users", :force => true do |t|
     t.integer  "course_id"
-    t.string   "email",                                  :null => false
+    t.string   "email",                                 :null => false
     t.string   "first_name"
     t.string   "last_name"
-    t.string   "blackboard_username"
     t.string   "registration_code"
-    t.boolean  "instructor",          :default => false
-    t.string   "crypted_password",                       :null => false
-    t.string   "password_salt",                          :null => false
-    t.string   "persistence_token",                      :null => false
-    t.integer  "login_count",         :default => 0,     :null => false
-    t.integer  "failed_login_count",  :default => 0,     :null => false
+    t.boolean  "instructor",         :default => false
+    t.string   "crypted_password",                      :null => false
+    t.string   "password_salt",                         :null => false
+    t.string   "persistence_token",                     :null => false
+    t.integer  "login_count",        :default => 0,     :null => false
+    t.integer  "failed_login_count", :default => 0,     :null => false
     t.datetime "last_request_at"
     t.datetime "current_login_at"
     t.datetime "last_login_at"

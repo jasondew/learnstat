@@ -4,7 +4,6 @@ Factory.define(:user) do |f|
   f.password_confirmation "FooBar!"
   f.first_name "John"
   f.last_name "Doe"
-  f.sequence(:blackboard_username) {|n| "blackboard_username_#{n}" }
   f.association :course
 end
 

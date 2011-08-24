@@ -5,7 +5,6 @@
     %tr
       %th Student
       %th Email
-      %th Blackboard ID
       %th Last Logged On
       %th Actions
 
@@ -14,7 +13,6 @@
       %tr
         %td= student
         %td= mail_to student.email, student.email
-        %td= student.blackboard_username
         %td= datetime_format student.last_login_at
         %td
           -#FIXME= link_to_remote "Reset Password", :url => reset_password_course_user_path(:course_id => @course, :id => student.id), :success => "alert(request.responseText)"

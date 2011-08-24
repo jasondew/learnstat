@@ -13,6 +13,8 @@ gem "authlogic", :git => "git://github.com/odorcicd/authlogic.git", :branch => "
 gem "carrierwave"
 gem "fog"
 
+gem "escape_utils"
+
 group :development do
   gem "awesome_print"
   gem "wirble"
@@ -37,6 +39,5 @@ group :test do
   gem "shoulda"
   gem "factory_girl"
   gem "rr"
-  gem "redgreen"
   gem "launchy"
 end

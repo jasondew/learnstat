@@ -16,7 +16,6 @@ if User.count == 0
               :password_confirmation => "password",
               :first_name => "Mr.",
               :last_name => "Instructor",
-              :blackboard_username => "instructor",
               :registration_code => "stats",
               :instructor => true,
               :course_id => 1
@@ -26,7 +25,6 @@ if User.count == 0
               :password_confirmation => "password",
               :first_name => "Student",
               :last_name => "One",
-              :blackboard_username => "student1",
               :registration_code => "stats",
               :course_id => 1
 
@@ -35,7 +33,6 @@ if User.count == 0
               :password_confirmation => "password",
               :first_name => "Student",
               :last_name => "Two",
-              :blackboard_username => "student2",
               :registration_code => "stats",
               :course_id => 1
 end

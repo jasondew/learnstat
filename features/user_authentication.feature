@@ -11,7 +11,6 @@ Feature: user authentication
       | user[first_name]            | John                    |
       | user[last_name]             | Doe                     |
       | user[email]                 | john.doe@email.com      |
-      | user[blackboard_username]   | johndoe                 |
       | user[password]              | Password!               |
       | user[password_confirmation] | Password!               |
       | user[registration_code]     | stat110sp11             |
@@ -26,7 +25,6 @@ Feature: user authentication
       | user[first_name]            | John                    |
       | user[last_name]             | Doe                     |
       | user[email]                 | john.doe@email.com      |
-      | user[blackboard_username]   | johndoe                 |
       | user[password]              | Password!               |
       | user[password_confirmation] | Password!               |
       | user[registration_code]     | il33th4x0r              |
