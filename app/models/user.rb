@@ -23,7 +23,7 @@ class User < ActiveRecord::Base
     "#{first_name.capitalize} #{last_name.capitalize}"
   end
 
-  def mean_score adjustment=20.0
+  def mean_score adjustment=0.0
     return if closed_question_responses.empty?
 
     adjusted_mean = (correct_question_responses.size + adjustment) / Quiz.closed.map {|quiz| quiz.questions.count }.sum.to_f
@@ -48,7 +48,7 @@ class User < ActiveRecord::Base
 
   def final_grade
     return unless (final_exam_grade = grades.detect {|grade| grade.exam.final? })
-    0.35 * mean_score + 0.45 * exam_mean_score + 0.15 * final_exam_grade.value + 0.05
+    0.25 * mean_score + 0.60 * exam_mean_score + 0.15 * final_exam_grade.value
   end
 
   def registration_code= code
