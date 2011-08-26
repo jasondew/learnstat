@@ -25,6 +25,7 @@ group :development do
   gem "autotest-fsevent"
   gem "rspec-rails"
   gem "cucumber-rails"
+  gem "heroku"
 end
 
 group :production do
