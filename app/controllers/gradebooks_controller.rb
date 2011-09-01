@@ -3,7 +3,7 @@ class GradebooksController < ApplicationController
   before_filter :get_course
 
   def show
-    @final_exam = Exam.where(:final => true).first
+    @final_exam = @course.exams.where(:final => true).first
     @quizzes = @course.quizzes(true)
     @gradebook = Hash.new {|h,k| h[k] = Array.new }
 
