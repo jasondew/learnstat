@@ -20,7 +20,7 @@ class ApplicationController < ActionController::Base
 
   def percent_format(number, nil_text="N/A")
     return nil_text unless number
-    number_to_percentage(number * 100, {:precision => 1})
+    number_to_percentage(number * 100, :precision => 0)
   end
 
   def instructor?
