@@ -10,7 +10,8 @@ class User < ActiveRecord::Base
   has_many :quiz_responses
   has_many :audits
 
-  validates_presence_of :first_name, :last_name, :email, :password, :password_confirmation
+  validates_presence_of :first_name, :last_name, :email
+  validates_presence_of :password, :password_confirmation, :if => :new_record?
   validates_uniqueness_of :email, :case_sensitive => false
 
   before_validation {|user| user.errors.add :registration_code, "is invalid" unless user.course }
