@@ -20,13 +20,13 @@ class User < ActiveRecord::Base
   end
 
   def name
-    "#{first_name.capitalize} #{last_name.capitalize}"
+    [first_name, last_name].map(&:capitalize).join " "
   end
 
   def mean_score adjustment=0.0
     return if closed_question_responses.empty?
 
-    adjusted_mean = (correct_question_responses.size + adjustment) / course.quizzes.closed.map {|quiz| quiz.questions.count }.sum.to_f
+    adjusted_mean = (correct_question_responses.size + adjustment + bonus_points) /course.quizzes.closed.map {|quiz| quiz.questions.count }.sum.to_f
     adjusted_mean > 1.0 ? 1.0 : adjusted_mean
   end
 

@@ -1,0 +1,18 @@
+%h2 Bonus Points
+
+= form_tag course_bonus_points_path(@course), method: :put do
+  %table
+    %thead
+      %tr
+        %th Name
+        %th Points
+
+    %tbody
+      - @students.each do |student|
+        %tr
+          %td= label_tag student
+          %td= text_field_tag "bonus_points[#{student.id}]", student.bonus_points
+
+  %p
+    = submit_tag "Save"
+    = link_to 'Cancel', @course

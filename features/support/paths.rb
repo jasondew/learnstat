@@ -14,6 +14,7 @@ module NavigationHelpers
     when /the edit quiz page/ then edit_quiz_path(@quiz)
     when /the roster page/ then course_roster_path(@course)
     when /the gradebook page/ then course_gradebook_path(@course)
+    when /the bonus points page/ then edit_course_bonus_points_path(@course)
     when /the account page/ then account_path
     when /the home\s?page/ then root_path
 

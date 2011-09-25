@@ -15,6 +15,7 @@ Learnstat::Application.routes.draw do
 
     resource :gradebook
     resource :roster
+    resource :bonus_points
   end
 
   resources :exams, :only => [:show, :edit, :update]
