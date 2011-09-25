@@ -9,7 +9,7 @@ class CoursesController < ApplicationController
     @course = Course.find params[:id]
     @latest_announcements = @course.announcements.latest
     @latest_documents = @course.documents.latest
-    @latest_grades = @course.gradeables.size > 3 ? @course.gradeables[0..2] : @course.gradeables
+    @latest_grades = @course.gradeables.last(3).reverse
   end
 
   def create
