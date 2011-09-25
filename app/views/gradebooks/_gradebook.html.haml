@@ -7,7 +7,7 @@
         %th
           = link_to shorten(gradeable.name), gradeable
           -#FIXME= link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
-      %th Bonus Points
+      %th= link_to "Bonus Points", edit_course_bonus_points_path(@course)
       - unless @course.gradeables.empty?
         %th Quiz Avg.
         %th Exam Avg.
