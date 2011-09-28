@@ -23,6 +23,10 @@ module ApplicationHelper
     end
   end
 
+  def mean values
+    values.compact.sum / values.size.to_f
+  end
+
   # OLD STUFF BELOW
 
   MENU_ITEMS = [

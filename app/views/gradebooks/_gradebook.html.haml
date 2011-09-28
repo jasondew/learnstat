@@ -6,7 +6,7 @@
       - @course.gradeables.each do |gradeable|
         %th
           = link_to shorten(gradeable.name), gradeable
-          -#FIXME= link_to image_tag( 'chart_pie.png', :alt => 'Grade Distribution' ), gradeable_report_path( gradeable ), :rel => 'lightbox'
+          -#FIXME= link_to image_tag( "chart_pie.png", :alt => "Grade Distribution" ), gradeable_report_path( gradeable ), :rel => "lightbox"
       %th= link_to "Bonus Points", edit_course_bonus_points_path(@course)
       - unless @course.gradeables.empty?
         %th Quiz Avg.
@@ -14,7 +14,6 @@
         - if @final_exam
           %th Final Exam
           %th Course Avg.
-
 
   %tbody
     - @students.each do |student|
@@ -25,16 +24,30 @@
 
         %td.data= student.bonus_points
         - unless @course.gradeables.empty?
-          %td.data= percent_format @gradebook['quiz_average'][student.id]
-          %td.data= percent_format @gradebook['exam_average'][student.id]
+          %td.data= percent_format @gradebook["quiz_average"][student.id]
+          %td.data= percent_format @gradebook["exam_average"][student.id]
           - if @final_exam
-            %td.data= percent_format @gradebook['final_exam'][student.id]
-            %td.data= percent_format @gradebook['course_average'][student.id]
+            %td.data= percent_format @gradebook["final_exam"][student.id]
+            %td.data= percent_format @gradebook["course_average"][student.id]
+
+    - if instructor?
+      %tr
+        %th.name Means
+        - @course.gradeables.each do |gradeable|
+          %td.data= percent_format mean(@gradebook[gradeable.name.underscore])
+
+        %td.data= mean @students.map(&:bonus_points)
+        - unless @course.gradeables.empty?
+          %td.data= percent_format mean(@gradebook["quiz_average"])
+          %td.data= percent_format mean(@gradebook["exam_average"])
+          - if @final_exam
+            %td.data= percent_format mean(@gradebook["final_exam"])
+            %td.data= percent_format mean(@gradebook["course_average"])
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?
 
 - unless @course.gradeables.empty?
-  %h3 Final Exam Score Needed
+  %h3 Final Exam Score Needed Given Your Current Quiz and Exam Average
 
   %table
 
@@ -50,4 +63,4 @@
           %td.name= student.name
 
           - Course::ALL_LETTER_GRADES.each do |(name, minimum)|
-            %td.data= percent_format minimum_final_grade_for(minimum, @gradebook['quiz_average'][student.id], @gradebook['exam_average'][student.id])
+            %td.data= percent_format minimum_final_grade_for(minimum, @gradebook["quiz_average"][student.id], @gradebook["exam_average"][student.id])
