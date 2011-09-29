@@ -22,7 +22,7 @@
         - @course.gradeables.each do |gradeable|
           %td.data= percent_format @gradebook[gradeable.name.underscore][student.id]
 
-        %td.data= student.bonus_points
+        %td.data= @gradebook["bonus_points"][student.id]
         - unless @course.gradeables.empty?
           %td.data= percent_format @gradebook["quiz_average"][student.id]
           %td.data= percent_format @gradebook["exam_average"][student.id]
@@ -34,15 +34,15 @@
       %tr
         %th.name Means
         - @course.gradeables.each do |gradeable|
-          %td.data= percent_format mean(@gradebook[gradeable.name.underscore])
+          %td.data= percent_format mean(@gradebook[gradeable.name.underscore].values)
 
-        %td.data= mean @students.map(&:bonus_points)
+        %td.data= mean @gradebook["bonus_points"].values
         - unless @course.gradeables.empty?
-          %td.data= percent_format mean(@gradebook["quiz_average"])
-          %td.data= percent_format mean(@gradebook["exam_average"])
+          %td.data= percent_format mean(@gradebook["quiz_average"].values)
+          %td.data= percent_format mean(@gradebook["exam_average"].values)
           - if @final_exam
-            %td.data= percent_format mean(@gradebook["final_exam"])
-            %td.data= percent_format mean(@gradebook["course_average"])
+            %td.data= percent_format mean(@gradebook["final_exam"].values)
+            %td.data= percent_format mean(@gradebook["course_average"].values)
 
     = content_tag(:tr, content_tag(:td, "No Students")) if @course.students.empty?
 

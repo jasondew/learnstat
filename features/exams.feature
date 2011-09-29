@@ -19,5 +19,5 @@ Feature: exams
       | exam[grades_attributes][0][value] | 85     |
       | exam[grades_attributes][1][value] | 95     |
     And I press "Create"
-    Then I should see "85.0%"
-    And I should see "95.0%"
+    Then I should see "85%"
+    And I should see "95%"

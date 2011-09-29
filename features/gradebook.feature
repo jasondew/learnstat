@@ -23,8 +23,8 @@ Feature: gradebook
     And a response with 9 correct
 
     When I go to the gradebook page
-    Then I should see "0.0%"
-    Then I should see "11.7%"
-    Then I should see "45.0%"
-    Then I should see "78.3%"
-    Then I should not see "N/A"
+    Then I should see "0%"
+    Then I should see "16%"
+    Then I should see "49%"
+    Then I should see "82%"
+    Then I should see "N/A"
