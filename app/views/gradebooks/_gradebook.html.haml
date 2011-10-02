@@ -36,7 +36,7 @@
         - @course.gradeables.each do |gradeable|
           %td.data= percent_format mean(@gradebook[gradeable.name.underscore].values)
 
-        %td.data= mean @gradebook["bonus_points"].values
+        %td.data= number_with_precision mean(@gradebook["bonus_points"].values), :precision => 1
         - unless @course.gradeables.empty?
           %td.data= percent_format mean(@gradebook["quiz_average"].values)
           %td.data= percent_format mean(@gradebook["exam_average"].values)
