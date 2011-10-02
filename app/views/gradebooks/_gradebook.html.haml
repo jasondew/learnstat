@@ -5,7 +5,7 @@
       %th.name Student
       - @course.gradeables.each do |gradeable|
         %th
-          = link_to shorten(gradeable.name), gradeable
+          = link_to shorten(gradeable.name), gradeable, :title => gradeable.name
           -#FIXME= link_to image_tag( "chart_pie.png", :alt => "Grade Distribution" ), gradeable_report_path( gradeable ), :rel => "lightbox"
       %th= link_to "Bonus Points", edit_course_bonus_points_path(@course)
       - unless @course.gradeables.empty?
