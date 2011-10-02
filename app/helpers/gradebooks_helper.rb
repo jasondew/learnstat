@@ -1,7 +1,7 @@
 module GradebooksHelper
 
   def shorten name
-    name.gsub /Homework/, 'HW'
+    name.gsub(/Homework /, "HW").gsub(/Quiz/, "Q")
   end
 
   def render_gradebook
