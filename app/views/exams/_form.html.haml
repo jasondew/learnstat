@@ -8,7 +8,7 @@
     %th Grade
 
   - @exam.course.students.each do |student|
-    = form.fields_for :grades, @exam.grades.build(:user => student) do |grade_form|
+    = form.fields_for :grades, (@exam.grades.for(student) || @exam.grades.build(:user => student)) do |grade_form|
       %tr
         %td= student
         %td

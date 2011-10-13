@@ -15,11 +15,11 @@ describe Exam do
       exam.grade_for(user).should == 0.92
     end
 
-    it "should return ** when no grade exists" do
+    it "should return nil when no grade exists" do
       user = mock!.id { :user_id }.subject
       mock(exam).grades { mock!.find_by_user_id(:user_id) { nil }.subject }
 
-      exam.grade_for(user).should == "**"
+      exam.grade_for(user).should be_nil
     end
   end
 

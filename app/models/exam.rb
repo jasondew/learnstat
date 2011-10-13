@@ -2,16 +2,16 @@ class Exam < ActiveRecord::Base
 
   belongs_to :course
 
-  has_many :grades
+  has_many :grades do
+    def for user
+      detect {|grade| grade.user == user }
+    end
+  end
 
   accepts_nested_attributes_for :grades
 
   def grade_for user
-    if (grade = grades.find_by_user_id(user.id))
-      grade.value
-    else
-      '**'
-    end
+    grades.find_by_user_id(user.to_param).try(:value)
   end
 
   def mean

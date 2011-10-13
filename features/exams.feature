@@ -11,7 +11,7 @@ Feature: exams
       | Jane       | Dane      |
     And I am logged in as an instructor
 
-  Scenario:
+  Scenario: Adding/updating exam grades
     When I go to the gradebook page
     And I follow "Add an exam"
     And I fill in the following:
